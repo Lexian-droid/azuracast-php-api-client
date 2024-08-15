@@ -1,0 +1,332 @@
+# AzuraCast\StationsPlaylistsApi
+
+All URIs are relative to https://demo.azuracast.com/api, except if the operation defines another base path.
+
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**addPlaylist()**](StationsPlaylistsApi.md#addPlaylist) | **POST** /station/{station_id}/playlists |  |
+| [**deletePlaylist()**](StationsPlaylistsApi.md#deletePlaylist) | **DELETE** /station/{station_id}/playlist/{id} |  |
+| [**editPlaylist()**](StationsPlaylistsApi.md#editPlaylist) | **PUT** /station/{station_id}/playlist/{id} |  |
+| [**getPlaylist()**](StationsPlaylistsApi.md#getPlaylist) | **GET** /station/{station_id}/playlist/{id} |  |
+| [**getPlaylists()**](StationsPlaylistsApi.md#getPlaylists) | **GET** /station/{station_id}/playlists |  |
+
+
+## `addPlaylist()`
+
+```php
+addPlaylist($stationId, $stationPlaylist): \AzuraCast\Model\StationPlaylist
+```
+
+
+
+Create a new playlist.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: ApiKey
+$config = AzuraCast\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = AzuraCast\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
+
+$apiInstance = new AzuraCast\Api\StationsPlaylistsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$stationPlaylist = new \AzuraCast\Model\StationPlaylist(); // \AzuraCast\Model\StationPlaylist
+
+try {
+    $result = $apiInstance->addPlaylist($stationId, $stationPlaylist);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling StationsPlaylistsApi->addPlaylist: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **stationPlaylist** | [**\AzuraCast\Model\StationPlaylist**](../Model/StationPlaylist.md)|  | [optional] |
+
+### Return type
+
+[**\AzuraCast\Model\StationPlaylist**](../Model/StationPlaylist.md)
+
+### Authorization
+
+[ApiKey](../../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `deletePlaylist()`
+
+```php
+deletePlaylist($stationId, $id): \AzuraCast\Model\ApiStatus
+```
+
+
+
+Delete a single playlist relay.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: ApiKey
+$config = AzuraCast\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = AzuraCast\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
+
+$apiInstance = new AzuraCast\Api\StationsPlaylistsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$id = 56; // int | Playlist ID
+
+try {
+    $result = $apiInstance->deletePlaylist($stationId, $id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling StationsPlaylistsApi->deletePlaylist: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **id** | **int**| Playlist ID | |
+
+### Return type
+
+[**\AzuraCast\Model\ApiStatus**](../Model/ApiStatus.md)
+
+### Authorization
+
+[ApiKey](../../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `editPlaylist()`
+
+```php
+editPlaylist($stationId, $id, $stationPlaylist): \AzuraCast\Model\ApiStatus
+```
+
+
+
+Update details of a single playlist.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: ApiKey
+$config = AzuraCast\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = AzuraCast\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
+
+$apiInstance = new AzuraCast\Api\StationsPlaylistsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$id = 56; // int | Playlist ID
+$stationPlaylist = new \AzuraCast\Model\StationPlaylist(); // \AzuraCast\Model\StationPlaylist
+
+try {
+    $result = $apiInstance->editPlaylist($stationId, $id, $stationPlaylist);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling StationsPlaylistsApi->editPlaylist: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **id** | **int**| Playlist ID | |
+| **stationPlaylist** | [**\AzuraCast\Model\StationPlaylist**](../Model/StationPlaylist.md)|  | [optional] |
+
+### Return type
+
+[**\AzuraCast\Model\ApiStatus**](../Model/ApiStatus.md)
+
+### Authorization
+
+[ApiKey](../../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getPlaylist()`
+
+```php
+getPlaylist($stationId, $id): \AzuraCast\Model\StationPlaylist
+```
+
+
+
+Retrieve details for a single playlist.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: ApiKey
+$config = AzuraCast\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = AzuraCast\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
+
+$apiInstance = new AzuraCast\Api\StationsPlaylistsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$id = 56; // int | Playlist ID
+
+try {
+    $result = $apiInstance->getPlaylist($stationId, $id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling StationsPlaylistsApi->getPlaylist: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **id** | **int**| Playlist ID | |
+
+### Return type
+
+[**\AzuraCast\Model\StationPlaylist**](../Model/StationPlaylist.md)
+
+### Authorization
+
+[ApiKey](../../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getPlaylists()`
+
+```php
+getPlaylists($stationId): \AzuraCast\Model\StationPlaylist[]
+```
+
+
+
+List all current playlists.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: ApiKey
+$config = AzuraCast\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = AzuraCast\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
+
+$apiInstance = new AzuraCast\Api\StationsPlaylistsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+
+try {
+    $result = $apiInstance->getPlaylists($stationId);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling StationsPlaylistsApi->getPlaylists: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+
+### Return type
+
+[**\AzuraCast\Model\StationPlaylist[]**](../Model/StationPlaylist.md)
+
+### Authorization
+
+[ApiKey](../../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
