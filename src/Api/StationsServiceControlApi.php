@@ -134,7 +134,7 @@ class StationsServiceControlApi
     /**
      * Operation doBackendServiceAction
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  string $action The action to perform (for all: start, stop, restart, skip, disconnect) (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['doBackendServiceAction'] to see the possible values for this operation
      *
@@ -142,16 +142,16 @@ class StationsServiceControlApi
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function doBackendServiceAction($stationId, $action, string $contentType = self::contentTypes['doBackendServiceAction'][0])
+    public function doBackendServiceAction($station_id, $action, string $contentType = self::contentTypes['doBackendServiceAction'][0])
     {
-        list($response) = $this->doBackendServiceActionWithHttpInfo($stationId, $action, $contentType);
+        list($response) = $this->doBackendServiceActionWithHttpInfo($station_id, $action, $contentType);
         return $response;
     }
 
     /**
      * Operation doBackendServiceActionWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $action The action to perform (for all: start, stop, restart, skip, disconnect) (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['doBackendServiceAction'] to see the possible values for this operation
      *
@@ -159,9 +159,9 @@ class StationsServiceControlApi
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function doBackendServiceActionWithHttpInfo($stationId, $action, string $contentType = self::contentTypes['doBackendServiceAction'][0])
+    public function doBackendServiceActionWithHttpInfo($station_id, $action, string $contentType = self::contentTypes['doBackendServiceAction'][0])
     {
-        $request = $this->doBackendServiceActionRequest($stationId, $action, $contentType);
+        $request = $this->doBackendServiceActionRequest($station_id, $action, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -379,16 +379,16 @@ class StationsServiceControlApi
     /**
      * Operation doBackendServiceActionAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $action The action to perform (for all: start, stop, restart, skip, disconnect) (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['doBackendServiceAction'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function doBackendServiceActionAsync($stationId, $action, string $contentType = self::contentTypes['doBackendServiceAction'][0])
+    public function doBackendServiceActionAsync($station_id, $action, string $contentType = self::contentTypes['doBackendServiceAction'][0])
     {
-        return $this->doBackendServiceActionAsyncWithHttpInfo($stationId, $action, $contentType)
+        return $this->doBackendServiceActionAsyncWithHttpInfo($station_id, $action, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -399,17 +399,17 @@ class StationsServiceControlApi
     /**
      * Operation doBackendServiceActionAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $action The action to perform (for all: start, stop, restart, skip, disconnect) (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['doBackendServiceAction'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function doBackendServiceActionAsyncWithHttpInfo($stationId, $action, string $contentType = self::contentTypes['doBackendServiceAction'][0])
+    public function doBackendServiceActionAsyncWithHttpInfo($station_id, $action, string $contentType = self::contentTypes['doBackendServiceAction'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStatus';
-        $request = $this->doBackendServiceActionRequest($stationId, $action, $contentType);
+        $request = $this->doBackendServiceActionRequest($station_id, $action, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -450,20 +450,20 @@ class StationsServiceControlApi
     /**
      * Create request for operation 'doBackendServiceAction'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $action The action to perform (for all: start, stop, restart, skip, disconnect) (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['doBackendServiceAction'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function doBackendServiceActionRequest($stationId, $action, string $contentType = self::contentTypes['doBackendServiceAction'][0])
+    public function doBackendServiceActionRequest($station_id, $action, string $contentType = self::contentTypes['doBackendServiceAction'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling doBackendServiceAction'
+                'Missing the required parameter $station_id when calling doBackendServiceAction'
             );
         }
 
@@ -485,10 +485,10 @@ class StationsServiceControlApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -563,7 +563,7 @@ class StationsServiceControlApi
     /**
      * Operation doFrontendServiceAction
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  string $action The action to perform (start, stop, restart) (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['doFrontendServiceAction'] to see the possible values for this operation
      *
@@ -571,16 +571,16 @@ class StationsServiceControlApi
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function doFrontendServiceAction($stationId, $action, string $contentType = self::contentTypes['doFrontendServiceAction'][0])
+    public function doFrontendServiceAction($station_id, $action, string $contentType = self::contentTypes['doFrontendServiceAction'][0])
     {
-        list($response) = $this->doFrontendServiceActionWithHttpInfo($stationId, $action, $contentType);
+        list($response) = $this->doFrontendServiceActionWithHttpInfo($station_id, $action, $contentType);
         return $response;
     }
 
     /**
      * Operation doFrontendServiceActionWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $action The action to perform (start, stop, restart) (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['doFrontendServiceAction'] to see the possible values for this operation
      *
@@ -588,9 +588,9 @@ class StationsServiceControlApi
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function doFrontendServiceActionWithHttpInfo($stationId, $action, string $contentType = self::contentTypes['doFrontendServiceAction'][0])
+    public function doFrontendServiceActionWithHttpInfo($station_id, $action, string $contentType = self::contentTypes['doFrontendServiceAction'][0])
     {
-        $request = $this->doFrontendServiceActionRequest($stationId, $action, $contentType);
+        $request = $this->doFrontendServiceActionRequest($station_id, $action, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -808,16 +808,16 @@ class StationsServiceControlApi
     /**
      * Operation doFrontendServiceActionAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $action The action to perform (start, stop, restart) (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['doFrontendServiceAction'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function doFrontendServiceActionAsync($stationId, $action, string $contentType = self::contentTypes['doFrontendServiceAction'][0])
+    public function doFrontendServiceActionAsync($station_id, $action, string $contentType = self::contentTypes['doFrontendServiceAction'][0])
     {
-        return $this->doFrontendServiceActionAsyncWithHttpInfo($stationId, $action, $contentType)
+        return $this->doFrontendServiceActionAsyncWithHttpInfo($station_id, $action, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -828,17 +828,17 @@ class StationsServiceControlApi
     /**
      * Operation doFrontendServiceActionAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $action The action to perform (start, stop, restart) (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['doFrontendServiceAction'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function doFrontendServiceActionAsyncWithHttpInfo($stationId, $action, string $contentType = self::contentTypes['doFrontendServiceAction'][0])
+    public function doFrontendServiceActionAsyncWithHttpInfo($station_id, $action, string $contentType = self::contentTypes['doFrontendServiceAction'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStatus';
-        $request = $this->doFrontendServiceActionRequest($stationId, $action, $contentType);
+        $request = $this->doFrontendServiceActionRequest($station_id, $action, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -879,20 +879,20 @@ class StationsServiceControlApi
     /**
      * Create request for operation 'doFrontendServiceAction'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $action The action to perform (start, stop, restart) (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['doFrontendServiceAction'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function doFrontendServiceActionRequest($stationId, $action, string $contentType = self::contentTypes['doFrontendServiceAction'][0])
+    public function doFrontendServiceActionRequest($station_id, $action, string $contentType = self::contentTypes['doFrontendServiceAction'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling doFrontendServiceAction'
+                'Missing the required parameter $station_id when calling doFrontendServiceAction'
             );
         }
 
@@ -914,10 +914,10 @@ class StationsServiceControlApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -992,32 +992,32 @@ class StationsServiceControlApi
     /**
      * Operation getServiceStatus
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getServiceStatus'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStationServiceStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function getServiceStatus($stationId, string $contentType = self::contentTypes['getServiceStatus'][0])
+    public function getServiceStatus($station_id, string $contentType = self::contentTypes['getServiceStatus'][0])
     {
-        list($response) = $this->getServiceStatusWithHttpInfo($stationId, $contentType);
+        list($response) = $this->getServiceStatusWithHttpInfo($station_id, $contentType);
         return $response;
     }
 
     /**
      * Operation getServiceStatusWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getServiceStatus'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStationServiceStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getServiceStatusWithHttpInfo($stationId, string $contentType = self::contentTypes['getServiceStatus'][0])
+    public function getServiceStatusWithHttpInfo($station_id, string $contentType = self::contentTypes['getServiceStatus'][0])
     {
-        $request = $this->getServiceStatusRequest($stationId, $contentType);
+        $request = $this->getServiceStatusRequest($station_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1235,15 +1235,15 @@ class StationsServiceControlApi
     /**
      * Operation getServiceStatusAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getServiceStatus'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getServiceStatusAsync($stationId, string $contentType = self::contentTypes['getServiceStatus'][0])
+    public function getServiceStatusAsync($station_id, string $contentType = self::contentTypes['getServiceStatus'][0])
     {
-        return $this->getServiceStatusAsyncWithHttpInfo($stationId, $contentType)
+        return $this->getServiceStatusAsyncWithHttpInfo($station_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1254,16 +1254,16 @@ class StationsServiceControlApi
     /**
      * Operation getServiceStatusAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getServiceStatus'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getServiceStatusAsyncWithHttpInfo($stationId, string $contentType = self::contentTypes['getServiceStatus'][0])
+    public function getServiceStatusAsyncWithHttpInfo($station_id, string $contentType = self::contentTypes['getServiceStatus'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStationServiceStatus';
-        $request = $this->getServiceStatusRequest($stationId, $contentType);
+        $request = $this->getServiceStatusRequest($station_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1304,19 +1304,19 @@ class StationsServiceControlApi
     /**
      * Create request for operation 'getServiceStatus'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getServiceStatus'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getServiceStatusRequest($stationId, string $contentType = self::contentTypes['getServiceStatus'][0])
+    public function getServiceStatusRequest($station_id, string $contentType = self::contentTypes['getServiceStatus'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling getServiceStatus'
+                'Missing the required parameter $station_id when calling getServiceStatus'
             );
         }
 
@@ -1331,10 +1331,10 @@ class StationsServiceControlApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -1401,32 +1401,32 @@ class StationsServiceControlApi
     /**
      * Operation restartServices
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restartServices'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function restartServices($stationId, string $contentType = self::contentTypes['restartServices'][0])
+    public function restartServices($station_id, string $contentType = self::contentTypes['restartServices'][0])
     {
-        list($response) = $this->restartServicesWithHttpInfo($stationId, $contentType);
+        list($response) = $this->restartServicesWithHttpInfo($station_id, $contentType);
         return $response;
     }
 
     /**
      * Operation restartServicesWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restartServices'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function restartServicesWithHttpInfo($stationId, string $contentType = self::contentTypes['restartServices'][0])
+    public function restartServicesWithHttpInfo($station_id, string $contentType = self::contentTypes['restartServices'][0])
     {
-        $request = $this->restartServicesRequest($stationId, $contentType);
+        $request = $this->restartServicesRequest($station_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1644,15 +1644,15 @@ class StationsServiceControlApi
     /**
      * Operation restartServicesAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restartServices'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function restartServicesAsync($stationId, string $contentType = self::contentTypes['restartServices'][0])
+    public function restartServicesAsync($station_id, string $contentType = self::contentTypes['restartServices'][0])
     {
-        return $this->restartServicesAsyncWithHttpInfo($stationId, $contentType)
+        return $this->restartServicesAsyncWithHttpInfo($station_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1663,16 +1663,16 @@ class StationsServiceControlApi
     /**
      * Operation restartServicesAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restartServices'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function restartServicesAsyncWithHttpInfo($stationId, string $contentType = self::contentTypes['restartServices'][0])
+    public function restartServicesAsyncWithHttpInfo($station_id, string $contentType = self::contentTypes['restartServices'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStatus';
-        $request = $this->restartServicesRequest($stationId, $contentType);
+        $request = $this->restartServicesRequest($station_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1713,19 +1713,19 @@ class StationsServiceControlApi
     /**
      * Create request for operation 'restartServices'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restartServices'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function restartServicesRequest($stationId, string $contentType = self::contentTypes['restartServices'][0])
+    public function restartServicesRequest($station_id, string $contentType = self::contentTypes['restartServices'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling restartServices'
+                'Missing the required parameter $station_id when calling restartServices'
             );
         }
 
@@ -1740,10 +1740,10 @@ class StationsServiceControlApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }

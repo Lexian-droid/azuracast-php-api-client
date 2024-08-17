@@ -137,34 +137,34 @@ class StationsHLSStreamsApi
     /**
      * Operation addHlsStream
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
-     * @param  \AzuraCast\Model\StationMount $stationMount stationMount (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
+     * @param  \AzuraCast\Model\StationMount $station_mount station_mount (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addHlsStream'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\StationMount|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function addHlsStream($stationId, $stationMount = null, string $contentType = self::contentTypes['addHlsStream'][0])
+    public function addHlsStream($station_id, $station_mount = null, string $contentType = self::contentTypes['addHlsStream'][0])
     {
-        list($response) = $this->addHlsStreamWithHttpInfo($stationId, $stationMount, $contentType);
+        list($response) = $this->addHlsStreamWithHttpInfo($station_id, $station_mount, $contentType);
         return $response;
     }
 
     /**
      * Operation addHlsStreamWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  \AzuraCast\Model\StationMount $stationMount (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  \AzuraCast\Model\StationMount $station_mount (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addHlsStream'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\StationMount|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function addHlsStreamWithHttpInfo($stationId, $stationMount = null, string $contentType = self::contentTypes['addHlsStream'][0])
+    public function addHlsStreamWithHttpInfo($station_id, $station_mount = null, string $contentType = self::contentTypes['addHlsStream'][0])
     {
-        $request = $this->addHlsStreamRequest($stationId, $stationMount, $contentType);
+        $request = $this->addHlsStreamRequest($station_id, $station_mount, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -347,16 +347,16 @@ class StationsHLSStreamsApi
     /**
      * Operation addHlsStreamAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  \AzuraCast\Model\StationMount $stationMount (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  \AzuraCast\Model\StationMount $station_mount (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addHlsStream'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addHlsStreamAsync($stationId, $stationMount = null, string $contentType = self::contentTypes['addHlsStream'][0])
+    public function addHlsStreamAsync($station_id, $station_mount = null, string $contentType = self::contentTypes['addHlsStream'][0])
     {
-        return $this->addHlsStreamAsyncWithHttpInfo($stationId, $stationMount, $contentType)
+        return $this->addHlsStreamAsyncWithHttpInfo($station_id, $station_mount, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -367,17 +367,17 @@ class StationsHLSStreamsApi
     /**
      * Operation addHlsStreamAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  \AzuraCast\Model\StationMount $stationMount (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  \AzuraCast\Model\StationMount $station_mount (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addHlsStream'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addHlsStreamAsyncWithHttpInfo($stationId, $stationMount = null, string $contentType = self::contentTypes['addHlsStream'][0])
+    public function addHlsStreamAsyncWithHttpInfo($station_id, $station_mount = null, string $contentType = self::contentTypes['addHlsStream'][0])
     {
         $returnType = '\AzuraCast\Model\StationMount';
-        $request = $this->addHlsStreamRequest($stationId, $stationMount, $contentType);
+        $request = $this->addHlsStreamRequest($station_id, $station_mount, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -418,20 +418,20 @@ class StationsHLSStreamsApi
     /**
      * Create request for operation 'addHlsStream'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  \AzuraCast\Model\StationMount $stationMount (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  \AzuraCast\Model\StationMount $station_mount (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addHlsStream'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function addHlsStreamRequest($stationId, $stationMount = null, string $contentType = self::contentTypes['addHlsStream'][0])
+    public function addHlsStreamRequest($station_id, $station_mount = null, string $contentType = self::contentTypes['addHlsStream'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling addHlsStream'
+                'Missing the required parameter $station_id when calling addHlsStream'
             );
         }
 
@@ -447,10 +447,10 @@ class StationsHLSStreamsApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -463,12 +463,12 @@ class StationsHLSStreamsApi
         );
 
         // for model (json/xml)
-        if (isset($stationMount)) {
+        if (isset($station_mount)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($stationMount));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($station_mount));
             } else {
-                $httpBody = $stationMount;
+                $httpBody = $station_mount;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -524,7 +524,7 @@ class StationsHLSStreamsApi
     /**
      * Operation deleteHlsStream
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  int $id HLS Stream ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteHlsStream'] to see the possible values for this operation
      *
@@ -532,16 +532,16 @@ class StationsHLSStreamsApi
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function deleteHlsStream($stationId, $id, string $contentType = self::contentTypes['deleteHlsStream'][0])
+    public function deleteHlsStream($station_id, $id, string $contentType = self::contentTypes['deleteHlsStream'][0])
     {
-        list($response) = $this->deleteHlsStreamWithHttpInfo($stationId, $id, $contentType);
+        list($response) = $this->deleteHlsStreamWithHttpInfo($station_id, $id, $contentType);
         return $response;
     }
 
     /**
      * Operation deleteHlsStreamWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id HLS Stream ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteHlsStream'] to see the possible values for this operation
      *
@@ -549,9 +549,9 @@ class StationsHLSStreamsApi
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteHlsStreamWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['deleteHlsStream'][0])
+    public function deleteHlsStreamWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['deleteHlsStream'][0])
     {
-        $request = $this->deleteHlsStreamRequest($stationId, $id, $contentType);
+        $request = $this->deleteHlsStreamRequest($station_id, $id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -769,16 +769,16 @@ class StationsHLSStreamsApi
     /**
      * Operation deleteHlsStreamAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id HLS Stream ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteHlsStream'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteHlsStreamAsync($stationId, $id, string $contentType = self::contentTypes['deleteHlsStream'][0])
+    public function deleteHlsStreamAsync($station_id, $id, string $contentType = self::contentTypes['deleteHlsStream'][0])
     {
-        return $this->deleteHlsStreamAsyncWithHttpInfo($stationId, $id, $contentType)
+        return $this->deleteHlsStreamAsyncWithHttpInfo($station_id, $id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -789,17 +789,17 @@ class StationsHLSStreamsApi
     /**
      * Operation deleteHlsStreamAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id HLS Stream ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteHlsStream'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteHlsStreamAsyncWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['deleteHlsStream'][0])
+    public function deleteHlsStreamAsyncWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['deleteHlsStream'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStatus';
-        $request = $this->deleteHlsStreamRequest($stationId, $id, $contentType);
+        $request = $this->deleteHlsStreamRequest($station_id, $id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -840,20 +840,20 @@ class StationsHLSStreamsApi
     /**
      * Create request for operation 'deleteHlsStream'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id HLS Stream ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteHlsStream'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function deleteHlsStreamRequest($stationId, $id, string $contentType = self::contentTypes['deleteHlsStream'][0])
+    public function deleteHlsStreamRequest($station_id, $id, string $contentType = self::contentTypes['deleteHlsStream'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling deleteHlsStream'
+                'Missing the required parameter $station_id when calling deleteHlsStream'
             );
         }
 
@@ -875,10 +875,10 @@ class StationsHLSStreamsApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -953,36 +953,36 @@ class StationsHLSStreamsApi
     /**
      * Operation editHlsStream
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  int $id HLS Stream ID (required)
-     * @param  \AzuraCast\Model\StationMount $stationMount stationMount (optional)
+     * @param  \AzuraCast\Model\StationMount $station_mount station_mount (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editHlsStream'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function editHlsStream($stationId, $id, $stationMount = null, string $contentType = self::contentTypes['editHlsStream'][0])
+    public function editHlsStream($station_id, $id, $station_mount = null, string $contentType = self::contentTypes['editHlsStream'][0])
     {
-        list($response) = $this->editHlsStreamWithHttpInfo($stationId, $id, $stationMount, $contentType);
+        list($response) = $this->editHlsStreamWithHttpInfo($station_id, $id, $station_mount, $contentType);
         return $response;
     }
 
     /**
      * Operation editHlsStreamWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id HLS Stream ID (required)
-     * @param  \AzuraCast\Model\StationMount $stationMount (optional)
+     * @param  \AzuraCast\Model\StationMount $station_mount (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editHlsStream'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function editHlsStreamWithHttpInfo($stationId, $id, $stationMount = null, string $contentType = self::contentTypes['editHlsStream'][0])
+    public function editHlsStreamWithHttpInfo($station_id, $id, $station_mount = null, string $contentType = self::contentTypes['editHlsStream'][0])
     {
-        $request = $this->editHlsStreamRequest($stationId, $id, $stationMount, $contentType);
+        $request = $this->editHlsStreamRequest($station_id, $id, $station_mount, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1200,17 +1200,17 @@ class StationsHLSStreamsApi
     /**
      * Operation editHlsStreamAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id HLS Stream ID (required)
-     * @param  \AzuraCast\Model\StationMount $stationMount (optional)
+     * @param  \AzuraCast\Model\StationMount $station_mount (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editHlsStream'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function editHlsStreamAsync($stationId, $id, $stationMount = null, string $contentType = self::contentTypes['editHlsStream'][0])
+    public function editHlsStreamAsync($station_id, $id, $station_mount = null, string $contentType = self::contentTypes['editHlsStream'][0])
     {
-        return $this->editHlsStreamAsyncWithHttpInfo($stationId, $id, $stationMount, $contentType)
+        return $this->editHlsStreamAsyncWithHttpInfo($station_id, $id, $station_mount, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1221,18 +1221,18 @@ class StationsHLSStreamsApi
     /**
      * Operation editHlsStreamAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id HLS Stream ID (required)
-     * @param  \AzuraCast\Model\StationMount $stationMount (optional)
+     * @param  \AzuraCast\Model\StationMount $station_mount (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editHlsStream'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function editHlsStreamAsyncWithHttpInfo($stationId, $id, $stationMount = null, string $contentType = self::contentTypes['editHlsStream'][0])
+    public function editHlsStreamAsyncWithHttpInfo($station_id, $id, $station_mount = null, string $contentType = self::contentTypes['editHlsStream'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStatus';
-        $request = $this->editHlsStreamRequest($stationId, $id, $stationMount, $contentType);
+        $request = $this->editHlsStreamRequest($station_id, $id, $station_mount, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1273,21 +1273,21 @@ class StationsHLSStreamsApi
     /**
      * Create request for operation 'editHlsStream'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id HLS Stream ID (required)
-     * @param  \AzuraCast\Model\StationMount $stationMount (optional)
+     * @param  \AzuraCast\Model\StationMount $station_mount (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editHlsStream'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function editHlsStreamRequest($stationId, $id, $stationMount = null, string $contentType = self::contentTypes['editHlsStream'][0])
+    public function editHlsStreamRequest($station_id, $id, $station_mount = null, string $contentType = self::contentTypes['editHlsStream'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling editHlsStream'
+                'Missing the required parameter $station_id when calling editHlsStream'
             );
         }
 
@@ -1310,10 +1310,10 @@ class StationsHLSStreamsApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -1334,12 +1334,12 @@ class StationsHLSStreamsApi
         );
 
         // for model (json/xml)
-        if (isset($stationMount)) {
+        if (isset($station_mount)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($stationMount));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($station_mount));
             } else {
-                $httpBody = $stationMount;
+                $httpBody = $station_mount;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1395,7 +1395,7 @@ class StationsHLSStreamsApi
     /**
      * Operation getHlsStream
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  int $id HLS Stream ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getHlsStream'] to see the possible values for this operation
      *
@@ -1403,16 +1403,16 @@ class StationsHLSStreamsApi
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\StationMount|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function getHlsStream($stationId, $id, string $contentType = self::contentTypes['getHlsStream'][0])
+    public function getHlsStream($station_id, $id, string $contentType = self::contentTypes['getHlsStream'][0])
     {
-        list($response) = $this->getHlsStreamWithHttpInfo($stationId, $id, $contentType);
+        list($response) = $this->getHlsStreamWithHttpInfo($station_id, $id, $contentType);
         return $response;
     }
 
     /**
      * Operation getHlsStreamWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id HLS Stream ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getHlsStream'] to see the possible values for this operation
      *
@@ -1420,9 +1420,9 @@ class StationsHLSStreamsApi
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\StationMount|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getHlsStreamWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['getHlsStream'][0])
+    public function getHlsStreamWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['getHlsStream'][0])
     {
-        $request = $this->getHlsStreamRequest($stationId, $id, $contentType);
+        $request = $this->getHlsStreamRequest($station_id, $id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1640,16 +1640,16 @@ class StationsHLSStreamsApi
     /**
      * Operation getHlsStreamAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id HLS Stream ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getHlsStream'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getHlsStreamAsync($stationId, $id, string $contentType = self::contentTypes['getHlsStream'][0])
+    public function getHlsStreamAsync($station_id, $id, string $contentType = self::contentTypes['getHlsStream'][0])
     {
-        return $this->getHlsStreamAsyncWithHttpInfo($stationId, $id, $contentType)
+        return $this->getHlsStreamAsyncWithHttpInfo($station_id, $id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1660,17 +1660,17 @@ class StationsHLSStreamsApi
     /**
      * Operation getHlsStreamAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id HLS Stream ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getHlsStream'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getHlsStreamAsyncWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['getHlsStream'][0])
+    public function getHlsStreamAsyncWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['getHlsStream'][0])
     {
         $returnType = '\AzuraCast\Model\StationMount';
-        $request = $this->getHlsStreamRequest($stationId, $id, $contentType);
+        $request = $this->getHlsStreamRequest($station_id, $id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1711,20 +1711,20 @@ class StationsHLSStreamsApi
     /**
      * Create request for operation 'getHlsStream'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id HLS Stream ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getHlsStream'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getHlsStreamRequest($stationId, $id, string $contentType = self::contentTypes['getHlsStream'][0])
+    public function getHlsStreamRequest($station_id, $id, string $contentType = self::contentTypes['getHlsStream'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling getHlsStream'
+                'Missing the required parameter $station_id when calling getHlsStream'
             );
         }
 
@@ -1746,10 +1746,10 @@ class StationsHLSStreamsApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -1824,32 +1824,32 @@ class StationsHLSStreamsApi
     /**
      * Operation getHlsStreams
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getHlsStreams'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\StationMount[]|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function getHlsStreams($stationId, string $contentType = self::contentTypes['getHlsStreams'][0])
+    public function getHlsStreams($station_id, string $contentType = self::contentTypes['getHlsStreams'][0])
     {
-        list($response) = $this->getHlsStreamsWithHttpInfo($stationId, $contentType);
+        list($response) = $this->getHlsStreamsWithHttpInfo($station_id, $contentType);
         return $response;
     }
 
     /**
      * Operation getHlsStreamsWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getHlsStreams'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\StationMount[]|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getHlsStreamsWithHttpInfo($stationId, string $contentType = self::contentTypes['getHlsStreams'][0])
+    public function getHlsStreamsWithHttpInfo($station_id, string $contentType = self::contentTypes['getHlsStreams'][0])
     {
-        $request = $this->getHlsStreamsRequest($stationId, $contentType);
+        $request = $this->getHlsStreamsRequest($station_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2032,15 +2032,15 @@ class StationsHLSStreamsApi
     /**
      * Operation getHlsStreamsAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getHlsStreams'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getHlsStreamsAsync($stationId, string $contentType = self::contentTypes['getHlsStreams'][0])
+    public function getHlsStreamsAsync($station_id, string $contentType = self::contentTypes['getHlsStreams'][0])
     {
-        return $this->getHlsStreamsAsyncWithHttpInfo($stationId, $contentType)
+        return $this->getHlsStreamsAsyncWithHttpInfo($station_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2051,16 +2051,16 @@ class StationsHLSStreamsApi
     /**
      * Operation getHlsStreamsAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getHlsStreams'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getHlsStreamsAsyncWithHttpInfo($stationId, string $contentType = self::contentTypes['getHlsStreams'][0])
+    public function getHlsStreamsAsyncWithHttpInfo($station_id, string $contentType = self::contentTypes['getHlsStreams'][0])
     {
         $returnType = '\AzuraCast\Model\StationMount[]';
-        $request = $this->getHlsStreamsRequest($stationId, $contentType);
+        $request = $this->getHlsStreamsRequest($station_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2101,19 +2101,19 @@ class StationsHLSStreamsApi
     /**
      * Create request for operation 'getHlsStreams'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getHlsStreams'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getHlsStreamsRequest($stationId, string $contentType = self::contentTypes['getHlsStreams'][0])
+    public function getHlsStreamsRequest($station_id, string $contentType = self::contentTypes['getHlsStreams'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling getHlsStreams'
+                'Missing the required parameter $station_id when calling getHlsStreams'
             );
         }
 
@@ -2128,10 +2128,10 @@ class StationsHLSStreamsApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }

@@ -17,7 +17,7 @@ All URIs are relative to https://demo.azuracast.com/api, except if the operation
 ## `addMount()`
 
 ```php
-addMount($stationId, $stationMount): \AzuraCast\Model\StationMount
+addMount($station_id, $station_mount): \AzuraCast\Model\StationMount
 ```
 
 
@@ -43,11 +43,11 @@ $apiInstance = new AzuraCast\Api\StationsMountPointsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
-$stationMount = new \AzuraCast\Model\StationMount(); // \AzuraCast\Model\StationMount
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_mount = new \AzuraCast\Model\StationMount(); // \AzuraCast\Model\StationMount
 
 try {
-    $result = $apiInstance->addMount($stationId, $stationMount);
+    $result = $apiInstance->addMount($station_id, $station_mount);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsMountPointsApi->addMount: ', $e->getMessage(), PHP_EOL;
@@ -58,8 +58,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
-| **stationMount** | [**\AzuraCast\Model\StationMount**](../Model/StationMount.md)|  | [optional] |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_mount** | [**\AzuraCast\Model\StationMount**](../Model/StationMount.md)|  | [optional] |
 
 ### Return type
 
@@ -81,7 +81,7 @@ try {
 ## `deleteMount()`
 
 ```php
-deleteMount($stationId, $id): \AzuraCast\Model\ApiStatus
+deleteMount($station_id, $id): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -107,11 +107,11 @@ $apiInstance = new AzuraCast\Api\StationsMountPointsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 56; // int | StationMount ID
 
 try {
-    $result = $apiInstance->deleteMount($stationId, $id);
+    $result = $apiInstance->deleteMount($station_id, $id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsMountPointsApi->deleteMount: ', $e->getMessage(), PHP_EOL;
@@ -122,7 +122,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **int**| StationMount ID | |
 
 ### Return type
@@ -145,7 +145,7 @@ try {
 ## `deleteMountIntro()`
 
 ```php
-deleteMountIntro($stationId, $id): \AzuraCast\Model\ApiStatus
+deleteMountIntro($station_id, $id): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -171,11 +171,11 @@ $apiInstance = new AzuraCast\Api\StationsMountPointsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 56; // int | Mount Point ID
 
 try {
-    $result = $apiInstance->deleteMountIntro($stationId, $id);
+    $result = $apiInstance->deleteMountIntro($station_id, $id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsMountPointsApi->deleteMountIntro: ', $e->getMessage(), PHP_EOL;
@@ -186,7 +186,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **int**| Mount Point ID | |
 
 ### Return type
@@ -209,7 +209,7 @@ try {
 ## `editMount()`
 
 ```php
-editMount($stationId, $id, $stationMount): \AzuraCast\Model\ApiStatus
+editMount($station_id, $id, $station_mount): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -235,12 +235,12 @@ $apiInstance = new AzuraCast\Api\StationsMountPointsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 56; // int | Streamer ID
-$stationMount = new \AzuraCast\Model\StationMount(); // \AzuraCast\Model\StationMount
+$station_mount = new \AzuraCast\Model\StationMount(); // \AzuraCast\Model\StationMount
 
 try {
-    $result = $apiInstance->editMount($stationId, $id, $stationMount);
+    $result = $apiInstance->editMount($station_id, $id, $station_mount);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsMountPointsApi->editMount: ', $e->getMessage(), PHP_EOL;
@@ -251,9 +251,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **int**| Streamer ID | |
-| **stationMount** | [**\AzuraCast\Model\StationMount**](../Model/StationMount.md)|  | [optional] |
+| **station_mount** | [**\AzuraCast\Model\StationMount**](../Model/StationMount.md)|  | [optional] |
 
 ### Return type
 
@@ -275,7 +275,7 @@ try {
 ## `getMount()`
 
 ```php
-getMount($stationId, $id): \AzuraCast\Model\StationMount
+getMount($station_id, $id): \AzuraCast\Model\StationMount
 ```
 
 
@@ -301,11 +301,11 @@ $apiInstance = new AzuraCast\Api\StationsMountPointsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 56; // int | Streamer ID
 
 try {
-    $result = $apiInstance->getMount($stationId, $id);
+    $result = $apiInstance->getMount($station_id, $id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsMountPointsApi->getMount: ', $e->getMessage(), PHP_EOL;
@@ -316,7 +316,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **int**| Streamer ID | |
 
 ### Return type
@@ -339,7 +339,7 @@ try {
 ## `getMountIntro()`
 
 ```php
-getMountIntro($stationId, $id)
+getMountIntro($station_id, $id)
 ```
 
 
@@ -365,11 +365,11 @@ $apiInstance = new AzuraCast\Api\StationsMountPointsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 56; // int | Mount Point ID
 
 try {
-    $apiInstance->getMountIntro($stationId, $id);
+    $apiInstance->getMountIntro($station_id, $id);
 } catch (Exception $e) {
     echo 'Exception when calling StationsMountPointsApi->getMountIntro: ', $e->getMessage(), PHP_EOL;
 }
@@ -379,7 +379,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **int**| Mount Point ID | |
 
 ### Return type
@@ -402,7 +402,7 @@ void (empty response body)
 ## `getStationMounts()`
 
 ```php
-getStationMounts($stationId): \AzuraCast\Model\StationMount[]
+getStationMounts($station_id): \AzuraCast\Model\StationMount[]
 ```
 
 
@@ -428,10 +428,10 @@ $apiInstance = new AzuraCast\Api\StationsMountPointsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 
 try {
-    $result = $apiInstance->getStationMounts($stationId);
+    $result = $apiInstance->getStationMounts($station_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsMountPointsApi->getStationMounts: ', $e->getMessage(), PHP_EOL;
@@ -442,7 +442,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 
 ### Return type
 
@@ -464,7 +464,7 @@ try {
 ## `postMountIntro()`
 
 ```php
-postMountIntro($stationId, $id): \AzuraCast\Model\ApiStatus
+postMountIntro($station_id, $id): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -490,11 +490,11 @@ $apiInstance = new AzuraCast\Api\StationsMountPointsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 56; // int | Mount Point ID
 
 try {
-    $result = $apiInstance->postMountIntro($stationId, $id);
+    $result = $apiInstance->postMountIntro($station_id, $id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsMountPointsApi->postMountIntro: ', $e->getMessage(), PHP_EOL;
@@ -505,7 +505,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **int**| Mount Point ID | |
 
 ### Return type

@@ -14,7 +14,7 @@ All URIs are relative to https://demo.azuracast.com/api, except if the operation
 ## `addCustomField()`
 
 ```php
-addCustomField($customField): \AzuraCast\Model\CustomField
+addCustomField($custom_field): \AzuraCast\Model\CustomField
 ```
 
 
@@ -40,10 +40,10 @@ $apiInstance = new AzuraCast\Api\AdministrationCustomFieldsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customField = new \AzuraCast\Model\CustomField(); // \AzuraCast\Model\CustomField
+$custom_field = new \AzuraCast\Model\CustomField(); // \AzuraCast\Model\CustomField
 
 try {
-    $result = $apiInstance->addCustomField($customField);
+    $result = $apiInstance->addCustomField($custom_field);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AdministrationCustomFieldsApi->addCustomField: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **customField** | [**\AzuraCast\Model\CustomField**](../Model/CustomField.md)|  | [optional] |
+| **custom_field** | [**\AzuraCast\Model\CustomField**](../Model/CustomField.md)|  | [optional] |
 
 ### Return type
 
@@ -138,7 +138,7 @@ try {
 ## `editCustomField()`
 
 ```php
-editCustomField($id, $customField): \AzuraCast\Model\ApiStatus
+editCustomField($id, $custom_field): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -165,10 +165,10 @@ $apiInstance = new AzuraCast\Api\AdministrationCustomFieldsApi(
     $config
 );
 $id = 56; // int | ID
-$customField = new \AzuraCast\Model\CustomField(); // \AzuraCast\Model\CustomField
+$custom_field = new \AzuraCast\Model\CustomField(); // \AzuraCast\Model\CustomField
 
 try {
-    $result = $apiInstance->editCustomField($id, $customField);
+    $result = $apiInstance->editCustomField($id, $custom_field);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AdministrationCustomFieldsApi->editCustomField: ', $e->getMessage(), PHP_EOL;
@@ -180,7 +180,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| ID | |
-| **customField** | [**\AzuraCast\Model\CustomField**](../Model/CustomField.md)|  | [optional] |
+| **custom_field** | [**\AzuraCast\Model\CustomField**](../Model/CustomField.md)|  | [optional] |
 
 ### Return type
 

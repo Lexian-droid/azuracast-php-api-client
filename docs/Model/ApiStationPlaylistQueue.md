@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**spmId** | **int** | ID of the StationPlaylistMedia record associating this track with the playlist | [optional]
-**mediaId** | **int** | ID of the StationPlaylistMedia record associating this track with the playlist | [optional]
-**songId** | **string** | The song&#39;s 32-character unique identifier hash | [optional]
+**spm_id** | **int** | ID of the StationPlaylistMedia record associating this track with the playlist | [optional]
+**media_id** | **int** | ID of the StationPlaylistMedia record associating this track with the playlist | [optional]
+**song_id** | **string** | The song&#39;s 32-character unique identifier hash | [optional]
 **artist** | **string** | The song artist. | [optional]
 **title** | **string** | The song title. | [optional]
 

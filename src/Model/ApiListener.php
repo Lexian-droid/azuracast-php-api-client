@@ -58,13 +58,13 @@ class ApiListener implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'ip' => 'string',
-        'userAgent' => 'string',
+        'user_agent' => 'string',
         'hash' => 'string',
-        'mountIsLocal' => 'bool',
-        'mountName' => 'string',
-        'connectedOn' => 'int',
-        'connectedUntil' => 'int',
-        'connectedTime' => 'int',
+        'mount_is_local' => 'bool',
+        'mount_name' => 'string',
+        'connected_on' => 'int',
+        'connected_until' => 'int',
+        'connected_time' => 'int',
         'device' => '\AzuraCast\Model\ApiListenerDevice',
         'location' => '\AzuraCast\Model\ApiListenerLocation'
     ];
@@ -78,13 +78,13 @@ class ApiListener implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'ip' => null,
-        'userAgent' => null,
+        'user_agent' => null,
         'hash' => null,
-        'mountIsLocal' => null,
-        'mountName' => null,
-        'connectedOn' => null,
-        'connectedUntil' => null,
-        'connectedTime' => null,
+        'mount_is_local' => null,
+        'mount_name' => null,
+        'connected_on' => null,
+        'connected_until' => null,
+        'connected_time' => null,
         'device' => null,
         'location' => null
     ];
@@ -96,13 +96,13 @@ class ApiListener implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'ip' => false,
-        'userAgent' => false,
+        'user_agent' => false,
         'hash' => false,
-        'mountIsLocal' => false,
-        'mountName' => false,
-        'connectedOn' => false,
-        'connectedUntil' => false,
-        'connectedTime' => false,
+        'mount_is_local' => false,
+        'mount_name' => false,
+        'connected_on' => false,
+        'connected_until' => false,
+        'connected_time' => false,
         'device' => false,
         'location' => false
     ];
@@ -194,13 +194,13 @@ class ApiListener implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'ip' => 'ip',
-        'userAgent' => 'user_agent',
+        'user_agent' => 'user_agent',
         'hash' => 'hash',
-        'mountIsLocal' => 'mount_is_local',
-        'mountName' => 'mount_name',
-        'connectedOn' => 'connected_on',
-        'connectedUntil' => 'connected_until',
-        'connectedTime' => 'connected_time',
+        'mount_is_local' => 'mount_is_local',
+        'mount_name' => 'mount_name',
+        'connected_on' => 'connected_on',
+        'connected_until' => 'connected_until',
+        'connected_time' => 'connected_time',
         'device' => 'device',
         'location' => 'location'
     ];
@@ -212,13 +212,13 @@ class ApiListener implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'ip' => 'setIp',
-        'userAgent' => 'setUserAgent',
+        'user_agent' => 'setUserAgent',
         'hash' => 'setHash',
-        'mountIsLocal' => 'setMountIsLocal',
-        'mountName' => 'setMountName',
-        'connectedOn' => 'setConnectedOn',
-        'connectedUntil' => 'setConnectedUntil',
-        'connectedTime' => 'setConnectedTime',
+        'mount_is_local' => 'setMountIsLocal',
+        'mount_name' => 'setMountName',
+        'connected_on' => 'setConnectedOn',
+        'connected_until' => 'setConnectedUntil',
+        'connected_time' => 'setConnectedTime',
         'device' => 'setDevice',
         'location' => 'setLocation'
     ];
@@ -230,13 +230,13 @@ class ApiListener implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'ip' => 'getIp',
-        'userAgent' => 'getUserAgent',
+        'user_agent' => 'getUserAgent',
         'hash' => 'getHash',
-        'mountIsLocal' => 'getMountIsLocal',
-        'mountName' => 'getMountName',
-        'connectedOn' => 'getConnectedOn',
-        'connectedUntil' => 'getConnectedUntil',
-        'connectedTime' => 'getConnectedTime',
+        'mount_is_local' => 'getMountIsLocal',
+        'mount_name' => 'getMountName',
+        'connected_on' => 'getConnectedOn',
+        'connected_until' => 'getConnectedUntil',
+        'connected_time' => 'getConnectedTime',
         'device' => 'getDevice',
         'location' => 'getLocation'
     ];
@@ -299,13 +299,13 @@ class ApiListener implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('ip', $data ?? [], null);
-        $this->setIfExists('userAgent', $data ?? [], null);
+        $this->setIfExists('user_agent', $data ?? [], null);
         $this->setIfExists('hash', $data ?? [], null);
-        $this->setIfExists('mountIsLocal', $data ?? [], null);
-        $this->setIfExists('mountName', $data ?? [], null);
-        $this->setIfExists('connectedOn', $data ?? [], null);
-        $this->setIfExists('connectedUntil', $data ?? [], null);
-        $this->setIfExists('connectedTime', $data ?? [], null);
+        $this->setIfExists('mount_is_local', $data ?? [], null);
+        $this->setIfExists('mount_name', $data ?? [], null);
+        $this->setIfExists('connected_on', $data ?? [], null);
+        $this->setIfExists('connected_until', $data ?? [], null);
+        $this->setIfExists('connected_time', $data ?? [], null);
         $this->setIfExists('device', $data ?? [], null);
         $this->setIfExists('location', $data ?? [], null);
     }
@@ -380,28 +380,28 @@ class ApiListener implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets userAgent
+     * Gets user_agent
      *
      * @return string|null
      */
     public function getUserAgent()
     {
-        return $this->container['userAgent'];
+        return $this->container['user_agent'];
     }
 
     /**
-     * Sets userAgent
+     * Sets user_agent
      *
-     * @param string|null $userAgent The listener's HTTP User-Agent
+     * @param string|null $user_agent The listener's HTTP User-Agent
      *
      * @return self
      */
-    public function setUserAgent($userAgent)
+    public function setUserAgent($user_agent)
     {
-        if (is_null($userAgent)) {
-            throw new \InvalidArgumentException('non-nullable userAgent cannot be null');
+        if (is_null($user_agent)) {
+            throw new \InvalidArgumentException('non-nullable user_agent cannot be null');
         }
-        $this->container['userAgent'] = $userAgent;
+        $this->container['user_agent'] = $user_agent;
 
         return $this;
     }
@@ -434,136 +434,136 @@ class ApiListener implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets mountIsLocal
+     * Gets mount_is_local
      *
      * @return bool|null
      */
     public function getMountIsLocal()
     {
-        return $this->container['mountIsLocal'];
+        return $this->container['mount_is_local'];
     }
 
     /**
-     * Sets mountIsLocal
+     * Sets mount_is_local
      *
-     * @param bool|null $mountIsLocal Whether the user is connected to a local mount point or a remote one.
+     * @param bool|null $mount_is_local Whether the user is connected to a local mount point or a remote one.
      *
      * @return self
      */
-    public function setMountIsLocal($mountIsLocal)
+    public function setMountIsLocal($mount_is_local)
     {
-        if (is_null($mountIsLocal)) {
-            throw new \InvalidArgumentException('non-nullable mountIsLocal cannot be null');
+        if (is_null($mount_is_local)) {
+            throw new \InvalidArgumentException('non-nullable mount_is_local cannot be null');
         }
-        $this->container['mountIsLocal'] = $mountIsLocal;
+        $this->container['mount_is_local'] = $mount_is_local;
 
         return $this;
     }
 
     /**
-     * Gets mountName
+     * Gets mount_name
      *
      * @return string|null
      */
     public function getMountName()
     {
-        return $this->container['mountName'];
+        return $this->container['mount_name'];
     }
 
     /**
-     * Sets mountName
+     * Sets mount_name
      *
-     * @param string|null $mountName The display name of the mount point.
+     * @param string|null $mount_name The display name of the mount point.
      *
      * @return self
      */
-    public function setMountName($mountName)
+    public function setMountName($mount_name)
     {
-        if (is_null($mountName)) {
-            throw new \InvalidArgumentException('non-nullable mountName cannot be null');
+        if (is_null($mount_name)) {
+            throw new \InvalidArgumentException('non-nullable mount_name cannot be null');
         }
-        $this->container['mountName'] = $mountName;
+        $this->container['mount_name'] = $mount_name;
 
         return $this;
     }
 
     /**
-     * Gets connectedOn
+     * Gets connected_on
      *
      * @return int|null
      */
     public function getConnectedOn()
     {
-        return $this->container['connectedOn'];
+        return $this->container['connected_on'];
     }
 
     /**
-     * Sets connectedOn
+     * Sets connected_on
      *
-     * @param int|null $connectedOn UNIX timestamp that the user first connected.
+     * @param int|null $connected_on UNIX timestamp that the user first connected.
      *
      * @return self
      */
-    public function setConnectedOn($connectedOn)
+    public function setConnectedOn($connected_on)
     {
-        if (is_null($connectedOn)) {
-            throw new \InvalidArgumentException('non-nullable connectedOn cannot be null');
+        if (is_null($connected_on)) {
+            throw new \InvalidArgumentException('non-nullable connected_on cannot be null');
         }
-        $this->container['connectedOn'] = $connectedOn;
+        $this->container['connected_on'] = $connected_on;
 
         return $this;
     }
 
     /**
-     * Gets connectedUntil
+     * Gets connected_until
      *
      * @return int|null
      */
     public function getConnectedUntil()
     {
-        return $this->container['connectedUntil'];
+        return $this->container['connected_until'];
     }
 
     /**
-     * Sets connectedUntil
+     * Sets connected_until
      *
-     * @param int|null $connectedUntil UNIX timestamp that the user disconnected (or the latest timestamp if they are still connected).
+     * @param int|null $connected_until UNIX timestamp that the user disconnected (or the latest timestamp if they are still connected).
      *
      * @return self
      */
-    public function setConnectedUntil($connectedUntil)
+    public function setConnectedUntil($connected_until)
     {
-        if (is_null($connectedUntil)) {
-            throw new \InvalidArgumentException('non-nullable connectedUntil cannot be null');
+        if (is_null($connected_until)) {
+            throw new \InvalidArgumentException('non-nullable connected_until cannot be null');
         }
-        $this->container['connectedUntil'] = $connectedUntil;
+        $this->container['connected_until'] = $connected_until;
 
         return $this;
     }
 
     /**
-     * Gets connectedTime
+     * Gets connected_time
      *
      * @return int|null
      */
     public function getConnectedTime()
     {
-        return $this->container['connectedTime'];
+        return $this->container['connected_time'];
     }
 
     /**
-     * Sets connectedTime
+     * Sets connected_time
      *
-     * @param int|null $connectedTime Number of seconds that the user has been connected.
+     * @param int|null $connected_time Number of seconds that the user has been connected.
      *
      * @return self
      */
-    public function setConnectedTime($connectedTime)
+    public function setConnectedTime($connected_time)
     {
-        if (is_null($connectedTime)) {
-            throw new \InvalidArgumentException('non-nullable connectedTime cannot be null');
+        if (is_null($connected_time)) {
+            throw new \InvalidArgumentException('non-nullable connected_time cannot be null');
         }
-        $this->container['connectedTime'] = $connectedTime;
+        $this->container['connected_time'] = $connected_time;
 
         return $this;
     }

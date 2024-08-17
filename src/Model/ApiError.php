@@ -60,8 +60,8 @@ class ApiError implements ModelInterface, ArrayAccess, \JsonSerializable
         'code' => 'int',
         'type' => 'string',
         'message' => 'string',
-        'formattedMessage' => 'string',
-        'extraData' => 'mixed[]',
+        'formatted_message' => 'string',
+        'extra_data' => 'mixed[]',
         'success' => 'bool'
     ];
 
@@ -76,8 +76,8 @@ class ApiError implements ModelInterface, ArrayAccess, \JsonSerializable
         'code' => null,
         'type' => null,
         'message' => null,
-        'formattedMessage' => null,
-        'extraData' => null,
+        'formatted_message' => null,
+        'extra_data' => null,
         'success' => null
     ];
 
@@ -90,8 +90,8 @@ class ApiError implements ModelInterface, ArrayAccess, \JsonSerializable
         'code' => false,
         'type' => false,
         'message' => false,
-        'formattedMessage' => true,
-        'extraData' => false,
+        'formatted_message' => true,
+        'extra_data' => false,
         'success' => false
     ];
 
@@ -184,8 +184,8 @@ class ApiError implements ModelInterface, ArrayAccess, \JsonSerializable
         'code' => 'code',
         'type' => 'type',
         'message' => 'message',
-        'formattedMessage' => 'formatted_message',
-        'extraData' => 'extra_data',
+        'formatted_message' => 'formatted_message',
+        'extra_data' => 'extra_data',
         'success' => 'success'
     ];
 
@@ -198,8 +198,8 @@ class ApiError implements ModelInterface, ArrayAccess, \JsonSerializable
         'code' => 'setCode',
         'type' => 'setType',
         'message' => 'setMessage',
-        'formattedMessage' => 'setFormattedMessage',
-        'extraData' => 'setExtraData',
+        'formatted_message' => 'setFormattedMessage',
+        'extra_data' => 'setExtraData',
         'success' => 'setSuccess'
     ];
 
@@ -212,8 +212,8 @@ class ApiError implements ModelInterface, ArrayAccess, \JsonSerializable
         'code' => 'getCode',
         'type' => 'getType',
         'message' => 'getMessage',
-        'formattedMessage' => 'getFormattedMessage',
-        'extraData' => 'getExtraData',
+        'formatted_message' => 'getFormattedMessage',
+        'extra_data' => 'getExtraData',
         'success' => 'getSuccess'
     ];
 
@@ -277,8 +277,8 @@ class ApiError implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('code', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('message', $data ?? [], null);
-        $this->setIfExists('formattedMessage', $data ?? [], null);
-        $this->setIfExists('extraData', $data ?? [], null);
+        $this->setIfExists('formatted_message', $data ?? [], null);
+        $this->setIfExists('extra_data', $data ?? [], null);
         $this->setIfExists('success', $data ?? [], null);
     }
 
@@ -406,62 +406,62 @@ class ApiError implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets formattedMessage
+     * Gets formatted_message
      *
      * @return string|null
      */
     public function getFormattedMessage()
     {
-        return $this->container['formattedMessage'];
+        return $this->container['formatted_message'];
     }
 
     /**
-     * Sets formattedMessage
+     * Sets formatted_message
      *
-     * @param string|null $formattedMessage The HTML-formatted text description of the error.
+     * @param string|null $formatted_message The HTML-formatted text description of the error.
      *
      * @return self
      */
-    public function setFormattedMessage($formattedMessage)
+    public function setFormattedMessage($formatted_message)
     {
-        if (is_null($formattedMessage)) {
-            array_push($this->openAPINullablesSetToNull, 'formattedMessage');
+        if (is_null($formatted_message)) {
+            array_push($this->openAPINullablesSetToNull, 'formatted_message');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('formattedMessage', $nullablesSetToNull);
+            $index = array_search('formatted_message', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['formattedMessage'] = $formattedMessage;
+        $this->container['formatted_message'] = $formatted_message;
 
         return $this;
     }
 
     /**
-     * Gets extraData
+     * Gets extra_data
      *
      * @return mixed[]|null
      */
     public function getExtraData()
     {
-        return $this->container['extraData'];
+        return $this->container['extra_data'];
     }
 
     /**
-     * Sets extraData
+     * Sets extra_data
      *
-     * @param mixed[]|null $extraData Stack traces and other supplemental data.
+     * @param mixed[]|null $extra_data Stack traces and other supplemental data.
      *
      * @return self
      */
-    public function setExtraData($extraData)
+    public function setExtraData($extra_data)
     {
-        if (is_null($extraData)) {
-            throw new \InvalidArgumentException('non-nullable extraData cannot be null');
+        if (is_null($extra_data)) {
+            throw new \InvalidArgumentException('non-nullable extra_data cannot be null');
         }
-        $this->container['extraData'] = $extraData;
+        $this->container['extra_data'] = $extra_data;
 
         return $this;
     }

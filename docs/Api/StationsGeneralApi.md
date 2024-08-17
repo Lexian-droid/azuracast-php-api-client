@@ -14,7 +14,7 @@ All URIs are relative to https://demo.azuracast.com/api, except if the operation
 ## `deleteStationFallback()`
 
 ```php
-deleteStationFallback($stationId): \AzuraCast\Model\ApiStatus
+deleteStationFallback($station_id): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -40,10 +40,10 @@ $apiInstance = new AzuraCast\Api\StationsGeneralApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 
 try {
-    $result = $apiInstance->deleteStationFallback($stationId);
+    $result = $apiInstance->deleteStationFallback($station_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsGeneralApi->deleteStationFallback: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 
 ### Return type
 
@@ -76,7 +76,7 @@ try {
 ## `getStation()`
 
 ```php
-getStation($stationId): \AzuraCast\Model\ApiNowPlayingStation
+getStation($station_id): \AzuraCast\Model\ApiNowPlayingStation
 ```
 
 
@@ -96,10 +96,10 @@ $apiInstance = new AzuraCast\Api\StationsGeneralApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 
 try {
-    $result = $apiInstance->getStation($stationId);
+    $result = $apiInstance->getStation($station_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsGeneralApi->getStation: ', $e->getMessage(), PHP_EOL;
@@ -110,7 +110,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 
 ### Return type
 
@@ -132,7 +132,7 @@ No authorization required
 ## `getStationFallback()`
 
 ```php
-getStationFallback($stationId)
+getStationFallback($station_id)
 ```
 
 
@@ -158,10 +158,10 @@ $apiInstance = new AzuraCast\Api\StationsGeneralApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 
 try {
-    $apiInstance->getStationFallback($stationId);
+    $apiInstance->getStationFallback($station_id);
 } catch (Exception $e) {
     echo 'Exception when calling StationsGeneralApi->getStationFallback: ', $e->getMessage(), PHP_EOL;
 }
@@ -171,7 +171,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 
 ### Return type
 
@@ -246,7 +246,7 @@ No authorization required
 ## `postStationFallback()`
 
 ```php
-postStationFallback($stationId): \AzuraCast\Model\ApiStatus
+postStationFallback($station_id): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -272,10 +272,10 @@ $apiInstance = new AzuraCast\Api\StationsGeneralApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 
 try {
-    $result = $apiInstance->postStationFallback($stationId);
+    $result = $apiInstance->postStationFallback($station_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsGeneralApi->postStationFallback: ', $e->getMessage(), PHP_EOL;
@@ -286,7 +286,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 
 ### Return type
 

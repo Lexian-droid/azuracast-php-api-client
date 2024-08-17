@@ -59,14 +59,14 @@ class StationStreamer implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'streamerUsername' => 'string',
-        'streamerPassword' => 'string',
-        'displayName' => 'string',
+        'streamer_username' => 'string',
+        'streamer_password' => 'string',
+        'display_name' => 'string',
         'comments' => 'string',
-        'isActive' => 'bool',
-        'enforceSchedule' => 'bool',
-        'reactivateAt' => 'int',
-        'scheduleItems' => 'mixed[]'
+        'is_active' => 'bool',
+        'enforce_schedule' => 'bool',
+        'reactivate_at' => 'int',
+        'schedule_items' => 'mixed[]'
     ];
 
     /**
@@ -78,14 +78,14 @@ class StationStreamer implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => null,
-        'streamerUsername' => null,
-        'streamerPassword' => null,
-        'displayName' => null,
+        'streamer_username' => null,
+        'streamer_password' => null,
+        'display_name' => null,
         'comments' => null,
-        'isActive' => null,
-        'enforceSchedule' => null,
-        'reactivateAt' => null,
-        'scheduleItems' => null
+        'is_active' => null,
+        'enforce_schedule' => null,
+        'reactivate_at' => null,
+        'schedule_items' => null
     ];
 
     /**
@@ -95,14 +95,14 @@ class StationStreamer implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => true,
-        'streamerUsername' => false,
-        'streamerPassword' => false,
-        'displayName' => true,
+        'streamer_username' => false,
+        'streamer_password' => false,
+        'display_name' => true,
         'comments' => true,
-        'isActive' => false,
-        'enforceSchedule' => false,
-        'reactivateAt' => true,
-        'scheduleItems' => false
+        'is_active' => false,
+        'enforce_schedule' => false,
+        'reactivate_at' => true,
+        'schedule_items' => false
     ];
 
     /**
@@ -192,14 +192,14 @@ class StationStreamer implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'streamerUsername' => 'streamer_username',
-        'streamerPassword' => 'streamer_password',
-        'displayName' => 'display_name',
+        'streamer_username' => 'streamer_username',
+        'streamer_password' => 'streamer_password',
+        'display_name' => 'display_name',
         'comments' => 'comments',
-        'isActive' => 'is_active',
-        'enforceSchedule' => 'enforce_schedule',
-        'reactivateAt' => 'reactivate_at',
-        'scheduleItems' => 'schedule_items'
+        'is_active' => 'is_active',
+        'enforce_schedule' => 'enforce_schedule',
+        'reactivate_at' => 'reactivate_at',
+        'schedule_items' => 'schedule_items'
     ];
 
     /**
@@ -209,14 +209,14 @@ class StationStreamer implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'streamerUsername' => 'setStreamerUsername',
-        'streamerPassword' => 'setStreamerPassword',
-        'displayName' => 'setDisplayName',
+        'streamer_username' => 'setStreamerUsername',
+        'streamer_password' => 'setStreamerPassword',
+        'display_name' => 'setDisplayName',
         'comments' => 'setComments',
-        'isActive' => 'setIsActive',
-        'enforceSchedule' => 'setEnforceSchedule',
-        'reactivateAt' => 'setReactivateAt',
-        'scheduleItems' => 'setScheduleItems'
+        'is_active' => 'setIsActive',
+        'enforce_schedule' => 'setEnforceSchedule',
+        'reactivate_at' => 'setReactivateAt',
+        'schedule_items' => 'setScheduleItems'
     ];
 
     /**
@@ -226,14 +226,14 @@ class StationStreamer implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'streamerUsername' => 'getStreamerUsername',
-        'streamerPassword' => 'getStreamerPassword',
-        'displayName' => 'getDisplayName',
+        'streamer_username' => 'getStreamerUsername',
+        'streamer_password' => 'getStreamerPassword',
+        'display_name' => 'getDisplayName',
         'comments' => 'getComments',
-        'isActive' => 'getIsActive',
-        'enforceSchedule' => 'getEnforceSchedule',
-        'reactivateAt' => 'getReactivateAt',
-        'scheduleItems' => 'getScheduleItems'
+        'is_active' => 'getIsActive',
+        'enforce_schedule' => 'getEnforceSchedule',
+        'reactivate_at' => 'getReactivateAt',
+        'schedule_items' => 'getScheduleItems'
     ];
 
     /**
@@ -294,14 +294,14 @@ class StationStreamer implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('streamerUsername', $data ?? [], null);
-        $this->setIfExists('streamerPassword', $data ?? [], null);
-        $this->setIfExists('displayName', $data ?? [], null);
+        $this->setIfExists('streamer_username', $data ?? [], null);
+        $this->setIfExists('streamer_password', $data ?? [], null);
+        $this->setIfExists('display_name', $data ?? [], null);
         $this->setIfExists('comments', $data ?? [], null);
-        $this->setIfExists('isActive', $data ?? [], null);
-        $this->setIfExists('enforceSchedule', $data ?? [], null);
-        $this->setIfExists('reactivateAt', $data ?? [], null);
-        $this->setIfExists('scheduleItems', $data ?? [], null);
+        $this->setIfExists('is_active', $data ?? [], null);
+        $this->setIfExists('enforce_schedule', $data ?? [], null);
+        $this->setIfExists('reactivate_at', $data ?? [], null);
+        $this->setIfExists('schedule_items', $data ?? [], null);
     }
 
     /**
@@ -381,89 +381,89 @@ class StationStreamer implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets streamerUsername
+     * Gets streamer_username
      *
      * @return string|null
      */
     public function getStreamerUsername()
     {
-        return $this->container['streamerUsername'];
+        return $this->container['streamer_username'];
     }
 
     /**
-     * Sets streamerUsername
+     * Sets streamer_username
      *
-     * @param string|null $streamerUsername streamerUsername
+     * @param string|null $streamer_username streamer_username
      *
      * @return self
      */
-    public function setStreamerUsername($streamerUsername)
+    public function setStreamerUsername($streamer_username)
     {
-        if (is_null($streamerUsername)) {
-            throw new \InvalidArgumentException('non-nullable streamerUsername cannot be null');
+        if (is_null($streamer_username)) {
+            throw new \InvalidArgumentException('non-nullable streamer_username cannot be null');
         }
-        $this->container['streamerUsername'] = $streamerUsername;
+        $this->container['streamer_username'] = $streamer_username;
 
         return $this;
     }
 
     /**
-     * Gets streamerPassword
+     * Gets streamer_password
      *
      * @return string|null
      */
     public function getStreamerPassword()
     {
-        return $this->container['streamerPassword'];
+        return $this->container['streamer_password'];
     }
 
     /**
-     * Sets streamerPassword
+     * Sets streamer_password
      *
-     * @param string|null $streamerPassword streamerPassword
+     * @param string|null $streamer_password streamer_password
      *
      * @return self
      */
-    public function setStreamerPassword($streamerPassword)
+    public function setStreamerPassword($streamer_password)
     {
-        if (is_null($streamerPassword)) {
-            throw new \InvalidArgumentException('non-nullable streamerPassword cannot be null');
+        if (is_null($streamer_password)) {
+            throw new \InvalidArgumentException('non-nullable streamer_password cannot be null');
         }
-        $this->container['streamerPassword'] = $streamerPassword;
+        $this->container['streamer_password'] = $streamer_password;
 
         return $this;
     }
 
     /**
-     * Gets displayName
+     * Gets display_name
      *
      * @return string|null
      */
     public function getDisplayName()
     {
-        return $this->container['displayName'];
+        return $this->container['display_name'];
     }
 
     /**
-     * Sets displayName
+     * Sets display_name
      *
-     * @param string|null $displayName displayName
+     * @param string|null $display_name display_name
      *
      * @return self
      */
-    public function setDisplayName($displayName)
+    public function setDisplayName($display_name)
     {
-        if (is_null($displayName)) {
-            array_push($this->openAPINullablesSetToNull, 'displayName');
+        if (is_null($display_name)) {
+            array_push($this->openAPINullablesSetToNull, 'display_name');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('displayName', $nullablesSetToNull);
+            $index = array_search('display_name', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['displayName'] = $displayName;
+        $this->container['display_name'] = $display_name;
 
         return $this;
     }
@@ -503,116 +503,116 @@ class StationStreamer implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets isActive
+     * Gets is_active
      *
      * @return bool|null
      */
     public function getIsActive()
     {
-        return $this->container['isActive'];
+        return $this->container['is_active'];
     }
 
     /**
-     * Sets isActive
+     * Sets is_active
      *
-     * @param bool|null $isActive isActive
+     * @param bool|null $is_active is_active
      *
      * @return self
      */
-    public function setIsActive($isActive)
+    public function setIsActive($is_active)
     {
-        if (is_null($isActive)) {
-            throw new \InvalidArgumentException('non-nullable isActive cannot be null');
+        if (is_null($is_active)) {
+            throw new \InvalidArgumentException('non-nullable is_active cannot be null');
         }
-        $this->container['isActive'] = $isActive;
+        $this->container['is_active'] = $is_active;
 
         return $this;
     }
 
     /**
-     * Gets enforceSchedule
+     * Gets enforce_schedule
      *
      * @return bool|null
      */
     public function getEnforceSchedule()
     {
-        return $this->container['enforceSchedule'];
+        return $this->container['enforce_schedule'];
     }
 
     /**
-     * Sets enforceSchedule
+     * Sets enforce_schedule
      *
-     * @param bool|null $enforceSchedule enforceSchedule
+     * @param bool|null $enforce_schedule enforce_schedule
      *
      * @return self
      */
-    public function setEnforceSchedule($enforceSchedule)
+    public function setEnforceSchedule($enforce_schedule)
     {
-        if (is_null($enforceSchedule)) {
-            throw new \InvalidArgumentException('non-nullable enforceSchedule cannot be null');
+        if (is_null($enforce_schedule)) {
+            throw new \InvalidArgumentException('non-nullable enforce_schedule cannot be null');
         }
-        $this->container['enforceSchedule'] = $enforceSchedule;
+        $this->container['enforce_schedule'] = $enforce_schedule;
 
         return $this;
     }
 
     /**
-     * Gets reactivateAt
+     * Gets reactivate_at
      *
      * @return int|null
      */
     public function getReactivateAt()
     {
-        return $this->container['reactivateAt'];
+        return $this->container['reactivate_at'];
     }
 
     /**
-     * Sets reactivateAt
+     * Sets reactivate_at
      *
-     * @param int|null $reactivateAt reactivateAt
+     * @param int|null $reactivate_at reactivate_at
      *
      * @return self
      */
-    public function setReactivateAt($reactivateAt)
+    public function setReactivateAt($reactivate_at)
     {
-        if (is_null($reactivateAt)) {
-            array_push($this->openAPINullablesSetToNull, 'reactivateAt');
+        if (is_null($reactivate_at)) {
+            array_push($this->openAPINullablesSetToNull, 'reactivate_at');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('reactivateAt', $nullablesSetToNull);
+            $index = array_search('reactivate_at', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['reactivateAt'] = $reactivateAt;
+        $this->container['reactivate_at'] = $reactivate_at;
 
         return $this;
     }
 
     /**
-     * Gets scheduleItems
+     * Gets schedule_items
      *
      * @return mixed[]|null
      */
     public function getScheduleItems()
     {
-        return $this->container['scheduleItems'];
+        return $this->container['schedule_items'];
     }
 
     /**
-     * Sets scheduleItems
+     * Sets schedule_items
      *
-     * @param mixed[]|null $scheduleItems StationSchedule>
+     * @param mixed[]|null $schedule_items StationSchedule>
      *
      * @return self
      */
-    public function setScheduleItems($scheduleItems)
+    public function setScheduleItems($schedule_items)
     {
-        if (is_null($scheduleItems)) {
-            throw new \InvalidArgumentException('non-nullable scheduleItems cannot be null');
+        if (is_null($schedule_items)) {
+            throw new \InvalidArgumentException('non-nullable schedule_items cannot be null');
         }
-        $this->container['scheduleItems'] = $scheduleItems;
+        $this->container['schedule_items'] = $schedule_items;
 
         return $this;
     }

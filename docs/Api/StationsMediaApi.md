@@ -17,7 +17,7 @@ All URIs are relative to https://demo.azuracast.com/api, except if the operation
 ## `addFile()`
 
 ```php
-addFile($stationId, $apiUploadFile): \AzuraCast\Model\ApiStationMedia
+addFile($station_id, $api_upload_file): \AzuraCast\Model\ApiStationMedia
 ```
 
 
@@ -43,11 +43,11 @@ $apiInstance = new AzuraCast\Api\StationsMediaApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
-$apiUploadFile = new \AzuraCast\Model\ApiUploadFile(); // \AzuraCast\Model\ApiUploadFile
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$api_upload_file = new \AzuraCast\Model\ApiUploadFile(); // \AzuraCast\Model\ApiUploadFile
 
 try {
-    $result = $apiInstance->addFile($stationId, $apiUploadFile);
+    $result = $apiInstance->addFile($station_id, $api_upload_file);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsMediaApi->addFile: ', $e->getMessage(), PHP_EOL;
@@ -58,8 +58,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
-| **apiUploadFile** | [**\AzuraCast\Model\ApiUploadFile**](../Model/ApiUploadFile.md)|  | [optional] |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **api_upload_file** | [**\AzuraCast\Model\ApiUploadFile**](../Model/ApiUploadFile.md)|  | [optional] |
 
 ### Return type
 
@@ -81,7 +81,7 @@ try {
 ## `deleteFile()`
 
 ```php
-deleteFile($stationId, $id): \AzuraCast\Model\ApiStatus
+deleteFile($station_id, $id): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -107,11 +107,11 @@ $apiInstance = new AzuraCast\Api\StationsMediaApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 56; // int | Media ID
 
 try {
-    $result = $apiInstance->deleteFile($stationId, $id);
+    $result = $apiInstance->deleteFile($station_id, $id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsMediaApi->deleteFile: ', $e->getMessage(), PHP_EOL;
@@ -122,7 +122,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **int**| Media ID | |
 
 ### Return type
@@ -145,7 +145,7 @@ try {
 ## `deleteMediaArt()`
 
 ```php
-deleteMediaArt($stationId, $mediaId): \AzuraCast\Model\ApiStatus
+deleteMediaArt($station_id, $media_id): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -171,11 +171,11 @@ $apiInstance = new AzuraCast\Api\StationsMediaApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
-$mediaId = new \AzuraCast\Model\PostMediaArtMediaIdParameter(); // PostMediaArtMediaIdParameter | Media ID
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$media_id = new \AzuraCast\Model\PostMediaArtMediaIdParameter(); // PostMediaArtMediaIdParameter | Media ID
 
 try {
-    $result = $apiInstance->deleteMediaArt($stationId, $mediaId);
+    $result = $apiInstance->deleteMediaArt($station_id, $media_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsMediaApi->deleteMediaArt: ', $e->getMessage(), PHP_EOL;
@@ -186,8 +186,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
-| **mediaId** | [**PostMediaArtMediaIdParameter**](../Model/.md)| Media ID | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **media_id** | [**PostMediaArtMediaIdParameter**](../Model/.md)| Media ID | |
 
 ### Return type
 
@@ -209,7 +209,7 @@ try {
 ## `editFile()`
 
 ```php
-editFile($stationId, $id, $apiStationMedia): \AzuraCast\Model\ApiStatus
+editFile($station_id, $id, $api_station_media): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -235,12 +235,12 @@ $apiInstance = new AzuraCast\Api\StationsMediaApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 56; // int | Media ID
-$apiStationMedia = new \AzuraCast\Model\ApiStationMedia(); // \AzuraCast\Model\ApiStationMedia
+$api_station_media = new \AzuraCast\Model\ApiStationMedia(); // \AzuraCast\Model\ApiStationMedia
 
 try {
-    $result = $apiInstance->editFile($stationId, $id, $apiStationMedia);
+    $result = $apiInstance->editFile($station_id, $id, $api_station_media);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsMediaApi->editFile: ', $e->getMessage(), PHP_EOL;
@@ -251,9 +251,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **int**| Media ID | |
-| **apiStationMedia** | [**\AzuraCast\Model\ApiStationMedia**](../Model/ApiStationMedia.md)|  | [optional] |
+| **api_station_media** | [**\AzuraCast\Model\ApiStationMedia**](../Model/ApiStationMedia.md)|  | [optional] |
 
 ### Return type
 
@@ -275,7 +275,7 @@ try {
 ## `getFile()`
 
 ```php
-getFile($stationId, $id): \AzuraCast\Model\ApiStationMedia
+getFile($station_id, $id): \AzuraCast\Model\ApiStationMedia
 ```
 
 
@@ -301,11 +301,11 @@ $apiInstance = new AzuraCast\Api\StationsMediaApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 56; // int | Media ID
 
 try {
-    $result = $apiInstance->getFile($stationId, $id);
+    $result = $apiInstance->getFile($station_id, $id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsMediaApi->getFile: ', $e->getMessage(), PHP_EOL;
@@ -316,7 +316,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **int**| Media ID | |
 
 ### Return type
@@ -339,7 +339,7 @@ try {
 ## `getFiles()`
 
 ```php
-getFiles($stationId): \AzuraCast\Model\ApiStationMedia[]
+getFiles($station_id): \AzuraCast\Model\ApiStationMedia[]
 ```
 
 
@@ -365,10 +365,10 @@ $apiInstance = new AzuraCast\Api\StationsMediaApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 
 try {
-    $result = $apiInstance->getFiles($stationId);
+    $result = $apiInstance->getFiles($station_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsMediaApi->getFiles: ', $e->getMessage(), PHP_EOL;
@@ -379,7 +379,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 
 ### Return type
 
@@ -401,7 +401,7 @@ try {
 ## `getMediaArt()`
 
 ```php
-getMediaArt($stationId, $mediaId)
+getMediaArt($station_id, $media_id)
 ```
 
 
@@ -421,11 +421,11 @@ $apiInstance = new AzuraCast\Api\StationsMediaApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
-$mediaId = 'mediaId_example'; // string | The station media unique ID
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$media_id = 'media_id_example'; // string | The station media unique ID
 
 try {
-    $apiInstance->getMediaArt($stationId, $mediaId);
+    $apiInstance->getMediaArt($station_id, $media_id);
 } catch (Exception $e) {
     echo 'Exception when calling StationsMediaApi->getMediaArt: ', $e->getMessage(), PHP_EOL;
 }
@@ -435,8 +435,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
-| **mediaId** | **string**| The station media unique ID | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **media_id** | **string**| The station media unique ID | |
 
 ### Return type
 
@@ -458,7 +458,7 @@ No authorization required
 ## `postMediaArt()`
 
 ```php
-postMediaArt($stationId, $mediaId): \AzuraCast\Model\ApiStatus
+postMediaArt($station_id, $media_id): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -484,11 +484,11 @@ $apiInstance = new AzuraCast\Api\StationsMediaApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
-$mediaId = new \AzuraCast\Model\PostMediaArtMediaIdParameter(); // PostMediaArtMediaIdParameter | Media ID
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$media_id = new \AzuraCast\Model\PostMediaArtMediaIdParameter(); // PostMediaArtMediaIdParameter | Media ID
 
 try {
-    $result = $apiInstance->postMediaArt($stationId, $mediaId);
+    $result = $apiInstance->postMediaArt($station_id, $media_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsMediaApi->postMediaArt: ', $e->getMessage(), PHP_EOL;
@@ -499,8 +499,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
-| **mediaId** | [**PostMediaArtMediaIdParameter**](../Model/.md)| Media ID | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **media_id** | [**PostMediaArtMediaIdParameter**](../Model/.md)| Media ID | |
 
 ### Return type
 

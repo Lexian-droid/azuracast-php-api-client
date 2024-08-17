@@ -14,7 +14,7 @@ All URIs are relative to https://demo.azuracast.com/api, except if the operation
 ## `addSftpUser()`
 
 ```php
-addSftpUser($stationId, $sftpUser): \AzuraCast\Model\SftpUser
+addSftpUser($station_id, $sftp_user): \AzuraCast\Model\SftpUser
 ```
 
 
@@ -40,11 +40,11 @@ $apiInstance = new AzuraCast\Api\StationsSFTPUsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
-$sftpUser = new \AzuraCast\Model\SftpUser(); // \AzuraCast\Model\SftpUser
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$sftp_user = new \AzuraCast\Model\SftpUser(); // \AzuraCast\Model\SftpUser
 
 try {
-    $result = $apiInstance->addSftpUser($stationId, $sftpUser);
+    $result = $apiInstance->addSftpUser($station_id, $sftp_user);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsSFTPUsersApi->addSftpUser: ', $e->getMessage(), PHP_EOL;
@@ -55,8 +55,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
-| **sftpUser** | [**\AzuraCast\Model\SftpUser**](../Model/SftpUser.md)|  | [optional] |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **sftp_user** | [**\AzuraCast\Model\SftpUser**](../Model/SftpUser.md)|  | [optional] |
 
 ### Return type
 
@@ -78,7 +78,7 @@ try {
 ## `deleteSftpUser()`
 
 ```php
-deleteSftpUser($stationId, $id): \AzuraCast\Model\ApiStatus
+deleteSftpUser($station_id, $id): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -104,11 +104,11 @@ $apiInstance = new AzuraCast\Api\StationsSFTPUsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 56; // int | Remote Relay ID
 
 try {
-    $result = $apiInstance->deleteSftpUser($stationId, $id);
+    $result = $apiInstance->deleteSftpUser($station_id, $id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsSFTPUsersApi->deleteSftpUser: ', $e->getMessage(), PHP_EOL;
@@ -119,7 +119,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **int**| Remote Relay ID | |
 
 ### Return type
@@ -142,7 +142,7 @@ try {
 ## `editSftpUser()`
 
 ```php
-editSftpUser($stationId, $id, $sftpUser): \AzuraCast\Model\ApiStatus
+editSftpUser($station_id, $id, $sftp_user): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -168,12 +168,12 @@ $apiInstance = new AzuraCast\Api\StationsSFTPUsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 56; // int | Remote Relay ID
-$sftpUser = new \AzuraCast\Model\SftpUser(); // \AzuraCast\Model\SftpUser
+$sftp_user = new \AzuraCast\Model\SftpUser(); // \AzuraCast\Model\SftpUser
 
 try {
-    $result = $apiInstance->editSftpUser($stationId, $id, $sftpUser);
+    $result = $apiInstance->editSftpUser($station_id, $id, $sftp_user);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsSFTPUsersApi->editSftpUser: ', $e->getMessage(), PHP_EOL;
@@ -184,9 +184,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **int**| Remote Relay ID | |
-| **sftpUser** | [**\AzuraCast\Model\SftpUser**](../Model/SftpUser.md)|  | [optional] |
+| **sftp_user** | [**\AzuraCast\Model\SftpUser**](../Model/SftpUser.md)|  | [optional] |
 
 ### Return type
 
@@ -208,7 +208,7 @@ try {
 ## `getSftpUser()`
 
 ```php
-getSftpUser($stationId, $id): \AzuraCast\Model\SftpUser
+getSftpUser($station_id, $id): \AzuraCast\Model\SftpUser
 ```
 
 
@@ -234,11 +234,11 @@ $apiInstance = new AzuraCast\Api\StationsSFTPUsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 56; // int | SFTP User ID
 
 try {
-    $result = $apiInstance->getSftpUser($stationId, $id);
+    $result = $apiInstance->getSftpUser($station_id, $id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsSFTPUsersApi->getSftpUser: ', $e->getMessage(), PHP_EOL;
@@ -249,7 +249,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **int**| SFTP User ID | |
 
 ### Return type
@@ -272,7 +272,7 @@ try {
 ## `getSftpUsers()`
 
 ```php
-getSftpUsers($stationId): \AzuraCast\Model\SftpUser[]
+getSftpUsers($station_id): \AzuraCast\Model\SftpUser[]
 ```
 
 
@@ -298,10 +298,10 @@ $apiInstance = new AzuraCast\Api\StationsSFTPUsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 
 try {
-    $result = $apiInstance->getSftpUsers($stationId);
+    $result = $apiInstance->getSftpUsers($station_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsSFTPUsersApi->getSftpUsers: ', $e->getMessage(), PHP_EOL;
@@ -312,7 +312,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 
 ### Return type
 

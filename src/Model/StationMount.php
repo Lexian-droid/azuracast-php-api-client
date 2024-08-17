@@ -59,21 +59,21 @@ class StationMount implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'int',
         'name' => 'string',
-        'displayName' => 'string',
-        'isVisibleOnPublicPages' => 'bool',
-        'isDefault' => 'bool',
-        'isPublic' => 'bool',
-        'fallbackMount' => 'string',
-        'relayUrl' => 'string',
+        'display_name' => 'string',
+        'is_visible_on_public_pages' => 'bool',
+        'is_default' => 'bool',
+        'is_public' => 'bool',
+        'fallback_mount' => 'string',
+        'relay_url' => 'string',
         'authhash' => 'string',
-        'maxListenerDuration' => 'int',
-        'enableAutodj' => 'bool',
-        'autodjFormat' => 'mixed',
-        'autodjBitrate' => 'int',
-        'customListenUrl' => 'string',
-        'frontendConfig' => 'mixed[]',
-        'listenersUnique' => 'int',
-        'listenersTotal' => 'int'
+        'max_listener_duration' => 'int',
+        'enable_autodj' => 'bool',
+        'autodj_format' => 'mixed',
+        'autodj_bitrate' => 'int',
+        'custom_listen_url' => 'string',
+        'frontend_config' => 'mixed[]',
+        'listeners_unique' => 'int',
+        'listeners_total' => 'int'
     ];
 
     /**
@@ -86,21 +86,21 @@ class StationMount implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'id' => null,
         'name' => null,
-        'displayName' => null,
-        'isVisibleOnPublicPages' => null,
-        'isDefault' => null,
-        'isPublic' => null,
-        'fallbackMount' => null,
-        'relayUrl' => null,
+        'display_name' => null,
+        'is_visible_on_public_pages' => null,
+        'is_default' => null,
+        'is_public' => null,
+        'fallback_mount' => null,
+        'relay_url' => null,
         'authhash' => null,
-        'maxListenerDuration' => null,
-        'enableAutodj' => null,
-        'autodjFormat' => null,
-        'autodjBitrate' => null,
-        'customListenUrl' => null,
-        'frontendConfig' => null,
-        'listenersUnique' => null,
-        'listenersTotal' => null
+        'max_listener_duration' => null,
+        'enable_autodj' => null,
+        'autodj_format' => null,
+        'autodj_bitrate' => null,
+        'custom_listen_url' => null,
+        'frontend_config' => null,
+        'listeners_unique' => null,
+        'listeners_total' => null
     ];
 
     /**
@@ -111,21 +111,21 @@ class StationMount implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'id' => true,
         'name' => false,
-        'displayName' => true,
-        'isVisibleOnPublicPages' => false,
-        'isDefault' => false,
-        'isPublic' => false,
-        'fallbackMount' => true,
-        'relayUrl' => true,
+        'display_name' => true,
+        'is_visible_on_public_pages' => false,
+        'is_default' => false,
+        'is_public' => false,
+        'fallback_mount' => true,
+        'relay_url' => true,
         'authhash' => true,
-        'maxListenerDuration' => false,
-        'enableAutodj' => false,
-        'autodjFormat' => true,
-        'autodjBitrate' => true,
-        'customListenUrl' => true,
-        'frontendConfig' => false,
-        'listenersUnique' => false,
-        'listenersTotal' => false
+        'max_listener_duration' => false,
+        'enable_autodj' => false,
+        'autodj_format' => true,
+        'autodj_bitrate' => true,
+        'custom_listen_url' => true,
+        'frontend_config' => false,
+        'listeners_unique' => false,
+        'listeners_total' => false
     ];
 
     /**
@@ -216,21 +216,21 @@ class StationMount implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'id' => 'id',
         'name' => 'name',
-        'displayName' => 'display_name',
-        'isVisibleOnPublicPages' => 'is_visible_on_public_pages',
-        'isDefault' => 'is_default',
-        'isPublic' => 'is_public',
-        'fallbackMount' => 'fallback_mount',
-        'relayUrl' => 'relay_url',
+        'display_name' => 'display_name',
+        'is_visible_on_public_pages' => 'is_visible_on_public_pages',
+        'is_default' => 'is_default',
+        'is_public' => 'is_public',
+        'fallback_mount' => 'fallback_mount',
+        'relay_url' => 'relay_url',
         'authhash' => 'authhash',
-        'maxListenerDuration' => 'max_listener_duration',
-        'enableAutodj' => 'enable_autodj',
-        'autodjFormat' => 'autodj_format',
-        'autodjBitrate' => 'autodj_bitrate',
-        'customListenUrl' => 'custom_listen_url',
-        'frontendConfig' => 'frontend_config',
-        'listenersUnique' => 'listeners_unique',
-        'listenersTotal' => 'listeners_total'
+        'max_listener_duration' => 'max_listener_duration',
+        'enable_autodj' => 'enable_autodj',
+        'autodj_format' => 'autodj_format',
+        'autodj_bitrate' => 'autodj_bitrate',
+        'custom_listen_url' => 'custom_listen_url',
+        'frontend_config' => 'frontend_config',
+        'listeners_unique' => 'listeners_unique',
+        'listeners_total' => 'listeners_total'
     ];
 
     /**
@@ -241,21 +241,21 @@ class StationMount implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'id' => 'setId',
         'name' => 'setName',
-        'displayName' => 'setDisplayName',
-        'isVisibleOnPublicPages' => 'setIsVisibleOnPublicPages',
-        'isDefault' => 'setIsDefault',
-        'isPublic' => 'setIsPublic',
-        'fallbackMount' => 'setFallbackMount',
-        'relayUrl' => 'setRelayUrl',
+        'display_name' => 'setDisplayName',
+        'is_visible_on_public_pages' => 'setIsVisibleOnPublicPages',
+        'is_default' => 'setIsDefault',
+        'is_public' => 'setIsPublic',
+        'fallback_mount' => 'setFallbackMount',
+        'relay_url' => 'setRelayUrl',
         'authhash' => 'setAuthhash',
-        'maxListenerDuration' => 'setMaxListenerDuration',
-        'enableAutodj' => 'setEnableAutodj',
-        'autodjFormat' => 'setAutodjFormat',
-        'autodjBitrate' => 'setAutodjBitrate',
-        'customListenUrl' => 'setCustomListenUrl',
-        'frontendConfig' => 'setFrontendConfig',
-        'listenersUnique' => 'setListenersUnique',
-        'listenersTotal' => 'setListenersTotal'
+        'max_listener_duration' => 'setMaxListenerDuration',
+        'enable_autodj' => 'setEnableAutodj',
+        'autodj_format' => 'setAutodjFormat',
+        'autodj_bitrate' => 'setAutodjBitrate',
+        'custom_listen_url' => 'setCustomListenUrl',
+        'frontend_config' => 'setFrontendConfig',
+        'listeners_unique' => 'setListenersUnique',
+        'listeners_total' => 'setListenersTotal'
     ];
 
     /**
@@ -266,21 +266,21 @@ class StationMount implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'id' => 'getId',
         'name' => 'getName',
-        'displayName' => 'getDisplayName',
-        'isVisibleOnPublicPages' => 'getIsVisibleOnPublicPages',
-        'isDefault' => 'getIsDefault',
-        'isPublic' => 'getIsPublic',
-        'fallbackMount' => 'getFallbackMount',
-        'relayUrl' => 'getRelayUrl',
+        'display_name' => 'getDisplayName',
+        'is_visible_on_public_pages' => 'getIsVisibleOnPublicPages',
+        'is_default' => 'getIsDefault',
+        'is_public' => 'getIsPublic',
+        'fallback_mount' => 'getFallbackMount',
+        'relay_url' => 'getRelayUrl',
         'authhash' => 'getAuthhash',
-        'maxListenerDuration' => 'getMaxListenerDuration',
-        'enableAutodj' => 'getEnableAutodj',
-        'autodjFormat' => 'getAutodjFormat',
-        'autodjBitrate' => 'getAutodjBitrate',
-        'customListenUrl' => 'getCustomListenUrl',
-        'frontendConfig' => 'getFrontendConfig',
-        'listenersUnique' => 'getListenersUnique',
-        'listenersTotal' => 'getListenersTotal'
+        'max_listener_duration' => 'getMaxListenerDuration',
+        'enable_autodj' => 'getEnableAutodj',
+        'autodj_format' => 'getAutodjFormat',
+        'autodj_bitrate' => 'getAutodjBitrate',
+        'custom_listen_url' => 'getCustomListenUrl',
+        'frontend_config' => 'getFrontendConfig',
+        'listeners_unique' => 'getListenersUnique',
+        'listeners_total' => 'getListenersTotal'
     ];
 
     /**
@@ -342,21 +342,21 @@ class StationMount implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('displayName', $data ?? [], null);
-        $this->setIfExists('isVisibleOnPublicPages', $data ?? [], null);
-        $this->setIfExists('isDefault', $data ?? [], null);
-        $this->setIfExists('isPublic', $data ?? [], null);
-        $this->setIfExists('fallbackMount', $data ?? [], null);
-        $this->setIfExists('relayUrl', $data ?? [], null);
+        $this->setIfExists('display_name', $data ?? [], null);
+        $this->setIfExists('is_visible_on_public_pages', $data ?? [], null);
+        $this->setIfExists('is_default', $data ?? [], null);
+        $this->setIfExists('is_public', $data ?? [], null);
+        $this->setIfExists('fallback_mount', $data ?? [], null);
+        $this->setIfExists('relay_url', $data ?? [], null);
         $this->setIfExists('authhash', $data ?? [], null);
-        $this->setIfExists('maxListenerDuration', $data ?? [], null);
-        $this->setIfExists('enableAutodj', $data ?? [], null);
-        $this->setIfExists('autodjFormat', $data ?? [], null);
-        $this->setIfExists('autodjBitrate', $data ?? [], null);
-        $this->setIfExists('customListenUrl', $data ?? [], null);
-        $this->setIfExists('frontendConfig', $data ?? [], null);
-        $this->setIfExists('listenersUnique', $data ?? [], null);
-        $this->setIfExists('listenersTotal', $data ?? [], null);
+        $this->setIfExists('max_listener_duration', $data ?? [], null);
+        $this->setIfExists('enable_autodj', $data ?? [], null);
+        $this->setIfExists('autodj_format', $data ?? [], null);
+        $this->setIfExists('autodj_bitrate', $data ?? [], null);
+        $this->setIfExists('custom_listen_url', $data ?? [], null);
+        $this->setIfExists('frontend_config', $data ?? [], null);
+        $this->setIfExists('listeners_unique', $data ?? [], null);
+        $this->setIfExists('listeners_total', $data ?? [], null);
     }
 
     /**
@@ -463,184 +463,184 @@ class StationMount implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets displayName
+     * Gets display_name
      *
      * @return string|null
      */
     public function getDisplayName()
     {
-        return $this->container['displayName'];
+        return $this->container['display_name'];
     }
 
     /**
-     * Sets displayName
+     * Sets display_name
      *
-     * @param string|null $displayName displayName
+     * @param string|null $display_name display_name
      *
      * @return self
      */
-    public function setDisplayName($displayName)
+    public function setDisplayName($display_name)
     {
-        if (is_null($displayName)) {
-            array_push($this->openAPINullablesSetToNull, 'displayName');
+        if (is_null($display_name)) {
+            array_push($this->openAPINullablesSetToNull, 'display_name');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('displayName', $nullablesSetToNull);
+            $index = array_search('display_name', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['displayName'] = $displayName;
+        $this->container['display_name'] = $display_name;
 
         return $this;
     }
 
     /**
-     * Gets isVisibleOnPublicPages
+     * Gets is_visible_on_public_pages
      *
      * @return bool|null
      */
     public function getIsVisibleOnPublicPages()
     {
-        return $this->container['isVisibleOnPublicPages'];
+        return $this->container['is_visible_on_public_pages'];
     }
 
     /**
-     * Sets isVisibleOnPublicPages
+     * Sets is_visible_on_public_pages
      *
-     * @param bool|null $isVisibleOnPublicPages isVisibleOnPublicPages
+     * @param bool|null $is_visible_on_public_pages is_visible_on_public_pages
      *
      * @return self
      */
-    public function setIsVisibleOnPublicPages($isVisibleOnPublicPages)
+    public function setIsVisibleOnPublicPages($is_visible_on_public_pages)
     {
-        if (is_null($isVisibleOnPublicPages)) {
-            throw new \InvalidArgumentException('non-nullable isVisibleOnPublicPages cannot be null');
+        if (is_null($is_visible_on_public_pages)) {
+            throw new \InvalidArgumentException('non-nullable is_visible_on_public_pages cannot be null');
         }
-        $this->container['isVisibleOnPublicPages'] = $isVisibleOnPublicPages;
+        $this->container['is_visible_on_public_pages'] = $is_visible_on_public_pages;
 
         return $this;
     }
 
     /**
-     * Gets isDefault
+     * Gets is_default
      *
      * @return bool|null
      */
     public function getIsDefault()
     {
-        return $this->container['isDefault'];
+        return $this->container['is_default'];
     }
 
     /**
-     * Sets isDefault
+     * Sets is_default
      *
-     * @param bool|null $isDefault isDefault
+     * @param bool|null $is_default is_default
      *
      * @return self
      */
-    public function setIsDefault($isDefault)
+    public function setIsDefault($is_default)
     {
-        if (is_null($isDefault)) {
-            throw new \InvalidArgumentException('non-nullable isDefault cannot be null');
+        if (is_null($is_default)) {
+            throw new \InvalidArgumentException('non-nullable is_default cannot be null');
         }
-        $this->container['isDefault'] = $isDefault;
+        $this->container['is_default'] = $is_default;
 
         return $this;
     }
 
     /**
-     * Gets isPublic
+     * Gets is_public
      *
      * @return bool|null
      */
     public function getIsPublic()
     {
-        return $this->container['isPublic'];
+        return $this->container['is_public'];
     }
 
     /**
-     * Sets isPublic
+     * Sets is_public
      *
-     * @param bool|null $isPublic isPublic
+     * @param bool|null $is_public is_public
      *
      * @return self
      */
-    public function setIsPublic($isPublic)
+    public function setIsPublic($is_public)
     {
-        if (is_null($isPublic)) {
-            throw new \InvalidArgumentException('non-nullable isPublic cannot be null');
+        if (is_null($is_public)) {
+            throw new \InvalidArgumentException('non-nullable is_public cannot be null');
         }
-        $this->container['isPublic'] = $isPublic;
+        $this->container['is_public'] = $is_public;
 
         return $this;
     }
 
     /**
-     * Gets fallbackMount
+     * Gets fallback_mount
      *
      * @return string|null
      */
     public function getFallbackMount()
     {
-        return $this->container['fallbackMount'];
+        return $this->container['fallback_mount'];
     }
 
     /**
-     * Sets fallbackMount
+     * Sets fallback_mount
      *
-     * @param string|null $fallbackMount fallbackMount
+     * @param string|null $fallback_mount fallback_mount
      *
      * @return self
      */
-    public function setFallbackMount($fallbackMount)
+    public function setFallbackMount($fallback_mount)
     {
-        if (is_null($fallbackMount)) {
-            array_push($this->openAPINullablesSetToNull, 'fallbackMount');
+        if (is_null($fallback_mount)) {
+            array_push($this->openAPINullablesSetToNull, 'fallback_mount');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('fallbackMount', $nullablesSetToNull);
+            $index = array_search('fallback_mount', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['fallbackMount'] = $fallbackMount;
+        $this->container['fallback_mount'] = $fallback_mount;
 
         return $this;
     }
 
     /**
-     * Gets relayUrl
+     * Gets relay_url
      *
      * @return string|null
      */
     public function getRelayUrl()
     {
-        return $this->container['relayUrl'];
+        return $this->container['relay_url'];
     }
 
     /**
-     * Sets relayUrl
+     * Sets relay_url
      *
-     * @param string|null $relayUrl relayUrl
+     * @param string|null $relay_url relay_url
      *
      * @return self
      */
-    public function setRelayUrl($relayUrl)
+    public function setRelayUrl($relay_url)
     {
-        if (is_null($relayUrl)) {
-            array_push($this->openAPINullablesSetToNull, 'relayUrl');
+        if (is_null($relay_url)) {
+            array_push($this->openAPINullablesSetToNull, 'relay_url');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('relayUrl', $nullablesSetToNull);
+            $index = array_search('relay_url', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['relayUrl'] = $relayUrl;
+        $this->container['relay_url'] = $relay_url;
 
         return $this;
     }
@@ -680,238 +680,238 @@ class StationMount implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets maxListenerDuration
+     * Gets max_listener_duration
      *
      * @return int|null
      */
     public function getMaxListenerDuration()
     {
-        return $this->container['maxListenerDuration'];
+        return $this->container['max_listener_duration'];
     }
 
     /**
-     * Sets maxListenerDuration
+     * Sets max_listener_duration
      *
-     * @param int|null $maxListenerDuration maxListenerDuration
+     * @param int|null $max_listener_duration max_listener_duration
      *
      * @return self
      */
-    public function setMaxListenerDuration($maxListenerDuration)
+    public function setMaxListenerDuration($max_listener_duration)
     {
-        if (is_null($maxListenerDuration)) {
-            throw new \InvalidArgumentException('non-nullable maxListenerDuration cannot be null');
+        if (is_null($max_listener_duration)) {
+            throw new \InvalidArgumentException('non-nullable max_listener_duration cannot be null');
         }
-        $this->container['maxListenerDuration'] = $maxListenerDuration;
+        $this->container['max_listener_duration'] = $max_listener_duration;
 
         return $this;
     }
 
     /**
-     * Gets enableAutodj
+     * Gets enable_autodj
      *
      * @return bool|null
      */
     public function getEnableAutodj()
     {
-        return $this->container['enableAutodj'];
+        return $this->container['enable_autodj'];
     }
 
     /**
-     * Sets enableAutodj
+     * Sets enable_autodj
      *
-     * @param bool|null $enableAutodj enableAutodj
+     * @param bool|null $enable_autodj enable_autodj
      *
      * @return self
      */
-    public function setEnableAutodj($enableAutodj)
+    public function setEnableAutodj($enable_autodj)
     {
-        if (is_null($enableAutodj)) {
-            throw new \InvalidArgumentException('non-nullable enableAutodj cannot be null');
+        if (is_null($enable_autodj)) {
+            throw new \InvalidArgumentException('non-nullable enable_autodj cannot be null');
         }
-        $this->container['enableAutodj'] = $enableAutodj;
+        $this->container['enable_autodj'] = $enable_autodj;
 
         return $this;
     }
 
     /**
-     * Gets autodjFormat
+     * Gets autodj_format
      *
      * @return mixed|null
      */
     public function getAutodjFormat()
     {
-        return $this->container['autodjFormat'];
+        return $this->container['autodj_format'];
     }
 
     /**
-     * Sets autodjFormat
+     * Sets autodj_format
      *
-     * @param mixed|null $autodjFormat autodjFormat
+     * @param mixed|null $autodj_format autodj_format
      *
      * @return self
      */
-    public function setAutodjFormat($autodjFormat)
+    public function setAutodjFormat($autodj_format)
     {
-        if (is_null($autodjFormat)) {
-            array_push($this->openAPINullablesSetToNull, 'autodjFormat');
+        if (is_null($autodj_format)) {
+            array_push($this->openAPINullablesSetToNull, 'autodj_format');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('autodjFormat', $nullablesSetToNull);
+            $index = array_search('autodj_format', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['autodjFormat'] = $autodjFormat;
+        $this->container['autodj_format'] = $autodj_format;
 
         return $this;
     }
 
     /**
-     * Gets autodjBitrate
+     * Gets autodj_bitrate
      *
      * @return int|null
      */
     public function getAutodjBitrate()
     {
-        return $this->container['autodjBitrate'];
+        return $this->container['autodj_bitrate'];
     }
 
     /**
-     * Sets autodjBitrate
+     * Sets autodj_bitrate
      *
-     * @param int|null $autodjBitrate autodjBitrate
+     * @param int|null $autodj_bitrate autodj_bitrate
      *
      * @return self
      */
-    public function setAutodjBitrate($autodjBitrate)
+    public function setAutodjBitrate($autodj_bitrate)
     {
-        if (is_null($autodjBitrate)) {
-            array_push($this->openAPINullablesSetToNull, 'autodjBitrate');
+        if (is_null($autodj_bitrate)) {
+            array_push($this->openAPINullablesSetToNull, 'autodj_bitrate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('autodjBitrate', $nullablesSetToNull);
+            $index = array_search('autodj_bitrate', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['autodjBitrate'] = $autodjBitrate;
+        $this->container['autodj_bitrate'] = $autodj_bitrate;
 
         return $this;
     }
 
     /**
-     * Gets customListenUrl
+     * Gets custom_listen_url
      *
      * @return string|null
      */
     public function getCustomListenUrl()
     {
-        return $this->container['customListenUrl'];
+        return $this->container['custom_listen_url'];
     }
 
     /**
-     * Sets customListenUrl
+     * Sets custom_listen_url
      *
-     * @param string|null $customListenUrl customListenUrl
+     * @param string|null $custom_listen_url custom_listen_url
      *
      * @return self
      */
-    public function setCustomListenUrl($customListenUrl)
+    public function setCustomListenUrl($custom_listen_url)
     {
-        if (is_null($customListenUrl)) {
-            array_push($this->openAPINullablesSetToNull, 'customListenUrl');
+        if (is_null($custom_listen_url)) {
+            array_push($this->openAPINullablesSetToNull, 'custom_listen_url');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('customListenUrl', $nullablesSetToNull);
+            $index = array_search('custom_listen_url', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['customListenUrl'] = $customListenUrl;
+        $this->container['custom_listen_url'] = $custom_listen_url;
 
         return $this;
     }
 
     /**
-     * Gets frontendConfig
+     * Gets frontend_config
      *
      * @return mixed[]|null
      */
     public function getFrontendConfig()
     {
-        return $this->container['frontendConfig'];
+        return $this->container['frontend_config'];
     }
 
     /**
-     * Sets frontendConfig
+     * Sets frontend_config
      *
-     * @param mixed[]|null $frontendConfig frontendConfig
+     * @param mixed[]|null $frontend_config frontend_config
      *
      * @return self
      */
-    public function setFrontendConfig($frontendConfig)
+    public function setFrontendConfig($frontend_config)
     {
-        if (is_null($frontendConfig)) {
-            throw new \InvalidArgumentException('non-nullable frontendConfig cannot be null');
+        if (is_null($frontend_config)) {
+            throw new \InvalidArgumentException('non-nullable frontend_config cannot be null');
         }
-        $this->container['frontendConfig'] = $frontendConfig;
+        $this->container['frontend_config'] = $frontend_config;
 
         return $this;
     }
 
     /**
-     * Gets listenersUnique
+     * Gets listeners_unique
      *
      * @return int|null
      */
     public function getListenersUnique()
     {
-        return $this->container['listenersUnique'];
+        return $this->container['listeners_unique'];
     }
 
     /**
-     * Sets listenersUnique
+     * Sets listeners_unique
      *
-     * @param int|null $listenersUnique The most recent number of unique listeners.
+     * @param int|null $listeners_unique The most recent number of unique listeners.
      *
      * @return self
      */
-    public function setListenersUnique($listenersUnique)
+    public function setListenersUnique($listeners_unique)
     {
-        if (is_null($listenersUnique)) {
-            throw new \InvalidArgumentException('non-nullable listenersUnique cannot be null');
+        if (is_null($listeners_unique)) {
+            throw new \InvalidArgumentException('non-nullable listeners_unique cannot be null');
         }
-        $this->container['listenersUnique'] = $listenersUnique;
+        $this->container['listeners_unique'] = $listeners_unique;
 
         return $this;
     }
 
     /**
-     * Gets listenersTotal
+     * Gets listeners_total
      *
      * @return int|null
      */
     public function getListenersTotal()
     {
-        return $this->container['listenersTotal'];
+        return $this->container['listeners_total'];
     }
 
     /**
-     * Sets listenersTotal
+     * Sets listeners_total
      *
-     * @param int|null $listenersTotal The most recent number of total (non-unique) listeners.
+     * @param int|null $listeners_total The most recent number of total (non-unique) listeners.
      *
      * @return self
      */
-    public function setListenersTotal($listenersTotal)
+    public function setListenersTotal($listeners_total)
     {
-        if (is_null($listenersTotal)) {
-            throw new \InvalidArgumentException('non-nullable listenersTotal cannot be null');
+        if (is_null($listeners_total)) {
+            throw new \InvalidArgumentException('non-nullable listeners_total cannot be null');
         }
-        $this->container['listenersTotal'] = $listenersTotal;
+        $this->container['listeners_total'] = $listeners_total;
 
         return $this;
     }

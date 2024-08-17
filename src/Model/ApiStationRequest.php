@@ -57,8 +57,8 @@ class ApiStationRequest implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'requestId' => 'string',
-        'requestUrl' => 'string',
+        'request_id' => 'string',
+        'request_url' => 'string',
         'song' => '\AzuraCast\Model\ApiSong'
     ];
 
@@ -70,8 +70,8 @@ class ApiStationRequest implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'requestId' => null,
-        'requestUrl' => null,
+        'request_id' => null,
+        'request_url' => null,
         'song' => null
     ];
 
@@ -81,8 +81,8 @@ class ApiStationRequest implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'requestId' => false,
-        'requestUrl' => false,
+        'request_id' => false,
+        'request_url' => false,
         'song' => false
     ];
 
@@ -172,8 +172,8 @@ class ApiStationRequest implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        'requestId' => 'request_id',
-        'requestUrl' => 'request_url',
+        'request_id' => 'request_id',
+        'request_url' => 'request_url',
         'song' => 'song'
     ];
 
@@ -183,8 +183,8 @@ class ApiStationRequest implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        'requestId' => 'setRequestId',
-        'requestUrl' => 'setRequestUrl',
+        'request_id' => 'setRequestId',
+        'request_url' => 'setRequestUrl',
         'song' => 'setSong'
     ];
 
@@ -194,8 +194,8 @@ class ApiStationRequest implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        'requestId' => 'getRequestId',
-        'requestUrl' => 'getRequestUrl',
+        'request_id' => 'getRequestId',
+        'request_url' => 'getRequestUrl',
         'song' => 'getSong'
     ];
 
@@ -256,8 +256,8 @@ class ApiStationRequest implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('requestId', $data ?? [], null);
-        $this->setIfExists('requestUrl', $data ?? [], null);
+        $this->setIfExists('request_id', $data ?? [], null);
+        $this->setIfExists('request_url', $data ?? [], null);
         $this->setIfExists('song', $data ?? [], null);
     }
 
@@ -304,55 +304,55 @@ class ApiStationRequest implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets requestId
+     * Gets request_id
      *
      * @return string|null
      */
     public function getRequestId()
     {
-        return $this->container['requestId'];
+        return $this->container['request_id'];
     }
 
     /**
-     * Sets requestId
+     * Sets request_id
      *
-     * @param string|null $requestId Requestable ID unique identifier
+     * @param string|null $request_id Requestable ID unique identifier
      *
      * @return self
      */
-    public function setRequestId($requestId)
+    public function setRequestId($request_id)
     {
-        if (is_null($requestId)) {
-            throw new \InvalidArgumentException('non-nullable requestId cannot be null');
+        if (is_null($request_id)) {
+            throw new \InvalidArgumentException('non-nullable request_id cannot be null');
         }
-        $this->container['requestId'] = $requestId;
+        $this->container['request_id'] = $request_id;
 
         return $this;
     }
 
     /**
-     * Gets requestUrl
+     * Gets request_url
      *
      * @return string|null
      */
     public function getRequestUrl()
     {
-        return $this->container['requestUrl'];
+        return $this->container['request_url'];
     }
 
     /**
-     * Sets requestUrl
+     * Sets request_url
      *
-     * @param string|null $requestUrl URL to directly submit request
+     * @param string|null $request_url URL to directly submit request
      *
      * @return self
      */
-    public function setRequestUrl($requestUrl)
+    public function setRequestUrl($request_url)
     {
-        if (is_null($requestUrl)) {
-            throw new \InvalidArgumentException('non-nullable requestUrl cannot be null');
+        if (is_null($request_url)) {
+            throw new \InvalidArgumentException('non-nullable request_url cannot be null');
         }
-        $this->container['requestUrl'] = $requestUrl;
+        $this->container['request_url'] = $request_url;
 
         return $this;
     }

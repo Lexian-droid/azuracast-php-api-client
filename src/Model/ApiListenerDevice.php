@@ -57,12 +57,12 @@ class ApiListenerDevice implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'isBrowser' => 'bool',
-        'isMobile' => 'bool',
-        'isBot' => 'bool',
+        'is_browser' => 'bool',
+        'is_mobile' => 'bool',
+        'is_bot' => 'bool',
         'client' => 'string',
-        'browserFamily' => 'string',
-        'osFamily' => 'string'
+        'browser_family' => 'string',
+        'os_family' => 'string'
     ];
 
     /**
@@ -73,12 +73,12 @@ class ApiListenerDevice implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'isBrowser' => null,
-        'isMobile' => null,
-        'isBot' => null,
+        'is_browser' => null,
+        'is_mobile' => null,
+        'is_bot' => null,
         'client' => null,
-        'browserFamily' => null,
-        'osFamily' => null
+        'browser_family' => null,
+        'os_family' => null
     ];
 
     /**
@@ -87,12 +87,12 @@ class ApiListenerDevice implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'isBrowser' => false,
-        'isMobile' => false,
-        'isBot' => false,
+        'is_browser' => false,
+        'is_mobile' => false,
+        'is_bot' => false,
         'client' => true,
-        'browserFamily' => true,
-        'osFamily' => true
+        'browser_family' => true,
+        'os_family' => true
     ];
 
     /**
@@ -181,12 +181,12 @@ class ApiListenerDevice implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        'isBrowser' => 'is_browser',
-        'isMobile' => 'is_mobile',
-        'isBot' => 'is_bot',
+        'is_browser' => 'is_browser',
+        'is_mobile' => 'is_mobile',
+        'is_bot' => 'is_bot',
         'client' => 'client',
-        'browserFamily' => 'browser_family',
-        'osFamily' => 'os_family'
+        'browser_family' => 'browser_family',
+        'os_family' => 'os_family'
     ];
 
     /**
@@ -195,12 +195,12 @@ class ApiListenerDevice implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        'isBrowser' => 'setIsBrowser',
-        'isMobile' => 'setIsMobile',
-        'isBot' => 'setIsBot',
+        'is_browser' => 'setIsBrowser',
+        'is_mobile' => 'setIsMobile',
+        'is_bot' => 'setIsBot',
         'client' => 'setClient',
-        'browserFamily' => 'setBrowserFamily',
-        'osFamily' => 'setOsFamily'
+        'browser_family' => 'setBrowserFamily',
+        'os_family' => 'setOsFamily'
     ];
 
     /**
@@ -209,12 +209,12 @@ class ApiListenerDevice implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        'isBrowser' => 'getIsBrowser',
-        'isMobile' => 'getIsMobile',
-        'isBot' => 'getIsBot',
+        'is_browser' => 'getIsBrowser',
+        'is_mobile' => 'getIsMobile',
+        'is_bot' => 'getIsBot',
         'client' => 'getClient',
-        'browserFamily' => 'getBrowserFamily',
-        'osFamily' => 'getOsFamily'
+        'browser_family' => 'getBrowserFamily',
+        'os_family' => 'getOsFamily'
     ];
 
     /**
@@ -274,12 +274,12 @@ class ApiListenerDevice implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('isBrowser', $data ?? [], null);
-        $this->setIfExists('isMobile', $data ?? [], null);
-        $this->setIfExists('isBot', $data ?? [], null);
+        $this->setIfExists('is_browser', $data ?? [], null);
+        $this->setIfExists('is_mobile', $data ?? [], null);
+        $this->setIfExists('is_bot', $data ?? [], null);
         $this->setIfExists('client', $data ?? [], null);
-        $this->setIfExists('browserFamily', $data ?? [], null);
-        $this->setIfExists('osFamily', $data ?? [], null);
+        $this->setIfExists('browser_family', $data ?? [], null);
+        $this->setIfExists('os_family', $data ?? [], null);
     }
 
     /**
@@ -325,82 +325,82 @@ class ApiListenerDevice implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets isBrowser
+     * Gets is_browser
      *
      * @return bool|null
      */
     public function getIsBrowser()
     {
-        return $this->container['isBrowser'];
+        return $this->container['is_browser'];
     }
 
     /**
-     * Sets isBrowser
+     * Sets is_browser
      *
-     * @param bool|null $isBrowser If the listener device is likely a browser.
+     * @param bool|null $is_browser If the listener device is likely a browser.
      *
      * @return self
      */
-    public function setIsBrowser($isBrowser)
+    public function setIsBrowser($is_browser)
     {
-        if (is_null($isBrowser)) {
-            throw new \InvalidArgumentException('non-nullable isBrowser cannot be null');
+        if (is_null($is_browser)) {
+            throw new \InvalidArgumentException('non-nullable is_browser cannot be null');
         }
-        $this->container['isBrowser'] = $isBrowser;
+        $this->container['is_browser'] = $is_browser;
 
         return $this;
     }
 
     /**
-     * Gets isMobile
+     * Gets is_mobile
      *
      * @return bool|null
      */
     public function getIsMobile()
     {
-        return $this->container['isMobile'];
+        return $this->container['is_mobile'];
     }
 
     /**
-     * Sets isMobile
+     * Sets is_mobile
      *
-     * @param bool|null $isMobile If the listener device is likely a mobile device.
+     * @param bool|null $is_mobile If the listener device is likely a mobile device.
      *
      * @return self
      */
-    public function setIsMobile($isMobile)
+    public function setIsMobile($is_mobile)
     {
-        if (is_null($isMobile)) {
-            throw new \InvalidArgumentException('non-nullable isMobile cannot be null');
+        if (is_null($is_mobile)) {
+            throw new \InvalidArgumentException('non-nullable is_mobile cannot be null');
         }
-        $this->container['isMobile'] = $isMobile;
+        $this->container['is_mobile'] = $is_mobile;
 
         return $this;
     }
 
     /**
-     * Gets isBot
+     * Gets is_bot
      *
      * @return bool|null
      */
     public function getIsBot()
     {
-        return $this->container['isBot'];
+        return $this->container['is_bot'];
     }
 
     /**
-     * Sets isBot
+     * Sets is_bot
      *
-     * @param bool|null $isBot If the listener device is likely a crawler.
+     * @param bool|null $is_bot If the listener device is likely a crawler.
      *
      * @return self
      */
-    public function setIsBot($isBot)
+    public function setIsBot($is_bot)
     {
-        if (is_null($isBot)) {
-            throw new \InvalidArgumentException('non-nullable isBot cannot be null');
+        if (is_null($is_bot)) {
+            throw new \InvalidArgumentException('non-nullable is_bot cannot be null');
         }
-        $this->container['isBot'] = $isBot;
+        $this->container['is_bot'] = $is_bot;
 
         return $this;
     }
@@ -440,69 +440,69 @@ class ApiListenerDevice implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets browserFamily
+     * Gets browser_family
      *
      * @return string|null
      */
     public function getBrowserFamily()
     {
-        return $this->container['browserFamily'];
+        return $this->container['browser_family'];
     }
 
     /**
-     * Sets browserFamily
+     * Sets browser_family
      *
-     * @param string|null $browserFamily Summary of the listener browser family.
+     * @param string|null $browser_family Summary of the listener browser family.
      *
      * @return self
      */
-    public function setBrowserFamily($browserFamily)
+    public function setBrowserFamily($browser_family)
     {
-        if (is_null($browserFamily)) {
-            array_push($this->openAPINullablesSetToNull, 'browserFamily');
+        if (is_null($browser_family)) {
+            array_push($this->openAPINullablesSetToNull, 'browser_family');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('browserFamily', $nullablesSetToNull);
+            $index = array_search('browser_family', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['browserFamily'] = $browserFamily;
+        $this->container['browser_family'] = $browser_family;
 
         return $this;
     }
 
     /**
-     * Gets osFamily
+     * Gets os_family
      *
      * @return string|null
      */
     public function getOsFamily()
     {
-        return $this->container['osFamily'];
+        return $this->container['os_family'];
     }
 
     /**
-     * Sets osFamily
+     * Sets os_family
      *
-     * @param string|null $osFamily Summary of the listener OS family.
+     * @param string|null $os_family Summary of the listener OS family.
      *
      * @return self
      */
-    public function setOsFamily($osFamily)
+    public function setOsFamily($os_family)
     {
-        if (is_null($osFamily)) {
-            array_push($this->openAPINullablesSetToNull, 'osFamily');
+        if (is_null($os_family)) {
+            array_push($this->openAPINullablesSetToNull, 'os_family');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('osFamily', $nullablesSetToNull);
+            $index = array_search('os_family', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['osFamily'] = $osFamily;
+        $this->container['os_family'] = $os_family;
 
         return $this;
     }

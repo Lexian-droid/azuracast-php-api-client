@@ -11,7 +11,7 @@ All URIs are relative to https://demo.azuracast.com/api, except if the operation
 ## `getRequestableSongs()`
 
 ```php
-getRequestableSongs($stationId): \AzuraCast\Model\ApiStationRequest[]
+getRequestableSongs($station_id): \AzuraCast\Model\ApiStationRequest[]
 ```
 
 
@@ -31,10 +31,10 @@ $apiInstance = new AzuraCast\Api\StationsSongRequestsApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 
 try {
-    $result = $apiInstance->getRequestableSongs($stationId);
+    $result = $apiInstance->getRequestableSongs($station_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsSongRequestsApi->getRequestableSongs: ', $e->getMessage(), PHP_EOL;
@@ -45,7 +45,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 
 ### Return type
 
@@ -67,7 +67,7 @@ No authorization required
 ## `submitSongRequest()`
 
 ```php
-submitSongRequest($stationId, $requestId): \AzuraCast\Model\ApiStatus
+submitSongRequest($station_id, $request_id): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -87,11 +87,11 @@ $apiInstance = new AzuraCast\Api\StationsSongRequestsApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
-$requestId = 'requestId_example'; // string | The requestable song ID
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$request_id = 'request_id_example'; // string | The requestable song ID
 
 try {
-    $result = $apiInstance->submitSongRequest($stationId, $requestId);
+    $result = $apiInstance->submitSongRequest($station_id, $request_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsSongRequestsApi->submitSongRequest: ', $e->getMessage(), PHP_EOL;
@@ -102,8 +102,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
-| **requestId** | **string**| The requestable song ID | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **request_id** | **string**| The requestable song ID | |
 
 ### Return type
 

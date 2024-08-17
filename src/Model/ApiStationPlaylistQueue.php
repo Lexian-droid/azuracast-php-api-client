@@ -57,9 +57,9 @@ class ApiStationPlaylistQueue implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'spmId' => 'int',
-        'mediaId' => 'int',
-        'songId' => 'string',
+        'spm_id' => 'int',
+        'media_id' => 'int',
+        'song_id' => 'string',
         'artist' => 'string',
         'title' => 'string'
     ];
@@ -72,9 +72,9 @@ class ApiStationPlaylistQueue implements ModelInterface, ArrayAccess, \JsonSeria
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'spmId' => null,
-        'mediaId' => null,
-        'songId' => null,
+        'spm_id' => null,
+        'media_id' => null,
+        'song_id' => null,
         'artist' => null,
         'title' => null
     ];
@@ -85,9 +85,9 @@ class ApiStationPlaylistQueue implements ModelInterface, ArrayAccess, \JsonSeria
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'spmId' => true,
-        'mediaId' => false,
-        'songId' => false,
+        'spm_id' => true,
+        'media_id' => false,
+        'song_id' => false,
         'artist' => false,
         'title' => false
     ];
@@ -178,9 +178,9 @@ class ApiStationPlaylistQueue implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $attributeMap = [
-        'spmId' => 'spm_id',
-        'mediaId' => 'media_id',
-        'songId' => 'song_id',
+        'spm_id' => 'spm_id',
+        'media_id' => 'media_id',
+        'song_id' => 'song_id',
         'artist' => 'artist',
         'title' => 'title'
     ];
@@ -191,9 +191,9 @@ class ApiStationPlaylistQueue implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $setters = [
-        'spmId' => 'setSpmId',
-        'mediaId' => 'setMediaId',
-        'songId' => 'setSongId',
+        'spm_id' => 'setSpmId',
+        'media_id' => 'setMediaId',
+        'song_id' => 'setSongId',
         'artist' => 'setArtist',
         'title' => 'setTitle'
     ];
@@ -204,9 +204,9 @@ class ApiStationPlaylistQueue implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $getters = [
-        'spmId' => 'getSpmId',
-        'mediaId' => 'getMediaId',
-        'songId' => 'getSongId',
+        'spm_id' => 'getSpmId',
+        'media_id' => 'getMediaId',
+        'song_id' => 'getSongId',
         'artist' => 'getArtist',
         'title' => 'getTitle'
     ];
@@ -268,9 +268,9 @@ class ApiStationPlaylistQueue implements ModelInterface, ArrayAccess, \JsonSeria
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('spmId', $data ?? [], null);
-        $this->setIfExists('mediaId', $data ?? [], null);
-        $this->setIfExists('songId', $data ?? [], null);
+        $this->setIfExists('spm_id', $data ?? [], null);
+        $this->setIfExists('media_id', $data ?? [], null);
+        $this->setIfExists('song_id', $data ?? [], null);
         $this->setIfExists('artist', $data ?? [], null);
         $this->setIfExists('title', $data ?? [], null);
     }
@@ -318,89 +318,89 @@ class ApiStationPlaylistQueue implements ModelInterface, ArrayAccess, \JsonSeria
 
 
     /**
-     * Gets spmId
+     * Gets spm_id
      *
      * @return int|null
      */
     public function getSpmId()
     {
-        return $this->container['spmId'];
+        return $this->container['spm_id'];
     }
 
     /**
-     * Sets spmId
+     * Sets spm_id
      *
-     * @param int|null $spmId ID of the StationPlaylistMedia record associating this track with the playlist
+     * @param int|null $spm_id ID of the StationPlaylistMedia record associating this track with the playlist
      *
      * @return self
      */
-    public function setSpmId($spmId)
+    public function setSpmId($spm_id)
     {
-        if (is_null($spmId)) {
-            array_push($this->openAPINullablesSetToNull, 'spmId');
+        if (is_null($spm_id)) {
+            array_push($this->openAPINullablesSetToNull, 'spm_id');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('spmId', $nullablesSetToNull);
+            $index = array_search('spm_id', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['spmId'] = $spmId;
+        $this->container['spm_id'] = $spm_id;
 
         return $this;
     }
 
     /**
-     * Gets mediaId
+     * Gets media_id
      *
      * @return int|null
      */
     public function getMediaId()
     {
-        return $this->container['mediaId'];
+        return $this->container['media_id'];
     }
 
     /**
-     * Sets mediaId
+     * Sets media_id
      *
-     * @param int|null $mediaId ID of the StationPlaylistMedia record associating this track with the playlist
+     * @param int|null $media_id ID of the StationPlaylistMedia record associating this track with the playlist
      *
      * @return self
      */
-    public function setMediaId($mediaId)
+    public function setMediaId($media_id)
     {
-        if (is_null($mediaId)) {
-            throw new \InvalidArgumentException('non-nullable mediaId cannot be null');
+        if (is_null($media_id)) {
+            throw new \InvalidArgumentException('non-nullable media_id cannot be null');
         }
-        $this->container['mediaId'] = $mediaId;
+        $this->container['media_id'] = $media_id;
 
         return $this;
     }
 
     /**
-     * Gets songId
+     * Gets song_id
      *
      * @return string|null
      */
     public function getSongId()
     {
-        return $this->container['songId'];
+        return $this->container['song_id'];
     }
 
     /**
-     * Sets songId
+     * Sets song_id
      *
-     * @param string|null $songId The song's 32-character unique identifier hash
+     * @param string|null $song_id The song's 32-character unique identifier hash
      *
      * @return self
      */
-    public function setSongId($songId)
+    public function setSongId($song_id)
     {
-        if (is_null($songId)) {
-            throw new \InvalidArgumentException('non-nullable songId cannot be null');
+        if (is_null($song_id)) {
+            throw new \InvalidArgumentException('non-nullable song_id cannot be null');
         }
-        $this->container['songId'] = $songId;
+        $this->container['song_id'] = $song_id;
 
         return $this;
     }

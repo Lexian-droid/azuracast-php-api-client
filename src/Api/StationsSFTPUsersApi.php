@@ -137,34 +137,34 @@ class StationsSFTPUsersApi
     /**
      * Operation addSftpUser
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
-     * @param  \AzuraCast\Model\SftpUser $sftpUser sftpUser (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
+     * @param  \AzuraCast\Model\SftpUser $sftp_user sftp_user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addSftpUser'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\SftpUser|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function addSftpUser($stationId, $sftpUser = null, string $contentType = self::contentTypes['addSftpUser'][0])
+    public function addSftpUser($station_id, $sftp_user = null, string $contentType = self::contentTypes['addSftpUser'][0])
     {
-        list($response) = $this->addSftpUserWithHttpInfo($stationId, $sftpUser, $contentType);
+        list($response) = $this->addSftpUserWithHttpInfo($station_id, $sftp_user, $contentType);
         return $response;
     }
 
     /**
      * Operation addSftpUserWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  \AzuraCast\Model\SftpUser $sftpUser (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  \AzuraCast\Model\SftpUser $sftp_user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addSftpUser'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\SftpUser|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function addSftpUserWithHttpInfo($stationId, $sftpUser = null, string $contentType = self::contentTypes['addSftpUser'][0])
+    public function addSftpUserWithHttpInfo($station_id, $sftp_user = null, string $contentType = self::contentTypes['addSftpUser'][0])
     {
-        $request = $this->addSftpUserRequest($stationId, $sftpUser, $contentType);
+        $request = $this->addSftpUserRequest($station_id, $sftp_user, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -382,16 +382,16 @@ class StationsSFTPUsersApi
     /**
      * Operation addSftpUserAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  \AzuraCast\Model\SftpUser $sftpUser (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  \AzuraCast\Model\SftpUser $sftp_user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addSftpUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addSftpUserAsync($stationId, $sftpUser = null, string $contentType = self::contentTypes['addSftpUser'][0])
+    public function addSftpUserAsync($station_id, $sftp_user = null, string $contentType = self::contentTypes['addSftpUser'][0])
     {
-        return $this->addSftpUserAsyncWithHttpInfo($stationId, $sftpUser, $contentType)
+        return $this->addSftpUserAsyncWithHttpInfo($station_id, $sftp_user, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -402,17 +402,17 @@ class StationsSFTPUsersApi
     /**
      * Operation addSftpUserAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  \AzuraCast\Model\SftpUser $sftpUser (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  \AzuraCast\Model\SftpUser $sftp_user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addSftpUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addSftpUserAsyncWithHttpInfo($stationId, $sftpUser = null, string $contentType = self::contentTypes['addSftpUser'][0])
+    public function addSftpUserAsyncWithHttpInfo($station_id, $sftp_user = null, string $contentType = self::contentTypes['addSftpUser'][0])
     {
         $returnType = '\AzuraCast\Model\SftpUser';
-        $request = $this->addSftpUserRequest($stationId, $sftpUser, $contentType);
+        $request = $this->addSftpUserRequest($station_id, $sftp_user, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -453,20 +453,20 @@ class StationsSFTPUsersApi
     /**
      * Create request for operation 'addSftpUser'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  \AzuraCast\Model\SftpUser $sftpUser (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  \AzuraCast\Model\SftpUser $sftp_user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addSftpUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function addSftpUserRequest($stationId, $sftpUser = null, string $contentType = self::contentTypes['addSftpUser'][0])
+    public function addSftpUserRequest($station_id, $sftp_user = null, string $contentType = self::contentTypes['addSftpUser'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling addSftpUser'
+                'Missing the required parameter $station_id when calling addSftpUser'
             );
         }
 
@@ -482,10 +482,10 @@ class StationsSFTPUsersApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -498,12 +498,12 @@ class StationsSFTPUsersApi
         );
 
         // for model (json/xml)
-        if (isset($sftpUser)) {
+        if (isset($sftp_user)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($sftpUser));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($sftp_user));
             } else {
-                $httpBody = $sftpUser;
+                $httpBody = $sftp_user;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -559,7 +559,7 @@ class StationsSFTPUsersApi
     /**
      * Operation deleteSftpUser
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  int $id Remote Relay ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSftpUser'] to see the possible values for this operation
      *
@@ -567,16 +567,16 @@ class StationsSFTPUsersApi
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function deleteSftpUser($stationId, $id, string $contentType = self::contentTypes['deleteSftpUser'][0])
+    public function deleteSftpUser($station_id, $id, string $contentType = self::contentTypes['deleteSftpUser'][0])
     {
-        list($response) = $this->deleteSftpUserWithHttpInfo($stationId, $id, $contentType);
+        list($response) = $this->deleteSftpUserWithHttpInfo($station_id, $id, $contentType);
         return $response;
     }
 
     /**
      * Operation deleteSftpUserWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Remote Relay ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSftpUser'] to see the possible values for this operation
      *
@@ -584,9 +584,9 @@ class StationsSFTPUsersApi
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteSftpUserWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['deleteSftpUser'][0])
+    public function deleteSftpUserWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['deleteSftpUser'][0])
     {
-        $request = $this->deleteSftpUserRequest($stationId, $id, $contentType);
+        $request = $this->deleteSftpUserRequest($station_id, $id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -804,16 +804,16 @@ class StationsSFTPUsersApi
     /**
      * Operation deleteSftpUserAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Remote Relay ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSftpUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteSftpUserAsync($stationId, $id, string $contentType = self::contentTypes['deleteSftpUser'][0])
+    public function deleteSftpUserAsync($station_id, $id, string $contentType = self::contentTypes['deleteSftpUser'][0])
     {
-        return $this->deleteSftpUserAsyncWithHttpInfo($stationId, $id, $contentType)
+        return $this->deleteSftpUserAsyncWithHttpInfo($station_id, $id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -824,17 +824,17 @@ class StationsSFTPUsersApi
     /**
      * Operation deleteSftpUserAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Remote Relay ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSftpUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteSftpUserAsyncWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['deleteSftpUser'][0])
+    public function deleteSftpUserAsyncWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['deleteSftpUser'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStatus';
-        $request = $this->deleteSftpUserRequest($stationId, $id, $contentType);
+        $request = $this->deleteSftpUserRequest($station_id, $id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -875,20 +875,20 @@ class StationsSFTPUsersApi
     /**
      * Create request for operation 'deleteSftpUser'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Remote Relay ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSftpUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function deleteSftpUserRequest($stationId, $id, string $contentType = self::contentTypes['deleteSftpUser'][0])
+    public function deleteSftpUserRequest($station_id, $id, string $contentType = self::contentTypes['deleteSftpUser'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling deleteSftpUser'
+                'Missing the required parameter $station_id when calling deleteSftpUser'
             );
         }
 
@@ -910,10 +910,10 @@ class StationsSFTPUsersApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -988,36 +988,36 @@ class StationsSFTPUsersApi
     /**
      * Operation editSftpUser
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  int $id Remote Relay ID (required)
-     * @param  \AzuraCast\Model\SftpUser $sftpUser sftpUser (optional)
+     * @param  \AzuraCast\Model\SftpUser $sftp_user sftp_user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editSftpUser'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function editSftpUser($stationId, $id, $sftpUser = null, string $contentType = self::contentTypes['editSftpUser'][0])
+    public function editSftpUser($station_id, $id, $sftp_user = null, string $contentType = self::contentTypes['editSftpUser'][0])
     {
-        list($response) = $this->editSftpUserWithHttpInfo($stationId, $id, $sftpUser, $contentType);
+        list($response) = $this->editSftpUserWithHttpInfo($station_id, $id, $sftp_user, $contentType);
         return $response;
     }
 
     /**
      * Operation editSftpUserWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Remote Relay ID (required)
-     * @param  \AzuraCast\Model\SftpUser $sftpUser (optional)
+     * @param  \AzuraCast\Model\SftpUser $sftp_user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editSftpUser'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function editSftpUserWithHttpInfo($stationId, $id, $sftpUser = null, string $contentType = self::contentTypes['editSftpUser'][0])
+    public function editSftpUserWithHttpInfo($station_id, $id, $sftp_user = null, string $contentType = self::contentTypes['editSftpUser'][0])
     {
-        $request = $this->editSftpUserRequest($stationId, $id, $sftpUser, $contentType);
+        $request = $this->editSftpUserRequest($station_id, $id, $sftp_user, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1235,17 +1235,17 @@ class StationsSFTPUsersApi
     /**
      * Operation editSftpUserAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Remote Relay ID (required)
-     * @param  \AzuraCast\Model\SftpUser $sftpUser (optional)
+     * @param  \AzuraCast\Model\SftpUser $sftp_user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editSftpUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function editSftpUserAsync($stationId, $id, $sftpUser = null, string $contentType = self::contentTypes['editSftpUser'][0])
+    public function editSftpUserAsync($station_id, $id, $sftp_user = null, string $contentType = self::contentTypes['editSftpUser'][0])
     {
-        return $this->editSftpUserAsyncWithHttpInfo($stationId, $id, $sftpUser, $contentType)
+        return $this->editSftpUserAsyncWithHttpInfo($station_id, $id, $sftp_user, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1256,18 +1256,18 @@ class StationsSFTPUsersApi
     /**
      * Operation editSftpUserAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Remote Relay ID (required)
-     * @param  \AzuraCast\Model\SftpUser $sftpUser (optional)
+     * @param  \AzuraCast\Model\SftpUser $sftp_user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editSftpUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function editSftpUserAsyncWithHttpInfo($stationId, $id, $sftpUser = null, string $contentType = self::contentTypes['editSftpUser'][0])
+    public function editSftpUserAsyncWithHttpInfo($station_id, $id, $sftp_user = null, string $contentType = self::contentTypes['editSftpUser'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStatus';
-        $request = $this->editSftpUserRequest($stationId, $id, $sftpUser, $contentType);
+        $request = $this->editSftpUserRequest($station_id, $id, $sftp_user, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1308,21 +1308,21 @@ class StationsSFTPUsersApi
     /**
      * Create request for operation 'editSftpUser'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Remote Relay ID (required)
-     * @param  \AzuraCast\Model\SftpUser $sftpUser (optional)
+     * @param  \AzuraCast\Model\SftpUser $sftp_user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editSftpUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function editSftpUserRequest($stationId, $id, $sftpUser = null, string $contentType = self::contentTypes['editSftpUser'][0])
+    public function editSftpUserRequest($station_id, $id, $sftp_user = null, string $contentType = self::contentTypes['editSftpUser'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling editSftpUser'
+                'Missing the required parameter $station_id when calling editSftpUser'
             );
         }
 
@@ -1345,10 +1345,10 @@ class StationsSFTPUsersApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -1369,12 +1369,12 @@ class StationsSFTPUsersApi
         );
 
         // for model (json/xml)
-        if (isset($sftpUser)) {
+        if (isset($sftp_user)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($sftpUser));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($sftp_user));
             } else {
-                $httpBody = $sftpUser;
+                $httpBody = $sftp_user;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1430,7 +1430,7 @@ class StationsSFTPUsersApi
     /**
      * Operation getSftpUser
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  int $id SFTP User ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSftpUser'] to see the possible values for this operation
      *
@@ -1438,16 +1438,16 @@ class StationsSFTPUsersApi
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\SftpUser|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function getSftpUser($stationId, $id, string $contentType = self::contentTypes['getSftpUser'][0])
+    public function getSftpUser($station_id, $id, string $contentType = self::contentTypes['getSftpUser'][0])
     {
-        list($response) = $this->getSftpUserWithHttpInfo($stationId, $id, $contentType);
+        list($response) = $this->getSftpUserWithHttpInfo($station_id, $id, $contentType);
         return $response;
     }
 
     /**
      * Operation getSftpUserWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id SFTP User ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSftpUser'] to see the possible values for this operation
      *
@@ -1455,9 +1455,9 @@ class StationsSFTPUsersApi
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\SftpUser|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getSftpUserWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['getSftpUser'][0])
+    public function getSftpUserWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['getSftpUser'][0])
     {
-        $request = $this->getSftpUserRequest($stationId, $id, $contentType);
+        $request = $this->getSftpUserRequest($station_id, $id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1675,16 +1675,16 @@ class StationsSFTPUsersApi
     /**
      * Operation getSftpUserAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id SFTP User ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSftpUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getSftpUserAsync($stationId, $id, string $contentType = self::contentTypes['getSftpUser'][0])
+    public function getSftpUserAsync($station_id, $id, string $contentType = self::contentTypes['getSftpUser'][0])
     {
-        return $this->getSftpUserAsyncWithHttpInfo($stationId, $id, $contentType)
+        return $this->getSftpUserAsyncWithHttpInfo($station_id, $id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1695,17 +1695,17 @@ class StationsSFTPUsersApi
     /**
      * Operation getSftpUserAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id SFTP User ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSftpUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getSftpUserAsyncWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['getSftpUser'][0])
+    public function getSftpUserAsyncWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['getSftpUser'][0])
     {
         $returnType = '\AzuraCast\Model\SftpUser';
-        $request = $this->getSftpUserRequest($stationId, $id, $contentType);
+        $request = $this->getSftpUserRequest($station_id, $id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1746,20 +1746,20 @@ class StationsSFTPUsersApi
     /**
      * Create request for operation 'getSftpUser'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id SFTP User ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSftpUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getSftpUserRequest($stationId, $id, string $contentType = self::contentTypes['getSftpUser'][0])
+    public function getSftpUserRequest($station_id, $id, string $contentType = self::contentTypes['getSftpUser'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling getSftpUser'
+                'Missing the required parameter $station_id when calling getSftpUser'
             );
         }
 
@@ -1781,10 +1781,10 @@ class StationsSFTPUsersApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -1859,32 +1859,32 @@ class StationsSFTPUsersApi
     /**
      * Operation getSftpUsers
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSftpUsers'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\SftpUser[]|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function getSftpUsers($stationId, string $contentType = self::contentTypes['getSftpUsers'][0])
+    public function getSftpUsers($station_id, string $contentType = self::contentTypes['getSftpUsers'][0])
     {
-        list($response) = $this->getSftpUsersWithHttpInfo($stationId, $contentType);
+        list($response) = $this->getSftpUsersWithHttpInfo($station_id, $contentType);
         return $response;
     }
 
     /**
      * Operation getSftpUsersWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSftpUsers'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\SftpUser[]|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getSftpUsersWithHttpInfo($stationId, string $contentType = self::contentTypes['getSftpUsers'][0])
+    public function getSftpUsersWithHttpInfo($station_id, string $contentType = self::contentTypes['getSftpUsers'][0])
     {
-        $request = $this->getSftpUsersRequest($stationId, $contentType);
+        $request = $this->getSftpUsersRequest($station_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2102,15 +2102,15 @@ class StationsSFTPUsersApi
     /**
      * Operation getSftpUsersAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSftpUsers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getSftpUsersAsync($stationId, string $contentType = self::contentTypes['getSftpUsers'][0])
+    public function getSftpUsersAsync($station_id, string $contentType = self::contentTypes['getSftpUsers'][0])
     {
-        return $this->getSftpUsersAsyncWithHttpInfo($stationId, $contentType)
+        return $this->getSftpUsersAsyncWithHttpInfo($station_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2121,16 +2121,16 @@ class StationsSFTPUsersApi
     /**
      * Operation getSftpUsersAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSftpUsers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getSftpUsersAsyncWithHttpInfo($stationId, string $contentType = self::contentTypes['getSftpUsers'][0])
+    public function getSftpUsersAsyncWithHttpInfo($station_id, string $contentType = self::contentTypes['getSftpUsers'][0])
     {
         $returnType = '\AzuraCast\Model\SftpUser[]';
-        $request = $this->getSftpUsersRequest($stationId, $contentType);
+        $request = $this->getSftpUsersRequest($station_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2171,19 +2171,19 @@ class StationsSFTPUsersApi
     /**
      * Create request for operation 'getSftpUsers'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSftpUsers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getSftpUsersRequest($stationId, string $contentType = self::contentTypes['getSftpUsers'][0])
+    public function getSftpUsersRequest($station_id, string $contentType = self::contentTypes['getSftpUsers'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling getSftpUsers'
+                'Missing the required parameter $station_id when calling getSftpUsers'
             );
         }
 
@@ -2198,10 +2198,10 @@ class StationsSFTPUsersApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }

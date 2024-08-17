@@ -137,32 +137,32 @@ class AdministrationStorageLocationsApi
     /**
      * Operation addStorageLocation
      *
-     * @param  \AzuraCast\Model\ApiAdminStorageLocation $apiAdminStorageLocation apiAdminStorageLocation (optional)
+     * @param  \AzuraCast\Model\ApiAdminStorageLocation $api_admin_storage_location api_admin_storage_location (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addStorageLocation'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiAdminStorageLocation|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function addStorageLocation($apiAdminStorageLocation = null, string $contentType = self::contentTypes['addStorageLocation'][0])
+    public function addStorageLocation($api_admin_storage_location = null, string $contentType = self::contentTypes['addStorageLocation'][0])
     {
-        list($response) = $this->addStorageLocationWithHttpInfo($apiAdminStorageLocation, $contentType);
+        list($response) = $this->addStorageLocationWithHttpInfo($api_admin_storage_location, $contentType);
         return $response;
     }
 
     /**
      * Operation addStorageLocationWithHttpInfo
      *
-     * @param  \AzuraCast\Model\ApiAdminStorageLocation $apiAdminStorageLocation (optional)
+     * @param  \AzuraCast\Model\ApiAdminStorageLocation $api_admin_storage_location (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addStorageLocation'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiAdminStorageLocation|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function addStorageLocationWithHttpInfo($apiAdminStorageLocation = null, string $contentType = self::contentTypes['addStorageLocation'][0])
+    public function addStorageLocationWithHttpInfo($api_admin_storage_location = null, string $contentType = self::contentTypes['addStorageLocation'][0])
     {
-        $request = $this->addStorageLocationRequest($apiAdminStorageLocation, $contentType);
+        $request = $this->addStorageLocationRequest($api_admin_storage_location, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -345,15 +345,15 @@ class AdministrationStorageLocationsApi
     /**
      * Operation addStorageLocationAsync
      *
-     * @param  \AzuraCast\Model\ApiAdminStorageLocation $apiAdminStorageLocation (optional)
+     * @param  \AzuraCast\Model\ApiAdminStorageLocation $api_admin_storage_location (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addStorageLocation'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addStorageLocationAsync($apiAdminStorageLocation = null, string $contentType = self::contentTypes['addStorageLocation'][0])
+    public function addStorageLocationAsync($api_admin_storage_location = null, string $contentType = self::contentTypes['addStorageLocation'][0])
     {
-        return $this->addStorageLocationAsyncWithHttpInfo($apiAdminStorageLocation, $contentType)
+        return $this->addStorageLocationAsyncWithHttpInfo($api_admin_storage_location, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -364,16 +364,16 @@ class AdministrationStorageLocationsApi
     /**
      * Operation addStorageLocationAsyncWithHttpInfo
      *
-     * @param  \AzuraCast\Model\ApiAdminStorageLocation $apiAdminStorageLocation (optional)
+     * @param  \AzuraCast\Model\ApiAdminStorageLocation $api_admin_storage_location (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addStorageLocation'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addStorageLocationAsyncWithHttpInfo($apiAdminStorageLocation = null, string $contentType = self::contentTypes['addStorageLocation'][0])
+    public function addStorageLocationAsyncWithHttpInfo($api_admin_storage_location = null, string $contentType = self::contentTypes['addStorageLocation'][0])
     {
         $returnType = '\AzuraCast\Model\ApiAdminStorageLocation';
-        $request = $this->addStorageLocationRequest($apiAdminStorageLocation, $contentType);
+        $request = $this->addStorageLocationRequest($api_admin_storage_location, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -414,13 +414,13 @@ class AdministrationStorageLocationsApi
     /**
      * Create request for operation 'addStorageLocation'
      *
-     * @param  \AzuraCast\Model\ApiAdminStorageLocation $apiAdminStorageLocation (optional)
+     * @param  \AzuraCast\Model\ApiAdminStorageLocation $api_admin_storage_location (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addStorageLocation'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function addStorageLocationRequest($apiAdminStorageLocation = null, string $contentType = self::contentTypes['addStorageLocation'][0])
+    public function addStorageLocationRequest($api_admin_storage_location = null, string $contentType = self::contentTypes['addStorageLocation'][0])
     {
 
 
@@ -443,12 +443,12 @@ class AdministrationStorageLocationsApi
         );
 
         // for model (json/xml)
-        if (isset($apiAdminStorageLocation)) {
+        if (isset($api_admin_storage_location)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($apiAdminStorageLocation));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($api_admin_storage_location));
             } else {
-                $httpBody = $apiAdminStorageLocation;
+                $httpBody = $api_admin_storage_location;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -914,16 +914,16 @@ class AdministrationStorageLocationsApi
      * Operation editStorageLocation
      *
      * @param  int $id Storage Location ID (required)
-     * @param  \AzuraCast\Model\ApiAdminStorageLocation $apiAdminStorageLocation apiAdminStorageLocation (optional)
+     * @param  \AzuraCast\Model\ApiAdminStorageLocation $api_admin_storage_location api_admin_storage_location (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editStorageLocation'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function editStorageLocation($id, $apiAdminStorageLocation = null, string $contentType = self::contentTypes['editStorageLocation'][0])
+    public function editStorageLocation($id, $api_admin_storage_location = null, string $contentType = self::contentTypes['editStorageLocation'][0])
     {
-        list($response) = $this->editStorageLocationWithHttpInfo($id, $apiAdminStorageLocation, $contentType);
+        list($response) = $this->editStorageLocationWithHttpInfo($id, $api_admin_storage_location, $contentType);
         return $response;
     }
 
@@ -931,16 +931,16 @@ class AdministrationStorageLocationsApi
      * Operation editStorageLocationWithHttpInfo
      *
      * @param  int $id Storage Location ID (required)
-     * @param  \AzuraCast\Model\ApiAdminStorageLocation $apiAdminStorageLocation (optional)
+     * @param  \AzuraCast\Model\ApiAdminStorageLocation $api_admin_storage_location (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editStorageLocation'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function editStorageLocationWithHttpInfo($id, $apiAdminStorageLocation = null, string $contentType = self::contentTypes['editStorageLocation'][0])
+    public function editStorageLocationWithHttpInfo($id, $api_admin_storage_location = null, string $contentType = self::contentTypes['editStorageLocation'][0])
     {
-        $request = $this->editStorageLocationRequest($id, $apiAdminStorageLocation, $contentType);
+        $request = $this->editStorageLocationRequest($id, $api_admin_storage_location, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1159,15 +1159,15 @@ class AdministrationStorageLocationsApi
      * Operation editStorageLocationAsync
      *
      * @param  int $id Storage Location ID (required)
-     * @param  \AzuraCast\Model\ApiAdminStorageLocation $apiAdminStorageLocation (optional)
+     * @param  \AzuraCast\Model\ApiAdminStorageLocation $api_admin_storage_location (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editStorageLocation'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function editStorageLocationAsync($id, $apiAdminStorageLocation = null, string $contentType = self::contentTypes['editStorageLocation'][0])
+    public function editStorageLocationAsync($id, $api_admin_storage_location = null, string $contentType = self::contentTypes['editStorageLocation'][0])
     {
-        return $this->editStorageLocationAsyncWithHttpInfo($id, $apiAdminStorageLocation, $contentType)
+        return $this->editStorageLocationAsyncWithHttpInfo($id, $api_admin_storage_location, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1179,16 +1179,16 @@ class AdministrationStorageLocationsApi
      * Operation editStorageLocationAsyncWithHttpInfo
      *
      * @param  int $id Storage Location ID (required)
-     * @param  \AzuraCast\Model\ApiAdminStorageLocation $apiAdminStorageLocation (optional)
+     * @param  \AzuraCast\Model\ApiAdminStorageLocation $api_admin_storage_location (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editStorageLocation'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function editStorageLocationAsyncWithHttpInfo($id, $apiAdminStorageLocation = null, string $contentType = self::contentTypes['editStorageLocation'][0])
+    public function editStorageLocationAsyncWithHttpInfo($id, $api_admin_storage_location = null, string $contentType = self::contentTypes['editStorageLocation'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStatus';
-        $request = $this->editStorageLocationRequest($id, $apiAdminStorageLocation, $contentType);
+        $request = $this->editStorageLocationRequest($id, $api_admin_storage_location, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1230,13 +1230,13 @@ class AdministrationStorageLocationsApi
      * Create request for operation 'editStorageLocation'
      *
      * @param  int $id Storage Location ID (required)
-     * @param  \AzuraCast\Model\ApiAdminStorageLocation $apiAdminStorageLocation (optional)
+     * @param  \AzuraCast\Model\ApiAdminStorageLocation $api_admin_storage_location (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editStorageLocation'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function editStorageLocationRequest($id, $apiAdminStorageLocation = null, string $contentType = self::contentTypes['editStorageLocation'][0])
+    public function editStorageLocationRequest($id, $api_admin_storage_location = null, string $contentType = self::contentTypes['editStorageLocation'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -1274,12 +1274,12 @@ class AdministrationStorageLocationsApi
         );
 
         // for model (json/xml)
-        if (isset($apiAdminStorageLocation)) {
+        if (isset($api_admin_storage_location)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($apiAdminStorageLocation));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($api_admin_storage_location));
             } else {
-                $httpBody = $apiAdminStorageLocation;
+                $httpBody = $api_admin_storage_location;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

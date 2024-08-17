@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**songId** | **string** |  | [optional]
+**song_id** | **string** |  | [optional]
 **text** | **string** |  | [optional]
 **artist** | **string** |  | [optional]
 **title** | **string** |  | [optional]

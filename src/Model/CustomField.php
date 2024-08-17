@@ -59,8 +59,8 @@ class CustomField implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'int',
         'name' => 'string',
-        'shortName' => 'string',
-        'autoAssign' => 'string'
+        'short_name' => 'string',
+        'auto_assign' => 'string'
     ];
 
     /**
@@ -73,8 +73,8 @@ class CustomField implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'id' => null,
         'name' => null,
-        'shortName' => null,
-        'autoAssign' => null
+        'short_name' => null,
+        'auto_assign' => null
     ];
 
     /**
@@ -85,8 +85,8 @@ class CustomField implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'id' => true,
         'name' => false,
-        'shortName' => false,
-        'autoAssign' => true
+        'short_name' => false,
+        'auto_assign' => true
     ];
 
     /**
@@ -177,8 +177,8 @@ class CustomField implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'id' => 'id',
         'name' => 'name',
-        'shortName' => 'short_name',
-        'autoAssign' => 'auto_assign'
+        'short_name' => 'short_name',
+        'auto_assign' => 'auto_assign'
     ];
 
     /**
@@ -189,8 +189,8 @@ class CustomField implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'id' => 'setId',
         'name' => 'setName',
-        'shortName' => 'setShortName',
-        'autoAssign' => 'setAutoAssign'
+        'short_name' => 'setShortName',
+        'auto_assign' => 'setAutoAssign'
     ];
 
     /**
@@ -201,8 +201,8 @@ class CustomField implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'id' => 'getId',
         'name' => 'getName',
-        'shortName' => 'getShortName',
-        'autoAssign' => 'getAutoAssign'
+        'short_name' => 'getShortName',
+        'auto_assign' => 'getAutoAssign'
     ];
 
     /**
@@ -264,8 +264,8 @@ class CustomField implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('shortName', $data ?? [], null);
-        $this->setIfExists('autoAssign', $data ?? [], null);
+        $this->setIfExists('short_name', $data ?? [], null);
+        $this->setIfExists('auto_assign', $data ?? [], null);
     }
 
     /**
@@ -372,62 +372,62 @@ class CustomField implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets shortName
+     * Gets short_name
      *
      * @return string|null
      */
     public function getShortName()
     {
-        return $this->container['shortName'];
+        return $this->container['short_name'];
     }
 
     /**
-     * Sets shortName
+     * Sets short_name
      *
-     * @param string|null $shortName The programmatic name for the field. Can be auto-generated from the full name.
+     * @param string|null $short_name The programmatic name for the field. Can be auto-generated from the full name.
      *
      * @return self
      */
-    public function setShortName($shortName)
+    public function setShortName($short_name)
     {
-        if (is_null($shortName)) {
-            throw new \InvalidArgumentException('non-nullable shortName cannot be null');
+        if (is_null($short_name)) {
+            throw new \InvalidArgumentException('non-nullable short_name cannot be null');
         }
-        $this->container['shortName'] = $shortName;
+        $this->container['short_name'] = $short_name;
 
         return $this;
     }
 
     /**
-     * Gets autoAssign
+     * Gets auto_assign
      *
      * @return string|null
      */
     public function getAutoAssign()
     {
-        return $this->container['autoAssign'];
+        return $this->container['auto_assign'];
     }
 
     /**
-     * Sets autoAssign
+     * Sets auto_assign
      *
-     * @param string|null $autoAssign An ID3v2 field to automatically assign to this value, if it exists in the media file.
+     * @param string|null $auto_assign An ID3v2 field to automatically assign to this value, if it exists in the media file.
      *
      * @return self
      */
-    public function setAutoAssign($autoAssign)
+    public function setAutoAssign($auto_assign)
     {
-        if (is_null($autoAssign)) {
-            array_push($this->openAPINullablesSetToNull, 'autoAssign');
+        if (is_null($auto_assign)) {
+            array_push($this->openAPINullablesSetToNull, 'auto_assign');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('autoAssign', $nullablesSetToNull);
+            $index = array_search('auto_assign', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['autoAssign'] = $autoAssign;
+        $this->container['auto_assign'] = $auto_assign;
 
         return $this;
     }

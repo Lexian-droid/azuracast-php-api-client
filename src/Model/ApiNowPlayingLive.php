@@ -57,9 +57,9 @@ class ApiNowPlayingLive implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'isLive' => 'bool',
-        'streamerName' => 'string',
-        'broadcastStart' => 'int',
+        'is_live' => 'bool',
+        'streamer_name' => 'string',
+        'broadcast_start' => 'int',
         'art' => 'mixed'
     ];
 
@@ -71,9 +71,9 @@ class ApiNowPlayingLive implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'isLive' => null,
-        'streamerName' => null,
-        'broadcastStart' => null,
+        'is_live' => null,
+        'streamer_name' => null,
+        'broadcast_start' => null,
         'art' => null
     ];
 
@@ -83,9 +83,9 @@ class ApiNowPlayingLive implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'isLive' => false,
-        'streamerName' => false,
-        'broadcastStart' => true,
+        'is_live' => false,
+        'streamer_name' => false,
+        'broadcast_start' => true,
         'art' => true
     ];
 
@@ -175,9 +175,9 @@ class ApiNowPlayingLive implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        'isLive' => 'is_live',
-        'streamerName' => 'streamer_name',
-        'broadcastStart' => 'broadcast_start',
+        'is_live' => 'is_live',
+        'streamer_name' => 'streamer_name',
+        'broadcast_start' => 'broadcast_start',
         'art' => 'art'
     ];
 
@@ -187,9 +187,9 @@ class ApiNowPlayingLive implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        'isLive' => 'setIsLive',
-        'streamerName' => 'setStreamerName',
-        'broadcastStart' => 'setBroadcastStart',
+        'is_live' => 'setIsLive',
+        'streamer_name' => 'setStreamerName',
+        'broadcast_start' => 'setBroadcastStart',
         'art' => 'setArt'
     ];
 
@@ -199,9 +199,9 @@ class ApiNowPlayingLive implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        'isLive' => 'getIsLive',
-        'streamerName' => 'getStreamerName',
-        'broadcastStart' => 'getBroadcastStart',
+        'is_live' => 'getIsLive',
+        'streamer_name' => 'getStreamerName',
+        'broadcast_start' => 'getBroadcastStart',
         'art' => 'getArt'
     ];
 
@@ -262,9 +262,9 @@ class ApiNowPlayingLive implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('isLive', $data ?? [], null);
-        $this->setIfExists('streamerName', $data ?? [], null);
-        $this->setIfExists('broadcastStart', $data ?? [], null);
+        $this->setIfExists('is_live', $data ?? [], null);
+        $this->setIfExists('streamer_name', $data ?? [], null);
+        $this->setIfExists('broadcast_start', $data ?? [], null);
         $this->setIfExists('art', $data ?? [], null);
     }
 
@@ -311,89 +311,89 @@ class ApiNowPlayingLive implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets isLive
+     * Gets is_live
      *
      * @return bool|null
      */
     public function getIsLive()
     {
-        return $this->container['isLive'];
+        return $this->container['is_live'];
     }
 
     /**
-     * Sets isLive
+     * Sets is_live
      *
-     * @param bool|null $isLive Whether the stream is known to currently have a live DJ.
+     * @param bool|null $is_live Whether the stream is known to currently have a live DJ.
      *
      * @return self
      */
-    public function setIsLive($isLive)
+    public function setIsLive($is_live)
     {
-        if (is_null($isLive)) {
-            throw new \InvalidArgumentException('non-nullable isLive cannot be null');
+        if (is_null($is_live)) {
+            throw new \InvalidArgumentException('non-nullable is_live cannot be null');
         }
-        $this->container['isLive'] = $isLive;
+        $this->container['is_live'] = $is_live;
 
         return $this;
     }
 
     /**
-     * Gets streamerName
+     * Gets streamer_name
      *
      * @return string|null
      */
     public function getStreamerName()
     {
-        return $this->container['streamerName'];
+        return $this->container['streamer_name'];
     }
 
     /**
-     * Sets streamerName
+     * Sets streamer_name
      *
-     * @param string|null $streamerName The current active streamer/DJ, if one is available.
+     * @param string|null $streamer_name The current active streamer/DJ, if one is available.
      *
      * @return self
      */
-    public function setStreamerName($streamerName)
+    public function setStreamerName($streamer_name)
     {
-        if (is_null($streamerName)) {
-            throw new \InvalidArgumentException('non-nullable streamerName cannot be null');
+        if (is_null($streamer_name)) {
+            throw new \InvalidArgumentException('non-nullable streamer_name cannot be null');
         }
-        $this->container['streamerName'] = $streamerName;
+        $this->container['streamer_name'] = $streamer_name;
 
         return $this;
     }
 
     /**
-     * Gets broadcastStart
+     * Gets broadcast_start
      *
      * @return int|null
      */
     public function getBroadcastStart()
     {
-        return $this->container['broadcastStart'];
+        return $this->container['broadcast_start'];
     }
 
     /**
-     * Sets broadcastStart
+     * Sets broadcast_start
      *
-     * @param int|null $broadcastStart The start timestamp of the current broadcast, if one is available.
+     * @param int|null $broadcast_start The start timestamp of the current broadcast, if one is available.
      *
      * @return self
      */
-    public function setBroadcastStart($broadcastStart)
+    public function setBroadcastStart($broadcast_start)
     {
-        if (is_null($broadcastStart)) {
-            array_push($this->openAPINullablesSetToNull, 'broadcastStart');
+        if (is_null($broadcast_start)) {
+            array_push($this->openAPINullablesSetToNull, 'broadcast_start');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('broadcastStart', $nullablesSetToNull);
+            $index = array_search('broadcast_start', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['broadcastStart'] = $broadcastStart;
+        $this->container['broadcast_start'] = $broadcast_start;
 
         return $this;
     }

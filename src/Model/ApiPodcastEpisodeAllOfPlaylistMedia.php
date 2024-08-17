@@ -66,7 +66,7 @@ class ApiPodcastEpisodeAllOfPlaylistMedia implements ModelInterface, ArrayAccess
         'lyrics' => 'string',
         'id' => 'string',
         'art' => 'mixed',
-        'customFields' => 'string[]'
+        'custom_fields' => 'string[]'
     ];
 
     /**
@@ -86,7 +86,7 @@ class ApiPodcastEpisodeAllOfPlaylistMedia implements ModelInterface, ArrayAccess
         'lyrics' => null,
         'id' => null,
         'art' => null,
-        'customFields' => null
+        'custom_fields' => null
     ];
 
     /**
@@ -104,7 +104,7 @@ class ApiPodcastEpisodeAllOfPlaylistMedia implements ModelInterface, ArrayAccess
         'lyrics' => true,
         'id' => false,
         'art' => true,
-        'customFields' => false
+        'custom_fields' => false
     ];
 
     /**
@@ -202,7 +202,7 @@ class ApiPodcastEpisodeAllOfPlaylistMedia implements ModelInterface, ArrayAccess
         'lyrics' => 'lyrics',
         'id' => 'id',
         'art' => 'art',
-        'customFields' => 'custom_fields'
+        'custom_fields' => 'custom_fields'
     ];
 
     /**
@@ -220,7 +220,7 @@ class ApiPodcastEpisodeAllOfPlaylistMedia implements ModelInterface, ArrayAccess
         'lyrics' => 'setLyrics',
         'id' => 'setId',
         'art' => 'setArt',
-        'customFields' => 'setCustomFields'
+        'custom_fields' => 'setCustomFields'
     ];
 
     /**
@@ -238,7 +238,7 @@ class ApiPodcastEpisodeAllOfPlaylistMedia implements ModelInterface, ArrayAccess
         'lyrics' => 'getLyrics',
         'id' => 'getId',
         'art' => 'getArt',
-        'customFields' => 'getCustomFields'
+        'custom_fields' => 'getCustomFields'
     ];
 
     /**
@@ -307,7 +307,7 @@ class ApiPodcastEpisodeAllOfPlaylistMedia implements ModelInterface, ArrayAccess
         $this->setIfExists('lyrics', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('art', $data ?? [], null);
-        $this->setIfExists('customFields', $data ?? [], null);
+        $this->setIfExists('custom_fields', $data ?? [], null);
     }
 
     /**
@@ -645,28 +645,28 @@ class ApiPodcastEpisodeAllOfPlaylistMedia implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets customFields
+     * Gets custom_fields
      *
      * @return string[]|null
      */
     public function getCustomFields()
     {
-        return $this->container['customFields'];
+        return $this->container['custom_fields'];
     }
 
     /**
-     * Sets customFields
+     * Sets custom_fields
      *
-     * @param string[]|null $customFields customFields
+     * @param string[]|null $custom_fields custom_fields
      *
      * @return self
      */
-    public function setCustomFields($customFields)
+    public function setCustomFields($custom_fields)
     {
-        if (is_null($customFields)) {
-            throw new \InvalidArgumentException('non-nullable customFields cannot be null');
+        if (is_null($custom_fields)) {
+            throw new \InvalidArgumentException('non-nullable custom_fields cannot be null');
         }
-        $this->container['customFields'] = $customFields;
+        $this->container['custom_fields'] = $custom_fields;
 
         return $this;
     }

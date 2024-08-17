@@ -14,7 +14,7 @@ All URIs are relative to https://demo.azuracast.com/api, except if the operation
 ## `addPlaylist()`
 
 ```php
-addPlaylist($stationId, $stationPlaylist): \AzuraCast\Model\StationPlaylist
+addPlaylist($station_id, $station_playlist): \AzuraCast\Model\StationPlaylist
 ```
 
 
@@ -40,11 +40,11 @@ $apiInstance = new AzuraCast\Api\StationsPlaylistsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
-$stationPlaylist = new \AzuraCast\Model\StationPlaylist(); // \AzuraCast\Model\StationPlaylist
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_playlist = new \AzuraCast\Model\StationPlaylist(); // \AzuraCast\Model\StationPlaylist
 
 try {
-    $result = $apiInstance->addPlaylist($stationId, $stationPlaylist);
+    $result = $apiInstance->addPlaylist($station_id, $station_playlist);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsPlaylistsApi->addPlaylist: ', $e->getMessage(), PHP_EOL;
@@ -55,8 +55,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
-| **stationPlaylist** | [**\AzuraCast\Model\StationPlaylist**](../Model/StationPlaylist.md)|  | [optional] |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_playlist** | [**\AzuraCast\Model\StationPlaylist**](../Model/StationPlaylist.md)|  | [optional] |
 
 ### Return type
 
@@ -78,7 +78,7 @@ try {
 ## `deletePlaylist()`
 
 ```php
-deletePlaylist($stationId, $id): \AzuraCast\Model\ApiStatus
+deletePlaylist($station_id, $id): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -104,11 +104,11 @@ $apiInstance = new AzuraCast\Api\StationsPlaylistsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 56; // int | Playlist ID
 
 try {
-    $result = $apiInstance->deletePlaylist($stationId, $id);
+    $result = $apiInstance->deletePlaylist($station_id, $id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsPlaylistsApi->deletePlaylist: ', $e->getMessage(), PHP_EOL;
@@ -119,7 +119,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **int**| Playlist ID | |
 
 ### Return type
@@ -142,7 +142,7 @@ try {
 ## `editPlaylist()`
 
 ```php
-editPlaylist($stationId, $id, $stationPlaylist): \AzuraCast\Model\ApiStatus
+editPlaylist($station_id, $id, $station_playlist): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -168,12 +168,12 @@ $apiInstance = new AzuraCast\Api\StationsPlaylistsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 56; // int | Playlist ID
-$stationPlaylist = new \AzuraCast\Model\StationPlaylist(); // \AzuraCast\Model\StationPlaylist
+$station_playlist = new \AzuraCast\Model\StationPlaylist(); // \AzuraCast\Model\StationPlaylist
 
 try {
-    $result = $apiInstance->editPlaylist($stationId, $id, $stationPlaylist);
+    $result = $apiInstance->editPlaylist($station_id, $id, $station_playlist);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsPlaylistsApi->editPlaylist: ', $e->getMessage(), PHP_EOL;
@@ -184,9 +184,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **int**| Playlist ID | |
-| **stationPlaylist** | [**\AzuraCast\Model\StationPlaylist**](../Model/StationPlaylist.md)|  | [optional] |
+| **station_playlist** | [**\AzuraCast\Model\StationPlaylist**](../Model/StationPlaylist.md)|  | [optional] |
 
 ### Return type
 
@@ -208,7 +208,7 @@ try {
 ## `getPlaylist()`
 
 ```php
-getPlaylist($stationId, $id): \AzuraCast\Model\StationPlaylist
+getPlaylist($station_id, $id): \AzuraCast\Model\StationPlaylist
 ```
 
 
@@ -234,11 +234,11 @@ $apiInstance = new AzuraCast\Api\StationsPlaylistsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 56; // int | Playlist ID
 
 try {
-    $result = $apiInstance->getPlaylist($stationId, $id);
+    $result = $apiInstance->getPlaylist($station_id, $id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsPlaylistsApi->getPlaylist: ', $e->getMessage(), PHP_EOL;
@@ -249,7 +249,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **int**| Playlist ID | |
 
 ### Return type
@@ -272,7 +272,7 @@ try {
 ## `getPlaylists()`
 
 ```php
-getPlaylists($stationId): \AzuraCast\Model\StationPlaylist[]
+getPlaylists($station_id): \AzuraCast\Model\StationPlaylist[]
 ```
 
 
@@ -298,10 +298,10 @@ $apiInstance = new AzuraCast\Api\StationsPlaylistsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 
 try {
-    $result = $apiInstance->getPlaylists($stationId);
+    $result = $apiInstance->getPlaylists($station_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsPlaylistsApi->getPlaylists: ', $e->getMessage(), PHP_EOL;
@@ -312,7 +312,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 
 ### Return type
 

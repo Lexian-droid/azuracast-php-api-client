@@ -59,13 +59,13 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'int',
         'email' => 'string',
-        'newPassword' => 'string',
+        'new_password' => 'string',
         'name' => 'string',
         'locale' => 'string',
-        'show24HourTime' => 'bool',
-        'twoFactorSecret' => 'string',
-        'createdAt' => 'int',
-        'updatedAt' => 'int',
+        'show_24_hour_time' => 'bool',
+        'two_factor_secret' => 'string',
+        'created_at' => 'int',
+        'updated_at' => 'int',
         'roles' => 'mixed[]'
     ];
 
@@ -79,13 +79,13 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'id' => null,
         'email' => null,
-        'newPassword' => null,
+        'new_password' => null,
         'name' => null,
         'locale' => null,
-        'show24HourTime' => null,
-        'twoFactorSecret' => null,
-        'createdAt' => null,
-        'updatedAt' => null,
+        'show_24_hour_time' => null,
+        'two_factor_secret' => null,
+        'created_at' => null,
+        'updated_at' => null,
         'roles' => null
     ];
 
@@ -97,13 +97,13 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'id' => true,
         'email' => false,
-        'newPassword' => true,
+        'new_password' => true,
         'name' => true,
         'locale' => true,
-        'show24HourTime' => true,
-        'twoFactorSecret' => true,
-        'createdAt' => false,
-        'updatedAt' => false,
+        'show_24_hour_time' => true,
+        'two_factor_secret' => true,
+        'created_at' => false,
+        'updated_at' => false,
         'roles' => false
     ];
 
@@ -195,13 +195,13 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'id' => 'id',
         'email' => 'email',
-        'newPassword' => 'new_password',
+        'new_password' => 'new_password',
         'name' => 'name',
         'locale' => 'locale',
-        'show24HourTime' => 'show_24_hour_time',
-        'twoFactorSecret' => 'two_factor_secret',
-        'createdAt' => 'created_at',
-        'updatedAt' => 'updated_at',
+        'show_24_hour_time' => 'show_24_hour_time',
+        'two_factor_secret' => 'two_factor_secret',
+        'created_at' => 'created_at',
+        'updated_at' => 'updated_at',
         'roles' => 'roles'
     ];
 
@@ -213,13 +213,13 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'id' => 'setId',
         'email' => 'setEmail',
-        'newPassword' => 'setNewPassword',
+        'new_password' => 'setNewPassword',
         'name' => 'setName',
         'locale' => 'setLocale',
-        'show24HourTime' => 'setShow24HourTime',
-        'twoFactorSecret' => 'setTwoFactorSecret',
-        'createdAt' => 'setCreatedAt',
-        'updatedAt' => 'setUpdatedAt',
+        'show_24_hour_time' => 'setShow24HourTime',
+        'two_factor_secret' => 'setTwoFactorSecret',
+        'created_at' => 'setCreatedAt',
+        'updated_at' => 'setUpdatedAt',
         'roles' => 'setRoles'
     ];
 
@@ -231,13 +231,13 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'id' => 'getId',
         'email' => 'getEmail',
-        'newPassword' => 'getNewPassword',
+        'new_password' => 'getNewPassword',
         'name' => 'getName',
         'locale' => 'getLocale',
-        'show24HourTime' => 'getShow24HourTime',
-        'twoFactorSecret' => 'getTwoFactorSecret',
-        'createdAt' => 'getCreatedAt',
-        'updatedAt' => 'getUpdatedAt',
+        'show_24_hour_time' => 'getShow24HourTime',
+        'two_factor_secret' => 'getTwoFactorSecret',
+        'created_at' => 'getCreatedAt',
+        'updated_at' => 'getUpdatedAt',
         'roles' => 'getRoles'
     ];
 
@@ -300,13 +300,13 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('email', $data ?? [], null);
-        $this->setIfExists('newPassword', $data ?? [], null);
+        $this->setIfExists('new_password', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('locale', $data ?? [], null);
-        $this->setIfExists('show24HourTime', $data ?? [], null);
-        $this->setIfExists('twoFactorSecret', $data ?? [], null);
-        $this->setIfExists('createdAt', $data ?? [], null);
-        $this->setIfExists('updatedAt', $data ?? [], null);
+        $this->setIfExists('show_24_hour_time', $data ?? [], null);
+        $this->setIfExists('two_factor_secret', $data ?? [], null);
+        $this->setIfExists('created_at', $data ?? [], null);
+        $this->setIfExists('updated_at', $data ?? [], null);
         $this->setIfExists('roles', $data ?? [], null);
     }
 
@@ -414,35 +414,35 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets newPassword
+     * Gets new_password
      *
      * @return string|null
      */
     public function getNewPassword()
     {
-        return $this->container['newPassword'];
+        return $this->container['new_password'];
     }
 
     /**
-     * Sets newPassword
+     * Sets new_password
      *
-     * @param string|null $newPassword newPassword
+     * @param string|null $new_password new_password
      *
      * @return self
      */
-    public function setNewPassword($newPassword)
+    public function setNewPassword($new_password)
     {
-        if (is_null($newPassword)) {
-            array_push($this->openAPINullablesSetToNull, 'newPassword');
+        if (is_null($new_password)) {
+            array_push($this->openAPINullablesSetToNull, 'new_password');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('newPassword', $nullablesSetToNull);
+            $index = array_search('new_password', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['newPassword'] = $newPassword;
+        $this->container['new_password'] = $new_password;
 
         return $this;
     }
@@ -516,123 +516,123 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets show24HourTime
+     * Gets show_24_hour_time
      *
      * @return bool|null
      */
     public function getShow24HourTime()
     {
-        return $this->container['show24HourTime'];
+        return $this->container['show_24_hour_time'];
     }
 
     /**
-     * Sets show24HourTime
+     * Sets show_24_hour_time
      *
-     * @param bool|null $show24HourTime show24HourTime
+     * @param bool|null $show_24_hour_time show_24_hour_time
      *
      * @return self
      */
-    public function setShow24HourTime($show24HourTime)
+    public function setShow24HourTime($show_24_hour_time)
     {
-        if (is_null($show24HourTime)) {
-            array_push($this->openAPINullablesSetToNull, 'show24HourTime');
+        if (is_null($show_24_hour_time)) {
+            array_push($this->openAPINullablesSetToNull, 'show_24_hour_time');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('show24HourTime', $nullablesSetToNull);
+            $index = array_search('show_24_hour_time', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['show24HourTime'] = $show24HourTime;
+        $this->container['show_24_hour_time'] = $show_24_hour_time;
 
         return $this;
     }
 
     /**
-     * Gets twoFactorSecret
+     * Gets two_factor_secret
      *
      * @return string|null
      */
     public function getTwoFactorSecret()
     {
-        return $this->container['twoFactorSecret'];
+        return $this->container['two_factor_secret'];
     }
 
     /**
-     * Sets twoFactorSecret
+     * Sets two_factor_secret
      *
-     * @param string|null $twoFactorSecret twoFactorSecret
+     * @param string|null $two_factor_secret two_factor_secret
      *
      * @return self
      */
-    public function setTwoFactorSecret($twoFactorSecret)
+    public function setTwoFactorSecret($two_factor_secret)
     {
-        if (is_null($twoFactorSecret)) {
-            array_push($this->openAPINullablesSetToNull, 'twoFactorSecret');
+        if (is_null($two_factor_secret)) {
+            array_push($this->openAPINullablesSetToNull, 'two_factor_secret');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('twoFactorSecret', $nullablesSetToNull);
+            $index = array_search('two_factor_secret', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['twoFactorSecret'] = $twoFactorSecret;
+        $this->container['two_factor_secret'] = $two_factor_secret;
 
         return $this;
     }
 
     /**
-     * Gets createdAt
+     * Gets created_at
      *
      * @return int|null
      */
     public function getCreatedAt()
     {
-        return $this->container['createdAt'];
+        return $this->container['created_at'];
     }
 
     /**
-     * Sets createdAt
+     * Sets created_at
      *
-     * @param int|null $createdAt createdAt
+     * @param int|null $created_at created_at
      *
      * @return self
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt($created_at)
     {
-        if (is_null($createdAt)) {
-            throw new \InvalidArgumentException('non-nullable createdAt cannot be null');
+        if (is_null($created_at)) {
+            throw new \InvalidArgumentException('non-nullable created_at cannot be null');
         }
-        $this->container['createdAt'] = $createdAt;
+        $this->container['created_at'] = $created_at;
 
         return $this;
     }
 
     /**
-     * Gets updatedAt
+     * Gets updated_at
      *
      * @return int|null
      */
     public function getUpdatedAt()
     {
-        return $this->container['updatedAt'];
+        return $this->container['updated_at'];
     }
 
     /**
-     * Sets updatedAt
+     * Sets updated_at
      *
-     * @param int|null $updatedAt updatedAt
+     * @param int|null $updated_at updated_at
      *
      * @return self
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt($updated_at)
     {
-        if (is_null($updatedAt)) {
-            throw new \InvalidArgumentException('non-nullable updatedAt cannot be null');
+        if (is_null($updated_at)) {
+            throw new \InvalidArgumentException('non-nullable updated_at cannot be null');
         }
-        $this->container['updatedAt'] = $updatedAt;
+        $this->container['updated_at'] = $updated_at;
 
         return $this;
     }

@@ -57,17 +57,17 @@ class ApiDetailedSongHistory implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'shId' => 'int',
-        'playedAt' => 'int',
+        'sh_id' => 'int',
+        'played_at' => 'int',
         'duration' => 'int',
         'playlist' => 'string',
         'streamer' => 'string',
-        'isRequest' => 'bool',
+        'is_request' => 'bool',
         'song' => '\AzuraCast\Model\ApiSong',
-        'listenersStart' => 'int',
-        'listenersEnd' => 'int',
-        'deltaTotal' => 'int',
-        'isVisible' => 'bool'
+        'listeners_start' => 'int',
+        'listeners_end' => 'int',
+        'delta_total' => 'int',
+        'is_visible' => 'bool'
     ];
 
     /**
@@ -78,17 +78,17 @@ class ApiDetailedSongHistory implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'shId' => null,
-        'playedAt' => null,
+        'sh_id' => null,
+        'played_at' => null,
         'duration' => null,
         'playlist' => null,
         'streamer' => null,
-        'isRequest' => null,
+        'is_request' => null,
         'song' => null,
-        'listenersStart' => null,
-        'listenersEnd' => null,
-        'deltaTotal' => null,
-        'isVisible' => null
+        'listeners_start' => null,
+        'listeners_end' => null,
+        'delta_total' => null,
+        'is_visible' => null
     ];
 
     /**
@@ -97,17 +97,17 @@ class ApiDetailedSongHistory implements ModelInterface, ArrayAccess, \JsonSerial
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'shId' => false,
-        'playedAt' => false,
+        'sh_id' => false,
+        'played_at' => false,
         'duration' => false,
         'playlist' => true,
         'streamer' => true,
-        'isRequest' => false,
+        'is_request' => false,
         'song' => false,
-        'listenersStart' => false,
-        'listenersEnd' => false,
-        'deltaTotal' => false,
-        'isVisible' => false
+        'listeners_start' => false,
+        'listeners_end' => false,
+        'delta_total' => false,
+        'is_visible' => false
     ];
 
     /**
@@ -196,17 +196,17 @@ class ApiDetailedSongHistory implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'shId' => 'sh_id',
-        'playedAt' => 'played_at',
+        'sh_id' => 'sh_id',
+        'played_at' => 'played_at',
         'duration' => 'duration',
         'playlist' => 'playlist',
         'streamer' => 'streamer',
-        'isRequest' => 'is_request',
+        'is_request' => 'is_request',
         'song' => 'song',
-        'listenersStart' => 'listeners_start',
-        'listenersEnd' => 'listeners_end',
-        'deltaTotal' => 'delta_total',
-        'isVisible' => 'is_visible'
+        'listeners_start' => 'listeners_start',
+        'listeners_end' => 'listeners_end',
+        'delta_total' => 'delta_total',
+        'is_visible' => 'is_visible'
     ];
 
     /**
@@ -215,17 +215,17 @@ class ApiDetailedSongHistory implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'shId' => 'setShId',
-        'playedAt' => 'setPlayedAt',
+        'sh_id' => 'setShId',
+        'played_at' => 'setPlayedAt',
         'duration' => 'setDuration',
         'playlist' => 'setPlaylist',
         'streamer' => 'setStreamer',
-        'isRequest' => 'setIsRequest',
+        'is_request' => 'setIsRequest',
         'song' => 'setSong',
-        'listenersStart' => 'setListenersStart',
-        'listenersEnd' => 'setListenersEnd',
-        'deltaTotal' => 'setDeltaTotal',
-        'isVisible' => 'setIsVisible'
+        'listeners_start' => 'setListenersStart',
+        'listeners_end' => 'setListenersEnd',
+        'delta_total' => 'setDeltaTotal',
+        'is_visible' => 'setIsVisible'
     ];
 
     /**
@@ -234,17 +234,17 @@ class ApiDetailedSongHistory implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'shId' => 'getShId',
-        'playedAt' => 'getPlayedAt',
+        'sh_id' => 'getShId',
+        'played_at' => 'getPlayedAt',
         'duration' => 'getDuration',
         'playlist' => 'getPlaylist',
         'streamer' => 'getStreamer',
-        'isRequest' => 'getIsRequest',
+        'is_request' => 'getIsRequest',
         'song' => 'getSong',
-        'listenersStart' => 'getListenersStart',
-        'listenersEnd' => 'getListenersEnd',
-        'deltaTotal' => 'getDeltaTotal',
-        'isVisible' => 'getIsVisible'
+        'listeners_start' => 'getListenersStart',
+        'listeners_end' => 'getListenersEnd',
+        'delta_total' => 'getDeltaTotal',
+        'is_visible' => 'getIsVisible'
     ];
 
     /**
@@ -304,17 +304,17 @@ class ApiDetailedSongHistory implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('shId', $data ?? [], null);
-        $this->setIfExists('playedAt', $data ?? [], null);
+        $this->setIfExists('sh_id', $data ?? [], null);
+        $this->setIfExists('played_at', $data ?? [], null);
         $this->setIfExists('duration', $data ?? [], null);
         $this->setIfExists('playlist', $data ?? [], null);
         $this->setIfExists('streamer', $data ?? [], null);
-        $this->setIfExists('isRequest', $data ?? [], null);
+        $this->setIfExists('is_request', $data ?? [], null);
         $this->setIfExists('song', $data ?? [], null);
-        $this->setIfExists('listenersStart', $data ?? [], null);
-        $this->setIfExists('listenersEnd', $data ?? [], null);
-        $this->setIfExists('deltaTotal', $data ?? [], null);
-        $this->setIfExists('isVisible', $data ?? [], null);
+        $this->setIfExists('listeners_start', $data ?? [], null);
+        $this->setIfExists('listeners_end', $data ?? [], null);
+        $this->setIfExists('delta_total', $data ?? [], null);
+        $this->setIfExists('is_visible', $data ?? [], null);
     }
 
     /**
@@ -360,55 +360,55 @@ class ApiDetailedSongHistory implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets shId
+     * Gets sh_id
      *
      * @return int|null
      */
     public function getShId()
     {
-        return $this->container['shId'];
+        return $this->container['sh_id'];
     }
 
     /**
-     * Sets shId
+     * Sets sh_id
      *
-     * @param int|null $shId Song history unique identifier
+     * @param int|null $sh_id Song history unique identifier
      *
      * @return self
      */
-    public function setShId($shId)
+    public function setShId($sh_id)
     {
-        if (is_null($shId)) {
-            throw new \InvalidArgumentException('non-nullable shId cannot be null');
+        if (is_null($sh_id)) {
+            throw new \InvalidArgumentException('non-nullable sh_id cannot be null');
         }
-        $this->container['shId'] = $shId;
+        $this->container['sh_id'] = $sh_id;
 
         return $this;
     }
 
     /**
-     * Gets playedAt
+     * Gets played_at
      *
      * @return int|null
      */
     public function getPlayedAt()
     {
-        return $this->container['playedAt'];
+        return $this->container['played_at'];
     }
 
     /**
-     * Sets playedAt
+     * Sets played_at
      *
-     * @param int|null $playedAt UNIX timestamp when playback started.
+     * @param int|null $played_at UNIX timestamp when playback started.
      *
      * @return self
      */
-    public function setPlayedAt($playedAt)
+    public function setPlayedAt($played_at)
     {
-        if (is_null($playedAt)) {
-            throw new \InvalidArgumentException('non-nullable playedAt cannot be null');
+        if (is_null($played_at)) {
+            throw new \InvalidArgumentException('non-nullable played_at cannot be null');
         }
-        $this->container['playedAt'] = $playedAt;
+        $this->container['played_at'] = $played_at;
 
         return $this;
     }
@@ -509,28 +509,28 @@ class ApiDetailedSongHistory implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
-     * Gets isRequest
+     * Gets is_request
      *
      * @return bool|null
      */
     public function getIsRequest()
     {
-        return $this->container['isRequest'];
+        return $this->container['is_request'];
     }
 
     /**
-     * Sets isRequest
+     * Sets is_request
      *
-     * @param bool|null $isRequest Indicates whether the song is a listener request.
+     * @param bool|null $is_request Indicates whether the song is a listener request.
      *
      * @return self
      */
-    public function setIsRequest($isRequest)
+    public function setIsRequest($is_request)
     {
-        if (is_null($isRequest)) {
-            throw new \InvalidArgumentException('non-nullable isRequest cannot be null');
+        if (is_null($is_request)) {
+            throw new \InvalidArgumentException('non-nullable is_request cannot be null');
         }
-        $this->container['isRequest'] = $isRequest;
+        $this->container['is_request'] = $is_request;
 
         return $this;
     }
@@ -563,109 +563,109 @@ class ApiDetailedSongHistory implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
-     * Gets listenersStart
+     * Gets listeners_start
      *
      * @return int|null
      */
     public function getListenersStart()
     {
-        return $this->container['listenersStart'];
+        return $this->container['listeners_start'];
     }
 
     /**
-     * Sets listenersStart
+     * Sets listeners_start
      *
-     * @param int|null $listenersStart Number of listeners when the song playback started.
+     * @param int|null $listeners_start Number of listeners when the song playback started.
      *
      * @return self
      */
-    public function setListenersStart($listenersStart)
+    public function setListenersStart($listeners_start)
     {
-        if (is_null($listenersStart)) {
-            throw new \InvalidArgumentException('non-nullable listenersStart cannot be null');
+        if (is_null($listeners_start)) {
+            throw new \InvalidArgumentException('non-nullable listeners_start cannot be null');
         }
-        $this->container['listenersStart'] = $listenersStart;
+        $this->container['listeners_start'] = $listeners_start;
 
         return $this;
     }
 
     /**
-     * Gets listenersEnd
+     * Gets listeners_end
      *
      * @return int|null
      */
     public function getListenersEnd()
     {
-        return $this->container['listenersEnd'];
+        return $this->container['listeners_end'];
     }
 
     /**
-     * Sets listenersEnd
+     * Sets listeners_end
      *
-     * @param int|null $listenersEnd Number of listeners when song playback ended.
+     * @param int|null $listeners_end Number of listeners when song playback ended.
      *
      * @return self
      */
-    public function setListenersEnd($listenersEnd)
+    public function setListenersEnd($listeners_end)
     {
-        if (is_null($listenersEnd)) {
-            throw new \InvalidArgumentException('non-nullable listenersEnd cannot be null');
+        if (is_null($listeners_end)) {
+            throw new \InvalidArgumentException('non-nullable listeners_end cannot be null');
         }
-        $this->container['listenersEnd'] = $listenersEnd;
+        $this->container['listeners_end'] = $listeners_end;
 
         return $this;
     }
 
     /**
-     * Gets deltaTotal
+     * Gets delta_total
      *
      * @return int|null
      */
     public function getDeltaTotal()
     {
-        return $this->container['deltaTotal'];
+        return $this->container['delta_total'];
     }
 
     /**
-     * Sets deltaTotal
+     * Sets delta_total
      *
-     * @param int|null $deltaTotal The sum total change of listeners between the song's start and ending.
+     * @param int|null $delta_total The sum total change of listeners between the song's start and ending.
      *
      * @return self
      */
-    public function setDeltaTotal($deltaTotal)
+    public function setDeltaTotal($delta_total)
     {
-        if (is_null($deltaTotal)) {
-            throw new \InvalidArgumentException('non-nullable deltaTotal cannot be null');
+        if (is_null($delta_total)) {
+            throw new \InvalidArgumentException('non-nullable delta_total cannot be null');
         }
-        $this->container['deltaTotal'] = $deltaTotal;
+        $this->container['delta_total'] = $delta_total;
 
         return $this;
     }
 
     /**
-     * Gets isVisible
+     * Gets is_visible
      *
      * @return bool|null
      */
     public function getIsVisible()
     {
-        return $this->container['isVisible'];
+        return $this->container['is_visible'];
     }
 
     /**
-     * Sets isVisible
+     * Sets is_visible
      *
-     * @param bool|null $isVisible Whether the entry is visible on public playlists.
+     * @param bool|null $is_visible Whether the entry is visible on public playlists.
      *
      * @return self
      */
-    public function setIsVisible($isVisible)
+    public function setIsVisible($is_visible)
     {
-        if (is_null($isVisible)) {
-            throw new \InvalidArgumentException('non-nullable isVisible cannot be null');
+        if (is_null($is_visible)) {
+            throw new \InvalidArgumentException('non-nullable is_visible cannot be null');
         }
-        $this->container['isVisible'] = $isVisible;
+        $this->container['is_visible'] = $is_visible;
 
         return $this;
     }

@@ -13,6 +13,6 @@ Name | Type | Description | Notes
 **lyrics** | **string** | Lyrics to the song. | [optional]
 **id** | **string** | The song&#39;s 32-character unique identifier hash | [optional]
 **art** | **mixed** | URL to the album artwork (if available). | [optional]
-**customFields** | **string[]** |  | [optional]
+**custom_fields** | **string[]** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

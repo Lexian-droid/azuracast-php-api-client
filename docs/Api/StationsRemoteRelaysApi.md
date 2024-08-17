@@ -14,7 +14,7 @@ All URIs are relative to https://demo.azuracast.com/api, except if the operation
 ## `addRelay()`
 
 ```php
-addRelay($stationId, $apiStationRemote): \AzuraCast\Model\ApiStationRemote
+addRelay($station_id, $api_station_remote): \AzuraCast\Model\ApiStationRemote
 ```
 
 
@@ -40,11 +40,11 @@ $apiInstance = new AzuraCast\Api\StationsRemoteRelaysApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
-$apiStationRemote = new \AzuraCast\Model\ApiStationRemote(); // \AzuraCast\Model\ApiStationRemote
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$api_station_remote = new \AzuraCast\Model\ApiStationRemote(); // \AzuraCast\Model\ApiStationRemote
 
 try {
-    $result = $apiInstance->addRelay($stationId, $apiStationRemote);
+    $result = $apiInstance->addRelay($station_id, $api_station_remote);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsRemoteRelaysApi->addRelay: ', $e->getMessage(), PHP_EOL;
@@ -55,8 +55,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
-| **apiStationRemote** | [**\AzuraCast\Model\ApiStationRemote**](../Model/ApiStationRemote.md)|  | [optional] |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **api_station_remote** | [**\AzuraCast\Model\ApiStationRemote**](../Model/ApiStationRemote.md)|  | [optional] |
 
 ### Return type
 
@@ -78,7 +78,7 @@ try {
 ## `deleteRelay()`
 
 ```php
-deleteRelay($stationId, $id): \AzuraCast\Model\ApiStatus
+deleteRelay($station_id, $id): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -104,11 +104,11 @@ $apiInstance = new AzuraCast\Api\StationsRemoteRelaysApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 56; // int | Remote Relay ID
 
 try {
-    $result = $apiInstance->deleteRelay($stationId, $id);
+    $result = $apiInstance->deleteRelay($station_id, $id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsRemoteRelaysApi->deleteRelay: ', $e->getMessage(), PHP_EOL;
@@ -119,7 +119,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **int**| Remote Relay ID | |
 
 ### Return type
@@ -142,7 +142,7 @@ try {
 ## `editRelay()`
 
 ```php
-editRelay($stationId, $id, $apiStationRemote): \AzuraCast\Model\ApiStatus
+editRelay($station_id, $id, $api_station_remote): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -168,12 +168,12 @@ $apiInstance = new AzuraCast\Api\StationsRemoteRelaysApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 56; // int | Remote Relay ID
-$apiStationRemote = new \AzuraCast\Model\ApiStationRemote(); // \AzuraCast\Model\ApiStationRemote
+$api_station_remote = new \AzuraCast\Model\ApiStationRemote(); // \AzuraCast\Model\ApiStationRemote
 
 try {
-    $result = $apiInstance->editRelay($stationId, $id, $apiStationRemote);
+    $result = $apiInstance->editRelay($station_id, $id, $api_station_remote);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsRemoteRelaysApi->editRelay: ', $e->getMessage(), PHP_EOL;
@@ -184,9 +184,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **int**| Remote Relay ID | |
-| **apiStationRemote** | [**\AzuraCast\Model\ApiStationRemote**](../Model/ApiStationRemote.md)|  | [optional] |
+| **api_station_remote** | [**\AzuraCast\Model\ApiStationRemote**](../Model/ApiStationRemote.md)|  | [optional] |
 
 ### Return type
 
@@ -208,7 +208,7 @@ try {
 ## `getRelay()`
 
 ```php
-getRelay($stationId, $id): \AzuraCast\Model\ApiStationRemote
+getRelay($station_id, $id): \AzuraCast\Model\ApiStationRemote
 ```
 
 
@@ -234,11 +234,11 @@ $apiInstance = new AzuraCast\Api\StationsRemoteRelaysApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 56; // int | Remote Relay ID
 
 try {
-    $result = $apiInstance->getRelay($stationId, $id);
+    $result = $apiInstance->getRelay($station_id, $id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsRemoteRelaysApi->getRelay: ', $e->getMessage(), PHP_EOL;
@@ -249,7 +249,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **int**| Remote Relay ID | |
 
 ### Return type
@@ -272,7 +272,7 @@ try {
 ## `getRelays()`
 
 ```php
-getRelays($stationId): \AzuraCast\Model\ApiStationRemote[]
+getRelays($station_id): \AzuraCast\Model\ApiStationRemote[]
 ```
 
 
@@ -298,10 +298,10 @@ $apiInstance = new AzuraCast\Api\StationsRemoteRelaysApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 
 try {
-    $result = $apiInstance->getRelays($stationId);
+    $result = $apiInstance->getRelays($station_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsRemoteRelaysApi->getRelays: ', $e->getMessage(), PHP_EOL;
@@ -312,7 +312,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 
 ### Return type
 

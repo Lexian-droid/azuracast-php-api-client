@@ -12,7 +12,7 @@ All URIs are relative to https://demo.azuracast.com/api, except if the operation
 ## `deleteStereoToolConfiguration()`
 
 ```php
-deleteStereoToolConfiguration($stationId): \AzuraCast\Model\ApiStatus
+deleteStereoToolConfiguration($station_id): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -38,10 +38,10 @@ $apiInstance = new AzuraCast\Api\StationsBroadcastingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 
 try {
-    $result = $apiInstance->deleteStereoToolConfiguration($stationId);
+    $result = $apiInstance->deleteStereoToolConfiguration($station_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsBroadcastingApi->deleteStereoToolConfiguration: ', $e->getMessage(), PHP_EOL;
@@ -52,7 +52,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 
 ### Return type
 
@@ -74,7 +74,7 @@ try {
 ## `getStereoToolConfiguration()`
 
 ```php
-getStereoToolConfiguration($stationId)
+getStereoToolConfiguration($station_id)
 ```
 
 
@@ -100,10 +100,10 @@ $apiInstance = new AzuraCast\Api\StationsBroadcastingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 
 try {
-    $apiInstance->getStereoToolConfiguration($stationId);
+    $apiInstance->getStereoToolConfiguration($station_id);
 } catch (Exception $e) {
     echo 'Exception when calling StationsBroadcastingApi->getStereoToolConfiguration: ', $e->getMessage(), PHP_EOL;
 }
@@ -113,7 +113,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 
 ### Return type
 
@@ -135,7 +135,7 @@ void (empty response body)
 ## `postStereoToolConfiguration()`
 
 ```php
-postStereoToolConfiguration($stationId): \AzuraCast\Model\ApiStatus
+postStereoToolConfiguration($station_id): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -161,10 +161,10 @@ $apiInstance = new AzuraCast\Api\StationsBroadcastingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 
 try {
-    $result = $apiInstance->postStereoToolConfiguration($stationId);
+    $result = $apiInstance->postStereoToolConfiguration($station_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsBroadcastingApi->postStereoToolConfiguration: ', $e->getMessage(), PHP_EOL;
@@ -175,7 +175,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 
 ### Return type
 

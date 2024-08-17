@@ -62,11 +62,11 @@ class ApiStationSchedule implements ModelInterface, ArrayAccess, \JsonSerializab
         'name' => 'string',
         'title' => 'string',
         'description' => 'string',
-        'startTimestamp' => 'int',
+        'start_timestamp' => 'int',
         'start' => 'string',
-        'endTimestamp' => 'int',
+        'end_timestamp' => 'int',
         'end' => 'string',
-        'isNow' => 'bool'
+        'is_now' => 'bool'
     ];
 
     /**
@@ -82,11 +82,11 @@ class ApiStationSchedule implements ModelInterface, ArrayAccess, \JsonSerializab
         'name' => null,
         'title' => null,
         'description' => null,
-        'startTimestamp' => null,
+        'start_timestamp' => null,
         'start' => null,
-        'endTimestamp' => null,
+        'end_timestamp' => null,
         'end' => null,
-        'isNow' => null
+        'is_now' => null
     ];
 
     /**
@@ -100,11 +100,11 @@ class ApiStationSchedule implements ModelInterface, ArrayAccess, \JsonSerializab
         'name' => false,
         'title' => false,
         'description' => false,
-        'startTimestamp' => false,
+        'start_timestamp' => false,
         'start' => false,
-        'endTimestamp' => false,
+        'end_timestamp' => false,
         'end' => false,
-        'isNow' => false
+        'is_now' => false
     ];
 
     /**
@@ -198,11 +198,11 @@ class ApiStationSchedule implements ModelInterface, ArrayAccess, \JsonSerializab
         'name' => 'name',
         'title' => 'title',
         'description' => 'description',
-        'startTimestamp' => 'start_timestamp',
+        'start_timestamp' => 'start_timestamp',
         'start' => 'start',
-        'endTimestamp' => 'end_timestamp',
+        'end_timestamp' => 'end_timestamp',
         'end' => 'end',
-        'isNow' => 'is_now'
+        'is_now' => 'is_now'
     ];
 
     /**
@@ -216,11 +216,11 @@ class ApiStationSchedule implements ModelInterface, ArrayAccess, \JsonSerializab
         'name' => 'setName',
         'title' => 'setTitle',
         'description' => 'setDescription',
-        'startTimestamp' => 'setStartTimestamp',
+        'start_timestamp' => 'setStartTimestamp',
         'start' => 'setStart',
-        'endTimestamp' => 'setEndTimestamp',
+        'end_timestamp' => 'setEndTimestamp',
         'end' => 'setEnd',
-        'isNow' => 'setIsNow'
+        'is_now' => 'setIsNow'
     ];
 
     /**
@@ -234,11 +234,11 @@ class ApiStationSchedule implements ModelInterface, ArrayAccess, \JsonSerializab
         'name' => 'getName',
         'title' => 'getTitle',
         'description' => 'getDescription',
-        'startTimestamp' => 'getStartTimestamp',
+        'start_timestamp' => 'getStartTimestamp',
         'start' => 'getStart',
-        'endTimestamp' => 'getEndTimestamp',
+        'end_timestamp' => 'getEndTimestamp',
         'end' => 'getEnd',
-        'isNow' => 'getIsNow'
+        'is_now' => 'getIsNow'
     ];
 
     /**
@@ -318,11 +318,11 @@ class ApiStationSchedule implements ModelInterface, ArrayAccess, \JsonSerializab
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('title', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
-        $this->setIfExists('startTimestamp', $data ?? [], null);
+        $this->setIfExists('start_timestamp', $data ?? [], null);
         $this->setIfExists('start', $data ?? [], null);
-        $this->setIfExists('endTimestamp', $data ?? [], null);
+        $this->setIfExists('end_timestamp', $data ?? [], null);
         $this->setIfExists('end', $data ?? [], null);
-        $this->setIfExists('isNow', $data ?? [], null);
+        $this->setIfExists('is_now', $data ?? [], null);
     }
 
     /**
@@ -522,28 +522,28 @@ class ApiStationSchedule implements ModelInterface, ArrayAccess, \JsonSerializab
     }
 
     /**
-     * Gets startTimestamp
+     * Gets start_timestamp
      *
      * @return int|null
      */
     public function getStartTimestamp()
     {
-        return $this->container['startTimestamp'];
+        return $this->container['start_timestamp'];
     }
 
     /**
-     * Sets startTimestamp
+     * Sets start_timestamp
      *
-     * @param int|null $startTimestamp The start time of the schedule entry, in UNIX format.
+     * @param int|null $start_timestamp The start time of the schedule entry, in UNIX format.
      *
      * @return self
      */
-    public function setStartTimestamp($startTimestamp)
+    public function setStartTimestamp($start_timestamp)
     {
-        if (is_null($startTimestamp)) {
-            throw new \InvalidArgumentException('non-nullable startTimestamp cannot be null');
+        if (is_null($start_timestamp)) {
+            throw new \InvalidArgumentException('non-nullable start_timestamp cannot be null');
         }
-        $this->container['startTimestamp'] = $startTimestamp;
+        $this->container['start_timestamp'] = $start_timestamp;
 
         return $this;
     }
@@ -576,28 +576,28 @@ class ApiStationSchedule implements ModelInterface, ArrayAccess, \JsonSerializab
     }
 
     /**
-     * Gets endTimestamp
+     * Gets end_timestamp
      *
      * @return int|null
      */
     public function getEndTimestamp()
     {
-        return $this->container['endTimestamp'];
+        return $this->container['end_timestamp'];
     }
 
     /**
-     * Sets endTimestamp
+     * Sets end_timestamp
      *
-     * @param int|null $endTimestamp The end time of the schedule entry, in UNIX format.
+     * @param int|null $end_timestamp The end time of the schedule entry, in UNIX format.
      *
      * @return self
      */
-    public function setEndTimestamp($endTimestamp)
+    public function setEndTimestamp($end_timestamp)
     {
-        if (is_null($endTimestamp)) {
-            throw new \InvalidArgumentException('non-nullable endTimestamp cannot be null');
+        if (is_null($end_timestamp)) {
+            throw new \InvalidArgumentException('non-nullable end_timestamp cannot be null');
         }
-        $this->container['endTimestamp'] = $endTimestamp;
+        $this->container['end_timestamp'] = $end_timestamp;
 
         return $this;
     }
@@ -630,28 +630,28 @@ class ApiStationSchedule implements ModelInterface, ArrayAccess, \JsonSerializab
     }
 
     /**
-     * Gets isNow
+     * Gets is_now
      *
      * @return bool|null
      */
     public function getIsNow()
     {
-        return $this->container['isNow'];
+        return $this->container['is_now'];
     }
 
     /**
-     * Sets isNow
+     * Sets is_now
      *
-     * @param bool|null $isNow Whether the event is currently ongoing.
+     * @param bool|null $is_now Whether the event is currently ongoing.
      *
      * @return self
      */
-    public function setIsNow($isNow)
+    public function setIsNow($is_now)
     {
-        if (is_null($isNow)) {
-            throw new \InvalidArgumentException('non-nullable isNow cannot be null');
+        if (is_null($is_now)) {
+            throw new \InvalidArgumentException('non-nullable is_now cannot be null');
         }
-        $this->container['isNow'] = $isNow;
+        $this->container['is_now'] = $is_now;
 
         return $this;
     }

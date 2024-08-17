@@ -14,7 +14,7 @@ All URIs are relative to https://demo.azuracast.com/api, except if the operation
 ## `addStreamer()`
 
 ```php
-addStreamer($stationId, $stationStreamer): \AzuraCast\Model\StationStreamer
+addStreamer($station_id, $station_streamer): \AzuraCast\Model\StationStreamer
 ```
 
 
@@ -40,11 +40,11 @@ $apiInstance = new AzuraCast\Api\StationsStreamersDJsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
-$stationStreamer = new \AzuraCast\Model\StationStreamer(); // \AzuraCast\Model\StationStreamer
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_streamer = new \AzuraCast\Model\StationStreamer(); // \AzuraCast\Model\StationStreamer
 
 try {
-    $result = $apiInstance->addStreamer($stationId, $stationStreamer);
+    $result = $apiInstance->addStreamer($station_id, $station_streamer);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsStreamersDJsApi->addStreamer: ', $e->getMessage(), PHP_EOL;
@@ -55,8 +55,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
-| **stationStreamer** | [**\AzuraCast\Model\StationStreamer**](../Model/StationStreamer.md)|  | [optional] |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_streamer** | [**\AzuraCast\Model\StationStreamer**](../Model/StationStreamer.md)|  | [optional] |
 
 ### Return type
 
@@ -78,7 +78,7 @@ try {
 ## `deleteStreamer()`
 
 ```php
-deleteStreamer($stationId, $id): \AzuraCast\Model\ApiStatus
+deleteStreamer($station_id, $id): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -104,11 +104,11 @@ $apiInstance = new AzuraCast\Api\StationsStreamersDJsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 56; // int | StationStreamer ID
 
 try {
-    $result = $apiInstance->deleteStreamer($stationId, $id);
+    $result = $apiInstance->deleteStreamer($station_id, $id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsStreamersDJsApi->deleteStreamer: ', $e->getMessage(), PHP_EOL;
@@ -119,7 +119,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **int**| StationStreamer ID | |
 
 ### Return type
@@ -142,7 +142,7 @@ try {
 ## `editStreamer()`
 
 ```php
-editStreamer($stationId, $id, $stationStreamer): \AzuraCast\Model\ApiStatus
+editStreamer($station_id, $id, $station_streamer): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -168,12 +168,12 @@ $apiInstance = new AzuraCast\Api\StationsStreamersDJsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 56; // int | Streamer ID
-$stationStreamer = new \AzuraCast\Model\StationStreamer(); // \AzuraCast\Model\StationStreamer
+$station_streamer = new \AzuraCast\Model\StationStreamer(); // \AzuraCast\Model\StationStreamer
 
 try {
-    $result = $apiInstance->editStreamer($stationId, $id, $stationStreamer);
+    $result = $apiInstance->editStreamer($station_id, $id, $station_streamer);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsStreamersDJsApi->editStreamer: ', $e->getMessage(), PHP_EOL;
@@ -184,9 +184,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **int**| Streamer ID | |
-| **stationStreamer** | [**\AzuraCast\Model\StationStreamer**](../Model/StationStreamer.md)|  | [optional] |
+| **station_streamer** | [**\AzuraCast\Model\StationStreamer**](../Model/StationStreamer.md)|  | [optional] |
 
 ### Return type
 
@@ -208,7 +208,7 @@ try {
 ## `getStreamer()`
 
 ```php
-getStreamer($stationId, $id): \AzuraCast\Model\StationStreamer
+getStreamer($station_id, $id): \AzuraCast\Model\StationStreamer
 ```
 
 
@@ -234,11 +234,11 @@ $apiInstance = new AzuraCast\Api\StationsStreamersDJsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 56; // int | Streamer ID
 
 try {
-    $result = $apiInstance->getStreamer($stationId, $id);
+    $result = $apiInstance->getStreamer($station_id, $id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsStreamersDJsApi->getStreamer: ', $e->getMessage(), PHP_EOL;
@@ -249,7 +249,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **int**| Streamer ID | |
 
 ### Return type
@@ -272,7 +272,7 @@ try {
 ## `getStreamers()`
 
 ```php
-getStreamers($stationId): \AzuraCast\Model\StationStreamer[]
+getStreamers($station_id): \AzuraCast\Model\StationStreamer[]
 ```
 
 
@@ -298,10 +298,10 @@ $apiInstance = new AzuraCast\Api\StationsStreamersDJsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 
 try {
-    $result = $apiInstance->getStreamers($stationId);
+    $result = $apiInstance->getStreamers($station_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsStreamersDJsApi->getStreamers: ', $e->getMessage(), PHP_EOL;
@@ -312,7 +312,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 
 ### Return type
 

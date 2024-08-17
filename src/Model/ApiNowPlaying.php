@@ -60,10 +60,10 @@ class ApiNowPlaying implements ModelInterface, ArrayAccess, \JsonSerializable
         'station' => '\AzuraCast\Model\ApiNowPlayingStation',
         'listeners' => '\AzuraCast\Model\ApiNowPlayingListeners',
         'live' => '\AzuraCast\Model\ApiNowPlayingLive',
-        'nowPlaying' => '\AzuraCast\Model\ApiNowPlayingNowPlaying',
-        'playingNext' => '\AzuraCast\Model\ApiNowPlayingPlayingNext',
-        'songHistory' => '\AzuraCast\Model\ApiNowPlayingSongHistory[]',
-        'isOnline' => 'bool',
+        'now_playing' => '\AzuraCast\Model\ApiNowPlayingNowPlaying',
+        'playing_next' => '\AzuraCast\Model\ApiNowPlayingPlayingNext',
+        'song_history' => '\AzuraCast\Model\ApiNowPlayingSongHistory[]',
+        'is_online' => 'bool',
         'cache' => 'string'
     ];
 
@@ -78,10 +78,10 @@ class ApiNowPlaying implements ModelInterface, ArrayAccess, \JsonSerializable
         'station' => null,
         'listeners' => null,
         'live' => null,
-        'nowPlaying' => null,
-        'playingNext' => null,
-        'songHistory' => null,
-        'isOnline' => null,
+        'now_playing' => null,
+        'playing_next' => null,
+        'song_history' => null,
+        'is_online' => null,
         'cache' => null
     ];
 
@@ -94,10 +94,10 @@ class ApiNowPlaying implements ModelInterface, ArrayAccess, \JsonSerializable
         'station' => false,
         'listeners' => false,
         'live' => false,
-        'nowPlaying' => true,
-        'playingNext' => true,
-        'songHistory' => false,
-        'isOnline' => false,
+        'now_playing' => true,
+        'playing_next' => true,
+        'song_history' => false,
+        'is_online' => false,
         'cache' => true
     ];
 
@@ -190,10 +190,10 @@ class ApiNowPlaying implements ModelInterface, ArrayAccess, \JsonSerializable
         'station' => 'station',
         'listeners' => 'listeners',
         'live' => 'live',
-        'nowPlaying' => 'now_playing',
-        'playingNext' => 'playing_next',
-        'songHistory' => 'song_history',
-        'isOnline' => 'is_online',
+        'now_playing' => 'now_playing',
+        'playing_next' => 'playing_next',
+        'song_history' => 'song_history',
+        'is_online' => 'is_online',
         'cache' => 'cache'
     ];
 
@@ -206,10 +206,10 @@ class ApiNowPlaying implements ModelInterface, ArrayAccess, \JsonSerializable
         'station' => 'setStation',
         'listeners' => 'setListeners',
         'live' => 'setLive',
-        'nowPlaying' => 'setNowPlaying',
-        'playingNext' => 'setPlayingNext',
-        'songHistory' => 'setSongHistory',
-        'isOnline' => 'setIsOnline',
+        'now_playing' => 'setNowPlaying',
+        'playing_next' => 'setPlayingNext',
+        'song_history' => 'setSongHistory',
+        'is_online' => 'setIsOnline',
         'cache' => 'setCache'
     ];
 
@@ -222,10 +222,10 @@ class ApiNowPlaying implements ModelInterface, ArrayAccess, \JsonSerializable
         'station' => 'getStation',
         'listeners' => 'getListeners',
         'live' => 'getLive',
-        'nowPlaying' => 'getNowPlaying',
-        'playingNext' => 'getPlayingNext',
-        'songHistory' => 'getSongHistory',
-        'isOnline' => 'getIsOnline',
+        'now_playing' => 'getNowPlaying',
+        'playing_next' => 'getPlayingNext',
+        'song_history' => 'getSongHistory',
+        'is_online' => 'getIsOnline',
         'cache' => 'getCache'
     ];
 
@@ -306,10 +306,10 @@ class ApiNowPlaying implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('station', $data ?? [], null);
         $this->setIfExists('listeners', $data ?? [], null);
         $this->setIfExists('live', $data ?? [], null);
-        $this->setIfExists('nowPlaying', $data ?? [], null);
-        $this->setIfExists('playingNext', $data ?? [], null);
-        $this->setIfExists('songHistory', $data ?? [], null);
-        $this->setIfExists('isOnline', $data ?? [], null);
+        $this->setIfExists('now_playing', $data ?? [], null);
+        $this->setIfExists('playing_next', $data ?? [], null);
+        $this->setIfExists('song_history', $data ?? [], null);
+        $this->setIfExists('is_online', $data ?? [], null);
         $this->setIfExists('cache', $data ?? [], null);
     }
 
@@ -446,123 +446,123 @@ class ApiNowPlaying implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets nowPlaying
+     * Gets now_playing
      *
      * @return \AzuraCast\Model\ApiNowPlayingNowPlaying|null
      */
     public function getNowPlaying()
     {
-        return $this->container['nowPlaying'];
+        return $this->container['now_playing'];
     }
 
     /**
-     * Sets nowPlaying
+     * Sets now_playing
      *
-     * @param \AzuraCast\Model\ApiNowPlayingNowPlaying|null $nowPlaying nowPlaying
+     * @param \AzuraCast\Model\ApiNowPlayingNowPlaying|null $now_playing now_playing
      *
      * @return self
      */
-    public function setNowPlaying($nowPlaying)
+    public function setNowPlaying($now_playing)
     {
-        if (is_null($nowPlaying)) {
-            array_push($this->openAPINullablesSetToNull, 'nowPlaying');
+        if (is_null($now_playing)) {
+            array_push($this->openAPINullablesSetToNull, 'now_playing');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('nowPlaying', $nullablesSetToNull);
+            $index = array_search('now_playing', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['nowPlaying'] = $nowPlaying;
+        $this->container['now_playing'] = $now_playing;
 
         return $this;
     }
 
     /**
-     * Gets playingNext
+     * Gets playing_next
      *
      * @return \AzuraCast\Model\ApiNowPlayingPlayingNext|null
      */
     public function getPlayingNext()
     {
-        return $this->container['playingNext'];
+        return $this->container['playing_next'];
     }
 
     /**
-     * Sets playingNext
+     * Sets playing_next
      *
-     * @param \AzuraCast\Model\ApiNowPlayingPlayingNext|null $playingNext playingNext
+     * @param \AzuraCast\Model\ApiNowPlayingPlayingNext|null $playing_next playing_next
      *
      * @return self
      */
-    public function setPlayingNext($playingNext)
+    public function setPlayingNext($playing_next)
     {
-        if (is_null($playingNext)) {
-            array_push($this->openAPINullablesSetToNull, 'playingNext');
+        if (is_null($playing_next)) {
+            array_push($this->openAPINullablesSetToNull, 'playing_next');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('playingNext', $nullablesSetToNull);
+            $index = array_search('playing_next', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['playingNext'] = $playingNext;
+        $this->container['playing_next'] = $playing_next;
 
         return $this;
     }
 
     /**
-     * Gets songHistory
+     * Gets song_history
      *
      * @return \AzuraCast\Model\ApiNowPlayingSongHistory[]|null
      */
     public function getSongHistory()
     {
-        return $this->container['songHistory'];
+        return $this->container['song_history'];
     }
 
     /**
-     * Sets songHistory
+     * Sets song_history
      *
-     * @param \AzuraCast\Model\ApiNowPlayingSongHistory[]|null $songHistory songHistory
+     * @param \AzuraCast\Model\ApiNowPlayingSongHistory[]|null $song_history song_history
      *
      * @return self
      */
-    public function setSongHistory($songHistory)
+    public function setSongHistory($song_history)
     {
-        if (is_null($songHistory)) {
-            throw new \InvalidArgumentException('non-nullable songHistory cannot be null');
+        if (is_null($song_history)) {
+            throw new \InvalidArgumentException('non-nullable song_history cannot be null');
         }
-        $this->container['songHistory'] = $songHistory;
+        $this->container['song_history'] = $song_history;
 
         return $this;
     }
 
     /**
-     * Gets isOnline
+     * Gets is_online
      *
      * @return bool|null
      */
     public function getIsOnline()
     {
-        return $this->container['isOnline'];
+        return $this->container['is_online'];
     }
 
     /**
-     * Sets isOnline
+     * Sets is_online
      *
-     * @param bool|null $isOnline Whether the stream is currently online.
+     * @param bool|null $is_online Whether the stream is currently online.
      *
      * @return self
      */
-    public function setIsOnline($isOnline)
+    public function setIsOnline($is_online)
     {
-        if (is_null($isOnline)) {
-            throw new \InvalidArgumentException('non-nullable isOnline cannot be null');
+        if (is_null($is_online)) {
+            throw new \InvalidArgumentException('non-nullable is_online cannot be null');
         }
-        $this->container['isOnline'] = $isOnline;
+        $this->container['is_online'] = $is_online;
 
         return $this;
     }

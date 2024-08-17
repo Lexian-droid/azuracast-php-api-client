@@ -137,34 +137,34 @@ class StationsRemoteRelaysApi
     /**
      * Operation addRelay
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
-     * @param  \AzuraCast\Model\ApiStationRemote $apiStationRemote apiStationRemote (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
+     * @param  \AzuraCast\Model\ApiStationRemote $api_station_remote api_station_remote (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addRelay'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStationRemote|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function addRelay($stationId, $apiStationRemote = null, string $contentType = self::contentTypes['addRelay'][0])
+    public function addRelay($station_id, $api_station_remote = null, string $contentType = self::contentTypes['addRelay'][0])
     {
-        list($response) = $this->addRelayWithHttpInfo($stationId, $apiStationRemote, $contentType);
+        list($response) = $this->addRelayWithHttpInfo($station_id, $api_station_remote, $contentType);
         return $response;
     }
 
     /**
      * Operation addRelayWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  \AzuraCast\Model\ApiStationRemote $apiStationRemote (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  \AzuraCast\Model\ApiStationRemote $api_station_remote (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addRelay'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStationRemote|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function addRelayWithHttpInfo($stationId, $apiStationRemote = null, string $contentType = self::contentTypes['addRelay'][0])
+    public function addRelayWithHttpInfo($station_id, $api_station_remote = null, string $contentType = self::contentTypes['addRelay'][0])
     {
-        $request = $this->addRelayRequest($stationId, $apiStationRemote, $contentType);
+        $request = $this->addRelayRequest($station_id, $api_station_remote, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -382,16 +382,16 @@ class StationsRemoteRelaysApi
     /**
      * Operation addRelayAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  \AzuraCast\Model\ApiStationRemote $apiStationRemote (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  \AzuraCast\Model\ApiStationRemote $api_station_remote (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addRelay'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addRelayAsync($stationId, $apiStationRemote = null, string $contentType = self::contentTypes['addRelay'][0])
+    public function addRelayAsync($station_id, $api_station_remote = null, string $contentType = self::contentTypes['addRelay'][0])
     {
-        return $this->addRelayAsyncWithHttpInfo($stationId, $apiStationRemote, $contentType)
+        return $this->addRelayAsyncWithHttpInfo($station_id, $api_station_remote, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -402,17 +402,17 @@ class StationsRemoteRelaysApi
     /**
      * Operation addRelayAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  \AzuraCast\Model\ApiStationRemote $apiStationRemote (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  \AzuraCast\Model\ApiStationRemote $api_station_remote (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addRelay'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addRelayAsyncWithHttpInfo($stationId, $apiStationRemote = null, string $contentType = self::contentTypes['addRelay'][0])
+    public function addRelayAsyncWithHttpInfo($station_id, $api_station_remote = null, string $contentType = self::contentTypes['addRelay'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStationRemote';
-        $request = $this->addRelayRequest($stationId, $apiStationRemote, $contentType);
+        $request = $this->addRelayRequest($station_id, $api_station_remote, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -453,20 +453,20 @@ class StationsRemoteRelaysApi
     /**
      * Create request for operation 'addRelay'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  \AzuraCast\Model\ApiStationRemote $apiStationRemote (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  \AzuraCast\Model\ApiStationRemote $api_station_remote (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addRelay'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function addRelayRequest($stationId, $apiStationRemote = null, string $contentType = self::contentTypes['addRelay'][0])
+    public function addRelayRequest($station_id, $api_station_remote = null, string $contentType = self::contentTypes['addRelay'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling addRelay'
+                'Missing the required parameter $station_id when calling addRelay'
             );
         }
 
@@ -482,10 +482,10 @@ class StationsRemoteRelaysApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -498,12 +498,12 @@ class StationsRemoteRelaysApi
         );
 
         // for model (json/xml)
-        if (isset($apiStationRemote)) {
+        if (isset($api_station_remote)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($apiStationRemote));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($api_station_remote));
             } else {
-                $httpBody = $apiStationRemote;
+                $httpBody = $api_station_remote;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -559,7 +559,7 @@ class StationsRemoteRelaysApi
     /**
      * Operation deleteRelay
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  int $id Remote Relay ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteRelay'] to see the possible values for this operation
      *
@@ -567,16 +567,16 @@ class StationsRemoteRelaysApi
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function deleteRelay($stationId, $id, string $contentType = self::contentTypes['deleteRelay'][0])
+    public function deleteRelay($station_id, $id, string $contentType = self::contentTypes['deleteRelay'][0])
     {
-        list($response) = $this->deleteRelayWithHttpInfo($stationId, $id, $contentType);
+        list($response) = $this->deleteRelayWithHttpInfo($station_id, $id, $contentType);
         return $response;
     }
 
     /**
      * Operation deleteRelayWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Remote Relay ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteRelay'] to see the possible values for this operation
      *
@@ -584,9 +584,9 @@ class StationsRemoteRelaysApi
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteRelayWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['deleteRelay'][0])
+    public function deleteRelayWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['deleteRelay'][0])
     {
-        $request = $this->deleteRelayRequest($stationId, $id, $contentType);
+        $request = $this->deleteRelayRequest($station_id, $id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -804,16 +804,16 @@ class StationsRemoteRelaysApi
     /**
      * Operation deleteRelayAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Remote Relay ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteRelay'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteRelayAsync($stationId, $id, string $contentType = self::contentTypes['deleteRelay'][0])
+    public function deleteRelayAsync($station_id, $id, string $contentType = self::contentTypes['deleteRelay'][0])
     {
-        return $this->deleteRelayAsyncWithHttpInfo($stationId, $id, $contentType)
+        return $this->deleteRelayAsyncWithHttpInfo($station_id, $id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -824,17 +824,17 @@ class StationsRemoteRelaysApi
     /**
      * Operation deleteRelayAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Remote Relay ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteRelay'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteRelayAsyncWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['deleteRelay'][0])
+    public function deleteRelayAsyncWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['deleteRelay'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStatus';
-        $request = $this->deleteRelayRequest($stationId, $id, $contentType);
+        $request = $this->deleteRelayRequest($station_id, $id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -875,20 +875,20 @@ class StationsRemoteRelaysApi
     /**
      * Create request for operation 'deleteRelay'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Remote Relay ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteRelay'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function deleteRelayRequest($stationId, $id, string $contentType = self::contentTypes['deleteRelay'][0])
+    public function deleteRelayRequest($station_id, $id, string $contentType = self::contentTypes['deleteRelay'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling deleteRelay'
+                'Missing the required parameter $station_id when calling deleteRelay'
             );
         }
 
@@ -910,10 +910,10 @@ class StationsRemoteRelaysApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -988,36 +988,36 @@ class StationsRemoteRelaysApi
     /**
      * Operation editRelay
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  int $id Remote Relay ID (required)
-     * @param  \AzuraCast\Model\ApiStationRemote $apiStationRemote apiStationRemote (optional)
+     * @param  \AzuraCast\Model\ApiStationRemote $api_station_remote api_station_remote (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editRelay'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function editRelay($stationId, $id, $apiStationRemote = null, string $contentType = self::contentTypes['editRelay'][0])
+    public function editRelay($station_id, $id, $api_station_remote = null, string $contentType = self::contentTypes['editRelay'][0])
     {
-        list($response) = $this->editRelayWithHttpInfo($stationId, $id, $apiStationRemote, $contentType);
+        list($response) = $this->editRelayWithHttpInfo($station_id, $id, $api_station_remote, $contentType);
         return $response;
     }
 
     /**
      * Operation editRelayWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Remote Relay ID (required)
-     * @param  \AzuraCast\Model\ApiStationRemote $apiStationRemote (optional)
+     * @param  \AzuraCast\Model\ApiStationRemote $api_station_remote (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editRelay'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function editRelayWithHttpInfo($stationId, $id, $apiStationRemote = null, string $contentType = self::contentTypes['editRelay'][0])
+    public function editRelayWithHttpInfo($station_id, $id, $api_station_remote = null, string $contentType = self::contentTypes['editRelay'][0])
     {
-        $request = $this->editRelayRequest($stationId, $id, $apiStationRemote, $contentType);
+        $request = $this->editRelayRequest($station_id, $id, $api_station_remote, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1235,17 +1235,17 @@ class StationsRemoteRelaysApi
     /**
      * Operation editRelayAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Remote Relay ID (required)
-     * @param  \AzuraCast\Model\ApiStationRemote $apiStationRemote (optional)
+     * @param  \AzuraCast\Model\ApiStationRemote $api_station_remote (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editRelay'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function editRelayAsync($stationId, $id, $apiStationRemote = null, string $contentType = self::contentTypes['editRelay'][0])
+    public function editRelayAsync($station_id, $id, $api_station_remote = null, string $contentType = self::contentTypes['editRelay'][0])
     {
-        return $this->editRelayAsyncWithHttpInfo($stationId, $id, $apiStationRemote, $contentType)
+        return $this->editRelayAsyncWithHttpInfo($station_id, $id, $api_station_remote, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1256,18 +1256,18 @@ class StationsRemoteRelaysApi
     /**
      * Operation editRelayAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Remote Relay ID (required)
-     * @param  \AzuraCast\Model\ApiStationRemote $apiStationRemote (optional)
+     * @param  \AzuraCast\Model\ApiStationRemote $api_station_remote (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editRelay'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function editRelayAsyncWithHttpInfo($stationId, $id, $apiStationRemote = null, string $contentType = self::contentTypes['editRelay'][0])
+    public function editRelayAsyncWithHttpInfo($station_id, $id, $api_station_remote = null, string $contentType = self::contentTypes['editRelay'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStatus';
-        $request = $this->editRelayRequest($stationId, $id, $apiStationRemote, $contentType);
+        $request = $this->editRelayRequest($station_id, $id, $api_station_remote, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1308,21 +1308,21 @@ class StationsRemoteRelaysApi
     /**
      * Create request for operation 'editRelay'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Remote Relay ID (required)
-     * @param  \AzuraCast\Model\ApiStationRemote $apiStationRemote (optional)
+     * @param  \AzuraCast\Model\ApiStationRemote $api_station_remote (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editRelay'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function editRelayRequest($stationId, $id, $apiStationRemote = null, string $contentType = self::contentTypes['editRelay'][0])
+    public function editRelayRequest($station_id, $id, $api_station_remote = null, string $contentType = self::contentTypes['editRelay'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling editRelay'
+                'Missing the required parameter $station_id when calling editRelay'
             );
         }
 
@@ -1345,10 +1345,10 @@ class StationsRemoteRelaysApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -1369,12 +1369,12 @@ class StationsRemoteRelaysApi
         );
 
         // for model (json/xml)
-        if (isset($apiStationRemote)) {
+        if (isset($api_station_remote)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($apiStationRemote));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($api_station_remote));
             } else {
-                $httpBody = $apiStationRemote;
+                $httpBody = $api_station_remote;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1430,7 +1430,7 @@ class StationsRemoteRelaysApi
     /**
      * Operation getRelay
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  int $id Remote Relay ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRelay'] to see the possible values for this operation
      *
@@ -1438,16 +1438,16 @@ class StationsRemoteRelaysApi
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStationRemote|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function getRelay($stationId, $id, string $contentType = self::contentTypes['getRelay'][0])
+    public function getRelay($station_id, $id, string $contentType = self::contentTypes['getRelay'][0])
     {
-        list($response) = $this->getRelayWithHttpInfo($stationId, $id, $contentType);
+        list($response) = $this->getRelayWithHttpInfo($station_id, $id, $contentType);
         return $response;
     }
 
     /**
      * Operation getRelayWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Remote Relay ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRelay'] to see the possible values for this operation
      *
@@ -1455,9 +1455,9 @@ class StationsRemoteRelaysApi
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStationRemote|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getRelayWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['getRelay'][0])
+    public function getRelayWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['getRelay'][0])
     {
-        $request = $this->getRelayRequest($stationId, $id, $contentType);
+        $request = $this->getRelayRequest($station_id, $id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1675,16 +1675,16 @@ class StationsRemoteRelaysApi
     /**
      * Operation getRelayAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Remote Relay ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRelay'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getRelayAsync($stationId, $id, string $contentType = self::contentTypes['getRelay'][0])
+    public function getRelayAsync($station_id, $id, string $contentType = self::contentTypes['getRelay'][0])
     {
-        return $this->getRelayAsyncWithHttpInfo($stationId, $id, $contentType)
+        return $this->getRelayAsyncWithHttpInfo($station_id, $id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1695,17 +1695,17 @@ class StationsRemoteRelaysApi
     /**
      * Operation getRelayAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Remote Relay ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRelay'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getRelayAsyncWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['getRelay'][0])
+    public function getRelayAsyncWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['getRelay'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStationRemote';
-        $request = $this->getRelayRequest($stationId, $id, $contentType);
+        $request = $this->getRelayRequest($station_id, $id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1746,20 +1746,20 @@ class StationsRemoteRelaysApi
     /**
      * Create request for operation 'getRelay'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Remote Relay ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRelay'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getRelayRequest($stationId, $id, string $contentType = self::contentTypes['getRelay'][0])
+    public function getRelayRequest($station_id, $id, string $contentType = self::contentTypes['getRelay'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling getRelay'
+                'Missing the required parameter $station_id when calling getRelay'
             );
         }
 
@@ -1781,10 +1781,10 @@ class StationsRemoteRelaysApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -1859,32 +1859,32 @@ class StationsRemoteRelaysApi
     /**
      * Operation getRelays
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRelays'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStationRemote[]|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function getRelays($stationId, string $contentType = self::contentTypes['getRelays'][0])
+    public function getRelays($station_id, string $contentType = self::contentTypes['getRelays'][0])
     {
-        list($response) = $this->getRelaysWithHttpInfo($stationId, $contentType);
+        list($response) = $this->getRelaysWithHttpInfo($station_id, $contentType);
         return $response;
     }
 
     /**
      * Operation getRelaysWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRelays'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStationRemote[]|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getRelaysWithHttpInfo($stationId, string $contentType = self::contentTypes['getRelays'][0])
+    public function getRelaysWithHttpInfo($station_id, string $contentType = self::contentTypes['getRelays'][0])
     {
-        $request = $this->getRelaysRequest($stationId, $contentType);
+        $request = $this->getRelaysRequest($station_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2102,15 +2102,15 @@ class StationsRemoteRelaysApi
     /**
      * Operation getRelaysAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRelays'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getRelaysAsync($stationId, string $contentType = self::contentTypes['getRelays'][0])
+    public function getRelaysAsync($station_id, string $contentType = self::contentTypes['getRelays'][0])
     {
-        return $this->getRelaysAsyncWithHttpInfo($stationId, $contentType)
+        return $this->getRelaysAsyncWithHttpInfo($station_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2121,16 +2121,16 @@ class StationsRemoteRelaysApi
     /**
      * Operation getRelaysAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRelays'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getRelaysAsyncWithHttpInfo($stationId, string $contentType = self::contentTypes['getRelays'][0])
+    public function getRelaysAsyncWithHttpInfo($station_id, string $contentType = self::contentTypes['getRelays'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStationRemote[]';
-        $request = $this->getRelaysRequest($stationId, $contentType);
+        $request = $this->getRelaysRequest($station_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2171,19 +2171,19 @@ class StationsRemoteRelaysApi
     /**
      * Create request for operation 'getRelays'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRelays'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getRelaysRequest($stationId, string $contentType = self::contentTypes['getRelays'][0])
+    public function getRelaysRequest($station_id, string $contentType = self::contentTypes['getRelays'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling getRelays'
+                'Missing the required parameter $station_id when calling getRelays'
             );
         }
 
@@ -2198,10 +2198,10 @@ class StationsRemoteRelaysApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }

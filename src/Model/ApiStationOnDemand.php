@@ -57,8 +57,8 @@ class ApiStationOnDemand implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'trackId' => 'string',
-        'downloadUrl' => 'string',
+        'track_id' => 'string',
+        'download_url' => 'string',
         'media' => '\AzuraCast\Model\ApiSong',
         'playlist' => 'string'
     ];
@@ -71,8 +71,8 @@ class ApiStationOnDemand implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'trackId' => null,
-        'downloadUrl' => null,
+        'track_id' => null,
+        'download_url' => null,
         'media' => null,
         'playlist' => null
     ];
@@ -83,8 +83,8 @@ class ApiStationOnDemand implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'trackId' => false,
-        'downloadUrl' => false,
+        'track_id' => false,
+        'download_url' => false,
         'media' => false,
         'playlist' => false
     ];
@@ -175,8 +175,8 @@ class ApiStationOnDemand implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'trackId' => 'track_id',
-        'downloadUrl' => 'download_url',
+        'track_id' => 'track_id',
+        'download_url' => 'download_url',
         'media' => 'media',
         'playlist' => 'playlist'
     ];
@@ -187,8 +187,8 @@ class ApiStationOnDemand implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'trackId' => 'setTrackId',
-        'downloadUrl' => 'setDownloadUrl',
+        'track_id' => 'setTrackId',
+        'download_url' => 'setDownloadUrl',
         'media' => 'setMedia',
         'playlist' => 'setPlaylist'
     ];
@@ -199,8 +199,8 @@ class ApiStationOnDemand implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'trackId' => 'getTrackId',
-        'downloadUrl' => 'getDownloadUrl',
+        'track_id' => 'getTrackId',
+        'download_url' => 'getDownloadUrl',
         'media' => 'getMedia',
         'playlist' => 'getPlaylist'
     ];
@@ -262,8 +262,8 @@ class ApiStationOnDemand implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('trackId', $data ?? [], null);
-        $this->setIfExists('downloadUrl', $data ?? [], null);
+        $this->setIfExists('track_id', $data ?? [], null);
+        $this->setIfExists('download_url', $data ?? [], null);
         $this->setIfExists('media', $data ?? [], null);
         $this->setIfExists('playlist', $data ?? [], null);
     }
@@ -311,55 +311,55 @@ class ApiStationOnDemand implements ModelInterface, ArrayAccess, \JsonSerializab
 
 
     /**
-     * Gets trackId
+     * Gets track_id
      *
      * @return string|null
      */
     public function getTrackId()
     {
-        return $this->container['trackId'];
+        return $this->container['track_id'];
     }
 
     /**
-     * Sets trackId
+     * Sets track_id
      *
-     * @param string|null $trackId Track ID unique identifier
+     * @param string|null $track_id Track ID unique identifier
      *
      * @return self
      */
-    public function setTrackId($trackId)
+    public function setTrackId($track_id)
     {
-        if (is_null($trackId)) {
-            throw new \InvalidArgumentException('non-nullable trackId cannot be null');
+        if (is_null($track_id)) {
+            throw new \InvalidArgumentException('non-nullable track_id cannot be null');
         }
-        $this->container['trackId'] = $trackId;
+        $this->container['track_id'] = $track_id;
 
         return $this;
     }
 
     /**
-     * Gets downloadUrl
+     * Gets download_url
      *
      * @return string|null
      */
     public function getDownloadUrl()
     {
-        return $this->container['downloadUrl'];
+        return $this->container['download_url'];
     }
 
     /**
-     * Sets downloadUrl
+     * Sets download_url
      *
-     * @param string|null $downloadUrl URL to download/play track.
+     * @param string|null $download_url URL to download/play track.
      *
      * @return self
      */
-    public function setDownloadUrl($downloadUrl)
+    public function setDownloadUrl($download_url)
     {
-        if (is_null($downloadUrl)) {
-            throw new \InvalidArgumentException('non-nullable downloadUrl cannot be null');
+        if (is_null($download_url)) {
+            throw new \InvalidArgumentException('non-nullable download_url cannot be null');
         }
-        $this->container['downloadUrl'] = $downloadUrl;
+        $this->container['download_url'] = $download_url;
 
         return $this;
     }

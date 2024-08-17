@@ -60,7 +60,7 @@ class SftpUser implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'int',
         'username' => 'string',
         'password' => 'string',
-        'publicKeys' => 'string'
+        'public_keys' => 'string'
     ];
 
     /**
@@ -74,7 +74,7 @@ class SftpUser implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => null,
         'username' => null,
         'password' => null,
-        'publicKeys' => null
+        'public_keys' => null
     ];
 
     /**
@@ -86,7 +86,7 @@ class SftpUser implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => true,
         'username' => false,
         'password' => false,
-        'publicKeys' => true
+        'public_keys' => true
     ];
 
     /**
@@ -178,7 +178,7 @@ class SftpUser implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'id',
         'username' => 'username',
         'password' => 'password',
-        'publicKeys' => 'publicKeys'
+        'public_keys' => 'publicKeys'
     ];
 
     /**
@@ -190,7 +190,7 @@ class SftpUser implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'setId',
         'username' => 'setUsername',
         'password' => 'setPassword',
-        'publicKeys' => 'setPublicKeys'
+        'public_keys' => 'setPublicKeys'
     ];
 
     /**
@@ -202,7 +202,7 @@ class SftpUser implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'getId',
         'username' => 'getUsername',
         'password' => 'getPassword',
-        'publicKeys' => 'getPublicKeys'
+        'public_keys' => 'getPublicKeys'
     ];
 
     /**
@@ -265,7 +265,7 @@ class SftpUser implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('username', $data ?? [], null);
         $this->setIfExists('password', $data ?? [], null);
-        $this->setIfExists('publicKeys', $data ?? [], null);
+        $this->setIfExists('public_keys', $data ?? [], null);
     }
 
     /**
@@ -399,35 +399,35 @@ class SftpUser implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets publicKeys
+     * Gets public_keys
      *
      * @return string|null
      */
     public function getPublicKeys()
     {
-        return $this->container['publicKeys'];
+        return $this->container['public_keys'];
     }
 
     /**
-     * Sets publicKeys
+     * Sets public_keys
      *
-     * @param string|null $publicKeys publicKeys
+     * @param string|null $public_keys public_keys
      *
      * @return self
      */
-    public function setPublicKeys($publicKeys)
+    public function setPublicKeys($public_keys)
     {
-        if (is_null($publicKeys)) {
-            array_push($this->openAPINullablesSetToNull, 'publicKeys');
+        if (is_null($public_keys)) {
+            array_push($this->openAPINullablesSetToNull, 'public_keys');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('publicKeys', $nullablesSetToNull);
+            $index = array_search('public_keys', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['publicKeys'] = $publicKeys;
+        $this->container['public_keys'] = $public_keys;
 
         return $this;
     }

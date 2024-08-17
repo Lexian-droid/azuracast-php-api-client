@@ -58,10 +58,10 @@ class StationSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'startTime' => 'int',
-        'endTime' => 'int',
+        'start_time' => 'int',
+        'end_time' => 'int',
         'days' => 'string',
-        'loopOnce' => 'bool'
+        'loop_once' => 'bool'
     ];
 
     /**
@@ -73,10 +73,10 @@ class StationSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => null,
-        'startTime' => null,
-        'endTime' => null,
+        'start_time' => null,
+        'end_time' => null,
         'days' => null,
-        'loopOnce' => null
+        'loop_once' => null
     ];
 
     /**
@@ -86,10 +86,10 @@ class StationSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => true,
-        'startTime' => false,
-        'endTime' => false,
+        'start_time' => false,
+        'end_time' => false,
         'days' => true,
-        'loopOnce' => false
+        'loop_once' => false
     ];
 
     /**
@@ -179,10 +179,10 @@ class StationSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'startTime' => 'start_time',
-        'endTime' => 'end_time',
+        'start_time' => 'start_time',
+        'end_time' => 'end_time',
         'days' => 'days',
-        'loopOnce' => 'loop_once'
+        'loop_once' => 'loop_once'
     ];
 
     /**
@@ -192,10 +192,10 @@ class StationSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'startTime' => 'setStartTime',
-        'endTime' => 'setEndTime',
+        'start_time' => 'setStartTime',
+        'end_time' => 'setEndTime',
         'days' => 'setDays',
-        'loopOnce' => 'setLoopOnce'
+        'loop_once' => 'setLoopOnce'
     ];
 
     /**
@@ -205,10 +205,10 @@ class StationSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'startTime' => 'getStartTime',
-        'endTime' => 'getEndTime',
+        'start_time' => 'getStartTime',
+        'end_time' => 'getEndTime',
         'days' => 'getDays',
-        'loopOnce' => 'getLoopOnce'
+        'loop_once' => 'getLoopOnce'
     ];
 
     /**
@@ -269,10 +269,10 @@ class StationSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('startTime', $data ?? [], null);
-        $this->setIfExists('endTime', $data ?? [], null);
+        $this->setIfExists('start_time', $data ?? [], null);
+        $this->setIfExists('end_time', $data ?? [], null);
         $this->setIfExists('days', $data ?? [], null);
-        $this->setIfExists('loopOnce', $data ?? [], null);
+        $this->setIfExists('loop_once', $data ?? [], null);
     }
 
     /**
@@ -352,55 +352,55 @@ class StationSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets startTime
+     * Gets start_time
      *
      * @return int|null
      */
     public function getStartTime()
     {
-        return $this->container['startTime'];
+        return $this->container['start_time'];
     }
 
     /**
-     * Sets startTime
+     * Sets start_time
      *
-     * @param int|null $startTime startTime
+     * @param int|null $start_time start_time
      *
      * @return self
      */
-    public function setStartTime($startTime)
+    public function setStartTime($start_time)
     {
-        if (is_null($startTime)) {
-            throw new \InvalidArgumentException('non-nullable startTime cannot be null');
+        if (is_null($start_time)) {
+            throw new \InvalidArgumentException('non-nullable start_time cannot be null');
         }
-        $this->container['startTime'] = $startTime;
+        $this->container['start_time'] = $start_time;
 
         return $this;
     }
 
     /**
-     * Gets endTime
+     * Gets end_time
      *
      * @return int|null
      */
     public function getEndTime()
     {
-        return $this->container['endTime'];
+        return $this->container['end_time'];
     }
 
     /**
-     * Sets endTime
+     * Sets end_time
      *
-     * @param int|null $endTime endTime
+     * @param int|null $end_time end_time
      *
      * @return self
      */
-    public function setEndTime($endTime)
+    public function setEndTime($end_time)
     {
-        if (is_null($endTime)) {
-            throw new \InvalidArgumentException('non-nullable endTime cannot be null');
+        if (is_null($end_time)) {
+            throw new \InvalidArgumentException('non-nullable end_time cannot be null');
         }
-        $this->container['endTime'] = $endTime;
+        $this->container['end_time'] = $end_time;
 
         return $this;
     }
@@ -440,28 +440,28 @@ class StationSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets loopOnce
+     * Gets loop_once
      *
      * @return bool|null
      */
     public function getLoopOnce()
     {
-        return $this->container['loopOnce'];
+        return $this->container['loop_once'];
     }
 
     /**
-     * Sets loopOnce
+     * Sets loop_once
      *
-     * @param bool|null $loopOnce loopOnce
+     * @param bool|null $loop_once loop_once
      *
      * @return self
      */
-    public function setLoopOnce($loopOnce)
+    public function setLoopOnce($loop_once)
     {
-        if (is_null($loopOnce)) {
-            throw new \InvalidArgumentException('non-nullable loopOnce cannot be null');
+        if (is_null($loop_once)) {
+            throw new \InvalidArgumentException('non-nullable loop_once cannot be null');
         }
-        $this->container['loopOnce'] = $loopOnce;
+        $this->container['loop_once'] = $loop_once;
 
         return $this;
     }

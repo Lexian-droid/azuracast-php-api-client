@@ -10,7 +10,7 @@ All URIs are relative to https://demo.azuracast.com/api, except if the operation
 ## `getStationHistory()`
 
 ```php
-getStationHistory($stationId, $start, $end): \AzuraCast\Model\ApiDetailedSongHistory[]
+getStationHistory($station_id, $start, $end): \AzuraCast\Model\ApiDetailedSongHistory[]
 ```
 
 
@@ -36,12 +36,12 @@ $apiInstance = new AzuraCast\Api\StationsHistoryApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $start = 'start_example'; // string | The start date for records, in PHP-supported date/time format. (https://www.php.net/manual/en/datetime.formats.php)
 $end = 'end_example'; // string | The end date for records, in PHP-supported date/time format. (https://www.php.net/manual/en/datetime.formats.php)
 
 try {
-    $result = $apiInstance->getStationHistory($stationId, $start, $end);
+    $result = $apiInstance->getStationHistory($station_id, $start, $end);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsHistoryApi->getStationHistory: ', $e->getMessage(), PHP_EOL;
@@ -52,7 +52,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **start** | **string**| The start date for records, in PHP-supported date/time format. (https://www.php.net/manual/en/datetime.formats.php) | [optional] |
 | **end** | **string**| The end date for records, in PHP-supported date/time format. (https://www.php.net/manual/en/datetime.formats.php) | [optional] |
 

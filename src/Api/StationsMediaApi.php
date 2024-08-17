@@ -146,34 +146,34 @@ class StationsMediaApi
     /**
      * Operation addFile
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
-     * @param  \AzuraCast\Model\ApiUploadFile $apiUploadFile apiUploadFile (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
+     * @param  \AzuraCast\Model\ApiUploadFile $api_upload_file api_upload_file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addFile'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStationMedia|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function addFile($stationId, $apiUploadFile = null, string $contentType = self::contentTypes['addFile'][0])
+    public function addFile($station_id, $api_upload_file = null, string $contentType = self::contentTypes['addFile'][0])
     {
-        list($response) = $this->addFileWithHttpInfo($stationId, $apiUploadFile, $contentType);
+        list($response) = $this->addFileWithHttpInfo($station_id, $api_upload_file, $contentType);
         return $response;
     }
 
     /**
      * Operation addFileWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  \AzuraCast\Model\ApiUploadFile $apiUploadFile (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  \AzuraCast\Model\ApiUploadFile $api_upload_file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addFile'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStationMedia|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function addFileWithHttpInfo($stationId, $apiUploadFile = null, string $contentType = self::contentTypes['addFile'][0])
+    public function addFileWithHttpInfo($station_id, $api_upload_file = null, string $contentType = self::contentTypes['addFile'][0])
     {
-        $request = $this->addFileRequest($stationId, $apiUploadFile, $contentType);
+        $request = $this->addFileRequest($station_id, $api_upload_file, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -356,16 +356,16 @@ class StationsMediaApi
     /**
      * Operation addFileAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  \AzuraCast\Model\ApiUploadFile $apiUploadFile (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  \AzuraCast\Model\ApiUploadFile $api_upload_file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addFile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addFileAsync($stationId, $apiUploadFile = null, string $contentType = self::contentTypes['addFile'][0])
+    public function addFileAsync($station_id, $api_upload_file = null, string $contentType = self::contentTypes['addFile'][0])
     {
-        return $this->addFileAsyncWithHttpInfo($stationId, $apiUploadFile, $contentType)
+        return $this->addFileAsyncWithHttpInfo($station_id, $api_upload_file, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -376,17 +376,17 @@ class StationsMediaApi
     /**
      * Operation addFileAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  \AzuraCast\Model\ApiUploadFile $apiUploadFile (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  \AzuraCast\Model\ApiUploadFile $api_upload_file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addFile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addFileAsyncWithHttpInfo($stationId, $apiUploadFile = null, string $contentType = self::contentTypes['addFile'][0])
+    public function addFileAsyncWithHttpInfo($station_id, $api_upload_file = null, string $contentType = self::contentTypes['addFile'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStationMedia';
-        $request = $this->addFileRequest($stationId, $apiUploadFile, $contentType);
+        $request = $this->addFileRequest($station_id, $api_upload_file, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -427,20 +427,20 @@ class StationsMediaApi
     /**
      * Create request for operation 'addFile'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  \AzuraCast\Model\ApiUploadFile $apiUploadFile (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  \AzuraCast\Model\ApiUploadFile $api_upload_file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addFile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function addFileRequest($stationId, $apiUploadFile = null, string $contentType = self::contentTypes['addFile'][0])
+    public function addFileRequest($station_id, $api_upload_file = null, string $contentType = self::contentTypes['addFile'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling addFile'
+                'Missing the required parameter $station_id when calling addFile'
             );
         }
 
@@ -456,10 +456,10 @@ class StationsMediaApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -472,12 +472,12 @@ class StationsMediaApi
         );
 
         // for model (json/xml)
-        if (isset($apiUploadFile)) {
+        if (isset($api_upload_file)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($apiUploadFile));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($api_upload_file));
             } else {
-                $httpBody = $apiUploadFile;
+                $httpBody = $api_upload_file;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -533,7 +533,7 @@ class StationsMediaApi
     /**
      * Operation deleteFile
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  int $id Media ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteFile'] to see the possible values for this operation
      *
@@ -541,16 +541,16 @@ class StationsMediaApi
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function deleteFile($stationId, $id, string $contentType = self::contentTypes['deleteFile'][0])
+    public function deleteFile($station_id, $id, string $contentType = self::contentTypes['deleteFile'][0])
     {
-        list($response) = $this->deleteFileWithHttpInfo($stationId, $id, $contentType);
+        list($response) = $this->deleteFileWithHttpInfo($station_id, $id, $contentType);
         return $response;
     }
 
     /**
      * Operation deleteFileWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Media ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteFile'] to see the possible values for this operation
      *
@@ -558,9 +558,9 @@ class StationsMediaApi
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteFileWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['deleteFile'][0])
+    public function deleteFileWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['deleteFile'][0])
     {
-        $request = $this->deleteFileRequest($stationId, $id, $contentType);
+        $request = $this->deleteFileRequest($station_id, $id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -778,16 +778,16 @@ class StationsMediaApi
     /**
      * Operation deleteFileAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Media ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteFile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteFileAsync($stationId, $id, string $contentType = self::contentTypes['deleteFile'][0])
+    public function deleteFileAsync($station_id, $id, string $contentType = self::contentTypes['deleteFile'][0])
     {
-        return $this->deleteFileAsyncWithHttpInfo($stationId, $id, $contentType)
+        return $this->deleteFileAsyncWithHttpInfo($station_id, $id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -798,17 +798,17 @@ class StationsMediaApi
     /**
      * Operation deleteFileAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Media ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteFile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteFileAsyncWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['deleteFile'][0])
+    public function deleteFileAsyncWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['deleteFile'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStatus';
-        $request = $this->deleteFileRequest($stationId, $id, $contentType);
+        $request = $this->deleteFileRequest($station_id, $id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -849,20 +849,20 @@ class StationsMediaApi
     /**
      * Create request for operation 'deleteFile'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Media ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteFile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function deleteFileRequest($stationId, $id, string $contentType = self::contentTypes['deleteFile'][0])
+    public function deleteFileRequest($station_id, $id, string $contentType = self::contentTypes['deleteFile'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling deleteFile'
+                'Missing the required parameter $station_id when calling deleteFile'
             );
         }
 
@@ -884,10 +884,10 @@ class StationsMediaApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -962,34 +962,34 @@ class StationsMediaApi
     /**
      * Operation deleteMediaArt
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
-     * @param  PostMediaArtMediaIdParameter $mediaId Media ID (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
+     * @param  PostMediaArtMediaIdParameter $media_id Media ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteMediaArt'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function deleteMediaArt($stationId, $mediaId, string $contentType = self::contentTypes['deleteMediaArt'][0])
+    public function deleteMediaArt($station_id, $media_id, string $contentType = self::contentTypes['deleteMediaArt'][0])
     {
-        list($response) = $this->deleteMediaArtWithHttpInfo($stationId, $mediaId, $contentType);
+        list($response) = $this->deleteMediaArtWithHttpInfo($station_id, $media_id, $contentType);
         return $response;
     }
 
     /**
      * Operation deleteMediaArtWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  PostMediaArtMediaIdParameter $mediaId Media ID (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  PostMediaArtMediaIdParameter $media_id Media ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteMediaArt'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteMediaArtWithHttpInfo($stationId, $mediaId, string $contentType = self::contentTypes['deleteMediaArt'][0])
+    public function deleteMediaArtWithHttpInfo($station_id, $media_id, string $contentType = self::contentTypes['deleteMediaArt'][0])
     {
-        $request = $this->deleteMediaArtRequest($stationId, $mediaId, $contentType);
+        $request = $this->deleteMediaArtRequest($station_id, $media_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1207,16 +1207,16 @@ class StationsMediaApi
     /**
      * Operation deleteMediaArtAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  PostMediaArtMediaIdParameter $mediaId Media ID (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  PostMediaArtMediaIdParameter $media_id Media ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteMediaArt'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteMediaArtAsync($stationId, $mediaId, string $contentType = self::contentTypes['deleteMediaArt'][0])
+    public function deleteMediaArtAsync($station_id, $media_id, string $contentType = self::contentTypes['deleteMediaArt'][0])
     {
-        return $this->deleteMediaArtAsyncWithHttpInfo($stationId, $mediaId, $contentType)
+        return $this->deleteMediaArtAsyncWithHttpInfo($station_id, $media_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1227,17 +1227,17 @@ class StationsMediaApi
     /**
      * Operation deleteMediaArtAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  PostMediaArtMediaIdParameter $mediaId Media ID (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  PostMediaArtMediaIdParameter $media_id Media ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteMediaArt'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteMediaArtAsyncWithHttpInfo($stationId, $mediaId, string $contentType = self::contentTypes['deleteMediaArt'][0])
+    public function deleteMediaArtAsyncWithHttpInfo($station_id, $media_id, string $contentType = self::contentTypes['deleteMediaArt'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStatus';
-        $request = $this->deleteMediaArtRequest($stationId, $mediaId, $contentType);
+        $request = $this->deleteMediaArtRequest($station_id, $media_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1278,27 +1278,27 @@ class StationsMediaApi
     /**
      * Create request for operation 'deleteMediaArt'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  PostMediaArtMediaIdParameter $mediaId Media ID (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  PostMediaArtMediaIdParameter $media_id Media ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteMediaArt'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function deleteMediaArtRequest($stationId, $mediaId, string $contentType = self::contentTypes['deleteMediaArt'][0])
+    public function deleteMediaArtRequest($station_id, $media_id, string $contentType = self::contentTypes['deleteMediaArt'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling deleteMediaArt'
+                'Missing the required parameter $station_id when calling deleteMediaArt'
             );
         }
 
-        // verify the required parameter 'mediaId' is set
-        if ($mediaId === null || (is_array($mediaId) && count($mediaId) === 0)) {
+        // verify the required parameter 'media_id' is set
+        if ($media_id === null || (is_array($media_id) && count($media_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $mediaId when calling deleteMediaArt'
+                'Missing the required parameter $media_id when calling deleteMediaArt'
             );
         }
 
@@ -1313,18 +1313,18 @@ class StationsMediaApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
         // path params
-        if ($mediaId !== null) {
+        if ($media_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'media_id' . '}',
-                ObjectSerializer::toPathValue($mediaId),
+                ObjectSerializer::toPathValue($media_id),
                 $resourcePath
             );
         }
@@ -1391,36 +1391,36 @@ class StationsMediaApi
     /**
      * Operation editFile
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  int $id Media ID (required)
-     * @param  \AzuraCast\Model\ApiStationMedia $apiStationMedia apiStationMedia (optional)
+     * @param  \AzuraCast\Model\ApiStationMedia $api_station_media api_station_media (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editFile'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function editFile($stationId, $id, $apiStationMedia = null, string $contentType = self::contentTypes['editFile'][0])
+    public function editFile($station_id, $id, $api_station_media = null, string $contentType = self::contentTypes['editFile'][0])
     {
-        list($response) = $this->editFileWithHttpInfo($stationId, $id, $apiStationMedia, $contentType);
+        list($response) = $this->editFileWithHttpInfo($station_id, $id, $api_station_media, $contentType);
         return $response;
     }
 
     /**
      * Operation editFileWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Media ID (required)
-     * @param  \AzuraCast\Model\ApiStationMedia $apiStationMedia (optional)
+     * @param  \AzuraCast\Model\ApiStationMedia $api_station_media (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editFile'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function editFileWithHttpInfo($stationId, $id, $apiStationMedia = null, string $contentType = self::contentTypes['editFile'][0])
+    public function editFileWithHttpInfo($station_id, $id, $api_station_media = null, string $contentType = self::contentTypes['editFile'][0])
     {
-        $request = $this->editFileRequest($stationId, $id, $apiStationMedia, $contentType);
+        $request = $this->editFileRequest($station_id, $id, $api_station_media, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1638,17 +1638,17 @@ class StationsMediaApi
     /**
      * Operation editFileAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Media ID (required)
-     * @param  \AzuraCast\Model\ApiStationMedia $apiStationMedia (optional)
+     * @param  \AzuraCast\Model\ApiStationMedia $api_station_media (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editFile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function editFileAsync($stationId, $id, $apiStationMedia = null, string $contentType = self::contentTypes['editFile'][0])
+    public function editFileAsync($station_id, $id, $api_station_media = null, string $contentType = self::contentTypes['editFile'][0])
     {
-        return $this->editFileAsyncWithHttpInfo($stationId, $id, $apiStationMedia, $contentType)
+        return $this->editFileAsyncWithHttpInfo($station_id, $id, $api_station_media, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1659,18 +1659,18 @@ class StationsMediaApi
     /**
      * Operation editFileAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Media ID (required)
-     * @param  \AzuraCast\Model\ApiStationMedia $apiStationMedia (optional)
+     * @param  \AzuraCast\Model\ApiStationMedia $api_station_media (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editFile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function editFileAsyncWithHttpInfo($stationId, $id, $apiStationMedia = null, string $contentType = self::contentTypes['editFile'][0])
+    public function editFileAsyncWithHttpInfo($station_id, $id, $api_station_media = null, string $contentType = self::contentTypes['editFile'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStatus';
-        $request = $this->editFileRequest($stationId, $id, $apiStationMedia, $contentType);
+        $request = $this->editFileRequest($station_id, $id, $api_station_media, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1711,21 +1711,21 @@ class StationsMediaApi
     /**
      * Create request for operation 'editFile'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Media ID (required)
-     * @param  \AzuraCast\Model\ApiStationMedia $apiStationMedia (optional)
+     * @param  \AzuraCast\Model\ApiStationMedia $api_station_media (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editFile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function editFileRequest($stationId, $id, $apiStationMedia = null, string $contentType = self::contentTypes['editFile'][0])
+    public function editFileRequest($station_id, $id, $api_station_media = null, string $contentType = self::contentTypes['editFile'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling editFile'
+                'Missing the required parameter $station_id when calling editFile'
             );
         }
 
@@ -1748,10 +1748,10 @@ class StationsMediaApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -1772,12 +1772,12 @@ class StationsMediaApi
         );
 
         // for model (json/xml)
-        if (isset($apiStationMedia)) {
+        if (isset($api_station_media)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($apiStationMedia));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($api_station_media));
             } else {
-                $httpBody = $apiStationMedia;
+                $httpBody = $api_station_media;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1833,7 +1833,7 @@ class StationsMediaApi
     /**
      * Operation getFile
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  int $id Media ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFile'] to see the possible values for this operation
      *
@@ -1841,16 +1841,16 @@ class StationsMediaApi
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStationMedia|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function getFile($stationId, $id, string $contentType = self::contentTypes['getFile'][0])
+    public function getFile($station_id, $id, string $contentType = self::contentTypes['getFile'][0])
     {
-        list($response) = $this->getFileWithHttpInfo($stationId, $id, $contentType);
+        list($response) = $this->getFileWithHttpInfo($station_id, $id, $contentType);
         return $response;
     }
 
     /**
      * Operation getFileWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Media ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFile'] to see the possible values for this operation
      *
@@ -1858,9 +1858,9 @@ class StationsMediaApi
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStationMedia|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getFileWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['getFile'][0])
+    public function getFileWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['getFile'][0])
     {
-        $request = $this->getFileRequest($stationId, $id, $contentType);
+        $request = $this->getFileRequest($station_id, $id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2078,16 +2078,16 @@ class StationsMediaApi
     /**
      * Operation getFileAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Media ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFileAsync($stationId, $id, string $contentType = self::contentTypes['getFile'][0])
+    public function getFileAsync($station_id, $id, string $contentType = self::contentTypes['getFile'][0])
     {
-        return $this->getFileAsyncWithHttpInfo($stationId, $id, $contentType)
+        return $this->getFileAsyncWithHttpInfo($station_id, $id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2098,17 +2098,17 @@ class StationsMediaApi
     /**
      * Operation getFileAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Media ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFileAsyncWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['getFile'][0])
+    public function getFileAsyncWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['getFile'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStationMedia';
-        $request = $this->getFileRequest($stationId, $id, $contentType);
+        $request = $this->getFileRequest($station_id, $id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2149,20 +2149,20 @@ class StationsMediaApi
     /**
      * Create request for operation 'getFile'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Media ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getFileRequest($stationId, $id, string $contentType = self::contentTypes['getFile'][0])
+    public function getFileRequest($station_id, $id, string $contentType = self::contentTypes['getFile'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling getFile'
+                'Missing the required parameter $station_id when calling getFile'
             );
         }
 
@@ -2184,10 +2184,10 @@ class StationsMediaApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -2262,32 +2262,32 @@ class StationsMediaApi
     /**
      * Operation getFiles
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFiles'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStationMedia[]|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function getFiles($stationId, string $contentType = self::contentTypes['getFiles'][0])
+    public function getFiles($station_id, string $contentType = self::contentTypes['getFiles'][0])
     {
-        list($response) = $this->getFilesWithHttpInfo($stationId, $contentType);
+        list($response) = $this->getFilesWithHttpInfo($station_id, $contentType);
         return $response;
     }
 
     /**
      * Operation getFilesWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFiles'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStationMedia[]|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getFilesWithHttpInfo($stationId, string $contentType = self::contentTypes['getFiles'][0])
+    public function getFilesWithHttpInfo($station_id, string $contentType = self::contentTypes['getFiles'][0])
     {
-        $request = $this->getFilesRequest($stationId, $contentType);
+        $request = $this->getFilesRequest($station_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2470,15 +2470,15 @@ class StationsMediaApi
     /**
      * Operation getFilesAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFiles'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFilesAsync($stationId, string $contentType = self::contentTypes['getFiles'][0])
+    public function getFilesAsync($station_id, string $contentType = self::contentTypes['getFiles'][0])
     {
-        return $this->getFilesAsyncWithHttpInfo($stationId, $contentType)
+        return $this->getFilesAsyncWithHttpInfo($station_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2489,16 +2489,16 @@ class StationsMediaApi
     /**
      * Operation getFilesAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFiles'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFilesAsyncWithHttpInfo($stationId, string $contentType = self::contentTypes['getFiles'][0])
+    public function getFilesAsyncWithHttpInfo($station_id, string $contentType = self::contentTypes['getFiles'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStationMedia[]';
-        $request = $this->getFilesRequest($stationId, $contentType);
+        $request = $this->getFilesRequest($station_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2539,19 +2539,19 @@ class StationsMediaApi
     /**
      * Create request for operation 'getFiles'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFiles'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getFilesRequest($stationId, string $contentType = self::contentTypes['getFiles'][0])
+    public function getFilesRequest($station_id, string $contentType = self::contentTypes['getFiles'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling getFiles'
+                'Missing the required parameter $station_id when calling getFiles'
             );
         }
 
@@ -2566,10 +2566,10 @@ class StationsMediaApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -2636,33 +2636,33 @@ class StationsMediaApi
     /**
      * Operation getMediaArt
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
-     * @param  string $mediaId The station media unique ID (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
+     * @param  string $media_id The station media unique ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMediaArt'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function getMediaArt($stationId, $mediaId, string $contentType = self::contentTypes['getMediaArt'][0])
+    public function getMediaArt($station_id, $media_id, string $contentType = self::contentTypes['getMediaArt'][0])
     {
-        $this->getMediaArtWithHttpInfo($stationId, $mediaId, $contentType);
+        $this->getMediaArtWithHttpInfo($station_id, $media_id, $contentType);
     }
 
     /**
      * Operation getMediaArtWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  string $mediaId The station media unique ID (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  string $media_id The station media unique ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMediaArt'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getMediaArtWithHttpInfo($stationId, $mediaId, string $contentType = self::contentTypes['getMediaArt'][0])
+    public function getMediaArtWithHttpInfo($station_id, $media_id, string $contentType = self::contentTypes['getMediaArt'][0])
     {
-        $request = $this->getMediaArtRequest($stationId, $mediaId, $contentType);
+        $request = $this->getMediaArtRequest($station_id, $media_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2711,16 +2711,16 @@ class StationsMediaApi
     /**
      * Operation getMediaArtAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  string $mediaId The station media unique ID (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  string $media_id The station media unique ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMediaArt'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getMediaArtAsync($stationId, $mediaId, string $contentType = self::contentTypes['getMediaArt'][0])
+    public function getMediaArtAsync($station_id, $media_id, string $contentType = self::contentTypes['getMediaArt'][0])
     {
-        return $this->getMediaArtAsyncWithHttpInfo($stationId, $mediaId, $contentType)
+        return $this->getMediaArtAsyncWithHttpInfo($station_id, $media_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2731,17 +2731,17 @@ class StationsMediaApi
     /**
      * Operation getMediaArtAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  string $mediaId The station media unique ID (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  string $media_id The station media unique ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMediaArt'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getMediaArtAsyncWithHttpInfo($stationId, $mediaId, string $contentType = self::contentTypes['getMediaArt'][0])
+    public function getMediaArtAsyncWithHttpInfo($station_id, $media_id, string $contentType = self::contentTypes['getMediaArt'][0])
     {
         $returnType = '';
-        $request = $this->getMediaArtRequest($stationId, $mediaId, $contentType);
+        $request = $this->getMediaArtRequest($station_id, $media_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2769,27 +2769,27 @@ class StationsMediaApi
     /**
      * Create request for operation 'getMediaArt'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  string $mediaId The station media unique ID (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  string $media_id The station media unique ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMediaArt'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getMediaArtRequest($stationId, $mediaId, string $contentType = self::contentTypes['getMediaArt'][0])
+    public function getMediaArtRequest($station_id, $media_id, string $contentType = self::contentTypes['getMediaArt'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling getMediaArt'
+                'Missing the required parameter $station_id when calling getMediaArt'
             );
         }
 
-        // verify the required parameter 'mediaId' is set
-        if ($mediaId === null || (is_array($mediaId) && count($mediaId) === 0)) {
+        // verify the required parameter 'media_id' is set
+        if ($media_id === null || (is_array($media_id) && count($media_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $mediaId when calling getMediaArt'
+                'Missing the required parameter $media_id when calling getMediaArt'
             );
         }
 
@@ -2804,18 +2804,18 @@ class StationsMediaApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
         // path params
-        if ($mediaId !== null) {
+        if ($media_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'media_id' . '}',
-                ObjectSerializer::toPathValue($mediaId),
+                ObjectSerializer::toPathValue($media_id),
                 $resourcePath
             );
         }
@@ -2877,34 +2877,34 @@ class StationsMediaApi
     /**
      * Operation postMediaArt
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
-     * @param  PostMediaArtMediaIdParameter $mediaId Media ID (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
+     * @param  PostMediaArtMediaIdParameter $media_id Media ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMediaArt'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function postMediaArt($stationId, $mediaId, string $contentType = self::contentTypes['postMediaArt'][0])
+    public function postMediaArt($station_id, $media_id, string $contentType = self::contentTypes['postMediaArt'][0])
     {
-        list($response) = $this->postMediaArtWithHttpInfo($stationId, $mediaId, $contentType);
+        list($response) = $this->postMediaArtWithHttpInfo($station_id, $media_id, $contentType);
         return $response;
     }
 
     /**
      * Operation postMediaArtWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  PostMediaArtMediaIdParameter $mediaId Media ID (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  PostMediaArtMediaIdParameter $media_id Media ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMediaArt'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postMediaArtWithHttpInfo($stationId, $mediaId, string $contentType = self::contentTypes['postMediaArt'][0])
+    public function postMediaArtWithHttpInfo($station_id, $media_id, string $contentType = self::contentTypes['postMediaArt'][0])
     {
-        $request = $this->postMediaArtRequest($stationId, $mediaId, $contentType);
+        $request = $this->postMediaArtRequest($station_id, $media_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3122,16 +3122,16 @@ class StationsMediaApi
     /**
      * Operation postMediaArtAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  PostMediaArtMediaIdParameter $mediaId Media ID (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  PostMediaArtMediaIdParameter $media_id Media ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMediaArt'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postMediaArtAsync($stationId, $mediaId, string $contentType = self::contentTypes['postMediaArt'][0])
+    public function postMediaArtAsync($station_id, $media_id, string $contentType = self::contentTypes['postMediaArt'][0])
     {
-        return $this->postMediaArtAsyncWithHttpInfo($stationId, $mediaId, $contentType)
+        return $this->postMediaArtAsyncWithHttpInfo($station_id, $media_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3142,17 +3142,17 @@ class StationsMediaApi
     /**
      * Operation postMediaArtAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  PostMediaArtMediaIdParameter $mediaId Media ID (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  PostMediaArtMediaIdParameter $media_id Media ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMediaArt'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postMediaArtAsyncWithHttpInfo($stationId, $mediaId, string $contentType = self::contentTypes['postMediaArt'][0])
+    public function postMediaArtAsyncWithHttpInfo($station_id, $media_id, string $contentType = self::contentTypes['postMediaArt'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStatus';
-        $request = $this->postMediaArtRequest($stationId, $mediaId, $contentType);
+        $request = $this->postMediaArtRequest($station_id, $media_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3193,27 +3193,27 @@ class StationsMediaApi
     /**
      * Create request for operation 'postMediaArt'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  PostMediaArtMediaIdParameter $mediaId Media ID (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  PostMediaArtMediaIdParameter $media_id Media ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMediaArt'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function postMediaArtRequest($stationId, $mediaId, string $contentType = self::contentTypes['postMediaArt'][0])
+    public function postMediaArtRequest($station_id, $media_id, string $contentType = self::contentTypes['postMediaArt'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling postMediaArt'
+                'Missing the required parameter $station_id when calling postMediaArt'
             );
         }
 
-        // verify the required parameter 'mediaId' is set
-        if ($mediaId === null || (is_array($mediaId) && count($mediaId) === 0)) {
+        // verify the required parameter 'media_id' is set
+        if ($media_id === null || (is_array($media_id) && count($media_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $mediaId when calling postMediaArt'
+                'Missing the required parameter $media_id when calling postMediaArt'
             );
         }
 
@@ -3228,18 +3228,18 @@ class StationsMediaApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
         // path params
-        if ($mediaId !== null) {
+        if ($media_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'media_id' . '}',
-                ObjectSerializer::toPathValue($mediaId),
+                ObjectSerializer::toPathValue($media_id),
                 $resourcePath
             );
         }

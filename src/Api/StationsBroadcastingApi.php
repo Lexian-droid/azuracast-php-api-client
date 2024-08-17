@@ -131,32 +131,32 @@ class StationsBroadcastingApi
     /**
      * Operation deleteStereoToolConfiguration
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteStereoToolConfiguration'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function deleteStereoToolConfiguration($stationId, string $contentType = self::contentTypes['deleteStereoToolConfiguration'][0])
+    public function deleteStereoToolConfiguration($station_id, string $contentType = self::contentTypes['deleteStereoToolConfiguration'][0])
     {
-        list($response) = $this->deleteStereoToolConfigurationWithHttpInfo($stationId, $contentType);
+        list($response) = $this->deleteStereoToolConfigurationWithHttpInfo($station_id, $contentType);
         return $response;
     }
 
     /**
      * Operation deleteStereoToolConfigurationWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteStereoToolConfiguration'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteStereoToolConfigurationWithHttpInfo($stationId, string $contentType = self::contentTypes['deleteStereoToolConfiguration'][0])
+    public function deleteStereoToolConfigurationWithHttpInfo($station_id, string $contentType = self::contentTypes['deleteStereoToolConfiguration'][0])
     {
-        $request = $this->deleteStereoToolConfigurationRequest($stationId, $contentType);
+        $request = $this->deleteStereoToolConfigurationRequest($station_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -374,15 +374,15 @@ class StationsBroadcastingApi
     /**
      * Operation deleteStereoToolConfigurationAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteStereoToolConfiguration'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteStereoToolConfigurationAsync($stationId, string $contentType = self::contentTypes['deleteStereoToolConfiguration'][0])
+    public function deleteStereoToolConfigurationAsync($station_id, string $contentType = self::contentTypes['deleteStereoToolConfiguration'][0])
     {
-        return $this->deleteStereoToolConfigurationAsyncWithHttpInfo($stationId, $contentType)
+        return $this->deleteStereoToolConfigurationAsyncWithHttpInfo($station_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -393,16 +393,16 @@ class StationsBroadcastingApi
     /**
      * Operation deleteStereoToolConfigurationAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteStereoToolConfiguration'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteStereoToolConfigurationAsyncWithHttpInfo($stationId, string $contentType = self::contentTypes['deleteStereoToolConfiguration'][0])
+    public function deleteStereoToolConfigurationAsyncWithHttpInfo($station_id, string $contentType = self::contentTypes['deleteStereoToolConfiguration'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStatus';
-        $request = $this->deleteStereoToolConfigurationRequest($stationId, $contentType);
+        $request = $this->deleteStereoToolConfigurationRequest($station_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -443,19 +443,19 @@ class StationsBroadcastingApi
     /**
      * Create request for operation 'deleteStereoToolConfiguration'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteStereoToolConfiguration'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function deleteStereoToolConfigurationRequest($stationId, string $contentType = self::contentTypes['deleteStereoToolConfiguration'][0])
+    public function deleteStereoToolConfigurationRequest($station_id, string $contentType = self::contentTypes['deleteStereoToolConfiguration'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling deleteStereoToolConfiguration'
+                'Missing the required parameter $station_id when calling deleteStereoToolConfiguration'
             );
         }
 
@@ -470,10 +470,10 @@ class StationsBroadcastingApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -540,31 +540,31 @@ class StationsBroadcastingApi
     /**
      * Operation getStereoToolConfiguration
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStereoToolConfiguration'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function getStereoToolConfiguration($stationId, string $contentType = self::contentTypes['getStereoToolConfiguration'][0])
+    public function getStereoToolConfiguration($station_id, string $contentType = self::contentTypes['getStereoToolConfiguration'][0])
     {
-        $this->getStereoToolConfigurationWithHttpInfo($stationId, $contentType);
+        $this->getStereoToolConfigurationWithHttpInfo($station_id, $contentType);
     }
 
     /**
      * Operation getStereoToolConfigurationWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStereoToolConfiguration'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getStereoToolConfigurationWithHttpInfo($stationId, string $contentType = self::contentTypes['getStereoToolConfiguration'][0])
+    public function getStereoToolConfigurationWithHttpInfo($station_id, string $contentType = self::contentTypes['getStereoToolConfiguration'][0])
     {
-        $request = $this->getStereoToolConfigurationRequest($stationId, $contentType);
+        $request = $this->getStereoToolConfigurationRequest($station_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -637,15 +637,15 @@ class StationsBroadcastingApi
     /**
      * Operation getStereoToolConfigurationAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStereoToolConfiguration'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStereoToolConfigurationAsync($stationId, string $contentType = self::contentTypes['getStereoToolConfiguration'][0])
+    public function getStereoToolConfigurationAsync($station_id, string $contentType = self::contentTypes['getStereoToolConfiguration'][0])
     {
-        return $this->getStereoToolConfigurationAsyncWithHttpInfo($stationId, $contentType)
+        return $this->getStereoToolConfigurationAsyncWithHttpInfo($station_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -656,16 +656,16 @@ class StationsBroadcastingApi
     /**
      * Operation getStereoToolConfigurationAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStereoToolConfiguration'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStereoToolConfigurationAsyncWithHttpInfo($stationId, string $contentType = self::contentTypes['getStereoToolConfiguration'][0])
+    public function getStereoToolConfigurationAsyncWithHttpInfo($station_id, string $contentType = self::contentTypes['getStereoToolConfiguration'][0])
     {
         $returnType = '';
-        $request = $this->getStereoToolConfigurationRequest($stationId, $contentType);
+        $request = $this->getStereoToolConfigurationRequest($station_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -693,19 +693,19 @@ class StationsBroadcastingApi
     /**
      * Create request for operation 'getStereoToolConfiguration'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStereoToolConfiguration'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getStereoToolConfigurationRequest($stationId, string $contentType = self::contentTypes['getStereoToolConfiguration'][0])
+    public function getStereoToolConfigurationRequest($station_id, string $contentType = self::contentTypes['getStereoToolConfiguration'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling getStereoToolConfiguration'
+                'Missing the required parameter $station_id when calling getStereoToolConfiguration'
             );
         }
 
@@ -720,10 +720,10 @@ class StationsBroadcastingApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -790,32 +790,32 @@ class StationsBroadcastingApi
     /**
      * Operation postStereoToolConfiguration
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStereoToolConfiguration'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function postStereoToolConfiguration($stationId, string $contentType = self::contentTypes['postStereoToolConfiguration'][0])
+    public function postStereoToolConfiguration($station_id, string $contentType = self::contentTypes['postStereoToolConfiguration'][0])
     {
-        list($response) = $this->postStereoToolConfigurationWithHttpInfo($stationId, $contentType);
+        list($response) = $this->postStereoToolConfigurationWithHttpInfo($station_id, $contentType);
         return $response;
     }
 
     /**
      * Operation postStereoToolConfigurationWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStereoToolConfiguration'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postStereoToolConfigurationWithHttpInfo($stationId, string $contentType = self::contentTypes['postStereoToolConfiguration'][0])
+    public function postStereoToolConfigurationWithHttpInfo($station_id, string $contentType = self::contentTypes['postStereoToolConfiguration'][0])
     {
-        $request = $this->postStereoToolConfigurationRequest($stationId, $contentType);
+        $request = $this->postStereoToolConfigurationRequest($station_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1033,15 +1033,15 @@ class StationsBroadcastingApi
     /**
      * Operation postStereoToolConfigurationAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStereoToolConfiguration'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postStereoToolConfigurationAsync($stationId, string $contentType = self::contentTypes['postStereoToolConfiguration'][0])
+    public function postStereoToolConfigurationAsync($station_id, string $contentType = self::contentTypes['postStereoToolConfiguration'][0])
     {
-        return $this->postStereoToolConfigurationAsyncWithHttpInfo($stationId, $contentType)
+        return $this->postStereoToolConfigurationAsyncWithHttpInfo($station_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1052,16 +1052,16 @@ class StationsBroadcastingApi
     /**
      * Operation postStereoToolConfigurationAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStereoToolConfiguration'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postStereoToolConfigurationAsyncWithHttpInfo($stationId, string $contentType = self::contentTypes['postStereoToolConfiguration'][0])
+    public function postStereoToolConfigurationAsyncWithHttpInfo($station_id, string $contentType = self::contentTypes['postStereoToolConfiguration'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStatus';
-        $request = $this->postStereoToolConfigurationRequest($stationId, $contentType);
+        $request = $this->postStereoToolConfigurationRequest($station_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1102,19 +1102,19 @@ class StationsBroadcastingApi
     /**
      * Create request for operation 'postStereoToolConfiguration'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStereoToolConfiguration'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function postStereoToolConfigurationRequest($stationId, string $contentType = self::contentTypes['postStereoToolConfiguration'][0])
+    public function postStereoToolConfigurationRequest($station_id, string $contentType = self::contentTypes['postStereoToolConfiguration'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling postStereoToolConfiguration'
+                'Missing the required parameter $station_id when calling postStereoToolConfiguration'
             );
         }
 
@@ -1129,10 +1129,10 @@ class StationsBroadcastingApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }

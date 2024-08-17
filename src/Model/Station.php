@@ -59,29 +59,29 @@ class Station implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'int',
         'name' => 'string',
-        'shortName' => 'string',
-        'isEnabled' => 'bool',
-        'frontendType' => 'mixed',
-        'frontendConfig' => 'object',
-        'backendType' => 'mixed',
-        'backendConfig' => 'object',
+        'short_name' => 'string',
+        'is_enabled' => 'bool',
+        'frontend_type' => 'mixed',
+        'frontend_config' => 'object',
+        'backend_type' => 'mixed',
+        'backend_config' => 'object',
         'description' => 'string',
         'url' => 'string',
         'genre' => 'string',
-        'radioBaseDir' => 'string',
-        'enableRequests' => 'bool',
-        'requestDelay' => 'int',
-        'requestThreshold' => 'int',
-        'disconnectDeactivateStreamer' => 'int',
-        'enableStreamers' => 'bool',
-        'isStreamerLive' => 'bool',
-        'enablePublicPage' => 'bool',
-        'enableOnDemand' => 'bool',
-        'enableOnDemandDownload' => 'bool',
-        'enableHls' => 'bool',
-        'apiHistoryItems' => 'int',
+        'radio_base_dir' => 'string',
+        'enable_requests' => 'bool',
+        'request_delay' => 'int',
+        'request_threshold' => 'int',
+        'disconnect_deactivate_streamer' => 'int',
+        'enable_streamers' => 'bool',
+        'is_streamer_live' => 'bool',
+        'enable_public_page' => 'bool',
+        'enable_on_demand' => 'bool',
+        'enable_on_demand_download' => 'bool',
+        'enable_hls' => 'bool',
+        'api_history_items' => 'int',
         'timezone' => 'string',
-        'brandingConfig' => 'object'
+        'branding_config' => 'object'
     ];
 
     /**
@@ -94,29 +94,29 @@ class Station implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'id' => null,
         'name' => null,
-        'shortName' => null,
-        'isEnabled' => null,
-        'frontendType' => null,
-        'frontendConfig' => null,
-        'backendType' => null,
-        'backendConfig' => null,
+        'short_name' => null,
+        'is_enabled' => null,
+        'frontend_type' => null,
+        'frontend_config' => null,
+        'backend_type' => null,
+        'backend_config' => null,
         'description' => null,
         'url' => null,
         'genre' => null,
-        'radioBaseDir' => null,
-        'enableRequests' => null,
-        'requestDelay' => null,
-        'requestThreshold' => null,
-        'disconnectDeactivateStreamer' => null,
-        'enableStreamers' => null,
-        'isStreamerLive' => null,
-        'enablePublicPage' => null,
-        'enableOnDemand' => null,
-        'enableOnDemandDownload' => null,
-        'enableHls' => null,
-        'apiHistoryItems' => null,
+        'radio_base_dir' => null,
+        'enable_requests' => null,
+        'request_delay' => null,
+        'request_threshold' => null,
+        'disconnect_deactivate_streamer' => null,
+        'enable_streamers' => null,
+        'is_streamer_live' => null,
+        'enable_public_page' => null,
+        'enable_on_demand' => null,
+        'enable_on_demand_download' => null,
+        'enable_hls' => null,
+        'api_history_items' => null,
         'timezone' => null,
-        'brandingConfig' => null
+        'branding_config' => null
     ];
 
     /**
@@ -127,29 +127,29 @@ class Station implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'id' => true,
         'name' => false,
-        'shortName' => false,
-        'isEnabled' => false,
-        'frontendType' => true,
-        'frontendConfig' => false,
-        'backendType' => true,
-        'backendConfig' => false,
+        'short_name' => false,
+        'is_enabled' => false,
+        'frontend_type' => true,
+        'frontend_config' => false,
+        'backend_type' => true,
+        'backend_config' => false,
         'description' => true,
         'url' => true,
         'genre' => true,
-        'radioBaseDir' => true,
-        'enableRequests' => false,
-        'requestDelay' => true,
-        'requestThreshold' => true,
-        'disconnectDeactivateStreamer' => true,
-        'enableStreamers' => false,
-        'isStreamerLive' => false,
-        'enablePublicPage' => false,
-        'enableOnDemand' => false,
-        'enableOnDemandDownload' => false,
-        'enableHls' => false,
-        'apiHistoryItems' => false,
+        'radio_base_dir' => true,
+        'enable_requests' => false,
+        'request_delay' => true,
+        'request_threshold' => true,
+        'disconnect_deactivate_streamer' => true,
+        'enable_streamers' => false,
+        'is_streamer_live' => false,
+        'enable_public_page' => false,
+        'enable_on_demand' => false,
+        'enable_on_demand_download' => false,
+        'enable_hls' => false,
+        'api_history_items' => false,
         'timezone' => true,
-        'brandingConfig' => false
+        'branding_config' => false
     ];
 
     /**
@@ -240,29 +240,29 @@ class Station implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'id' => 'id',
         'name' => 'name',
-        'shortName' => 'short_name',
-        'isEnabled' => 'is_enabled',
-        'frontendType' => 'frontend_type',
-        'frontendConfig' => 'frontend_config',
-        'backendType' => 'backend_type',
-        'backendConfig' => 'backend_config',
+        'short_name' => 'short_name',
+        'is_enabled' => 'is_enabled',
+        'frontend_type' => 'frontend_type',
+        'frontend_config' => 'frontend_config',
+        'backend_type' => 'backend_type',
+        'backend_config' => 'backend_config',
         'description' => 'description',
         'url' => 'url',
         'genre' => 'genre',
-        'radioBaseDir' => 'radio_base_dir',
-        'enableRequests' => 'enable_requests',
-        'requestDelay' => 'request_delay',
-        'requestThreshold' => 'request_threshold',
-        'disconnectDeactivateStreamer' => 'disconnect_deactivate_streamer',
-        'enableStreamers' => 'enable_streamers',
-        'isStreamerLive' => 'is_streamer_live',
-        'enablePublicPage' => 'enable_public_page',
-        'enableOnDemand' => 'enable_on_demand',
-        'enableOnDemandDownload' => 'enable_on_demand_download',
-        'enableHls' => 'enable_hls',
-        'apiHistoryItems' => 'api_history_items',
+        'radio_base_dir' => 'radio_base_dir',
+        'enable_requests' => 'enable_requests',
+        'request_delay' => 'request_delay',
+        'request_threshold' => 'request_threshold',
+        'disconnect_deactivate_streamer' => 'disconnect_deactivate_streamer',
+        'enable_streamers' => 'enable_streamers',
+        'is_streamer_live' => 'is_streamer_live',
+        'enable_public_page' => 'enable_public_page',
+        'enable_on_demand' => 'enable_on_demand',
+        'enable_on_demand_download' => 'enable_on_demand_download',
+        'enable_hls' => 'enable_hls',
+        'api_history_items' => 'api_history_items',
         'timezone' => 'timezone',
-        'brandingConfig' => 'branding_config'
+        'branding_config' => 'branding_config'
     ];
 
     /**
@@ -273,29 +273,29 @@ class Station implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'id' => 'setId',
         'name' => 'setName',
-        'shortName' => 'setShortName',
-        'isEnabled' => 'setIsEnabled',
-        'frontendType' => 'setFrontendType',
-        'frontendConfig' => 'setFrontendConfig',
-        'backendType' => 'setBackendType',
-        'backendConfig' => 'setBackendConfig',
+        'short_name' => 'setShortName',
+        'is_enabled' => 'setIsEnabled',
+        'frontend_type' => 'setFrontendType',
+        'frontend_config' => 'setFrontendConfig',
+        'backend_type' => 'setBackendType',
+        'backend_config' => 'setBackendConfig',
         'description' => 'setDescription',
         'url' => 'setUrl',
         'genre' => 'setGenre',
-        'radioBaseDir' => 'setRadioBaseDir',
-        'enableRequests' => 'setEnableRequests',
-        'requestDelay' => 'setRequestDelay',
-        'requestThreshold' => 'setRequestThreshold',
-        'disconnectDeactivateStreamer' => 'setDisconnectDeactivateStreamer',
-        'enableStreamers' => 'setEnableStreamers',
-        'isStreamerLive' => 'setIsStreamerLive',
-        'enablePublicPage' => 'setEnablePublicPage',
-        'enableOnDemand' => 'setEnableOnDemand',
-        'enableOnDemandDownload' => 'setEnableOnDemandDownload',
-        'enableHls' => 'setEnableHls',
-        'apiHistoryItems' => 'setApiHistoryItems',
+        'radio_base_dir' => 'setRadioBaseDir',
+        'enable_requests' => 'setEnableRequests',
+        'request_delay' => 'setRequestDelay',
+        'request_threshold' => 'setRequestThreshold',
+        'disconnect_deactivate_streamer' => 'setDisconnectDeactivateStreamer',
+        'enable_streamers' => 'setEnableStreamers',
+        'is_streamer_live' => 'setIsStreamerLive',
+        'enable_public_page' => 'setEnablePublicPage',
+        'enable_on_demand' => 'setEnableOnDemand',
+        'enable_on_demand_download' => 'setEnableOnDemandDownload',
+        'enable_hls' => 'setEnableHls',
+        'api_history_items' => 'setApiHistoryItems',
         'timezone' => 'setTimezone',
-        'brandingConfig' => 'setBrandingConfig'
+        'branding_config' => 'setBrandingConfig'
     ];
 
     /**
@@ -306,29 +306,29 @@ class Station implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'id' => 'getId',
         'name' => 'getName',
-        'shortName' => 'getShortName',
-        'isEnabled' => 'getIsEnabled',
-        'frontendType' => 'getFrontendType',
-        'frontendConfig' => 'getFrontendConfig',
-        'backendType' => 'getBackendType',
-        'backendConfig' => 'getBackendConfig',
+        'short_name' => 'getShortName',
+        'is_enabled' => 'getIsEnabled',
+        'frontend_type' => 'getFrontendType',
+        'frontend_config' => 'getFrontendConfig',
+        'backend_type' => 'getBackendType',
+        'backend_config' => 'getBackendConfig',
         'description' => 'getDescription',
         'url' => 'getUrl',
         'genre' => 'getGenre',
-        'radioBaseDir' => 'getRadioBaseDir',
-        'enableRequests' => 'getEnableRequests',
-        'requestDelay' => 'getRequestDelay',
-        'requestThreshold' => 'getRequestThreshold',
-        'disconnectDeactivateStreamer' => 'getDisconnectDeactivateStreamer',
-        'enableStreamers' => 'getEnableStreamers',
-        'isStreamerLive' => 'getIsStreamerLive',
-        'enablePublicPage' => 'getEnablePublicPage',
-        'enableOnDemand' => 'getEnableOnDemand',
-        'enableOnDemandDownload' => 'getEnableOnDemandDownload',
-        'enableHls' => 'getEnableHls',
-        'apiHistoryItems' => 'getApiHistoryItems',
+        'radio_base_dir' => 'getRadioBaseDir',
+        'enable_requests' => 'getEnableRequests',
+        'request_delay' => 'getRequestDelay',
+        'request_threshold' => 'getRequestThreshold',
+        'disconnect_deactivate_streamer' => 'getDisconnectDeactivateStreamer',
+        'enable_streamers' => 'getEnableStreamers',
+        'is_streamer_live' => 'getIsStreamerLive',
+        'enable_public_page' => 'getEnablePublicPage',
+        'enable_on_demand' => 'getEnableOnDemand',
+        'enable_on_demand_download' => 'getEnableOnDemandDownload',
+        'enable_hls' => 'getEnableHls',
+        'api_history_items' => 'getApiHistoryItems',
         'timezone' => 'getTimezone',
-        'brandingConfig' => 'getBrandingConfig'
+        'branding_config' => 'getBrandingConfig'
     ];
 
     /**
@@ -390,29 +390,29 @@ class Station implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('shortName', $data ?? [], null);
-        $this->setIfExists('isEnabled', $data ?? [], null);
-        $this->setIfExists('frontendType', $data ?? [], null);
-        $this->setIfExists('frontendConfig', $data ?? [], null);
-        $this->setIfExists('backendType', $data ?? [], null);
-        $this->setIfExists('backendConfig', $data ?? [], null);
+        $this->setIfExists('short_name', $data ?? [], null);
+        $this->setIfExists('is_enabled', $data ?? [], null);
+        $this->setIfExists('frontend_type', $data ?? [], null);
+        $this->setIfExists('frontend_config', $data ?? [], null);
+        $this->setIfExists('backend_type', $data ?? [], null);
+        $this->setIfExists('backend_config', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
         $this->setIfExists('url', $data ?? [], null);
         $this->setIfExists('genre', $data ?? [], null);
-        $this->setIfExists('radioBaseDir', $data ?? [], null);
-        $this->setIfExists('enableRequests', $data ?? [], null);
-        $this->setIfExists('requestDelay', $data ?? [], null);
-        $this->setIfExists('requestThreshold', $data ?? [], null);
-        $this->setIfExists('disconnectDeactivateStreamer', $data ?? [], null);
-        $this->setIfExists('enableStreamers', $data ?? [], null);
-        $this->setIfExists('isStreamerLive', $data ?? [], null);
-        $this->setIfExists('enablePublicPage', $data ?? [], null);
-        $this->setIfExists('enableOnDemand', $data ?? [], null);
-        $this->setIfExists('enableOnDemandDownload', $data ?? [], null);
-        $this->setIfExists('enableHls', $data ?? [], null);
-        $this->setIfExists('apiHistoryItems', $data ?? [], null);
+        $this->setIfExists('radio_base_dir', $data ?? [], null);
+        $this->setIfExists('enable_requests', $data ?? [], null);
+        $this->setIfExists('request_delay', $data ?? [], null);
+        $this->setIfExists('request_threshold', $data ?? [], null);
+        $this->setIfExists('disconnect_deactivate_streamer', $data ?? [], null);
+        $this->setIfExists('enable_streamers', $data ?? [], null);
+        $this->setIfExists('is_streamer_live', $data ?? [], null);
+        $this->setIfExists('enable_public_page', $data ?? [], null);
+        $this->setIfExists('enable_on_demand', $data ?? [], null);
+        $this->setIfExists('enable_on_demand_download', $data ?? [], null);
+        $this->setIfExists('enable_hls', $data ?? [], null);
+        $this->setIfExists('api_history_items', $data ?? [], null);
         $this->setIfExists('timezone', $data ?? [], null);
-        $this->setIfExists('brandingConfig', $data ?? [], null);
+        $this->setIfExists('branding_config', $data ?? [], null);
     }
 
     /**
@@ -519,177 +519,177 @@ class Station implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets shortName
+     * Gets short_name
      *
      * @return string|null
      */
     public function getShortName()
     {
-        return $this->container['shortName'];
+        return $this->container['short_name'];
     }
 
     /**
-     * Sets shortName
+     * Sets short_name
      *
-     * @param string|null $shortName The URL-friendly name for the station, typically auto-generated from the full station name.
+     * @param string|null $short_name The URL-friendly name for the station, typically auto-generated from the full station name.
      *
      * @return self
      */
-    public function setShortName($shortName)
+    public function setShortName($short_name)
     {
-        if (is_null($shortName)) {
-            throw new \InvalidArgumentException('non-nullable shortName cannot be null');
+        if (is_null($short_name)) {
+            throw new \InvalidArgumentException('non-nullable short_name cannot be null');
         }
-        $this->container['shortName'] = $shortName;
+        $this->container['short_name'] = $short_name;
 
         return $this;
     }
 
     /**
-     * Gets isEnabled
+     * Gets is_enabled
      *
      * @return bool|null
      */
     public function getIsEnabled()
     {
-        return $this->container['isEnabled'];
+        return $this->container['is_enabled'];
     }
 
     /**
-     * Sets isEnabled
+     * Sets is_enabled
      *
-     * @param bool|null $isEnabled If set to 'false', prevents the station from broadcasting but leaves it in the database.
+     * @param bool|null $is_enabled If set to 'false', prevents the station from broadcasting but leaves it in the database.
      *
      * @return self
      */
-    public function setIsEnabled($isEnabled)
+    public function setIsEnabled($is_enabled)
     {
-        if (is_null($isEnabled)) {
-            throw new \InvalidArgumentException('non-nullable isEnabled cannot be null');
+        if (is_null($is_enabled)) {
+            throw new \InvalidArgumentException('non-nullable is_enabled cannot be null');
         }
-        $this->container['isEnabled'] = $isEnabled;
+        $this->container['is_enabled'] = $is_enabled;
 
         return $this;
     }
 
     /**
-     * Gets frontendType
+     * Gets frontend_type
      *
      * @return mixed|null
      */
     public function getFrontendType()
     {
-        return $this->container['frontendType'];
+        return $this->container['frontend_type'];
     }
 
     /**
-     * Sets frontendType
+     * Sets frontend_type
      *
-     * @param mixed|null $frontendType The frontend adapter (icecast,shoutcast,remote,etc)
+     * @param mixed|null $frontend_type The frontend adapter (icecast,shoutcast,remote,etc)
      *
      * @return self
      */
-    public function setFrontendType($frontendType)
+    public function setFrontendType($frontend_type)
     {
-        if (is_null($frontendType)) {
-            array_push($this->openAPINullablesSetToNull, 'frontendType');
+        if (is_null($frontend_type)) {
+            array_push($this->openAPINullablesSetToNull, 'frontend_type');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('frontendType', $nullablesSetToNull);
+            $index = array_search('frontend_type', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['frontendType'] = $frontendType;
+        $this->container['frontend_type'] = $frontend_type;
 
         return $this;
     }
 
     /**
-     * Gets frontendConfig
+     * Gets frontend_config
      *
      * @return object|null
      */
     public function getFrontendConfig()
     {
-        return $this->container['frontendConfig'];
+        return $this->container['frontend_config'];
     }
 
     /**
-     * Sets frontendConfig
+     * Sets frontend_config
      *
-     * @param object|null $frontendConfig An array containing station-specific frontend configuration
+     * @param object|null $frontend_config An array containing station-specific frontend configuration
      *
      * @return self
      */
-    public function setFrontendConfig($frontendConfig)
+    public function setFrontendConfig($frontend_config)
     {
-        if (is_null($frontendConfig)) {
-            throw new \InvalidArgumentException('non-nullable frontendConfig cannot be null');
+        if (is_null($frontend_config)) {
+            throw new \InvalidArgumentException('non-nullable frontend_config cannot be null');
         }
-        $this->container['frontendConfig'] = $frontendConfig;
+        $this->container['frontend_config'] = $frontend_config;
 
         return $this;
     }
 
     /**
-     * Gets backendType
+     * Gets backend_type
      *
      * @return mixed|null
      */
     public function getBackendType()
     {
-        return $this->container['backendType'];
+        return $this->container['backend_type'];
     }
 
     /**
-     * Sets backendType
+     * Sets backend_type
      *
-     * @param mixed|null $backendType The backend adapter (liquidsoap,etc)
+     * @param mixed|null $backend_type The backend adapter (liquidsoap,etc)
      *
      * @return self
      */
-    public function setBackendType($backendType)
+    public function setBackendType($backend_type)
     {
-        if (is_null($backendType)) {
-            array_push($this->openAPINullablesSetToNull, 'backendType');
+        if (is_null($backend_type)) {
+            array_push($this->openAPINullablesSetToNull, 'backend_type');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('backendType', $nullablesSetToNull);
+            $index = array_search('backend_type', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['backendType'] = $backendType;
+        $this->container['backend_type'] = $backend_type;
 
         return $this;
     }
 
     /**
-     * Gets backendConfig
+     * Gets backend_config
      *
      * @return object|null
      */
     public function getBackendConfig()
     {
-        return $this->container['backendConfig'];
+        return $this->container['backend_config'];
     }
 
     /**
-     * Sets backendConfig
+     * Sets backend_config
      *
-     * @param object|null $backendConfig An array containing station-specific backend configuration
+     * @param object|null $backend_config An array containing station-specific backend configuration
      *
      * @return self
      */
-    public function setBackendConfig($backendConfig)
+    public function setBackendConfig($backend_config)
     {
-        if (is_null($backendConfig)) {
-            throw new \InvalidArgumentException('non-nullable backendConfig cannot be null');
+        if (is_null($backend_config)) {
+            throw new \InvalidArgumentException('non-nullable backend_config cannot be null');
         }
-        $this->container['backendConfig'] = $backendConfig;
+        $this->container['backend_config'] = $backend_config;
 
         return $this;
     }
@@ -797,353 +797,353 @@ class Station implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets radioBaseDir
+     * Gets radio_base_dir
      *
      * @return string|null
      */
     public function getRadioBaseDir()
     {
-        return $this->container['radioBaseDir'];
+        return $this->container['radio_base_dir'];
     }
 
     /**
-     * Sets radioBaseDir
+     * Sets radio_base_dir
      *
-     * @param string|null $radioBaseDir radioBaseDir
+     * @param string|null $radio_base_dir radio_base_dir
      *
      * @return self
      */
-    public function setRadioBaseDir($radioBaseDir)
+    public function setRadioBaseDir($radio_base_dir)
     {
-        if (is_null($radioBaseDir)) {
-            array_push($this->openAPINullablesSetToNull, 'radioBaseDir');
+        if (is_null($radio_base_dir)) {
+            array_push($this->openAPINullablesSetToNull, 'radio_base_dir');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('radioBaseDir', $nullablesSetToNull);
+            $index = array_search('radio_base_dir', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['radioBaseDir'] = $radioBaseDir;
+        $this->container['radio_base_dir'] = $radio_base_dir;
 
         return $this;
     }
 
     /**
-     * Gets enableRequests
+     * Gets enable_requests
      *
      * @return bool|null
      */
     public function getEnableRequests()
     {
-        return $this->container['enableRequests'];
+        return $this->container['enable_requests'];
     }
 
     /**
-     * Sets enableRequests
+     * Sets enable_requests
      *
-     * @param bool|null $enableRequests Whether listeners can request songs to play on this station.
+     * @param bool|null $enable_requests Whether listeners can request songs to play on this station.
      *
      * @return self
      */
-    public function setEnableRequests($enableRequests)
+    public function setEnableRequests($enable_requests)
     {
-        if (is_null($enableRequests)) {
-            throw new \InvalidArgumentException('non-nullable enableRequests cannot be null');
+        if (is_null($enable_requests)) {
+            throw new \InvalidArgumentException('non-nullable enable_requests cannot be null');
         }
-        $this->container['enableRequests'] = $enableRequests;
+        $this->container['enable_requests'] = $enable_requests;
 
         return $this;
     }
 
     /**
-     * Gets requestDelay
+     * Gets request_delay
      *
      * @return int|null
      */
     public function getRequestDelay()
     {
-        return $this->container['requestDelay'];
+        return $this->container['request_delay'];
     }
 
     /**
-     * Sets requestDelay
+     * Sets request_delay
      *
-     * @param int|null $requestDelay requestDelay
+     * @param int|null $request_delay request_delay
      *
      * @return self
      */
-    public function setRequestDelay($requestDelay)
+    public function setRequestDelay($request_delay)
     {
-        if (is_null($requestDelay)) {
-            array_push($this->openAPINullablesSetToNull, 'requestDelay');
+        if (is_null($request_delay)) {
+            array_push($this->openAPINullablesSetToNull, 'request_delay');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('requestDelay', $nullablesSetToNull);
+            $index = array_search('request_delay', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['requestDelay'] = $requestDelay;
+        $this->container['request_delay'] = $request_delay;
 
         return $this;
     }
 
     /**
-     * Gets requestThreshold
+     * Gets request_threshold
      *
      * @return int|null
      */
     public function getRequestThreshold()
     {
-        return $this->container['requestThreshold'];
+        return $this->container['request_threshold'];
     }
 
     /**
-     * Sets requestThreshold
+     * Sets request_threshold
      *
-     * @param int|null $requestThreshold requestThreshold
+     * @param int|null $request_threshold request_threshold
      *
      * @return self
      */
-    public function setRequestThreshold($requestThreshold)
+    public function setRequestThreshold($request_threshold)
     {
-        if (is_null($requestThreshold)) {
-            array_push($this->openAPINullablesSetToNull, 'requestThreshold');
+        if (is_null($request_threshold)) {
+            array_push($this->openAPINullablesSetToNull, 'request_threshold');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('requestThreshold', $nullablesSetToNull);
+            $index = array_search('request_threshold', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['requestThreshold'] = $requestThreshold;
+        $this->container['request_threshold'] = $request_threshold;
 
         return $this;
     }
 
     /**
-     * Gets disconnectDeactivateStreamer
+     * Gets disconnect_deactivate_streamer
      *
      * @return int|null
      */
     public function getDisconnectDeactivateStreamer()
     {
-        return $this->container['disconnectDeactivateStreamer'];
+        return $this->container['disconnect_deactivate_streamer'];
     }
 
     /**
-     * Sets disconnectDeactivateStreamer
+     * Sets disconnect_deactivate_streamer
      *
-     * @param int|null $disconnectDeactivateStreamer disconnectDeactivateStreamer
+     * @param int|null $disconnect_deactivate_streamer disconnect_deactivate_streamer
      *
      * @return self
      */
-    public function setDisconnectDeactivateStreamer($disconnectDeactivateStreamer)
+    public function setDisconnectDeactivateStreamer($disconnect_deactivate_streamer)
     {
-        if (is_null($disconnectDeactivateStreamer)) {
-            array_push($this->openAPINullablesSetToNull, 'disconnectDeactivateStreamer');
+        if (is_null($disconnect_deactivate_streamer)) {
+            array_push($this->openAPINullablesSetToNull, 'disconnect_deactivate_streamer');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('disconnectDeactivateStreamer', $nullablesSetToNull);
+            $index = array_search('disconnect_deactivate_streamer', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['disconnectDeactivateStreamer'] = $disconnectDeactivateStreamer;
+        $this->container['disconnect_deactivate_streamer'] = $disconnect_deactivate_streamer;
 
         return $this;
     }
 
     /**
-     * Gets enableStreamers
+     * Gets enable_streamers
      *
      * @return bool|null
      */
     public function getEnableStreamers()
     {
-        return $this->container['enableStreamers'];
+        return $this->container['enable_streamers'];
     }
 
     /**
-     * Sets enableStreamers
+     * Sets enable_streamers
      *
-     * @param bool|null $enableStreamers Whether streamers are allowed to broadcast to this station at all.
+     * @param bool|null $enable_streamers Whether streamers are allowed to broadcast to this station at all.
      *
      * @return self
      */
-    public function setEnableStreamers($enableStreamers)
+    public function setEnableStreamers($enable_streamers)
     {
-        if (is_null($enableStreamers)) {
-            throw new \InvalidArgumentException('non-nullable enableStreamers cannot be null');
+        if (is_null($enable_streamers)) {
+            throw new \InvalidArgumentException('non-nullable enable_streamers cannot be null');
         }
-        $this->container['enableStreamers'] = $enableStreamers;
+        $this->container['enable_streamers'] = $enable_streamers;
 
         return $this;
     }
 
     /**
-     * Gets isStreamerLive
+     * Gets is_streamer_live
      *
      * @return bool|null
      */
     public function getIsStreamerLive()
     {
-        return $this->container['isStreamerLive'];
+        return $this->container['is_streamer_live'];
     }
 
     /**
-     * Sets isStreamerLive
+     * Sets is_streamer_live
      *
-     * @param bool|null $isStreamerLive Whether a streamer is currently active on the station.
+     * @param bool|null $is_streamer_live Whether a streamer is currently active on the station.
      *
      * @return self
      */
-    public function setIsStreamerLive($isStreamerLive)
+    public function setIsStreamerLive($is_streamer_live)
     {
-        if (is_null($isStreamerLive)) {
-            throw new \InvalidArgumentException('non-nullable isStreamerLive cannot be null');
+        if (is_null($is_streamer_live)) {
+            throw new \InvalidArgumentException('non-nullable is_streamer_live cannot be null');
         }
-        $this->container['isStreamerLive'] = $isStreamerLive;
+        $this->container['is_streamer_live'] = $is_streamer_live;
 
         return $this;
     }
 
     /**
-     * Gets enablePublicPage
+     * Gets enable_public_page
      *
      * @return bool|null
      */
     public function getEnablePublicPage()
     {
-        return $this->container['enablePublicPage'];
+        return $this->container['enable_public_page'];
     }
 
     /**
-     * Sets enablePublicPage
+     * Sets enable_public_page
      *
-     * @param bool|null $enablePublicPage Whether this station is visible as a public page and in a now-playing API response.
+     * @param bool|null $enable_public_page Whether this station is visible as a public page and in a now-playing API response.
      *
      * @return self
      */
-    public function setEnablePublicPage($enablePublicPage)
+    public function setEnablePublicPage($enable_public_page)
     {
-        if (is_null($enablePublicPage)) {
-            throw new \InvalidArgumentException('non-nullable enablePublicPage cannot be null');
+        if (is_null($enable_public_page)) {
+            throw new \InvalidArgumentException('non-nullable enable_public_page cannot be null');
         }
-        $this->container['enablePublicPage'] = $enablePublicPage;
+        $this->container['enable_public_page'] = $enable_public_page;
 
         return $this;
     }
 
     /**
-     * Gets enableOnDemand
+     * Gets enable_on_demand
      *
      * @return bool|null
      */
     public function getEnableOnDemand()
     {
-        return $this->container['enableOnDemand'];
+        return $this->container['enable_on_demand'];
     }
 
     /**
-     * Sets enableOnDemand
+     * Sets enable_on_demand
      *
-     * @param bool|null $enableOnDemand Whether this station has a public 'on-demand' streaming and download page.
+     * @param bool|null $enable_on_demand Whether this station has a public 'on-demand' streaming and download page.
      *
      * @return self
      */
-    public function setEnableOnDemand($enableOnDemand)
+    public function setEnableOnDemand($enable_on_demand)
     {
-        if (is_null($enableOnDemand)) {
-            throw new \InvalidArgumentException('non-nullable enableOnDemand cannot be null');
+        if (is_null($enable_on_demand)) {
+            throw new \InvalidArgumentException('non-nullable enable_on_demand cannot be null');
         }
-        $this->container['enableOnDemand'] = $enableOnDemand;
+        $this->container['enable_on_demand'] = $enable_on_demand;
 
         return $this;
     }
 
     /**
-     * Gets enableOnDemandDownload
+     * Gets enable_on_demand_download
      *
      * @return bool|null
      */
     public function getEnableOnDemandDownload()
     {
-        return $this->container['enableOnDemandDownload'];
+        return $this->container['enable_on_demand_download'];
     }
 
     /**
-     * Sets enableOnDemandDownload
+     * Sets enable_on_demand_download
      *
-     * @param bool|null $enableOnDemandDownload Whether the 'on-demand' page offers download capability.
+     * @param bool|null $enable_on_demand_download Whether the 'on-demand' page offers download capability.
      *
      * @return self
      */
-    public function setEnableOnDemandDownload($enableOnDemandDownload)
+    public function setEnableOnDemandDownload($enable_on_demand_download)
     {
-        if (is_null($enableOnDemandDownload)) {
-            throw new \InvalidArgumentException('non-nullable enableOnDemandDownload cannot be null');
+        if (is_null($enable_on_demand_download)) {
+            throw new \InvalidArgumentException('non-nullable enable_on_demand_download cannot be null');
         }
-        $this->container['enableOnDemandDownload'] = $enableOnDemandDownload;
+        $this->container['enable_on_demand_download'] = $enable_on_demand_download;
 
         return $this;
     }
 
     /**
-     * Gets enableHls
+     * Gets enable_hls
      *
      * @return bool|null
      */
     public function getEnableHls()
     {
-        return $this->container['enableHls'];
+        return $this->container['enable_hls'];
     }
 
     /**
-     * Sets enableHls
+     * Sets enable_hls
      *
-     * @param bool|null $enableHls Whether HLS streaming is enabled.
+     * @param bool|null $enable_hls Whether HLS streaming is enabled.
      *
      * @return self
      */
-    public function setEnableHls($enableHls)
+    public function setEnableHls($enable_hls)
     {
-        if (is_null($enableHls)) {
-            throw new \InvalidArgumentException('non-nullable enableHls cannot be null');
+        if (is_null($enable_hls)) {
+            throw new \InvalidArgumentException('non-nullable enable_hls cannot be null');
         }
-        $this->container['enableHls'] = $enableHls;
+        $this->container['enable_hls'] = $enable_hls;
 
         return $this;
     }
 
     /**
-     * Gets apiHistoryItems
+     * Gets api_history_items
      *
      * @return int|null
      */
     public function getApiHistoryItems()
     {
-        return $this->container['apiHistoryItems'];
+        return $this->container['api_history_items'];
     }
 
     /**
-     * Sets apiHistoryItems
+     * Sets api_history_items
      *
-     * @param int|null $apiHistoryItems The number of 'last played' history items to show for a station in API responses.
+     * @param int|null $api_history_items The number of 'last played' history items to show for a station in API responses.
      *
      * @return self
      */
-    public function setApiHistoryItems($apiHistoryItems)
+    public function setApiHistoryItems($api_history_items)
     {
-        if (is_null($apiHistoryItems)) {
-            throw new \InvalidArgumentException('non-nullable apiHistoryItems cannot be null');
+        if (is_null($api_history_items)) {
+            throw new \InvalidArgumentException('non-nullable api_history_items cannot be null');
         }
-        $this->container['apiHistoryItems'] = $apiHistoryItems;
+        $this->container['api_history_items'] = $api_history_items;
 
         return $this;
     }
@@ -1183,28 +1183,28 @@ class Station implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets brandingConfig
+     * Gets branding_config
      *
      * @return object|null
      */
     public function getBrandingConfig()
     {
-        return $this->container['brandingConfig'];
+        return $this->container['branding_config'];
     }
 
     /**
-     * Sets brandingConfig
+     * Sets branding_config
      *
-     * @param object|null $brandingConfig An array containing station-specific branding configuration
+     * @param object|null $branding_config An array containing station-specific branding configuration
      *
      * @return self
      */
-    public function setBrandingConfig($brandingConfig)
+    public function setBrandingConfig($branding_config)
     {
-        if (is_null($brandingConfig)) {
-            throw new \InvalidArgumentException('non-nullable brandingConfig cannot be null');
+        if (is_null($branding_config)) {
+            throw new \InvalidArgumentException('non-nullable branding_config cannot be null');
         }
-        $this->container['brandingConfig'] = $brandingConfig;
+        $this->container['branding_config'] = $branding_config;
 
         return $this;
     }

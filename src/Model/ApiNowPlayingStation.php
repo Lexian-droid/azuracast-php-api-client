@@ -64,18 +64,18 @@ class ApiNowPlayingStation implements ModelInterface, ArrayAccess, \JsonSerializ
         'frontend' => 'string',
         'backend' => 'string',
         'timezone' => 'string',
-        'listenUrl' => 'mixed',
+        'listen_url' => 'mixed',
         'url' => 'string',
-        'publicPlayerUrl' => 'mixed',
-        'playlistPlsUrl' => 'mixed',
-        'playlistM3uUrl' => 'mixed',
-        'isPublic' => 'bool',
+        'public_player_url' => 'mixed',
+        'playlist_pls_url' => 'mixed',
+        'playlist_m3u_url' => 'mixed',
+        'is_public' => 'bool',
         'mounts' => '\AzuraCast\Model\ApiNowPlayingStationMount[]',
         'remotes' => '\AzuraCast\Model\ApiNowPlayingStationRemote[]',
-        'hlsEnabled' => 'bool',
-        'hlsIsDefault' => 'bool',
-        'hlsUrl' => 'mixed',
-        'hlsListeners' => 'int'
+        'hls_enabled' => 'bool',
+        'hls_is_default' => 'bool',
+        'hls_url' => 'mixed',
+        'hls_listeners' => 'int'
     ];
 
     /**
@@ -93,18 +93,18 @@ class ApiNowPlayingStation implements ModelInterface, ArrayAccess, \JsonSerializ
         'frontend' => null,
         'backend' => null,
         'timezone' => null,
-        'listenUrl' => null,
+        'listen_url' => null,
         'url' => null,
-        'publicPlayerUrl' => null,
-        'playlistPlsUrl' => null,
-        'playlistM3uUrl' => null,
-        'isPublic' => null,
+        'public_player_url' => null,
+        'playlist_pls_url' => null,
+        'playlist_m3u_url' => null,
+        'is_public' => null,
         'mounts' => null,
         'remotes' => null,
-        'hlsEnabled' => null,
-        'hlsIsDefault' => null,
-        'hlsUrl' => null,
-        'hlsListeners' => null
+        'hls_enabled' => null,
+        'hls_is_default' => null,
+        'hls_url' => null,
+        'hls_listeners' => null
     ];
 
     /**
@@ -120,18 +120,18 @@ class ApiNowPlayingStation implements ModelInterface, ArrayAccess, \JsonSerializ
         'frontend' => false,
         'backend' => false,
         'timezone' => false,
-        'listenUrl' => true,
+        'listen_url' => true,
         'url' => true,
-        'publicPlayerUrl' => true,
-        'playlistPlsUrl' => true,
-        'playlistM3uUrl' => true,
-        'isPublic' => false,
+        'public_player_url' => true,
+        'playlist_pls_url' => true,
+        'playlist_m3u_url' => true,
+        'is_public' => false,
         'mounts' => false,
         'remotes' => false,
-        'hlsEnabled' => false,
-        'hlsIsDefault' => false,
-        'hlsUrl' => true,
-        'hlsListeners' => false
+        'hls_enabled' => false,
+        'hls_is_default' => false,
+        'hls_url' => true,
+        'hls_listeners' => false
     ];
 
     /**
@@ -227,18 +227,18 @@ class ApiNowPlayingStation implements ModelInterface, ArrayAccess, \JsonSerializ
         'frontend' => 'frontend',
         'backend' => 'backend',
         'timezone' => 'timezone',
-        'listenUrl' => 'listen_url',
+        'listen_url' => 'listen_url',
         'url' => 'url',
-        'publicPlayerUrl' => 'public_player_url',
-        'playlistPlsUrl' => 'playlist_pls_url',
-        'playlistM3uUrl' => 'playlist_m3u_url',
-        'isPublic' => 'is_public',
+        'public_player_url' => 'public_player_url',
+        'playlist_pls_url' => 'playlist_pls_url',
+        'playlist_m3u_url' => 'playlist_m3u_url',
+        'is_public' => 'is_public',
         'mounts' => 'mounts',
         'remotes' => 'remotes',
-        'hlsEnabled' => 'hls_enabled',
-        'hlsIsDefault' => 'hls_is_default',
-        'hlsUrl' => 'hls_url',
-        'hlsListeners' => 'hls_listeners'
+        'hls_enabled' => 'hls_enabled',
+        'hls_is_default' => 'hls_is_default',
+        'hls_url' => 'hls_url',
+        'hls_listeners' => 'hls_listeners'
     ];
 
     /**
@@ -254,18 +254,18 @@ class ApiNowPlayingStation implements ModelInterface, ArrayAccess, \JsonSerializ
         'frontend' => 'setFrontend',
         'backend' => 'setBackend',
         'timezone' => 'setTimezone',
-        'listenUrl' => 'setListenUrl',
+        'listen_url' => 'setListenUrl',
         'url' => 'setUrl',
-        'publicPlayerUrl' => 'setPublicPlayerUrl',
-        'playlistPlsUrl' => 'setPlaylistPlsUrl',
-        'playlistM3uUrl' => 'setPlaylistM3uUrl',
-        'isPublic' => 'setIsPublic',
+        'public_player_url' => 'setPublicPlayerUrl',
+        'playlist_pls_url' => 'setPlaylistPlsUrl',
+        'playlist_m3u_url' => 'setPlaylistM3uUrl',
+        'is_public' => 'setIsPublic',
         'mounts' => 'setMounts',
         'remotes' => 'setRemotes',
-        'hlsEnabled' => 'setHlsEnabled',
-        'hlsIsDefault' => 'setHlsIsDefault',
-        'hlsUrl' => 'setHlsUrl',
-        'hlsListeners' => 'setHlsListeners'
+        'hls_enabled' => 'setHlsEnabled',
+        'hls_is_default' => 'setHlsIsDefault',
+        'hls_url' => 'setHlsUrl',
+        'hls_listeners' => 'setHlsListeners'
     ];
 
     /**
@@ -281,18 +281,18 @@ class ApiNowPlayingStation implements ModelInterface, ArrayAccess, \JsonSerializ
         'frontend' => 'getFrontend',
         'backend' => 'getBackend',
         'timezone' => 'getTimezone',
-        'listenUrl' => 'getListenUrl',
+        'listen_url' => 'getListenUrl',
         'url' => 'getUrl',
-        'publicPlayerUrl' => 'getPublicPlayerUrl',
-        'playlistPlsUrl' => 'getPlaylistPlsUrl',
-        'playlistM3uUrl' => 'getPlaylistM3uUrl',
-        'isPublic' => 'getIsPublic',
+        'public_player_url' => 'getPublicPlayerUrl',
+        'playlist_pls_url' => 'getPlaylistPlsUrl',
+        'playlist_m3u_url' => 'getPlaylistM3uUrl',
+        'is_public' => 'getIsPublic',
         'mounts' => 'getMounts',
         'remotes' => 'getRemotes',
-        'hlsEnabled' => 'getHlsEnabled',
-        'hlsIsDefault' => 'getHlsIsDefault',
-        'hlsUrl' => 'getHlsUrl',
-        'hlsListeners' => 'getHlsListeners'
+        'hls_enabled' => 'getHlsEnabled',
+        'hls_is_default' => 'getHlsIsDefault',
+        'hls_url' => 'getHlsUrl',
+        'hls_listeners' => 'getHlsListeners'
     ];
 
     /**
@@ -359,18 +359,18 @@ class ApiNowPlayingStation implements ModelInterface, ArrayAccess, \JsonSerializ
         $this->setIfExists('frontend', $data ?? [], null);
         $this->setIfExists('backend', $data ?? [], null);
         $this->setIfExists('timezone', $data ?? [], null);
-        $this->setIfExists('listenUrl', $data ?? [], null);
+        $this->setIfExists('listen_url', $data ?? [], null);
         $this->setIfExists('url', $data ?? [], null);
-        $this->setIfExists('publicPlayerUrl', $data ?? [], null);
-        $this->setIfExists('playlistPlsUrl', $data ?? [], null);
-        $this->setIfExists('playlistM3uUrl', $data ?? [], null);
-        $this->setIfExists('isPublic', $data ?? [], null);
+        $this->setIfExists('public_player_url', $data ?? [], null);
+        $this->setIfExists('playlist_pls_url', $data ?? [], null);
+        $this->setIfExists('playlist_m3u_url', $data ?? [], null);
+        $this->setIfExists('is_public', $data ?? [], null);
         $this->setIfExists('mounts', $data ?? [], null);
         $this->setIfExists('remotes', $data ?? [], null);
-        $this->setIfExists('hlsEnabled', $data ?? [], null);
-        $this->setIfExists('hlsIsDefault', $data ?? [], null);
-        $this->setIfExists('hlsUrl', $data ?? [], null);
-        $this->setIfExists('hlsListeners', $data ?? [], null);
+        $this->setIfExists('hls_enabled', $data ?? [], null);
+        $this->setIfExists('hls_is_default', $data ?? [], null);
+        $this->setIfExists('hls_url', $data ?? [], null);
+        $this->setIfExists('hls_listeners', $data ?? [], null);
     }
 
     /**
@@ -605,35 +605,35 @@ class ApiNowPlayingStation implements ModelInterface, ArrayAccess, \JsonSerializ
     }
 
     /**
-     * Gets listenUrl
+     * Gets listen_url
      *
      * @return mixed|null
      */
     public function getListenUrl()
     {
-        return $this->container['listenUrl'];
+        return $this->container['listen_url'];
     }
 
     /**
-     * Sets listenUrl
+     * Sets listen_url
      *
-     * @param mixed|null $listenUrl The full URL to listen to the default mount of the station
+     * @param mixed|null $listen_url The full URL to listen to the default mount of the station
      *
      * @return self
      */
-    public function setListenUrl($listenUrl)
+    public function setListenUrl($listen_url)
     {
-        if (is_null($listenUrl)) {
-            array_push($this->openAPINullablesSetToNull, 'listenUrl');
+        if (is_null($listen_url)) {
+            array_push($this->openAPINullablesSetToNull, 'listen_url');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('listenUrl', $nullablesSetToNull);
+            $index = array_search('listen_url', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['listenUrl'] = $listenUrl;
+        $this->container['listen_url'] = $listen_url;
 
         return $this;
     }
@@ -673,130 +673,130 @@ class ApiNowPlayingStation implements ModelInterface, ArrayAccess, \JsonSerializ
     }
 
     /**
-     * Gets publicPlayerUrl
+     * Gets public_player_url
      *
      * @return mixed|null
      */
     public function getPublicPlayerUrl()
     {
-        return $this->container['publicPlayerUrl'];
+        return $this->container['public_player_url'];
     }
 
     /**
-     * Sets publicPlayerUrl
+     * Sets public_player_url
      *
-     * @param mixed|null $publicPlayerUrl The public player URL for the station.
+     * @param mixed|null $public_player_url The public player URL for the station.
      *
      * @return self
      */
-    public function setPublicPlayerUrl($publicPlayerUrl)
+    public function setPublicPlayerUrl($public_player_url)
     {
-        if (is_null($publicPlayerUrl)) {
-            array_push($this->openAPINullablesSetToNull, 'publicPlayerUrl');
+        if (is_null($public_player_url)) {
+            array_push($this->openAPINullablesSetToNull, 'public_player_url');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('publicPlayerUrl', $nullablesSetToNull);
+            $index = array_search('public_player_url', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['publicPlayerUrl'] = $publicPlayerUrl;
+        $this->container['public_player_url'] = $public_player_url;
 
         return $this;
     }
 
     /**
-     * Gets playlistPlsUrl
+     * Gets playlist_pls_url
      *
      * @return mixed|null
      */
     public function getPlaylistPlsUrl()
     {
-        return $this->container['playlistPlsUrl'];
+        return $this->container['playlist_pls_url'];
     }
 
     /**
-     * Sets playlistPlsUrl
+     * Sets playlist_pls_url
      *
-     * @param mixed|null $playlistPlsUrl The playlist download URL in PLS format.
+     * @param mixed|null $playlist_pls_url The playlist download URL in PLS format.
      *
      * @return self
      */
-    public function setPlaylistPlsUrl($playlistPlsUrl)
+    public function setPlaylistPlsUrl($playlist_pls_url)
     {
-        if (is_null($playlistPlsUrl)) {
-            array_push($this->openAPINullablesSetToNull, 'playlistPlsUrl');
+        if (is_null($playlist_pls_url)) {
+            array_push($this->openAPINullablesSetToNull, 'playlist_pls_url');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('playlistPlsUrl', $nullablesSetToNull);
+            $index = array_search('playlist_pls_url', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['playlistPlsUrl'] = $playlistPlsUrl;
+        $this->container['playlist_pls_url'] = $playlist_pls_url;
 
         return $this;
     }
 
     /**
-     * Gets playlistM3uUrl
+     * Gets playlist_m3u_url
      *
      * @return mixed|null
      */
     public function getPlaylistM3uUrl()
     {
-        return $this->container['playlistM3uUrl'];
+        return $this->container['playlist_m3u_url'];
     }
 
     /**
-     * Sets playlistM3uUrl
+     * Sets playlist_m3u_url
      *
-     * @param mixed|null $playlistM3uUrl The playlist download URL in M3U format.
+     * @param mixed|null $playlist_m3u_url The playlist download URL in M3U format.
      *
      * @return self
      */
-    public function setPlaylistM3uUrl($playlistM3uUrl)
+    public function setPlaylistM3uUrl($playlist_m3u_url)
     {
-        if (is_null($playlistM3uUrl)) {
-            array_push($this->openAPINullablesSetToNull, 'playlistM3uUrl');
+        if (is_null($playlist_m3u_url)) {
+            array_push($this->openAPINullablesSetToNull, 'playlist_m3u_url');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('playlistM3uUrl', $nullablesSetToNull);
+            $index = array_search('playlist_m3u_url', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['playlistM3uUrl'] = $playlistM3uUrl;
+        $this->container['playlist_m3u_url'] = $playlist_m3u_url;
 
         return $this;
     }
 
     /**
-     * Gets isPublic
+     * Gets is_public
      *
      * @return bool|null
      */
     public function getIsPublic()
     {
-        return $this->container['isPublic'];
+        return $this->container['is_public'];
     }
 
     /**
-     * Sets isPublic
+     * Sets is_public
      *
-     * @param bool|null $isPublic If the station is public (i.e. should be shown in listings of all stations)
+     * @param bool|null $is_public If the station is public (i.e. should be shown in listings of all stations)
      *
      * @return self
      */
-    public function setIsPublic($isPublic)
+    public function setIsPublic($is_public)
     {
-        if (is_null($isPublic)) {
-            throw new \InvalidArgumentException('non-nullable isPublic cannot be null');
+        if (is_null($is_public)) {
+            throw new \InvalidArgumentException('non-nullable is_public cannot be null');
         }
-        $this->container['isPublic'] = $isPublic;
+        $this->container['is_public'] = $is_public;
 
         return $this;
     }
@@ -856,116 +856,116 @@ class ApiNowPlayingStation implements ModelInterface, ArrayAccess, \JsonSerializ
     }
 
     /**
-     * Gets hlsEnabled
+     * Gets hls_enabled
      *
      * @return bool|null
      */
     public function getHlsEnabled()
     {
-        return $this->container['hlsEnabled'];
+        return $this->container['hls_enabled'];
     }
 
     /**
-     * Sets hlsEnabled
+     * Sets hls_enabled
      *
-     * @param bool|null $hlsEnabled If the station has HLS streaming enabled.
+     * @param bool|null $hls_enabled If the station has HLS streaming enabled.
      *
      * @return self
      */
-    public function setHlsEnabled($hlsEnabled)
+    public function setHlsEnabled($hls_enabled)
     {
-        if (is_null($hlsEnabled)) {
-            throw new \InvalidArgumentException('non-nullable hlsEnabled cannot be null');
+        if (is_null($hls_enabled)) {
+            throw new \InvalidArgumentException('non-nullable hls_enabled cannot be null');
         }
-        $this->container['hlsEnabled'] = $hlsEnabled;
+        $this->container['hls_enabled'] = $hls_enabled;
 
         return $this;
     }
 
     /**
-     * Gets hlsIsDefault
+     * Gets hls_is_default
      *
      * @return bool|null
      */
     public function getHlsIsDefault()
     {
-        return $this->container['hlsIsDefault'];
+        return $this->container['hls_is_default'];
     }
 
     /**
-     * Sets hlsIsDefault
+     * Sets hls_is_default
      *
-     * @param bool|null $hlsIsDefault If the HLS stream should be the default one for the station.
+     * @param bool|null $hls_is_default If the HLS stream should be the default one for the station.
      *
      * @return self
      */
-    public function setHlsIsDefault($hlsIsDefault)
+    public function setHlsIsDefault($hls_is_default)
     {
-        if (is_null($hlsIsDefault)) {
-            throw new \InvalidArgumentException('non-nullable hlsIsDefault cannot be null');
+        if (is_null($hls_is_default)) {
+            throw new \InvalidArgumentException('non-nullable hls_is_default cannot be null');
         }
-        $this->container['hlsIsDefault'] = $hlsIsDefault;
+        $this->container['hls_is_default'] = $hls_is_default;
 
         return $this;
     }
 
     /**
-     * Gets hlsUrl
+     * Gets hls_url
      *
      * @return mixed|null
      */
     public function getHlsUrl()
     {
-        return $this->container['hlsUrl'];
+        return $this->container['hls_url'];
     }
 
     /**
-     * Sets hlsUrl
+     * Sets hls_url
      *
-     * @param mixed|null $hlsUrl The full URL to listen to the HLS stream for the station.
+     * @param mixed|null $hls_url The full URL to listen to the HLS stream for the station.
      *
      * @return self
      */
-    public function setHlsUrl($hlsUrl)
+    public function setHlsUrl($hls_url)
     {
-        if (is_null($hlsUrl)) {
-            array_push($this->openAPINullablesSetToNull, 'hlsUrl');
+        if (is_null($hls_url)) {
+            array_push($this->openAPINullablesSetToNull, 'hls_url');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('hlsUrl', $nullablesSetToNull);
+            $index = array_search('hls_url', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['hlsUrl'] = $hlsUrl;
+        $this->container['hls_url'] = $hls_url;
 
         return $this;
     }
 
     /**
-     * Gets hlsListeners
+     * Gets hls_listeners
      *
      * @return int|null
      */
     public function getHlsListeners()
     {
-        return $this->container['hlsListeners'];
+        return $this->container['hls_listeners'];
     }
 
     /**
-     * Sets hlsListeners
+     * Sets hls_listeners
      *
-     * @param int|null $hlsListeners HLS Listeners
+     * @param int|null $hls_listeners HLS Listeners
      *
      * @return self
      */
-    public function setHlsListeners($hlsListeners)
+    public function setHlsListeners($hls_listeners)
     {
-        if (is_null($hlsListeners)) {
-            throw new \InvalidArgumentException('non-nullable hlsListeners cannot be null');
+        if (is_null($hls_listeners)) {
+            throw new \InvalidArgumentException('non-nullable hls_listeners cannot be null');
         }
-        $this->container['hlsListeners'] = $hlsListeners;
+        $this->container['hls_listeners'] = $hls_listeners;
 
         return $this;
     }

@@ -58,9 +58,9 @@ class ApiPodcastEpisodeAllOfMedia implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static $openAPITypes = [
         'id' => 'string',
-        'originalName' => 'string',
+        'original_name' => 'string',
         'length' => 'float',
-        'lengthText' => 'string',
+        'length_text' => 'string',
         'path' => 'string'
     ];
 
@@ -73,9 +73,9 @@ class ApiPodcastEpisodeAllOfMedia implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static $openAPIFormats = [
         'id' => null,
-        'originalName' => null,
+        'original_name' => null,
         'length' => 'float',
-        'lengthText' => null,
+        'length_text' => null,
         'path' => null
     ];
 
@@ -86,9 +86,9 @@ class ApiPodcastEpisodeAllOfMedia implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static array $openAPINullables = [
         'id' => true,
-        'originalName' => true,
+        'original_name' => true,
         'length' => false,
-        'lengthText' => true,
+        'length_text' => true,
         'path' => true
     ];
 
@@ -179,9 +179,9 @@ class ApiPodcastEpisodeAllOfMedia implements ModelInterface, ArrayAccess, \JsonS
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'originalName' => 'original_name',
+        'original_name' => 'original_name',
         'length' => 'length',
-        'lengthText' => 'length_text',
+        'length_text' => 'length_text',
         'path' => 'path'
     ];
 
@@ -192,9 +192,9 @@ class ApiPodcastEpisodeAllOfMedia implements ModelInterface, ArrayAccess, \JsonS
      */
     protected static $setters = [
         'id' => 'setId',
-        'originalName' => 'setOriginalName',
+        'original_name' => 'setOriginalName',
         'length' => 'setLength',
-        'lengthText' => 'setLengthText',
+        'length_text' => 'setLengthText',
         'path' => 'setPath'
     ];
 
@@ -205,9 +205,9 @@ class ApiPodcastEpisodeAllOfMedia implements ModelInterface, ArrayAccess, \JsonS
      */
     protected static $getters = [
         'id' => 'getId',
-        'originalName' => 'getOriginalName',
+        'original_name' => 'getOriginalName',
         'length' => 'getLength',
-        'lengthText' => 'getLengthText',
+        'length_text' => 'getLengthText',
         'path' => 'getPath'
     ];
 
@@ -269,9 +269,9 @@ class ApiPodcastEpisodeAllOfMedia implements ModelInterface, ArrayAccess, \JsonS
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('originalName', $data ?? [], null);
+        $this->setIfExists('original_name', $data ?? [], null);
         $this->setIfExists('length', $data ?? [], null);
-        $this->setIfExists('lengthText', $data ?? [], null);
+        $this->setIfExists('length_text', $data ?? [], null);
         $this->setIfExists('path', $data ?? [], null);
     }
 
@@ -352,35 +352,35 @@ class ApiPodcastEpisodeAllOfMedia implements ModelInterface, ArrayAccess, \JsonS
     }
 
     /**
-     * Gets originalName
+     * Gets original_name
      *
      * @return string|null
      */
     public function getOriginalName()
     {
-        return $this->container['originalName'];
+        return $this->container['original_name'];
     }
 
     /**
-     * Sets originalName
+     * Sets original_name
      *
-     * @param string|null $originalName originalName
+     * @param string|null $original_name original_name
      *
      * @return self
      */
-    public function setOriginalName($originalName)
+    public function setOriginalName($original_name)
     {
-        if (is_null($originalName)) {
-            array_push($this->openAPINullablesSetToNull, 'originalName');
+        if (is_null($original_name)) {
+            array_push($this->openAPINullablesSetToNull, 'original_name');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('originalName', $nullablesSetToNull);
+            $index = array_search('original_name', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['originalName'] = $originalName;
+        $this->container['original_name'] = $original_name;
 
         return $this;
     }
@@ -413,35 +413,35 @@ class ApiPodcastEpisodeAllOfMedia implements ModelInterface, ArrayAccess, \JsonS
     }
 
     /**
-     * Gets lengthText
+     * Gets length_text
      *
      * @return string|null
      */
     public function getLengthText()
     {
-        return $this->container['lengthText'];
+        return $this->container['length_text'];
     }
 
     /**
-     * Sets lengthText
+     * Sets length_text
      *
-     * @param string|null $lengthText lengthText
+     * @param string|null $length_text length_text
      *
      * @return self
      */
-    public function setLengthText($lengthText)
+    public function setLengthText($length_text)
     {
-        if (is_null($lengthText)) {
-            array_push($this->openAPINullablesSetToNull, 'lengthText');
+        if (is_null($length_text)) {
+            array_push($this->openAPINullablesSetToNull, 'length_text');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('lengthText', $nullablesSetToNull);
+            $index = array_search('length_text', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['lengthText'] = $lengthText;
+        $this->container['length_text'] = $length_text;
 
         return $this;
     }

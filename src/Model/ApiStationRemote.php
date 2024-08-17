@@ -59,24 +59,24 @@ class ApiStationRemote implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'links' => 'array<string,string>',
         'id' => 'int',
-        'displayName' => 'string',
-        'isVisibleOnPublicPages' => 'bool',
+        'display_name' => 'string',
+        'is_visible_on_public_pages' => 'bool',
         'type' => 'string',
-        'isEditable' => 'bool',
-        'enableAutodj' => 'bool',
-        'autodjFormat' => 'string',
-        'autodjBitrate' => 'int',
-        'customListenUrl' => 'string',
+        'is_editable' => 'bool',
+        'enable_autodj' => 'bool',
+        'autodj_format' => 'string',
+        'autodj_bitrate' => 'int',
+        'custom_listen_url' => 'string',
         'url' => 'string',
         'mount' => 'string',
-        'adminPassword' => 'string',
-        'sourcePort' => 'int',
-        'sourceMount' => 'string',
-        'sourceUsername' => 'string',
-        'sourcePassword' => 'string',
-        'isPublic' => 'bool',
-        'listenersUnique' => 'int',
-        'listenersTotal' => 'int'
+        'admin_password' => 'string',
+        'source_port' => 'int',
+        'source_mount' => 'string',
+        'source_username' => 'string',
+        'source_password' => 'string',
+        'is_public' => 'bool',
+        'listeners_unique' => 'int',
+        'listeners_total' => 'int'
     ];
 
     /**
@@ -89,24 +89,24 @@ class ApiStationRemote implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'links' => null,
         'id' => null,
-        'displayName' => null,
-        'isVisibleOnPublicPages' => null,
+        'display_name' => null,
+        'is_visible_on_public_pages' => null,
         'type' => null,
-        'isEditable' => null,
-        'enableAutodj' => null,
-        'autodjFormat' => null,
-        'autodjBitrate' => null,
-        'customListenUrl' => null,
+        'is_editable' => null,
+        'enable_autodj' => null,
+        'autodj_format' => null,
+        'autodj_bitrate' => null,
+        'custom_listen_url' => null,
         'url' => null,
         'mount' => null,
-        'adminPassword' => null,
-        'sourcePort' => null,
-        'sourceMount' => null,
-        'sourceUsername' => null,
-        'sourcePassword' => null,
-        'isPublic' => null,
-        'listenersUnique' => null,
-        'listenersTotal' => null
+        'admin_password' => null,
+        'source_port' => null,
+        'source_mount' => null,
+        'source_username' => null,
+        'source_password' => null,
+        'is_public' => null,
+        'listeners_unique' => null,
+        'listeners_total' => null
     ];
 
     /**
@@ -117,24 +117,24 @@ class ApiStationRemote implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'links' => false,
         'id' => true,
-        'displayName' => true,
-        'isVisibleOnPublicPages' => false,
+        'display_name' => true,
+        'is_visible_on_public_pages' => false,
         'type' => false,
-        'isEditable' => false,
-        'enableAutodj' => false,
-        'autodjFormat' => true,
-        'autodjBitrate' => true,
-        'customListenUrl' => true,
+        'is_editable' => false,
+        'enable_autodj' => false,
+        'autodj_format' => true,
+        'autodj_bitrate' => true,
+        'custom_listen_url' => true,
         'url' => false,
         'mount' => true,
-        'adminPassword' => true,
-        'sourcePort' => true,
-        'sourceMount' => true,
-        'sourceUsername' => true,
-        'sourcePassword' => true,
-        'isPublic' => false,
-        'listenersUnique' => false,
-        'listenersTotal' => false
+        'admin_password' => true,
+        'source_port' => true,
+        'source_mount' => true,
+        'source_username' => true,
+        'source_password' => true,
+        'is_public' => false,
+        'listeners_unique' => false,
+        'listeners_total' => false
     ];
 
     /**
@@ -225,24 +225,24 @@ class ApiStationRemote implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'links' => 'links',
         'id' => 'id',
-        'displayName' => 'display_name',
-        'isVisibleOnPublicPages' => 'is_visible_on_public_pages',
+        'display_name' => 'display_name',
+        'is_visible_on_public_pages' => 'is_visible_on_public_pages',
         'type' => 'type',
-        'isEditable' => 'is_editable',
-        'enableAutodj' => 'enable_autodj',
-        'autodjFormat' => 'autodj_format',
-        'autodjBitrate' => 'autodj_bitrate',
-        'customListenUrl' => 'custom_listen_url',
+        'is_editable' => 'is_editable',
+        'enable_autodj' => 'enable_autodj',
+        'autodj_format' => 'autodj_format',
+        'autodj_bitrate' => 'autodj_bitrate',
+        'custom_listen_url' => 'custom_listen_url',
         'url' => 'url',
         'mount' => 'mount',
-        'adminPassword' => 'admin_password',
-        'sourcePort' => 'source_port',
-        'sourceMount' => 'source_mount',
-        'sourceUsername' => 'source_username',
-        'sourcePassword' => 'source_password',
-        'isPublic' => 'is_public',
-        'listenersUnique' => 'listeners_unique',
-        'listenersTotal' => 'listeners_total'
+        'admin_password' => 'admin_password',
+        'source_port' => 'source_port',
+        'source_mount' => 'source_mount',
+        'source_username' => 'source_username',
+        'source_password' => 'source_password',
+        'is_public' => 'is_public',
+        'listeners_unique' => 'listeners_unique',
+        'listeners_total' => 'listeners_total'
     ];
 
     /**
@@ -253,24 +253,24 @@ class ApiStationRemote implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'links' => 'setLinks',
         'id' => 'setId',
-        'displayName' => 'setDisplayName',
-        'isVisibleOnPublicPages' => 'setIsVisibleOnPublicPages',
+        'display_name' => 'setDisplayName',
+        'is_visible_on_public_pages' => 'setIsVisibleOnPublicPages',
         'type' => 'setType',
-        'isEditable' => 'setIsEditable',
-        'enableAutodj' => 'setEnableAutodj',
-        'autodjFormat' => 'setAutodjFormat',
-        'autodjBitrate' => 'setAutodjBitrate',
-        'customListenUrl' => 'setCustomListenUrl',
+        'is_editable' => 'setIsEditable',
+        'enable_autodj' => 'setEnableAutodj',
+        'autodj_format' => 'setAutodjFormat',
+        'autodj_bitrate' => 'setAutodjBitrate',
+        'custom_listen_url' => 'setCustomListenUrl',
         'url' => 'setUrl',
         'mount' => 'setMount',
-        'adminPassword' => 'setAdminPassword',
-        'sourcePort' => 'setSourcePort',
-        'sourceMount' => 'setSourceMount',
-        'sourceUsername' => 'setSourceUsername',
-        'sourcePassword' => 'setSourcePassword',
-        'isPublic' => 'setIsPublic',
-        'listenersUnique' => 'setListenersUnique',
-        'listenersTotal' => 'setListenersTotal'
+        'admin_password' => 'setAdminPassword',
+        'source_port' => 'setSourcePort',
+        'source_mount' => 'setSourceMount',
+        'source_username' => 'setSourceUsername',
+        'source_password' => 'setSourcePassword',
+        'is_public' => 'setIsPublic',
+        'listeners_unique' => 'setListenersUnique',
+        'listeners_total' => 'setListenersTotal'
     ];
 
     /**
@@ -281,24 +281,24 @@ class ApiStationRemote implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'links' => 'getLinks',
         'id' => 'getId',
-        'displayName' => 'getDisplayName',
-        'isVisibleOnPublicPages' => 'getIsVisibleOnPublicPages',
+        'display_name' => 'getDisplayName',
+        'is_visible_on_public_pages' => 'getIsVisibleOnPublicPages',
         'type' => 'getType',
-        'isEditable' => 'getIsEditable',
-        'enableAutodj' => 'getEnableAutodj',
-        'autodjFormat' => 'getAutodjFormat',
-        'autodjBitrate' => 'getAutodjBitrate',
-        'customListenUrl' => 'getCustomListenUrl',
+        'is_editable' => 'getIsEditable',
+        'enable_autodj' => 'getEnableAutodj',
+        'autodj_format' => 'getAutodjFormat',
+        'autodj_bitrate' => 'getAutodjBitrate',
+        'custom_listen_url' => 'getCustomListenUrl',
         'url' => 'getUrl',
         'mount' => 'getMount',
-        'adminPassword' => 'getAdminPassword',
-        'sourcePort' => 'getSourcePort',
-        'sourceMount' => 'getSourceMount',
-        'sourceUsername' => 'getSourceUsername',
-        'sourcePassword' => 'getSourcePassword',
-        'isPublic' => 'getIsPublic',
-        'listenersUnique' => 'getListenersUnique',
-        'listenersTotal' => 'getListenersTotal'
+        'admin_password' => 'getAdminPassword',
+        'source_port' => 'getSourcePort',
+        'source_mount' => 'getSourceMount',
+        'source_username' => 'getSourceUsername',
+        'source_password' => 'getSourcePassword',
+        'is_public' => 'getIsPublic',
+        'listeners_unique' => 'getListenersUnique',
+        'listeners_total' => 'getListenersTotal'
     ];
 
     /**
@@ -360,24 +360,24 @@ class ApiStationRemote implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('links', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('displayName', $data ?? [], null);
-        $this->setIfExists('isVisibleOnPublicPages', $data ?? [], null);
+        $this->setIfExists('display_name', $data ?? [], null);
+        $this->setIfExists('is_visible_on_public_pages', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
-        $this->setIfExists('isEditable', $data ?? [], null);
-        $this->setIfExists('enableAutodj', $data ?? [], null);
-        $this->setIfExists('autodjFormat', $data ?? [], null);
-        $this->setIfExists('autodjBitrate', $data ?? [], null);
-        $this->setIfExists('customListenUrl', $data ?? [], null);
+        $this->setIfExists('is_editable', $data ?? [], null);
+        $this->setIfExists('enable_autodj', $data ?? [], null);
+        $this->setIfExists('autodj_format', $data ?? [], null);
+        $this->setIfExists('autodj_bitrate', $data ?? [], null);
+        $this->setIfExists('custom_listen_url', $data ?? [], null);
         $this->setIfExists('url', $data ?? [], null);
         $this->setIfExists('mount', $data ?? [], null);
-        $this->setIfExists('adminPassword', $data ?? [], null);
-        $this->setIfExists('sourcePort', $data ?? [], null);
-        $this->setIfExists('sourceMount', $data ?? [], null);
-        $this->setIfExists('sourceUsername', $data ?? [], null);
-        $this->setIfExists('sourcePassword', $data ?? [], null);
-        $this->setIfExists('isPublic', $data ?? [], null);
-        $this->setIfExists('listenersUnique', $data ?? [], null);
-        $this->setIfExists('listenersTotal', $data ?? [], null);
+        $this->setIfExists('admin_password', $data ?? [], null);
+        $this->setIfExists('source_port', $data ?? [], null);
+        $this->setIfExists('source_mount', $data ?? [], null);
+        $this->setIfExists('source_username', $data ?? [], null);
+        $this->setIfExists('source_password', $data ?? [], null);
+        $this->setIfExists('is_public', $data ?? [], null);
+        $this->setIfExists('listeners_unique', $data ?? [], null);
+        $this->setIfExists('listeners_total', $data ?? [], null);
     }
 
     /**
@@ -484,62 +484,62 @@ class ApiStationRemote implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets displayName
+     * Gets display_name
      *
      * @return string|null
      */
     public function getDisplayName()
     {
-        return $this->container['displayName'];
+        return $this->container['display_name'];
     }
 
     /**
-     * Sets displayName
+     * Sets display_name
      *
-     * @param string|null $displayName displayName
+     * @param string|null $display_name display_name
      *
      * @return self
      */
-    public function setDisplayName($displayName)
+    public function setDisplayName($display_name)
     {
-        if (is_null($displayName)) {
-            array_push($this->openAPINullablesSetToNull, 'displayName');
+        if (is_null($display_name)) {
+            array_push($this->openAPINullablesSetToNull, 'display_name');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('displayName', $nullablesSetToNull);
+            $index = array_search('display_name', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['displayName'] = $displayName;
+        $this->container['display_name'] = $display_name;
 
         return $this;
     }
 
     /**
-     * Gets isVisibleOnPublicPages
+     * Gets is_visible_on_public_pages
      *
      * @return bool|null
      */
     public function getIsVisibleOnPublicPages()
     {
-        return $this->container['isVisibleOnPublicPages'];
+        return $this->container['is_visible_on_public_pages'];
     }
 
     /**
-     * Sets isVisibleOnPublicPages
+     * Sets is_visible_on_public_pages
      *
-     * @param bool|null $isVisibleOnPublicPages isVisibleOnPublicPages
+     * @param bool|null $is_visible_on_public_pages is_visible_on_public_pages
      *
      * @return self
      */
-    public function setIsVisibleOnPublicPages($isVisibleOnPublicPages)
+    public function setIsVisibleOnPublicPages($is_visible_on_public_pages)
     {
-        if (is_null($isVisibleOnPublicPages)) {
-            throw new \InvalidArgumentException('non-nullable isVisibleOnPublicPages cannot be null');
+        if (is_null($is_visible_on_public_pages)) {
+            throw new \InvalidArgumentException('non-nullable is_visible_on_public_pages cannot be null');
         }
-        $this->container['isVisibleOnPublicPages'] = $isVisibleOnPublicPages;
+        $this->container['is_visible_on_public_pages'] = $is_visible_on_public_pages;
 
         return $this;
     }
@@ -572,157 +572,157 @@ class ApiStationRemote implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets isEditable
+     * Gets is_editable
      *
      * @return bool|null
      */
     public function getIsEditable()
     {
-        return $this->container['isEditable'];
+        return $this->container['is_editable'];
     }
 
     /**
-     * Sets isEditable
+     * Sets is_editable
      *
-     * @param bool|null $isEditable isEditable
+     * @param bool|null $is_editable is_editable
      *
      * @return self
      */
-    public function setIsEditable($isEditable)
+    public function setIsEditable($is_editable)
     {
-        if (is_null($isEditable)) {
-            throw new \InvalidArgumentException('non-nullable isEditable cannot be null');
+        if (is_null($is_editable)) {
+            throw new \InvalidArgumentException('non-nullable is_editable cannot be null');
         }
-        $this->container['isEditable'] = $isEditable;
+        $this->container['is_editable'] = $is_editable;
 
         return $this;
     }
 
     /**
-     * Gets enableAutodj
+     * Gets enable_autodj
      *
      * @return bool|null
      */
     public function getEnableAutodj()
     {
-        return $this->container['enableAutodj'];
+        return $this->container['enable_autodj'];
     }
 
     /**
-     * Sets enableAutodj
+     * Sets enable_autodj
      *
-     * @param bool|null $enableAutodj enableAutodj
+     * @param bool|null $enable_autodj enable_autodj
      *
      * @return self
      */
-    public function setEnableAutodj($enableAutodj)
+    public function setEnableAutodj($enable_autodj)
     {
-        if (is_null($enableAutodj)) {
-            throw new \InvalidArgumentException('non-nullable enableAutodj cannot be null');
+        if (is_null($enable_autodj)) {
+            throw new \InvalidArgumentException('non-nullable enable_autodj cannot be null');
         }
-        $this->container['enableAutodj'] = $enableAutodj;
+        $this->container['enable_autodj'] = $enable_autodj;
 
         return $this;
     }
 
     /**
-     * Gets autodjFormat
+     * Gets autodj_format
      *
      * @return string|null
      */
     public function getAutodjFormat()
     {
-        return $this->container['autodjFormat'];
+        return $this->container['autodj_format'];
     }
 
     /**
-     * Sets autodjFormat
+     * Sets autodj_format
      *
-     * @param string|null $autodjFormat autodjFormat
+     * @param string|null $autodj_format autodj_format
      *
      * @return self
      */
-    public function setAutodjFormat($autodjFormat)
+    public function setAutodjFormat($autodj_format)
     {
-        if (is_null($autodjFormat)) {
-            array_push($this->openAPINullablesSetToNull, 'autodjFormat');
+        if (is_null($autodj_format)) {
+            array_push($this->openAPINullablesSetToNull, 'autodj_format');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('autodjFormat', $nullablesSetToNull);
+            $index = array_search('autodj_format', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['autodjFormat'] = $autodjFormat;
+        $this->container['autodj_format'] = $autodj_format;
 
         return $this;
     }
 
     /**
-     * Gets autodjBitrate
+     * Gets autodj_bitrate
      *
      * @return int|null
      */
     public function getAutodjBitrate()
     {
-        return $this->container['autodjBitrate'];
+        return $this->container['autodj_bitrate'];
     }
 
     /**
-     * Sets autodjBitrate
+     * Sets autodj_bitrate
      *
-     * @param int|null $autodjBitrate autodjBitrate
+     * @param int|null $autodj_bitrate autodj_bitrate
      *
      * @return self
      */
-    public function setAutodjBitrate($autodjBitrate)
+    public function setAutodjBitrate($autodj_bitrate)
     {
-        if (is_null($autodjBitrate)) {
-            array_push($this->openAPINullablesSetToNull, 'autodjBitrate');
+        if (is_null($autodj_bitrate)) {
+            array_push($this->openAPINullablesSetToNull, 'autodj_bitrate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('autodjBitrate', $nullablesSetToNull);
+            $index = array_search('autodj_bitrate', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['autodjBitrate'] = $autodjBitrate;
+        $this->container['autodj_bitrate'] = $autodj_bitrate;
 
         return $this;
     }
 
     /**
-     * Gets customListenUrl
+     * Gets custom_listen_url
      *
      * @return string|null
      */
     public function getCustomListenUrl()
     {
-        return $this->container['customListenUrl'];
+        return $this->container['custom_listen_url'];
     }
 
     /**
-     * Sets customListenUrl
+     * Sets custom_listen_url
      *
-     * @param string|null $customListenUrl customListenUrl
+     * @param string|null $custom_listen_url custom_listen_url
      *
      * @return self
      */
-    public function setCustomListenUrl($customListenUrl)
+    public function setCustomListenUrl($custom_listen_url)
     {
-        if (is_null($customListenUrl)) {
-            array_push($this->openAPINullablesSetToNull, 'customListenUrl');
+        if (is_null($custom_listen_url)) {
+            array_push($this->openAPINullablesSetToNull, 'custom_listen_url');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('customListenUrl', $nullablesSetToNull);
+            $index = array_search('custom_listen_url', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['customListenUrl'] = $customListenUrl;
+        $this->container['custom_listen_url'] = $custom_listen_url;
 
         return $this;
     }
@@ -789,252 +789,252 @@ class ApiStationRemote implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets adminPassword
+     * Gets admin_password
      *
      * @return string|null
      */
     public function getAdminPassword()
     {
-        return $this->container['adminPassword'];
+        return $this->container['admin_password'];
     }
 
     /**
-     * Sets adminPassword
+     * Sets admin_password
      *
-     * @param string|null $adminPassword adminPassword
+     * @param string|null $admin_password admin_password
      *
      * @return self
      */
-    public function setAdminPassword($adminPassword)
+    public function setAdminPassword($admin_password)
     {
-        if (is_null($adminPassword)) {
-            array_push($this->openAPINullablesSetToNull, 'adminPassword');
+        if (is_null($admin_password)) {
+            array_push($this->openAPINullablesSetToNull, 'admin_password');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('adminPassword', $nullablesSetToNull);
+            $index = array_search('admin_password', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['adminPassword'] = $adminPassword;
+        $this->container['admin_password'] = $admin_password;
 
         return $this;
     }
 
     /**
-     * Gets sourcePort
+     * Gets source_port
      *
      * @return int|null
      */
     public function getSourcePort()
     {
-        return $this->container['sourcePort'];
+        return $this->container['source_port'];
     }
 
     /**
-     * Sets sourcePort
+     * Sets source_port
      *
-     * @param int|null $sourcePort sourcePort
+     * @param int|null $source_port source_port
      *
      * @return self
      */
-    public function setSourcePort($sourcePort)
+    public function setSourcePort($source_port)
     {
-        if (is_null($sourcePort)) {
-            array_push($this->openAPINullablesSetToNull, 'sourcePort');
+        if (is_null($source_port)) {
+            array_push($this->openAPINullablesSetToNull, 'source_port');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('sourcePort', $nullablesSetToNull);
+            $index = array_search('source_port', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['sourcePort'] = $sourcePort;
+        $this->container['source_port'] = $source_port;
 
         return $this;
     }
 
     /**
-     * Gets sourceMount
+     * Gets source_mount
      *
      * @return string|null
      */
     public function getSourceMount()
     {
-        return $this->container['sourceMount'];
+        return $this->container['source_mount'];
     }
 
     /**
-     * Sets sourceMount
+     * Sets source_mount
      *
-     * @param string|null $sourceMount sourceMount
+     * @param string|null $source_mount source_mount
      *
      * @return self
      */
-    public function setSourceMount($sourceMount)
+    public function setSourceMount($source_mount)
     {
-        if (is_null($sourceMount)) {
-            array_push($this->openAPINullablesSetToNull, 'sourceMount');
+        if (is_null($source_mount)) {
+            array_push($this->openAPINullablesSetToNull, 'source_mount');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('sourceMount', $nullablesSetToNull);
+            $index = array_search('source_mount', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['sourceMount'] = $sourceMount;
+        $this->container['source_mount'] = $source_mount;
 
         return $this;
     }
 
     /**
-     * Gets sourceUsername
+     * Gets source_username
      *
      * @return string|null
      */
     public function getSourceUsername()
     {
-        return $this->container['sourceUsername'];
+        return $this->container['source_username'];
     }
 
     /**
-     * Sets sourceUsername
+     * Sets source_username
      *
-     * @param string|null $sourceUsername sourceUsername
+     * @param string|null $source_username source_username
      *
      * @return self
      */
-    public function setSourceUsername($sourceUsername)
+    public function setSourceUsername($source_username)
     {
-        if (is_null($sourceUsername)) {
-            array_push($this->openAPINullablesSetToNull, 'sourceUsername');
+        if (is_null($source_username)) {
+            array_push($this->openAPINullablesSetToNull, 'source_username');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('sourceUsername', $nullablesSetToNull);
+            $index = array_search('source_username', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['sourceUsername'] = $sourceUsername;
+        $this->container['source_username'] = $source_username;
 
         return $this;
     }
 
     /**
-     * Gets sourcePassword
+     * Gets source_password
      *
      * @return string|null
      */
     public function getSourcePassword()
     {
-        return $this->container['sourcePassword'];
+        return $this->container['source_password'];
     }
 
     /**
-     * Sets sourcePassword
+     * Sets source_password
      *
-     * @param string|null $sourcePassword sourcePassword
+     * @param string|null $source_password source_password
      *
      * @return self
      */
-    public function setSourcePassword($sourcePassword)
+    public function setSourcePassword($source_password)
     {
-        if (is_null($sourcePassword)) {
-            array_push($this->openAPINullablesSetToNull, 'sourcePassword');
+        if (is_null($source_password)) {
+            array_push($this->openAPINullablesSetToNull, 'source_password');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('sourcePassword', $nullablesSetToNull);
+            $index = array_search('source_password', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['sourcePassword'] = $sourcePassword;
+        $this->container['source_password'] = $source_password;
 
         return $this;
     }
 
     /**
-     * Gets isPublic
+     * Gets is_public
      *
      * @return bool|null
      */
     public function getIsPublic()
     {
-        return $this->container['isPublic'];
+        return $this->container['is_public'];
     }
 
     /**
-     * Sets isPublic
+     * Sets is_public
      *
-     * @param bool|null $isPublic isPublic
+     * @param bool|null $is_public is_public
      *
      * @return self
      */
-    public function setIsPublic($isPublic)
+    public function setIsPublic($is_public)
     {
-        if (is_null($isPublic)) {
-            throw new \InvalidArgumentException('non-nullable isPublic cannot be null');
+        if (is_null($is_public)) {
+            throw new \InvalidArgumentException('non-nullable is_public cannot be null');
         }
-        $this->container['isPublic'] = $isPublic;
+        $this->container['is_public'] = $is_public;
 
         return $this;
     }
 
     /**
-     * Gets listenersUnique
+     * Gets listeners_unique
      *
      * @return int|null
      */
     public function getListenersUnique()
     {
-        return $this->container['listenersUnique'];
+        return $this->container['listeners_unique'];
     }
 
     /**
-     * Sets listenersUnique
+     * Sets listeners_unique
      *
-     * @param int|null $listenersUnique The most recent number of unique listeners.
+     * @param int|null $listeners_unique The most recent number of unique listeners.
      *
      * @return self
      */
-    public function setListenersUnique($listenersUnique)
+    public function setListenersUnique($listeners_unique)
     {
-        if (is_null($listenersUnique)) {
-            throw new \InvalidArgumentException('non-nullable listenersUnique cannot be null');
+        if (is_null($listeners_unique)) {
+            throw new \InvalidArgumentException('non-nullable listeners_unique cannot be null');
         }
-        $this->container['listenersUnique'] = $listenersUnique;
+        $this->container['listeners_unique'] = $listeners_unique;
 
         return $this;
     }
 
     /**
-     * Gets listenersTotal
+     * Gets listeners_total
      *
      * @return int|null
      */
     public function getListenersTotal()
     {
-        return $this->container['listenersTotal'];
+        return $this->container['listeners_total'];
     }
 
     /**
-     * Sets listenersTotal
+     * Sets listeners_total
      *
-     * @param int|null $listenersTotal The most recent number of total (non-unique) listeners.
+     * @param int|null $listeners_total The most recent number of total (non-unique) listeners.
      *
      * @return self
      */
-    public function setListenersTotal($listenersTotal)
+    public function setListenersTotal($listeners_total)
     {
-        if (is_null($listenersTotal)) {
-            throw new \InvalidArgumentException('non-nullable listenersTotal cannot be null');
+        if (is_null($listeners_total)) {
+            throw new \InvalidArgumentException('non-nullable listeners_total cannot be null');
         }
-        $this->container['listenersTotal'] = $listenersTotal;
+        $this->container['listeners_total'] = $listeners_total;
 
         return $this;
     }

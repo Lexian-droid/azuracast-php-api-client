@@ -28,7 +28,7 @@ All URIs are relative to https://demo.azuracast.com/api, except if the operation
 ## `addEpisode()`
 
 ```php
-addEpisode($stationId, $podcastId, $apiPodcastEpisode): \AzuraCast\Model\ApiPodcastEpisode
+addEpisode($station_id, $podcast_id, $api_podcast_episode): \AzuraCast\Model\ApiPodcastEpisode
 ```
 
 
@@ -54,12 +54,12 @@ $apiInstance = new AzuraCast\Api\StationsPodcastsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
-$podcastId = 'podcastId_example'; // string | Podcast ID
-$apiPodcastEpisode = new \AzuraCast\Model\ApiPodcastEpisode(); // \AzuraCast\Model\ApiPodcastEpisode
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$podcast_id = 'podcast_id_example'; // string | Podcast ID
+$api_podcast_episode = new \AzuraCast\Model\ApiPodcastEpisode(); // \AzuraCast\Model\ApiPodcastEpisode
 
 try {
-    $result = $apiInstance->addEpisode($stationId, $podcastId, $apiPodcastEpisode);
+    $result = $apiInstance->addEpisode($station_id, $podcast_id, $api_podcast_episode);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsPodcastsApi->addEpisode: ', $e->getMessage(), PHP_EOL;
@@ -70,9 +70,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
-| **podcastId** | **string**| Podcast ID | |
-| **apiPodcastEpisode** | [**\AzuraCast\Model\ApiPodcastEpisode**](../Model/ApiPodcastEpisode.md)|  | [optional] |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **podcast_id** | **string**| Podcast ID | |
+| **api_podcast_episode** | [**\AzuraCast\Model\ApiPodcastEpisode**](../Model/ApiPodcastEpisode.md)|  | [optional] |
 
 ### Return type
 
@@ -94,7 +94,7 @@ try {
 ## `addPodcast()`
 
 ```php
-addPodcast($stationId, $apiPodcast): \AzuraCast\Model\ApiPodcast
+addPodcast($station_id, $api_podcast): \AzuraCast\Model\ApiPodcast
 ```
 
 
@@ -120,11 +120,11 @@ $apiInstance = new AzuraCast\Api\StationsPodcastsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
-$apiPodcast = new \AzuraCast\Model\ApiPodcast(); // \AzuraCast\Model\ApiPodcast
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$api_podcast = new \AzuraCast\Model\ApiPodcast(); // \AzuraCast\Model\ApiPodcast
 
 try {
-    $result = $apiInstance->addPodcast($stationId, $apiPodcast);
+    $result = $apiInstance->addPodcast($station_id, $api_podcast);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsPodcastsApi->addPodcast: ', $e->getMessage(), PHP_EOL;
@@ -135,8 +135,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
-| **apiPodcast** | [**\AzuraCast\Model\ApiPodcast**](../Model/ApiPodcast.md)|  | [optional] |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **api_podcast** | [**\AzuraCast\Model\ApiPodcast**](../Model/ApiPodcast.md)|  | [optional] |
 
 ### Return type
 
@@ -158,7 +158,7 @@ try {
 ## `deleteEpisode()`
 
 ```php
-deleteEpisode($stationId, $podcastId, $id): \AzuraCast\Model\ApiStatus
+deleteEpisode($station_id, $podcast_id, $id): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -184,12 +184,12 @@ $apiInstance = new AzuraCast\Api\StationsPodcastsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
-$podcastId = 'podcastId_example'; // string | Podcast ID
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$podcast_id = 'podcast_id_example'; // string | Podcast ID
 $id = 'id_example'; // string | Podcast Episode ID
 
 try {
-    $result = $apiInstance->deleteEpisode($stationId, $podcastId, $id);
+    $result = $apiInstance->deleteEpisode($station_id, $podcast_id, $id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsPodcastsApi->deleteEpisode: ', $e->getMessage(), PHP_EOL;
@@ -200,8 +200,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
-| **podcastId** | **string**| Podcast ID | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **podcast_id** | **string**| Podcast ID | |
 | **id** | **string**| Podcast Episode ID | |
 
 ### Return type
@@ -224,7 +224,7 @@ try {
 ## `deletePodcast()`
 
 ```php
-deletePodcast($stationId, $id): \AzuraCast\Model\ApiStatus
+deletePodcast($station_id, $id): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -250,11 +250,11 @@ $apiInstance = new AzuraCast\Api\StationsPodcastsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 'id_example'; // string | Podcast ID
 
 try {
-    $result = $apiInstance->deletePodcast($stationId, $id);
+    $result = $apiInstance->deletePodcast($station_id, $id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsPodcastsApi->deletePodcast: ', $e->getMessage(), PHP_EOL;
@@ -265,7 +265,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **string**| Podcast ID | |
 
 ### Return type
@@ -288,7 +288,7 @@ try {
 ## `deletePodcastArt()`
 
 ```php
-deletePodcastArt($stationId, $podcastId): \AzuraCast\Model\ApiStatus
+deletePodcastArt($station_id, $podcast_id): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -314,11 +314,11 @@ $apiInstance = new AzuraCast\Api\StationsPodcastsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
-$podcastId = 'podcastId_example'; // string | Podcast ID
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$podcast_id = 'podcast_id_example'; // string | Podcast ID
 
 try {
-    $result = $apiInstance->deletePodcastArt($stationId, $podcastId);
+    $result = $apiInstance->deletePodcastArt($station_id, $podcast_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsPodcastsApi->deletePodcastArt: ', $e->getMessage(), PHP_EOL;
@@ -329,8 +329,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
-| **podcastId** | **string**| Podcast ID | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **podcast_id** | **string**| Podcast ID | |
 
 ### Return type
 
@@ -352,7 +352,7 @@ try {
 ## `deletePodcastEpisodeArt()`
 
 ```php
-deletePodcastEpisodeArt($stationId, $podcastId, $episodeId): \AzuraCast\Model\ApiStatus
+deletePodcastEpisodeArt($station_id, $podcast_id, $episode_id): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -378,12 +378,12 @@ $apiInstance = new AzuraCast\Api\StationsPodcastsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
-$podcastId = 'podcastId_example'; // string | Podcast ID
-$episodeId = 'episodeId_example'; // string | Podcast Episode ID
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$podcast_id = 'podcast_id_example'; // string | Podcast ID
+$episode_id = 'episode_id_example'; // string | Podcast Episode ID
 
 try {
-    $result = $apiInstance->deletePodcastEpisodeArt($stationId, $podcastId, $episodeId);
+    $result = $apiInstance->deletePodcastEpisodeArt($station_id, $podcast_id, $episode_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsPodcastsApi->deletePodcastEpisodeArt: ', $e->getMessage(), PHP_EOL;
@@ -394,9 +394,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
-| **podcastId** | **string**| Podcast ID | |
-| **episodeId** | **string**| Podcast Episode ID | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **podcast_id** | **string**| Podcast ID | |
+| **episode_id** | **string**| Podcast Episode ID | |
 
 ### Return type
 
@@ -418,7 +418,7 @@ try {
 ## `deletePodcastEpisodeMedia()`
 
 ```php
-deletePodcastEpisodeMedia($stationId, $podcastId, $episodeId): \AzuraCast\Model\ApiStatus
+deletePodcastEpisodeMedia($station_id, $podcast_id, $episode_id): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -444,12 +444,12 @@ $apiInstance = new AzuraCast\Api\StationsPodcastsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
-$podcastId = 'podcastId_example'; // string | Podcast ID
-$episodeId = 'episodeId_example'; // string | Podcast Episode ID
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$podcast_id = 'podcast_id_example'; // string | Podcast ID
+$episode_id = 'episode_id_example'; // string | Podcast Episode ID
 
 try {
-    $result = $apiInstance->deletePodcastEpisodeMedia($stationId, $podcastId, $episodeId);
+    $result = $apiInstance->deletePodcastEpisodeMedia($station_id, $podcast_id, $episode_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsPodcastsApi->deletePodcastEpisodeMedia: ', $e->getMessage(), PHP_EOL;
@@ -460,9 +460,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
-| **podcastId** | **string**| Podcast ID | |
-| **episodeId** | **string**| Podcast Episode ID | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **podcast_id** | **string**| Podcast ID | |
+| **episode_id** | **string**| Podcast Episode ID | |
 
 ### Return type
 
@@ -484,7 +484,7 @@ try {
 ## `editEpisode()`
 
 ```php
-editEpisode($stationId, $podcastId, $id, $apiPodcastEpisode): \AzuraCast\Model\ApiStatus
+editEpisode($station_id, $podcast_id, $id, $api_podcast_episode): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -510,13 +510,13 @@ $apiInstance = new AzuraCast\Api\StationsPodcastsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
-$podcastId = 'podcastId_example'; // string | Podcast ID
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$podcast_id = 'podcast_id_example'; // string | Podcast ID
 $id = 'id_example'; // string | Podcast Episode ID
-$apiPodcastEpisode = new \AzuraCast\Model\ApiPodcastEpisode(); // \AzuraCast\Model\ApiPodcastEpisode
+$api_podcast_episode = new \AzuraCast\Model\ApiPodcastEpisode(); // \AzuraCast\Model\ApiPodcastEpisode
 
 try {
-    $result = $apiInstance->editEpisode($stationId, $podcastId, $id, $apiPodcastEpisode);
+    $result = $apiInstance->editEpisode($station_id, $podcast_id, $id, $api_podcast_episode);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsPodcastsApi->editEpisode: ', $e->getMessage(), PHP_EOL;
@@ -527,10 +527,10 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
-| **podcastId** | **string**| Podcast ID | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **podcast_id** | **string**| Podcast ID | |
 | **id** | **string**| Podcast Episode ID | |
-| **apiPodcastEpisode** | [**\AzuraCast\Model\ApiPodcastEpisode**](../Model/ApiPodcastEpisode.md)|  | [optional] |
+| **api_podcast_episode** | [**\AzuraCast\Model\ApiPodcastEpisode**](../Model/ApiPodcastEpisode.md)|  | [optional] |
 
 ### Return type
 
@@ -552,7 +552,7 @@ try {
 ## `editPodcast()`
 
 ```php
-editPodcast($stationId, $id, $apiPodcast): \AzuraCast\Model\ApiStatus
+editPodcast($station_id, $id, $api_podcast): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -578,12 +578,12 @@ $apiInstance = new AzuraCast\Api\StationsPodcastsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 'id_example'; // string | Podcast ID
-$apiPodcast = new \AzuraCast\Model\ApiPodcast(); // \AzuraCast\Model\ApiPodcast
+$api_podcast = new \AzuraCast\Model\ApiPodcast(); // \AzuraCast\Model\ApiPodcast
 
 try {
-    $result = $apiInstance->editPodcast($stationId, $id, $apiPodcast);
+    $result = $apiInstance->editPodcast($station_id, $id, $api_podcast);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsPodcastsApi->editPodcast: ', $e->getMessage(), PHP_EOL;
@@ -594,9 +594,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **string**| Podcast ID | |
-| **apiPodcast** | [**\AzuraCast\Model\ApiPodcast**](../Model/ApiPodcast.md)|  | [optional] |
+| **api_podcast** | [**\AzuraCast\Model\ApiPodcast**](../Model/ApiPodcast.md)|  | [optional] |
 
 ### Return type
 
@@ -618,7 +618,7 @@ try {
 ## `getEpisode()`
 
 ```php
-getEpisode($stationId, $podcastId, $id): \AzuraCast\Model\ApiPodcastEpisode
+getEpisode($station_id, $podcast_id, $id): \AzuraCast\Model\ApiPodcastEpisode
 ```
 
 
@@ -644,12 +644,12 @@ $apiInstance = new AzuraCast\Api\StationsPodcastsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
-$podcastId = 'podcastId_example'; // string | Podcast ID
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$podcast_id = 'podcast_id_example'; // string | Podcast ID
 $id = 'id_example'; // string | Podcast Episode ID
 
 try {
-    $result = $apiInstance->getEpisode($stationId, $podcastId, $id);
+    $result = $apiInstance->getEpisode($station_id, $podcast_id, $id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsPodcastsApi->getEpisode: ', $e->getMessage(), PHP_EOL;
@@ -660,8 +660,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
-| **podcastId** | **string**| Podcast ID | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **podcast_id** | **string**| Podcast ID | |
 | **id** | **string**| Podcast Episode ID | |
 
 ### Return type
@@ -684,7 +684,7 @@ try {
 ## `getEpisodes()`
 
 ```php
-getEpisodes($stationId, $podcastId): \AzuraCast\Model\ApiPodcastEpisode[]
+getEpisodes($station_id, $podcast_id): \AzuraCast\Model\ApiPodcastEpisode[]
 ```
 
 
@@ -710,11 +710,11 @@ $apiInstance = new AzuraCast\Api\StationsPodcastsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
-$podcastId = 'podcastId_example'; // string | Podcast ID
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$podcast_id = 'podcast_id_example'; // string | Podcast ID
 
 try {
-    $result = $apiInstance->getEpisodes($stationId, $podcastId);
+    $result = $apiInstance->getEpisodes($station_id, $podcast_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsPodcastsApi->getEpisodes: ', $e->getMessage(), PHP_EOL;
@@ -725,8 +725,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
-| **podcastId** | **string**| Podcast ID | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **podcast_id** | **string**| Podcast ID | |
 
 ### Return type
 
@@ -748,7 +748,7 @@ try {
 ## `getPodcast()`
 
 ```php
-getPodcast($stationId, $id): \AzuraCast\Model\ApiPodcast
+getPodcast($station_id, $id): \AzuraCast\Model\ApiPodcast
 ```
 
 
@@ -774,11 +774,11 @@ $apiInstance = new AzuraCast\Api\StationsPodcastsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 'id_example'; // string | Podcast ID
 
 try {
-    $result = $apiInstance->getPodcast($stationId, $id);
+    $result = $apiInstance->getPodcast($station_id, $id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsPodcastsApi->getPodcast: ', $e->getMessage(), PHP_EOL;
@@ -789,7 +789,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **string**| Podcast ID | |
 
 ### Return type
@@ -812,7 +812,7 @@ try {
 ## `getPodcastArt()`
 
 ```php
-getPodcastArt($stationId, $podcastId)
+getPodcastArt($station_id, $podcast_id)
 ```
 
 
@@ -838,11 +838,11 @@ $apiInstance = new AzuraCast\Api\StationsPodcastsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
-$podcastId = 'podcastId_example'; // string | Podcast ID
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$podcast_id = 'podcast_id_example'; // string | Podcast ID
 
 try {
-    $apiInstance->getPodcastArt($stationId, $podcastId);
+    $apiInstance->getPodcastArt($station_id, $podcast_id);
 } catch (Exception $e) {
     echo 'Exception when calling StationsPodcastsApi->getPodcastArt: ', $e->getMessage(), PHP_EOL;
 }
@@ -852,8 +852,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
-| **podcastId** | **string**| Podcast ID | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **podcast_id** | **string**| Podcast ID | |
 
 ### Return type
 
@@ -875,7 +875,7 @@ void (empty response body)
 ## `getPodcastEpisodeArt()`
 
 ```php
-getPodcastEpisodeArt($stationId, $podcastId, $episodeId)
+getPodcastEpisodeArt($station_id, $podcast_id, $episode_id)
 ```
 
 
@@ -901,12 +901,12 @@ $apiInstance = new AzuraCast\Api\StationsPodcastsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
-$podcastId = 'podcastId_example'; // string | Podcast ID
-$episodeId = 'episodeId_example'; // string | Podcast Episode ID
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$podcast_id = 'podcast_id_example'; // string | Podcast ID
+$episode_id = 'episode_id_example'; // string | Podcast Episode ID
 
 try {
-    $apiInstance->getPodcastEpisodeArt($stationId, $podcastId, $episodeId);
+    $apiInstance->getPodcastEpisodeArt($station_id, $podcast_id, $episode_id);
 } catch (Exception $e) {
     echo 'Exception when calling StationsPodcastsApi->getPodcastEpisodeArt: ', $e->getMessage(), PHP_EOL;
 }
@@ -916,9 +916,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
-| **podcastId** | **string**| Podcast ID | |
-| **episodeId** | **string**| Podcast Episode ID | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **podcast_id** | **string**| Podcast ID | |
+| **episode_id** | **string**| Podcast Episode ID | |
 
 ### Return type
 
@@ -940,7 +940,7 @@ void (empty response body)
 ## `getPodcastEpisodeMedia()`
 
 ```php
-getPodcastEpisodeMedia($stationId, $podcastId, $episodeId)
+getPodcastEpisodeMedia($station_id, $podcast_id, $episode_id)
 ```
 
 
@@ -966,12 +966,12 @@ $apiInstance = new AzuraCast\Api\StationsPodcastsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
-$podcastId = 'podcastId_example'; // string | Podcast ID
-$episodeId = 'episodeId_example'; // string | Podcast Episode ID
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$podcast_id = 'podcast_id_example'; // string | Podcast ID
+$episode_id = 'episode_id_example'; // string | Podcast Episode ID
 
 try {
-    $apiInstance->getPodcastEpisodeMedia($stationId, $podcastId, $episodeId);
+    $apiInstance->getPodcastEpisodeMedia($station_id, $podcast_id, $episode_id);
 } catch (Exception $e) {
     echo 'Exception when calling StationsPodcastsApi->getPodcastEpisodeMedia: ', $e->getMessage(), PHP_EOL;
 }
@@ -981,9 +981,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
-| **podcastId** | **string**| Podcast ID | |
-| **episodeId** | **string**| Podcast Episode ID | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **podcast_id** | **string**| Podcast ID | |
+| **episode_id** | **string**| Podcast Episode ID | |
 
 ### Return type
 
@@ -1005,7 +1005,7 @@ void (empty response body)
 ## `getPodcasts()`
 
 ```php
-getPodcasts($stationId): \AzuraCast\Model\ApiPodcast[]
+getPodcasts($station_id): \AzuraCast\Model\ApiPodcast[]
 ```
 
 
@@ -1031,10 +1031,10 @@ $apiInstance = new AzuraCast\Api\StationsPodcastsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 
 try {
-    $result = $apiInstance->getPodcasts($stationId);
+    $result = $apiInstance->getPodcasts($station_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsPodcastsApi->getPodcasts: ', $e->getMessage(), PHP_EOL;
@@ -1045,7 +1045,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 
 ### Return type
 
@@ -1067,7 +1067,7 @@ try {
 ## `postPodcastArt()`
 
 ```php
-postPodcastArt($stationId, $podcastId): \AzuraCast\Model\ApiStatus
+postPodcastArt($station_id, $podcast_id): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -1093,11 +1093,11 @@ $apiInstance = new AzuraCast\Api\StationsPodcastsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
-$podcastId = 'podcastId_example'; // string | Podcast ID
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$podcast_id = 'podcast_id_example'; // string | Podcast ID
 
 try {
-    $result = $apiInstance->postPodcastArt($stationId, $podcastId);
+    $result = $apiInstance->postPodcastArt($station_id, $podcast_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsPodcastsApi->postPodcastArt: ', $e->getMessage(), PHP_EOL;
@@ -1108,8 +1108,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
-| **podcastId** | **string**| Podcast ID | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **podcast_id** | **string**| Podcast ID | |
 
 ### Return type
 
@@ -1131,7 +1131,7 @@ try {
 ## `postPodcastEpisodeArt()`
 
 ```php
-postPodcastEpisodeArt($stationId, $podcastId, $episodeId): \AzuraCast\Model\ApiStatus
+postPodcastEpisodeArt($station_id, $podcast_id, $episode_id): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -1157,12 +1157,12 @@ $apiInstance = new AzuraCast\Api\StationsPodcastsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
-$podcastId = 'podcastId_example'; // string | Podcast ID
-$episodeId = 'episodeId_example'; // string | Podcast Episode ID
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$podcast_id = 'podcast_id_example'; // string | Podcast ID
+$episode_id = 'episode_id_example'; // string | Podcast Episode ID
 
 try {
-    $result = $apiInstance->postPodcastEpisodeArt($stationId, $podcastId, $episodeId);
+    $result = $apiInstance->postPodcastEpisodeArt($station_id, $podcast_id, $episode_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsPodcastsApi->postPodcastEpisodeArt: ', $e->getMessage(), PHP_EOL;
@@ -1173,9 +1173,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
-| **podcastId** | **string**| Podcast ID | |
-| **episodeId** | **string**| Podcast Episode ID | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **podcast_id** | **string**| Podcast ID | |
+| **episode_id** | **string**| Podcast Episode ID | |
 
 ### Return type
 
@@ -1197,7 +1197,7 @@ try {
 ## `postPodcastEpisodeMedia()`
 
 ```php
-postPodcastEpisodeMedia($stationId, $podcastId, $episodeId): \AzuraCast\Model\ApiStatus
+postPodcastEpisodeMedia($station_id, $podcast_id, $episode_id): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -1223,12 +1223,12 @@ $apiInstance = new AzuraCast\Api\StationsPodcastsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
-$podcastId = 'podcastId_example'; // string | Podcast ID
-$episodeId = 'episodeId_example'; // string | Podcast Episode ID
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$podcast_id = 'podcast_id_example'; // string | Podcast ID
+$episode_id = 'episode_id_example'; // string | Podcast Episode ID
 
 try {
-    $result = $apiInstance->postPodcastEpisodeMedia($stationId, $podcastId, $episodeId);
+    $result = $apiInstance->postPodcastEpisodeMedia($station_id, $podcast_id, $episode_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsPodcastsApi->postPodcastEpisodeMedia: ', $e->getMessage(), PHP_EOL;
@@ -1239,9 +1239,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
-| **podcastId** | **string**| Podcast ID | |
-| **episodeId** | **string**| Podcast Episode ID | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **podcast_id** | **string**| Podcast ID | |
+| **episode_id** | **string**| Podcast Episode ID | |
 
 ### Return type
 

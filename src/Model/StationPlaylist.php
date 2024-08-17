@@ -62,20 +62,20 @@ class StationPlaylist implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'mixed',
         'source' => 'mixed',
         'order' => 'mixed',
-        'remoteUrl' => 'string',
-        'remoteType' => 'mixed',
-        'remoteBuffer' => 'int',
-        'isEnabled' => 'bool',
-        'isJingle' => 'bool',
-        'playPerSongs' => 'int',
-        'playPerMinutes' => 'int',
-        'playPerHourMinute' => 'int',
+        'remote_url' => 'string',
+        'remote_type' => 'mixed',
+        'remote_buffer' => 'int',
+        'is_enabled' => 'bool',
+        'is_jingle' => 'bool',
+        'play_per_songs' => 'int',
+        'play_per_minutes' => 'int',
+        'play_per_hour_minute' => 'int',
         'weight' => 'int',
-        'includeInRequests' => 'bool',
-        'includeInOnDemand' => 'bool',
-        'backendOptions' => 'string',
-        'avoidDuplicates' => 'bool',
-        'scheduleItems' => 'mixed[]',
+        'include_in_requests' => 'bool',
+        'include_in_on_demand' => 'bool',
+        'backend_options' => 'string',
+        'avoid_duplicates' => 'bool',
+        'schedule_items' => 'mixed[]',
         'podcasts' => 'mixed[]'
     ];
 
@@ -92,20 +92,20 @@ class StationPlaylist implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => null,
         'source' => null,
         'order' => null,
-        'remoteUrl' => null,
-        'remoteType' => null,
-        'remoteBuffer' => null,
-        'isEnabled' => null,
-        'isJingle' => null,
-        'playPerSongs' => null,
-        'playPerMinutes' => null,
-        'playPerHourMinute' => null,
+        'remote_url' => null,
+        'remote_type' => null,
+        'remote_buffer' => null,
+        'is_enabled' => null,
+        'is_jingle' => null,
+        'play_per_songs' => null,
+        'play_per_minutes' => null,
+        'play_per_hour_minute' => null,
         'weight' => null,
-        'includeInRequests' => null,
-        'includeInOnDemand' => null,
-        'backendOptions' => null,
-        'avoidDuplicates' => null,
-        'scheduleItems' => null,
+        'include_in_requests' => null,
+        'include_in_on_demand' => null,
+        'backend_options' => null,
+        'avoid_duplicates' => null,
+        'schedule_items' => null,
         'podcasts' => null
     ];
 
@@ -120,20 +120,20 @@ class StationPlaylist implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => true,
         'source' => true,
         'order' => true,
-        'remoteUrl' => true,
-        'remoteType' => true,
-        'remoteBuffer' => false,
-        'isEnabled' => false,
-        'isJingle' => false,
-        'playPerSongs' => false,
-        'playPerMinutes' => false,
-        'playPerHourMinute' => false,
+        'remote_url' => true,
+        'remote_type' => true,
+        'remote_buffer' => false,
+        'is_enabled' => false,
+        'is_jingle' => false,
+        'play_per_songs' => false,
+        'play_per_minutes' => false,
+        'play_per_hour_minute' => false,
         'weight' => false,
-        'includeInRequests' => false,
-        'includeInOnDemand' => false,
-        'backendOptions' => true,
-        'avoidDuplicates' => false,
-        'scheduleItems' => false,
+        'include_in_requests' => false,
+        'include_in_on_demand' => false,
+        'backend_options' => true,
+        'avoid_duplicates' => false,
+        'schedule_items' => false,
         'podcasts' => false
     ];
 
@@ -228,20 +228,20 @@ class StationPlaylist implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'type',
         'source' => 'source',
         'order' => 'order',
-        'remoteUrl' => 'remote_url',
-        'remoteType' => 'remote_type',
-        'remoteBuffer' => 'remote_buffer',
-        'isEnabled' => 'is_enabled',
-        'isJingle' => 'is_jingle',
-        'playPerSongs' => 'play_per_songs',
-        'playPerMinutes' => 'play_per_minutes',
-        'playPerHourMinute' => 'play_per_hour_minute',
+        'remote_url' => 'remote_url',
+        'remote_type' => 'remote_type',
+        'remote_buffer' => 'remote_buffer',
+        'is_enabled' => 'is_enabled',
+        'is_jingle' => 'is_jingle',
+        'play_per_songs' => 'play_per_songs',
+        'play_per_minutes' => 'play_per_minutes',
+        'play_per_hour_minute' => 'play_per_hour_minute',
         'weight' => 'weight',
-        'includeInRequests' => 'include_in_requests',
-        'includeInOnDemand' => 'include_in_on_demand',
-        'backendOptions' => 'backend_options',
-        'avoidDuplicates' => 'avoid_duplicates',
-        'scheduleItems' => 'schedule_items',
+        'include_in_requests' => 'include_in_requests',
+        'include_in_on_demand' => 'include_in_on_demand',
+        'backend_options' => 'backend_options',
+        'avoid_duplicates' => 'avoid_duplicates',
+        'schedule_items' => 'schedule_items',
         'podcasts' => 'podcasts'
     ];
 
@@ -256,20 +256,20 @@ class StationPlaylist implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'setType',
         'source' => 'setSource',
         'order' => 'setOrder',
-        'remoteUrl' => 'setRemoteUrl',
-        'remoteType' => 'setRemoteType',
-        'remoteBuffer' => 'setRemoteBuffer',
-        'isEnabled' => 'setIsEnabled',
-        'isJingle' => 'setIsJingle',
-        'playPerSongs' => 'setPlayPerSongs',
-        'playPerMinutes' => 'setPlayPerMinutes',
-        'playPerHourMinute' => 'setPlayPerHourMinute',
+        'remote_url' => 'setRemoteUrl',
+        'remote_type' => 'setRemoteType',
+        'remote_buffer' => 'setRemoteBuffer',
+        'is_enabled' => 'setIsEnabled',
+        'is_jingle' => 'setIsJingle',
+        'play_per_songs' => 'setPlayPerSongs',
+        'play_per_minutes' => 'setPlayPerMinutes',
+        'play_per_hour_minute' => 'setPlayPerHourMinute',
         'weight' => 'setWeight',
-        'includeInRequests' => 'setIncludeInRequests',
-        'includeInOnDemand' => 'setIncludeInOnDemand',
-        'backendOptions' => 'setBackendOptions',
-        'avoidDuplicates' => 'setAvoidDuplicates',
-        'scheduleItems' => 'setScheduleItems',
+        'include_in_requests' => 'setIncludeInRequests',
+        'include_in_on_demand' => 'setIncludeInOnDemand',
+        'backend_options' => 'setBackendOptions',
+        'avoid_duplicates' => 'setAvoidDuplicates',
+        'schedule_items' => 'setScheduleItems',
         'podcasts' => 'setPodcasts'
     ];
 
@@ -284,20 +284,20 @@ class StationPlaylist implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'getType',
         'source' => 'getSource',
         'order' => 'getOrder',
-        'remoteUrl' => 'getRemoteUrl',
-        'remoteType' => 'getRemoteType',
-        'remoteBuffer' => 'getRemoteBuffer',
-        'isEnabled' => 'getIsEnabled',
-        'isJingle' => 'getIsJingle',
-        'playPerSongs' => 'getPlayPerSongs',
-        'playPerMinutes' => 'getPlayPerMinutes',
-        'playPerHourMinute' => 'getPlayPerHourMinute',
+        'remote_url' => 'getRemoteUrl',
+        'remote_type' => 'getRemoteType',
+        'remote_buffer' => 'getRemoteBuffer',
+        'is_enabled' => 'getIsEnabled',
+        'is_jingle' => 'getIsJingle',
+        'play_per_songs' => 'getPlayPerSongs',
+        'play_per_minutes' => 'getPlayPerMinutes',
+        'play_per_hour_minute' => 'getPlayPerHourMinute',
         'weight' => 'getWeight',
-        'includeInRequests' => 'getIncludeInRequests',
-        'includeInOnDemand' => 'getIncludeInOnDemand',
-        'backendOptions' => 'getBackendOptions',
-        'avoidDuplicates' => 'getAvoidDuplicates',
-        'scheduleItems' => 'getScheduleItems',
+        'include_in_requests' => 'getIncludeInRequests',
+        'include_in_on_demand' => 'getIncludeInOnDemand',
+        'backend_options' => 'getBackendOptions',
+        'avoid_duplicates' => 'getAvoidDuplicates',
+        'schedule_items' => 'getScheduleItems',
         'podcasts' => 'getPodcasts'
     ];
 
@@ -363,20 +363,20 @@ class StationPlaylist implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('source', $data ?? [], null);
         $this->setIfExists('order', $data ?? [], null);
-        $this->setIfExists('remoteUrl', $data ?? [], null);
-        $this->setIfExists('remoteType', $data ?? [], null);
-        $this->setIfExists('remoteBuffer', $data ?? [], null);
-        $this->setIfExists('isEnabled', $data ?? [], null);
-        $this->setIfExists('isJingle', $data ?? [], null);
-        $this->setIfExists('playPerSongs', $data ?? [], null);
-        $this->setIfExists('playPerMinutes', $data ?? [], null);
-        $this->setIfExists('playPerHourMinute', $data ?? [], null);
+        $this->setIfExists('remote_url', $data ?? [], null);
+        $this->setIfExists('remote_type', $data ?? [], null);
+        $this->setIfExists('remote_buffer', $data ?? [], null);
+        $this->setIfExists('is_enabled', $data ?? [], null);
+        $this->setIfExists('is_jingle', $data ?? [], null);
+        $this->setIfExists('play_per_songs', $data ?? [], null);
+        $this->setIfExists('play_per_minutes', $data ?? [], null);
+        $this->setIfExists('play_per_hour_minute', $data ?? [], null);
         $this->setIfExists('weight', $data ?? [], null);
-        $this->setIfExists('includeInRequests', $data ?? [], null);
-        $this->setIfExists('includeInOnDemand', $data ?? [], null);
-        $this->setIfExists('backendOptions', $data ?? [], null);
-        $this->setIfExists('avoidDuplicates', $data ?? [], null);
-        $this->setIfExists('scheduleItems', $data ?? [], null);
+        $this->setIfExists('include_in_requests', $data ?? [], null);
+        $this->setIfExists('include_in_on_demand', $data ?? [], null);
+        $this->setIfExists('backend_options', $data ?? [], null);
+        $this->setIfExists('avoid_duplicates', $data ?? [], null);
+        $this->setIfExists('schedule_items', $data ?? [], null);
         $this->setIfExists('podcasts', $data ?? [], null);
     }
 
@@ -586,231 +586,231 @@ class StationPlaylist implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets remoteUrl
+     * Gets remote_url
      *
      * @return string|null
      */
     public function getRemoteUrl()
     {
-        return $this->container['remoteUrl'];
+        return $this->container['remote_url'];
     }
 
     /**
-     * Sets remoteUrl
+     * Sets remote_url
      *
-     * @param string|null $remoteUrl remoteUrl
+     * @param string|null $remote_url remote_url
      *
      * @return self
      */
-    public function setRemoteUrl($remoteUrl)
+    public function setRemoteUrl($remote_url)
     {
-        if (is_null($remoteUrl)) {
-            array_push($this->openAPINullablesSetToNull, 'remoteUrl');
+        if (is_null($remote_url)) {
+            array_push($this->openAPINullablesSetToNull, 'remote_url');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('remoteUrl', $nullablesSetToNull);
+            $index = array_search('remote_url', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['remoteUrl'] = $remoteUrl;
+        $this->container['remote_url'] = $remote_url;
 
         return $this;
     }
 
     /**
-     * Gets remoteType
+     * Gets remote_type
      *
      * @return mixed|null
      */
     public function getRemoteType()
     {
-        return $this->container['remoteType'];
+        return $this->container['remote_type'];
     }
 
     /**
-     * Sets remoteType
+     * Sets remote_type
      *
-     * @param mixed|null $remoteType remoteType
+     * @param mixed|null $remote_type remote_type
      *
      * @return self
      */
-    public function setRemoteType($remoteType)
+    public function setRemoteType($remote_type)
     {
-        if (is_null($remoteType)) {
-            array_push($this->openAPINullablesSetToNull, 'remoteType');
+        if (is_null($remote_type)) {
+            array_push($this->openAPINullablesSetToNull, 'remote_type');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('remoteType', $nullablesSetToNull);
+            $index = array_search('remote_type', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['remoteType'] = $remoteType;
+        $this->container['remote_type'] = $remote_type;
 
         return $this;
     }
 
     /**
-     * Gets remoteBuffer
+     * Gets remote_buffer
      *
      * @return int|null
      */
     public function getRemoteBuffer()
     {
-        return $this->container['remoteBuffer'];
+        return $this->container['remote_buffer'];
     }
 
     /**
-     * Sets remoteBuffer
+     * Sets remote_buffer
      *
-     * @param int|null $remoteBuffer The total time (in seconds) that Liquidsoap should buffer remote URL streams.
+     * @param int|null $remote_buffer The total time (in seconds) that Liquidsoap should buffer remote URL streams.
      *
      * @return self
      */
-    public function setRemoteBuffer($remoteBuffer)
+    public function setRemoteBuffer($remote_buffer)
     {
-        if (is_null($remoteBuffer)) {
-            throw new \InvalidArgumentException('non-nullable remoteBuffer cannot be null');
+        if (is_null($remote_buffer)) {
+            throw new \InvalidArgumentException('non-nullable remote_buffer cannot be null');
         }
-        $this->container['remoteBuffer'] = $remoteBuffer;
+        $this->container['remote_buffer'] = $remote_buffer;
 
         return $this;
     }
 
     /**
-     * Gets isEnabled
+     * Gets is_enabled
      *
      * @return bool|null
      */
     public function getIsEnabled()
     {
-        return $this->container['isEnabled'];
+        return $this->container['is_enabled'];
     }
 
     /**
-     * Sets isEnabled
+     * Sets is_enabled
      *
-     * @param bool|null $isEnabled isEnabled
+     * @param bool|null $is_enabled is_enabled
      *
      * @return self
      */
-    public function setIsEnabled($isEnabled)
+    public function setIsEnabled($is_enabled)
     {
-        if (is_null($isEnabled)) {
-            throw new \InvalidArgumentException('non-nullable isEnabled cannot be null');
+        if (is_null($is_enabled)) {
+            throw new \InvalidArgumentException('non-nullable is_enabled cannot be null');
         }
-        $this->container['isEnabled'] = $isEnabled;
+        $this->container['is_enabled'] = $is_enabled;
 
         return $this;
     }
 
     /**
-     * Gets isJingle
+     * Gets is_jingle
      *
      * @return bool|null
      */
     public function getIsJingle()
     {
-        return $this->container['isJingle'];
+        return $this->container['is_jingle'];
     }
 
     /**
-     * Sets isJingle
+     * Sets is_jingle
      *
-     * @param bool|null $isJingle If yes, do not send jingle metadata to AutoDJ or trigger web hooks.
+     * @param bool|null $is_jingle If yes, do not send jingle metadata to AutoDJ or trigger web hooks.
      *
      * @return self
      */
-    public function setIsJingle($isJingle)
+    public function setIsJingle($is_jingle)
     {
-        if (is_null($isJingle)) {
-            throw new \InvalidArgumentException('non-nullable isJingle cannot be null');
+        if (is_null($is_jingle)) {
+            throw new \InvalidArgumentException('non-nullable is_jingle cannot be null');
         }
-        $this->container['isJingle'] = $isJingle;
+        $this->container['is_jingle'] = $is_jingle;
 
         return $this;
     }
 
     /**
-     * Gets playPerSongs
+     * Gets play_per_songs
      *
      * @return int|null
      */
     public function getPlayPerSongs()
     {
-        return $this->container['playPerSongs'];
+        return $this->container['play_per_songs'];
     }
 
     /**
-     * Sets playPerSongs
+     * Sets play_per_songs
      *
-     * @param int|null $playPerSongs playPerSongs
+     * @param int|null $play_per_songs play_per_songs
      *
      * @return self
      */
-    public function setPlayPerSongs($playPerSongs)
+    public function setPlayPerSongs($play_per_songs)
     {
-        if (is_null($playPerSongs)) {
-            throw new \InvalidArgumentException('non-nullable playPerSongs cannot be null');
+        if (is_null($play_per_songs)) {
+            throw new \InvalidArgumentException('non-nullable play_per_songs cannot be null');
         }
-        $this->container['playPerSongs'] = $playPerSongs;
+        $this->container['play_per_songs'] = $play_per_songs;
 
         return $this;
     }
 
     /**
-     * Gets playPerMinutes
+     * Gets play_per_minutes
      *
      * @return int|null
      */
     public function getPlayPerMinutes()
     {
-        return $this->container['playPerMinutes'];
+        return $this->container['play_per_minutes'];
     }
 
     /**
-     * Sets playPerMinutes
+     * Sets play_per_minutes
      *
-     * @param int|null $playPerMinutes playPerMinutes
+     * @param int|null $play_per_minutes play_per_minutes
      *
      * @return self
      */
-    public function setPlayPerMinutes($playPerMinutes)
+    public function setPlayPerMinutes($play_per_minutes)
     {
-        if (is_null($playPerMinutes)) {
-            throw new \InvalidArgumentException('non-nullable playPerMinutes cannot be null');
+        if (is_null($play_per_minutes)) {
+            throw new \InvalidArgumentException('non-nullable play_per_minutes cannot be null');
         }
-        $this->container['playPerMinutes'] = $playPerMinutes;
+        $this->container['play_per_minutes'] = $play_per_minutes;
 
         return $this;
     }
 
     /**
-     * Gets playPerHourMinute
+     * Gets play_per_hour_minute
      *
      * @return int|null
      */
     public function getPlayPerHourMinute()
     {
-        return $this->container['playPerHourMinute'];
+        return $this->container['play_per_hour_minute'];
     }
 
     /**
-     * Sets playPerHourMinute
+     * Sets play_per_hour_minute
      *
-     * @param int|null $playPerHourMinute playPerHourMinute
+     * @param int|null $play_per_hour_minute play_per_hour_minute
      *
      * @return self
      */
-    public function setPlayPerHourMinute($playPerHourMinute)
+    public function setPlayPerHourMinute($play_per_hour_minute)
     {
-        if (is_null($playPerHourMinute)) {
-            throw new \InvalidArgumentException('non-nullable playPerHourMinute cannot be null');
+        if (is_null($play_per_hour_minute)) {
+            throw new \InvalidArgumentException('non-nullable play_per_hour_minute cannot be null');
         }
-        $this->container['playPerHourMinute'] = $playPerHourMinute;
+        $this->container['play_per_hour_minute'] = $play_per_hour_minute;
 
         return $this;
     }
@@ -843,143 +843,143 @@ class StationPlaylist implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets includeInRequests
+     * Gets include_in_requests
      *
      * @return bool|null
      */
     public function getIncludeInRequests()
     {
-        return $this->container['includeInRequests'];
+        return $this->container['include_in_requests'];
     }
 
     /**
-     * Sets includeInRequests
+     * Sets include_in_requests
      *
-     * @param bool|null $includeInRequests includeInRequests
+     * @param bool|null $include_in_requests include_in_requests
      *
      * @return self
      */
-    public function setIncludeInRequests($includeInRequests)
+    public function setIncludeInRequests($include_in_requests)
     {
-        if (is_null($includeInRequests)) {
-            throw new \InvalidArgumentException('non-nullable includeInRequests cannot be null');
+        if (is_null($include_in_requests)) {
+            throw new \InvalidArgumentException('non-nullable include_in_requests cannot be null');
         }
-        $this->container['includeInRequests'] = $includeInRequests;
+        $this->container['include_in_requests'] = $include_in_requests;
 
         return $this;
     }
 
     /**
-     * Gets includeInOnDemand
+     * Gets include_in_on_demand
      *
      * @return bool|null
      */
     public function getIncludeInOnDemand()
     {
-        return $this->container['includeInOnDemand'];
+        return $this->container['include_in_on_demand'];
     }
 
     /**
-     * Sets includeInOnDemand
+     * Sets include_in_on_demand
      *
-     * @param bool|null $includeInOnDemand Whether this playlist's media is included in 'on demand' download/streaming if enabled.
+     * @param bool|null $include_in_on_demand Whether this playlist's media is included in 'on demand' download/streaming if enabled.
      *
      * @return self
      */
-    public function setIncludeInOnDemand($includeInOnDemand)
+    public function setIncludeInOnDemand($include_in_on_demand)
     {
-        if (is_null($includeInOnDemand)) {
-            throw new \InvalidArgumentException('non-nullable includeInOnDemand cannot be null');
+        if (is_null($include_in_on_demand)) {
+            throw new \InvalidArgumentException('non-nullable include_in_on_demand cannot be null');
         }
-        $this->container['includeInOnDemand'] = $includeInOnDemand;
+        $this->container['include_in_on_demand'] = $include_in_on_demand;
 
         return $this;
     }
 
     /**
-     * Gets backendOptions
+     * Gets backend_options
      *
      * @return string|null
      */
     public function getBackendOptions()
     {
-        return $this->container['backendOptions'];
+        return $this->container['backend_options'];
     }
 
     /**
-     * Sets backendOptions
+     * Sets backend_options
      *
-     * @param string|null $backendOptions backendOptions
+     * @param string|null $backend_options backend_options
      *
      * @return self
      */
-    public function setBackendOptions($backendOptions)
+    public function setBackendOptions($backend_options)
     {
-        if (is_null($backendOptions)) {
-            array_push($this->openAPINullablesSetToNull, 'backendOptions');
+        if (is_null($backend_options)) {
+            array_push($this->openAPINullablesSetToNull, 'backend_options');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('backendOptions', $nullablesSetToNull);
+            $index = array_search('backend_options', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['backendOptions'] = $backendOptions;
+        $this->container['backend_options'] = $backend_options;
 
         return $this;
     }
 
     /**
-     * Gets avoidDuplicates
+     * Gets avoid_duplicates
      *
      * @return bool|null
      */
     public function getAvoidDuplicates()
     {
-        return $this->container['avoidDuplicates'];
+        return $this->container['avoid_duplicates'];
     }
 
     /**
-     * Sets avoidDuplicates
+     * Sets avoid_duplicates
      *
-     * @param bool|null $avoidDuplicates avoidDuplicates
+     * @param bool|null $avoid_duplicates avoid_duplicates
      *
      * @return self
      */
-    public function setAvoidDuplicates($avoidDuplicates)
+    public function setAvoidDuplicates($avoid_duplicates)
     {
-        if (is_null($avoidDuplicates)) {
-            throw new \InvalidArgumentException('non-nullable avoidDuplicates cannot be null');
+        if (is_null($avoid_duplicates)) {
+            throw new \InvalidArgumentException('non-nullable avoid_duplicates cannot be null');
         }
-        $this->container['avoidDuplicates'] = $avoidDuplicates;
+        $this->container['avoid_duplicates'] = $avoid_duplicates;
 
         return $this;
     }
 
     /**
-     * Gets scheduleItems
+     * Gets schedule_items
      *
      * @return mixed[]|null
      */
     public function getScheduleItems()
     {
-        return $this->container['scheduleItems'];
+        return $this->container['schedule_items'];
     }
 
     /**
-     * Sets scheduleItems
+     * Sets schedule_items
      *
-     * @param mixed[]|null $scheduleItems StationSchedule>
+     * @param mixed[]|null $schedule_items StationSchedule>
      *
      * @return self
      */
-    public function setScheduleItems($scheduleItems)
+    public function setScheduleItems($schedule_items)
     {
-        if (is_null($scheduleItems)) {
-            throw new \InvalidArgumentException('non-nullable scheduleItems cannot be null');
+        if (is_null($schedule_items)) {
+            throw new \InvalidArgumentException('non-nullable schedule_items cannot be null');
         }
-        $this->container['scheduleItems'] = $scheduleItems;
+        $this->container['schedule_items'] = $schedule_items;
 
         return $this;
     }

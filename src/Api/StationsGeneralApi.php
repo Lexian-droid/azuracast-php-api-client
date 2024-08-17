@@ -137,32 +137,32 @@ class StationsGeneralApi
     /**
      * Operation deleteStationFallback
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteStationFallback'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function deleteStationFallback($stationId, string $contentType = self::contentTypes['deleteStationFallback'][0])
+    public function deleteStationFallback($station_id, string $contentType = self::contentTypes['deleteStationFallback'][0])
     {
-        list($response) = $this->deleteStationFallbackWithHttpInfo($stationId, $contentType);
+        list($response) = $this->deleteStationFallbackWithHttpInfo($station_id, $contentType);
         return $response;
     }
 
     /**
      * Operation deleteStationFallbackWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteStationFallback'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteStationFallbackWithHttpInfo($stationId, string $contentType = self::contentTypes['deleteStationFallback'][0])
+    public function deleteStationFallbackWithHttpInfo($station_id, string $contentType = self::contentTypes['deleteStationFallback'][0])
     {
-        $request = $this->deleteStationFallbackRequest($stationId, $contentType);
+        $request = $this->deleteStationFallbackRequest($station_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -380,15 +380,15 @@ class StationsGeneralApi
     /**
      * Operation deleteStationFallbackAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteStationFallback'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteStationFallbackAsync($stationId, string $contentType = self::contentTypes['deleteStationFallback'][0])
+    public function deleteStationFallbackAsync($station_id, string $contentType = self::contentTypes['deleteStationFallback'][0])
     {
-        return $this->deleteStationFallbackAsyncWithHttpInfo($stationId, $contentType)
+        return $this->deleteStationFallbackAsyncWithHttpInfo($station_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -399,16 +399,16 @@ class StationsGeneralApi
     /**
      * Operation deleteStationFallbackAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteStationFallback'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteStationFallbackAsyncWithHttpInfo($stationId, string $contentType = self::contentTypes['deleteStationFallback'][0])
+    public function deleteStationFallbackAsyncWithHttpInfo($station_id, string $contentType = self::contentTypes['deleteStationFallback'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStatus';
-        $request = $this->deleteStationFallbackRequest($stationId, $contentType);
+        $request = $this->deleteStationFallbackRequest($station_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -449,19 +449,19 @@ class StationsGeneralApi
     /**
      * Create request for operation 'deleteStationFallback'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteStationFallback'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function deleteStationFallbackRequest($stationId, string $contentType = self::contentTypes['deleteStationFallback'][0])
+    public function deleteStationFallbackRequest($station_id, string $contentType = self::contentTypes['deleteStationFallback'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling deleteStationFallback'
+                'Missing the required parameter $station_id when calling deleteStationFallback'
             );
         }
 
@@ -476,10 +476,10 @@ class StationsGeneralApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -546,32 +546,32 @@ class StationsGeneralApi
     /**
      * Operation getStation
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStation'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiNowPlayingStation|\AzuraCast\Model\ApiError
      */
-    public function getStation($stationId, string $contentType = self::contentTypes['getStation'][0])
+    public function getStation($station_id, string $contentType = self::contentTypes['getStation'][0])
     {
-        list($response) = $this->getStationWithHttpInfo($stationId, $contentType);
+        list($response) = $this->getStationWithHttpInfo($station_id, $contentType);
         return $response;
     }
 
     /**
      * Operation getStationWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStation'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiNowPlayingStation|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getStationWithHttpInfo($stationId, string $contentType = self::contentTypes['getStation'][0])
+    public function getStationWithHttpInfo($station_id, string $contentType = self::contentTypes['getStation'][0])
     {
-        $request = $this->getStationRequest($stationId, $contentType);
+        $request = $this->getStationRequest($station_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -719,15 +719,15 @@ class StationsGeneralApi
     /**
      * Operation getStationAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStation'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStationAsync($stationId, string $contentType = self::contentTypes['getStation'][0])
+    public function getStationAsync($station_id, string $contentType = self::contentTypes['getStation'][0])
     {
-        return $this->getStationAsyncWithHttpInfo($stationId, $contentType)
+        return $this->getStationAsyncWithHttpInfo($station_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -738,16 +738,16 @@ class StationsGeneralApi
     /**
      * Operation getStationAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStation'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStationAsyncWithHttpInfo($stationId, string $contentType = self::contentTypes['getStation'][0])
+    public function getStationAsyncWithHttpInfo($station_id, string $contentType = self::contentTypes['getStation'][0])
     {
         $returnType = '\AzuraCast\Model\ApiNowPlayingStation';
-        $request = $this->getStationRequest($stationId, $contentType);
+        $request = $this->getStationRequest($station_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -788,19 +788,19 @@ class StationsGeneralApi
     /**
      * Create request for operation 'getStation'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStation'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getStationRequest($stationId, string $contentType = self::contentTypes['getStation'][0])
+    public function getStationRequest($station_id, string $contentType = self::contentTypes['getStation'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling getStation'
+                'Missing the required parameter $station_id when calling getStation'
             );
         }
 
@@ -815,10 +815,10 @@ class StationsGeneralApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -880,31 +880,31 @@ class StationsGeneralApi
     /**
      * Operation getStationFallback
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStationFallback'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function getStationFallback($stationId, string $contentType = self::contentTypes['getStationFallback'][0])
+    public function getStationFallback($station_id, string $contentType = self::contentTypes['getStationFallback'][0])
     {
-        $this->getStationFallbackWithHttpInfo($stationId, $contentType);
+        $this->getStationFallbackWithHttpInfo($station_id, $contentType);
     }
 
     /**
      * Operation getStationFallbackWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStationFallback'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getStationFallbackWithHttpInfo($stationId, string $contentType = self::contentTypes['getStationFallback'][0])
+    public function getStationFallbackWithHttpInfo($station_id, string $contentType = self::contentTypes['getStationFallback'][0])
     {
-        $request = $this->getStationFallbackRequest($stationId, $contentType);
+        $request = $this->getStationFallbackRequest($station_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -977,15 +977,15 @@ class StationsGeneralApi
     /**
      * Operation getStationFallbackAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStationFallback'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStationFallbackAsync($stationId, string $contentType = self::contentTypes['getStationFallback'][0])
+    public function getStationFallbackAsync($station_id, string $contentType = self::contentTypes['getStationFallback'][0])
     {
-        return $this->getStationFallbackAsyncWithHttpInfo($stationId, $contentType)
+        return $this->getStationFallbackAsyncWithHttpInfo($station_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -996,16 +996,16 @@ class StationsGeneralApi
     /**
      * Operation getStationFallbackAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStationFallback'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStationFallbackAsyncWithHttpInfo($stationId, string $contentType = self::contentTypes['getStationFallback'][0])
+    public function getStationFallbackAsyncWithHttpInfo($station_id, string $contentType = self::contentTypes['getStationFallback'][0])
     {
         $returnType = '';
-        $request = $this->getStationFallbackRequest($stationId, $contentType);
+        $request = $this->getStationFallbackRequest($station_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1033,19 +1033,19 @@ class StationsGeneralApi
     /**
      * Create request for operation 'getStationFallback'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStationFallback'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getStationFallbackRequest($stationId, string $contentType = self::contentTypes['getStationFallback'][0])
+    public function getStationFallbackRequest($station_id, string $contentType = self::contentTypes['getStationFallback'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling getStationFallback'
+                'Missing the required parameter $station_id when calling getStationFallback'
             );
         }
 
@@ -1060,10 +1060,10 @@ class StationsGeneralApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -1409,32 +1409,32 @@ class StationsGeneralApi
     /**
      * Operation postStationFallback
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStationFallback'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function postStationFallback($stationId, string $contentType = self::contentTypes['postStationFallback'][0])
+    public function postStationFallback($station_id, string $contentType = self::contentTypes['postStationFallback'][0])
     {
-        list($response) = $this->postStationFallbackWithHttpInfo($stationId, $contentType);
+        list($response) = $this->postStationFallbackWithHttpInfo($station_id, $contentType);
         return $response;
     }
 
     /**
      * Operation postStationFallbackWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStationFallback'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postStationFallbackWithHttpInfo($stationId, string $contentType = self::contentTypes['postStationFallback'][0])
+    public function postStationFallbackWithHttpInfo($station_id, string $contentType = self::contentTypes['postStationFallback'][0])
     {
-        $request = $this->postStationFallbackRequest($stationId, $contentType);
+        $request = $this->postStationFallbackRequest($station_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1652,15 +1652,15 @@ class StationsGeneralApi
     /**
      * Operation postStationFallbackAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStationFallback'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postStationFallbackAsync($stationId, string $contentType = self::contentTypes['postStationFallback'][0])
+    public function postStationFallbackAsync($station_id, string $contentType = self::contentTypes['postStationFallback'][0])
     {
-        return $this->postStationFallbackAsyncWithHttpInfo($stationId, $contentType)
+        return $this->postStationFallbackAsyncWithHttpInfo($station_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1671,16 +1671,16 @@ class StationsGeneralApi
     /**
      * Operation postStationFallbackAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStationFallback'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postStationFallbackAsyncWithHttpInfo($stationId, string $contentType = self::contentTypes['postStationFallback'][0])
+    public function postStationFallbackAsyncWithHttpInfo($station_id, string $contentType = self::contentTypes['postStationFallback'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStatus';
-        $request = $this->postStationFallbackRequest($stationId, $contentType);
+        $request = $this->postStationFallbackRequest($station_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1721,19 +1721,19 @@ class StationsGeneralApi
     /**
      * Create request for operation 'postStationFallback'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStationFallback'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function postStationFallbackRequest($stationId, string $contentType = self::contentTypes['postStationFallback'][0])
+    public function postStationFallbackRequest($station_id, string $contentType = self::contentTypes['postStationFallback'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling postStationFallback'
+                'Missing the required parameter $station_id when calling postStationFallback'
             );
         }
 
@@ -1748,10 +1748,10 @@ class StationsGeneralApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }

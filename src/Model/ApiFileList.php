@@ -59,7 +59,7 @@ class ApiFileList implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'links' => 'array<string,string>',
         'path' => 'string',
-        'pathShort' => 'string',
+        'path_short' => 'string',
         'text' => 'string',
         'type' => '\AzuraCast\Model\FileTypes',
         'timestamp' => 'int',
@@ -78,7 +78,7 @@ class ApiFileList implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'links' => null,
         'path' => null,
-        'pathShort' => null,
+        'path_short' => null,
         'text' => null,
         'type' => null,
         'timestamp' => null,
@@ -95,7 +95,7 @@ class ApiFileList implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'links' => false,
         'path' => false,
-        'pathShort' => false,
+        'path_short' => false,
         'text' => false,
         'type' => false,
         'timestamp' => false,
@@ -192,7 +192,7 @@ class ApiFileList implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'links' => 'links',
         'path' => 'path',
-        'pathShort' => 'path_short',
+        'path_short' => 'path_short',
         'text' => 'text',
         'type' => 'type',
         'timestamp' => 'timestamp',
@@ -209,7 +209,7 @@ class ApiFileList implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'links' => 'setLinks',
         'path' => 'setPath',
-        'pathShort' => 'setPathShort',
+        'path_short' => 'setPathShort',
         'text' => 'setText',
         'type' => 'setType',
         'timestamp' => 'setTimestamp',
@@ -226,7 +226,7 @@ class ApiFileList implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'links' => 'getLinks',
         'path' => 'getPath',
-        'pathShort' => 'getPathShort',
+        'path_short' => 'getPathShort',
         'text' => 'getText',
         'type' => 'getType',
         'timestamp' => 'getTimestamp',
@@ -294,7 +294,7 @@ class ApiFileList implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('links', $data ?? [], null);
         $this->setIfExists('path', $data ?? [], null);
-        $this->setIfExists('pathShort', $data ?? [], null);
+        $this->setIfExists('path_short', $data ?? [], null);
         $this->setIfExists('text', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('timestamp', $data ?? [], null);
@@ -400,28 +400,28 @@ class ApiFileList implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets pathShort
+     * Gets path_short
      *
      * @return string|null
      */
     public function getPathShort()
     {
-        return $this->container['pathShort'];
+        return $this->container['path_short'];
     }
 
     /**
-     * Sets pathShort
+     * Sets path_short
      *
-     * @param string|null $pathShort pathShort
+     * @param string|null $path_short path_short
      *
      * @return self
      */
-    public function setPathShort($pathShort)
+    public function setPathShort($path_short)
     {
-        if (is_null($pathShort)) {
-            throw new \InvalidArgumentException('non-nullable pathShort cannot be null');
+        if (is_null($path_short)) {
+            throw new \InvalidArgumentException('non-nullable path_short cannot be null');
         }
-        $this->container['pathShort'] = $pathShort;
+        $this->container['path_short'] = $path_short;
 
         return $this;
     }

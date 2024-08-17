@@ -14,7 +14,7 @@ All URIs are relative to https://demo.azuracast.com/api, except if the operation
 ## `addHlsStream()`
 
 ```php
-addHlsStream($stationId, $stationMount): \AzuraCast\Model\StationMount
+addHlsStream($station_id, $station_mount): \AzuraCast\Model\StationMount
 ```
 
 
@@ -40,11 +40,11 @@ $apiInstance = new AzuraCast\Api\StationsHLSStreamsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
-$stationMount = new \AzuraCast\Model\StationMount(); // \AzuraCast\Model\StationMount
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_mount = new \AzuraCast\Model\StationMount(); // \AzuraCast\Model\StationMount
 
 try {
-    $result = $apiInstance->addHlsStream($stationId, $stationMount);
+    $result = $apiInstance->addHlsStream($station_id, $station_mount);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsHLSStreamsApi->addHlsStream: ', $e->getMessage(), PHP_EOL;
@@ -55,8 +55,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
-| **stationMount** | [**\AzuraCast\Model\StationMount**](../Model/StationMount.md)|  | [optional] |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_mount** | [**\AzuraCast\Model\StationMount**](../Model/StationMount.md)|  | [optional] |
 
 ### Return type
 
@@ -78,7 +78,7 @@ try {
 ## `deleteHlsStream()`
 
 ```php
-deleteHlsStream($stationId, $id): \AzuraCast\Model\ApiStatus
+deleteHlsStream($station_id, $id): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -104,11 +104,11 @@ $apiInstance = new AzuraCast\Api\StationsHLSStreamsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 56; // int | HLS Stream ID
 
 try {
-    $result = $apiInstance->deleteHlsStream($stationId, $id);
+    $result = $apiInstance->deleteHlsStream($station_id, $id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsHLSStreamsApi->deleteHlsStream: ', $e->getMessage(), PHP_EOL;
@@ -119,7 +119,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **int**| HLS Stream ID | |
 
 ### Return type
@@ -142,7 +142,7 @@ try {
 ## `editHlsStream()`
 
 ```php
-editHlsStream($stationId, $id, $stationMount): \AzuraCast\Model\ApiStatus
+editHlsStream($station_id, $id, $station_mount): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -168,12 +168,12 @@ $apiInstance = new AzuraCast\Api\StationsHLSStreamsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 56; // int | HLS Stream ID
-$stationMount = new \AzuraCast\Model\StationMount(); // \AzuraCast\Model\StationMount
+$station_mount = new \AzuraCast\Model\StationMount(); // \AzuraCast\Model\StationMount
 
 try {
-    $result = $apiInstance->editHlsStream($stationId, $id, $stationMount);
+    $result = $apiInstance->editHlsStream($station_id, $id, $station_mount);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsHLSStreamsApi->editHlsStream: ', $e->getMessage(), PHP_EOL;
@@ -184,9 +184,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **int**| HLS Stream ID | |
-| **stationMount** | [**\AzuraCast\Model\StationMount**](../Model/StationMount.md)|  | [optional] |
+| **station_mount** | [**\AzuraCast\Model\StationMount**](../Model/StationMount.md)|  | [optional] |
 
 ### Return type
 
@@ -208,7 +208,7 @@ try {
 ## `getHlsStream()`
 
 ```php
-getHlsStream($stationId, $id): \AzuraCast\Model\StationMount
+getHlsStream($station_id, $id): \AzuraCast\Model\StationMount
 ```
 
 
@@ -234,11 +234,11 @@ $apiInstance = new AzuraCast\Api\StationsHLSStreamsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 56; // int | HLS Stream ID
 
 try {
-    $result = $apiInstance->getHlsStream($stationId, $id);
+    $result = $apiInstance->getHlsStream($station_id, $id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsHLSStreamsApi->getHlsStream: ', $e->getMessage(), PHP_EOL;
@@ -249,7 +249,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **int**| HLS Stream ID | |
 
 ### Return type
@@ -272,7 +272,7 @@ try {
 ## `getHlsStreams()`
 
 ```php
-getHlsStreams($stationId): \AzuraCast\Model\StationMount[]
+getHlsStreams($station_id): \AzuraCast\Model\StationMount[]
 ```
 
 
@@ -298,10 +298,10 @@ $apiInstance = new AzuraCast\Api\StationsHLSStreamsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 
 try {
-    $result = $apiInstance->getHlsStreams($stationId);
+    $result = $apiInstance->getHlsStreams($station_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsHLSStreamsApi->getHlsStreams: ', $e->getMessage(), PHP_EOL;
@@ -312,7 +312,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 
 ### Return type
 

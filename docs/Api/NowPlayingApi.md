@@ -64,7 +64,7 @@ No authorization required
 ## `getStationNowPlaying()`
 
 ```php
-getStationNowPlaying($stationId): \AzuraCast\Model\ApiNowPlaying
+getStationNowPlaying($station_id): \AzuraCast\Model\ApiNowPlaying
 ```
 
 
@@ -84,10 +84,10 @@ $apiInstance = new AzuraCast\Api\NowPlayingApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 
 try {
-    $result = $apiInstance->getStationNowPlaying($stationId);
+    $result = $apiInstance->getStationNowPlaying($station_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NowPlayingApi->getStationNowPlaying: ', $e->getMessage(), PHP_EOL;
@@ -98,7 +98,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 
 ### Return type
 

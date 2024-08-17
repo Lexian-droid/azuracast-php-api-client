@@ -66,17 +66,17 @@ class ApiStationMedia implements ModelInterface, ArrayAccess, \JsonSerializable
         'lyrics' => 'string',
         'links' => 'array<string,string>',
         'id' => 'int',
-        'uniqueId' => 'string',
-        'songId' => 'string',
+        'unique_id' => 'string',
+        'song_id' => 'string',
         'art' => 'string',
         'path' => 'string',
         'mtime' => 'int',
-        'uploadedAt' => 'int',
-        'artUpdatedAt' => 'int',
+        'uploaded_at' => 'int',
+        'art_updated_at' => 'int',
         'length' => 'float',
-        'lengthText' => 'string',
-        'customFields' => 'string[]',
-        'extraMetadata' => 'mixed[]',
+        'length_text' => 'string',
+        'custom_fields' => 'string[]',
+        'extra_metadata' => 'mixed[]',
         'playlists' => 'mixed[]'
     ];
 
@@ -97,17 +97,17 @@ class ApiStationMedia implements ModelInterface, ArrayAccess, \JsonSerializable
         'lyrics' => null,
         'links' => null,
         'id' => null,
-        'uniqueId' => null,
-        'songId' => null,
+        'unique_id' => null,
+        'song_id' => null,
         'art' => null,
         'path' => null,
         'mtime' => null,
-        'uploadedAt' => null,
-        'artUpdatedAt' => null,
+        'uploaded_at' => null,
+        'art_updated_at' => null,
         'length' => 'float',
-        'lengthText' => null,
-        'customFields' => null,
-        'extraMetadata' => null,
+        'length_text' => null,
+        'custom_fields' => null,
+        'extra_metadata' => null,
         'playlists' => null
     ];
 
@@ -126,17 +126,17 @@ class ApiStationMedia implements ModelInterface, ArrayAccess, \JsonSerializable
         'lyrics' => true,
         'links' => false,
         'id' => false,
-        'uniqueId' => false,
-        'songId' => false,
+        'unique_id' => false,
+        'song_id' => false,
         'art' => false,
         'path' => false,
         'mtime' => false,
-        'uploadedAt' => false,
-        'artUpdatedAt' => false,
+        'uploaded_at' => false,
+        'art_updated_at' => false,
         'length' => false,
-        'lengthText' => false,
-        'customFields' => false,
-        'extraMetadata' => false,
+        'length_text' => false,
+        'custom_fields' => false,
+        'extra_metadata' => false,
         'playlists' => false
     ];
 
@@ -235,17 +235,17 @@ class ApiStationMedia implements ModelInterface, ArrayAccess, \JsonSerializable
         'lyrics' => 'lyrics',
         'links' => 'links',
         'id' => 'id',
-        'uniqueId' => 'unique_id',
-        'songId' => 'song_id',
+        'unique_id' => 'unique_id',
+        'song_id' => 'song_id',
         'art' => 'art',
         'path' => 'path',
         'mtime' => 'mtime',
-        'uploadedAt' => 'uploaded_at',
-        'artUpdatedAt' => 'art_updated_at',
+        'uploaded_at' => 'uploaded_at',
+        'art_updated_at' => 'art_updated_at',
         'length' => 'length',
-        'lengthText' => 'length_text',
-        'customFields' => 'custom_fields',
-        'extraMetadata' => 'extra_metadata',
+        'length_text' => 'length_text',
+        'custom_fields' => 'custom_fields',
+        'extra_metadata' => 'extra_metadata',
         'playlists' => 'playlists'
     ];
 
@@ -264,17 +264,17 @@ class ApiStationMedia implements ModelInterface, ArrayAccess, \JsonSerializable
         'lyrics' => 'setLyrics',
         'links' => 'setLinks',
         'id' => 'setId',
-        'uniqueId' => 'setUniqueId',
-        'songId' => 'setSongId',
+        'unique_id' => 'setUniqueId',
+        'song_id' => 'setSongId',
         'art' => 'setArt',
         'path' => 'setPath',
         'mtime' => 'setMtime',
-        'uploadedAt' => 'setUploadedAt',
-        'artUpdatedAt' => 'setArtUpdatedAt',
+        'uploaded_at' => 'setUploadedAt',
+        'art_updated_at' => 'setArtUpdatedAt',
         'length' => 'setLength',
-        'lengthText' => 'setLengthText',
-        'customFields' => 'setCustomFields',
-        'extraMetadata' => 'setExtraMetadata',
+        'length_text' => 'setLengthText',
+        'custom_fields' => 'setCustomFields',
+        'extra_metadata' => 'setExtraMetadata',
         'playlists' => 'setPlaylists'
     ];
 
@@ -293,17 +293,17 @@ class ApiStationMedia implements ModelInterface, ArrayAccess, \JsonSerializable
         'lyrics' => 'getLyrics',
         'links' => 'getLinks',
         'id' => 'getId',
-        'uniqueId' => 'getUniqueId',
-        'songId' => 'getSongId',
+        'unique_id' => 'getUniqueId',
+        'song_id' => 'getSongId',
         'art' => 'getArt',
         'path' => 'getPath',
         'mtime' => 'getMtime',
-        'uploadedAt' => 'getUploadedAt',
-        'artUpdatedAt' => 'getArtUpdatedAt',
+        'uploaded_at' => 'getUploadedAt',
+        'art_updated_at' => 'getArtUpdatedAt',
         'length' => 'getLength',
-        'lengthText' => 'getLengthText',
-        'customFields' => 'getCustomFields',
-        'extraMetadata' => 'getExtraMetadata',
+        'length_text' => 'getLengthText',
+        'custom_fields' => 'getCustomFields',
+        'extra_metadata' => 'getExtraMetadata',
         'playlists' => 'getPlaylists'
     ];
 
@@ -373,17 +373,17 @@ class ApiStationMedia implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('lyrics', $data ?? [], null);
         $this->setIfExists('links', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('uniqueId', $data ?? [], null);
-        $this->setIfExists('songId', $data ?? [], null);
+        $this->setIfExists('unique_id', $data ?? [], null);
+        $this->setIfExists('song_id', $data ?? [], null);
         $this->setIfExists('art', $data ?? [], null);
         $this->setIfExists('path', $data ?? [], null);
         $this->setIfExists('mtime', $data ?? [], null);
-        $this->setIfExists('uploadedAt', $data ?? [], null);
-        $this->setIfExists('artUpdatedAt', $data ?? [], null);
+        $this->setIfExists('uploaded_at', $data ?? [], null);
+        $this->setIfExists('art_updated_at', $data ?? [], null);
         $this->setIfExists('length', $data ?? [], null);
-        $this->setIfExists('lengthText', $data ?? [], null);
-        $this->setIfExists('customFields', $data ?? [], null);
-        $this->setIfExists('extraMetadata', $data ?? [], null);
+        $this->setIfExists('length_text', $data ?? [], null);
+        $this->setIfExists('custom_fields', $data ?? [], null);
+        $this->setIfExists('extra_metadata', $data ?? [], null);
         $this->setIfExists('playlists', $data ?? [], null);
     }
 
@@ -715,55 +715,55 @@ class ApiStationMedia implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets uniqueId
+     * Gets unique_id
      *
      * @return string|null
      */
     public function getUniqueId()
     {
-        return $this->container['uniqueId'];
+        return $this->container['unique_id'];
     }
 
     /**
-     * Sets uniqueId
+     * Sets unique_id
      *
-     * @param string|null $uniqueId A unique identifier associated with this record.
+     * @param string|null $unique_id A unique identifier associated with this record.
      *
      * @return self
      */
-    public function setUniqueId($uniqueId)
+    public function setUniqueId($unique_id)
     {
-        if (is_null($uniqueId)) {
-            throw new \InvalidArgumentException('non-nullable uniqueId cannot be null');
+        if (is_null($unique_id)) {
+            throw new \InvalidArgumentException('non-nullable unique_id cannot be null');
         }
-        $this->container['uniqueId'] = $uniqueId;
+        $this->container['unique_id'] = $unique_id;
 
         return $this;
     }
 
     /**
-     * Gets songId
+     * Gets song_id
      *
      * @return string|null
      */
     public function getSongId()
     {
-        return $this->container['songId'];
+        return $this->container['song_id'];
     }
 
     /**
-     * Sets songId
+     * Sets song_id
      *
-     * @param string|null $songId The media file's 32-character unique song identifier hash
+     * @param string|null $song_id The media file's 32-character unique song identifier hash
      *
      * @return self
      */
-    public function setSongId($songId)
+    public function setSongId($song_id)
     {
-        if (is_null($songId)) {
-            throw new \InvalidArgumentException('non-nullable songId cannot be null');
+        if (is_null($song_id)) {
+            throw new \InvalidArgumentException('non-nullable song_id cannot be null');
         }
-        $this->container['songId'] = $songId;
+        $this->container['song_id'] = $song_id;
 
         return $this;
     }
@@ -850,55 +850,55 @@ class ApiStationMedia implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets uploadedAt
+     * Gets uploaded_at
      *
      * @return int|null
      */
     public function getUploadedAt()
     {
-        return $this->container['uploadedAt'];
+        return $this->container['uploaded_at'];
     }
 
     /**
-     * Sets uploadedAt
+     * Sets uploaded_at
      *
-     * @param int|null $uploadedAt The UNIX timestamp when the item was first imported into the database.
+     * @param int|null $uploaded_at The UNIX timestamp when the item was first imported into the database.
      *
      * @return self
      */
-    public function setUploadedAt($uploadedAt)
+    public function setUploadedAt($uploaded_at)
     {
-        if (is_null($uploadedAt)) {
-            throw new \InvalidArgumentException('non-nullable uploadedAt cannot be null');
+        if (is_null($uploaded_at)) {
+            throw new \InvalidArgumentException('non-nullable uploaded_at cannot be null');
         }
-        $this->container['uploadedAt'] = $uploadedAt;
+        $this->container['uploaded_at'] = $uploaded_at;
 
         return $this;
     }
 
     /**
-     * Gets artUpdatedAt
+     * Gets art_updated_at
      *
      * @return int|null
      */
     public function getArtUpdatedAt()
     {
-        return $this->container['artUpdatedAt'];
+        return $this->container['art_updated_at'];
     }
 
     /**
-     * Sets artUpdatedAt
+     * Sets art_updated_at
      *
-     * @param int|null $artUpdatedAt The latest time (UNIX timestamp) when album art was updated.
+     * @param int|null $art_updated_at The latest time (UNIX timestamp) when album art was updated.
      *
      * @return self
      */
-    public function setArtUpdatedAt($artUpdatedAt)
+    public function setArtUpdatedAt($art_updated_at)
     {
-        if (is_null($artUpdatedAt)) {
-            throw new \InvalidArgumentException('non-nullable artUpdatedAt cannot be null');
+        if (is_null($art_updated_at)) {
+            throw new \InvalidArgumentException('non-nullable art_updated_at cannot be null');
         }
-        $this->container['artUpdatedAt'] = $artUpdatedAt;
+        $this->container['art_updated_at'] = $art_updated_at;
 
         return $this;
     }
@@ -931,82 +931,82 @@ class ApiStationMedia implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets lengthText
+     * Gets length_text
      *
      * @return string|null
      */
     public function getLengthText()
     {
-        return $this->container['lengthText'];
+        return $this->container['length_text'];
     }
 
     /**
-     * Sets lengthText
+     * Sets length_text
      *
-     * @param string|null $lengthText The formatted song duration (in mm:ss format)
+     * @param string|null $length_text The formatted song duration (in mm:ss format)
      *
      * @return self
      */
-    public function setLengthText($lengthText)
+    public function setLengthText($length_text)
     {
-        if (is_null($lengthText)) {
-            throw new \InvalidArgumentException('non-nullable lengthText cannot be null');
+        if (is_null($length_text)) {
+            throw new \InvalidArgumentException('non-nullable length_text cannot be null');
         }
-        $this->container['lengthText'] = $lengthText;
+        $this->container['length_text'] = $length_text;
 
         return $this;
     }
 
     /**
-     * Gets customFields
+     * Gets custom_fields
      *
      * @return string[]|null
      */
     public function getCustomFields()
     {
-        return $this->container['customFields'];
+        return $this->container['custom_fields'];
     }
 
     /**
-     * Sets customFields
+     * Sets custom_fields
      *
-     * @param string[]|null $customFields customFields
+     * @param string[]|null $custom_fields custom_fields
      *
      * @return self
      */
-    public function setCustomFields($customFields)
+    public function setCustomFields($custom_fields)
     {
-        if (is_null($customFields)) {
-            throw new \InvalidArgumentException('non-nullable customFields cannot be null');
+        if (is_null($custom_fields)) {
+            throw new \InvalidArgumentException('non-nullable custom_fields cannot be null');
         }
-        $this->container['customFields'] = $customFields;
+        $this->container['custom_fields'] = $custom_fields;
 
         return $this;
     }
 
     /**
-     * Gets extraMetadata
+     * Gets extra_metadata
      *
      * @return mixed[]|null
      */
     public function getExtraMetadata()
     {
-        return $this->container['extraMetadata'];
+        return $this->container['extra_metadata'];
     }
 
     /**
-     * Sets extraMetadata
+     * Sets extra_metadata
      *
-     * @param mixed[]|null $extraMetadata extraMetadata
+     * @param mixed[]|null $extra_metadata extra_metadata
      *
      * @return self
      */
-    public function setExtraMetadata($extraMetadata)
+    public function setExtraMetadata($extra_metadata)
     {
-        if (is_null($extraMetadata)) {
-            throw new \InvalidArgumentException('non-nullable extraMetadata cannot be null');
+        if (is_null($extra_metadata)) {
+            throw new \InvalidArgumentException('non-nullable extra_metadata cannot be null');
         }
-        $this->container['extraMetadata'] = $extraMetadata;
+        $this->container['extra_metadata'] = $extra_metadata;
 
         return $this;
     }

@@ -407,32 +407,32 @@ class NowPlayingApi
     /**
      * Operation getStationNowPlaying
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStationNowPlaying'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiNowPlaying|\AzuraCast\Model\ApiError
      */
-    public function getStationNowPlaying($stationId, string $contentType = self::contentTypes['getStationNowPlaying'][0])
+    public function getStationNowPlaying($station_id, string $contentType = self::contentTypes['getStationNowPlaying'][0])
     {
-        list($response) = $this->getStationNowPlayingWithHttpInfo($stationId, $contentType);
+        list($response) = $this->getStationNowPlayingWithHttpInfo($station_id, $contentType);
         return $response;
     }
 
     /**
      * Operation getStationNowPlayingWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStationNowPlaying'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiNowPlaying|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getStationNowPlayingWithHttpInfo($stationId, string $contentType = self::contentTypes['getStationNowPlaying'][0])
+    public function getStationNowPlayingWithHttpInfo($station_id, string $contentType = self::contentTypes['getStationNowPlaying'][0])
     {
-        $request = $this->getStationNowPlayingRequest($stationId, $contentType);
+        $request = $this->getStationNowPlayingRequest($station_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -580,15 +580,15 @@ class NowPlayingApi
     /**
      * Operation getStationNowPlayingAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStationNowPlaying'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStationNowPlayingAsync($stationId, string $contentType = self::contentTypes['getStationNowPlaying'][0])
+    public function getStationNowPlayingAsync($station_id, string $contentType = self::contentTypes['getStationNowPlaying'][0])
     {
-        return $this->getStationNowPlayingAsyncWithHttpInfo($stationId, $contentType)
+        return $this->getStationNowPlayingAsyncWithHttpInfo($station_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -599,16 +599,16 @@ class NowPlayingApi
     /**
      * Operation getStationNowPlayingAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStationNowPlaying'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStationNowPlayingAsyncWithHttpInfo($stationId, string $contentType = self::contentTypes['getStationNowPlaying'][0])
+    public function getStationNowPlayingAsyncWithHttpInfo($station_id, string $contentType = self::contentTypes['getStationNowPlaying'][0])
     {
         $returnType = '\AzuraCast\Model\ApiNowPlaying';
-        $request = $this->getStationNowPlayingRequest($stationId, $contentType);
+        $request = $this->getStationNowPlayingRequest($station_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -649,19 +649,19 @@ class NowPlayingApi
     /**
      * Create request for operation 'getStationNowPlaying'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStationNowPlaying'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getStationNowPlayingRequest($stationId, string $contentType = self::contentTypes['getStationNowPlaying'][0])
+    public function getStationNowPlayingRequest($station_id, string $contentType = self::contentTypes['getStationNowPlaying'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling getStationNowPlaying'
+                'Missing the required parameter $station_id when calling getStationNowPlaying'
             );
         }
 
@@ -676,10 +676,10 @@ class NowPlayingApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }

@@ -57,58 +57,58 @@ class Settings implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'appUniqueIdentifier' => 'string',
-        'baseUrl' => 'string',
-        'instanceName' => 'string',
-        'preferBrowserUrl' => 'bool',
-        'useRadioProxy' => 'bool',
-        'historyKeepDays' => 'int',
-        'alwaysUseSsl' => 'bool',
-        'apiAccessControl' => 'string',
-        'enableStaticNowplaying' => 'bool',
+        'app_unique_identifier' => 'string',
+        'base_url' => 'string',
+        'instance_name' => 'string',
+        'prefer_browser_url' => 'bool',
+        'use_radio_proxy' => 'bool',
+        'history_keep_days' => 'int',
+        'always_use_ssl' => 'bool',
+        'api_access_control' => 'string',
+        'enable_static_nowplaying' => 'bool',
         'analytics' => 'mixed',
-        'checkForUpdates' => 'bool',
-        'updateResults' => 'mixed[]',
-        'updateLastRun' => 'int',
-        'publicTheme' => 'mixed',
-        'hideAlbumArt' => 'bool',
-        'homepageRedirectUrl' => 'string',
-        'defaultAlbumArtUrl' => 'string',
-        'useExternalAlbumArtWhenProcessingMedia' => 'bool',
-        'useExternalAlbumArtInApis' => 'bool',
-        'lastFmApiKey' => 'string',
-        'hideProductName' => 'bool',
-        'publicCustomCss' => 'string',
-        'publicCustomJs' => 'string',
-        'internalCustomCss' => 'string',
-        'backupEnabled' => 'bool',
-        'backupTimeCode' => 'string',
-        'backupExcludeMedia' => 'bool',
-        'backupKeepCopies' => 'int',
-        'backupStorageLocation' => 'int',
-        'backupFormat' => 'string',
-        'backupLastRun' => 'int',
-        'backupLastOutput' => 'string',
-        'setupCompleteTime' => 'int',
-        'syncDisabled' => 'bool',
-        'syncLastRun' => 'int',
-        'externalIp' => 'string',
-        'geoliteLicenseKey' => 'string',
-        'geoliteLastRun' => 'int',
-        'enableAdvancedFeatures' => 'bool',
-        'mailEnabled' => 'bool',
-        'mailSenderName' => 'string',
-        'mailSenderEmail' => 'string',
-        'mailSmtpHost' => 'string',
-        'mailSmtpPort' => 'int',
-        'mailSmtpUsername' => 'string',
-        'mailSmtpPassword' => 'string',
-        'mailSmtpSecure' => 'bool',
-        'avatarService' => 'string',
-        'avatarDefaultUrl' => 'string',
-        'acmeEmail' => 'string',
-        'acmeDomains' => 'string',
-        'ipSource' => 'mixed'
+        'check_for_updates' => 'bool',
+        'update_results' => 'mixed[]',
+        'update_last_run' => 'int',
+        'public_theme' => 'mixed',
+        'hide_album_art' => 'bool',
+        'homepage_redirect_url' => 'string',
+        'default_album_art_url' => 'string',
+        'use_external_album_art_when_processing_media' => 'bool',
+        'use_external_album_art_in_apis' => 'bool',
+        'last_fm_api_key' => 'string',
+        'hide_product_name' => 'bool',
+        'public_custom_css' => 'string',
+        'public_custom_js' => 'string',
+        'internal_custom_css' => 'string',
+        'backup_enabled' => 'bool',
+        'backup_time_code' => 'string',
+        'backup_exclude_media' => 'bool',
+        'backup_keep_copies' => 'int',
+        'backup_storage_location' => 'int',
+        'backup_format' => 'string',
+        'backup_last_run' => 'int',
+        'backup_last_output' => 'string',
+        'setup_complete_time' => 'int',
+        'sync_disabled' => 'bool',
+        'sync_last_run' => 'int',
+        'external_ip' => 'string',
+        'geolite_license_key' => 'string',
+        'geolite_last_run' => 'int',
+        'enable_advanced_features' => 'bool',
+        'mail_enabled' => 'bool',
+        'mail_sender_name' => 'string',
+        'mail_sender_email' => 'string',
+        'mail_smtp_host' => 'string',
+        'mail_smtp_port' => 'int',
+        'mail_smtp_username' => 'string',
+        'mail_smtp_password' => 'string',
+        'mail_smtp_secure' => 'bool',
+        'avatar_service' => 'string',
+        'avatar_default_url' => 'string',
+        'acme_email' => 'string',
+        'acme_domains' => 'string',
+        'ip_source' => 'mixed'
     ];
 
     /**
@@ -119,58 +119,58 @@ class Settings implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'appUniqueIdentifier' => null,
-        'baseUrl' => null,
-        'instanceName' => null,
-        'preferBrowserUrl' => null,
-        'useRadioProxy' => null,
-        'historyKeepDays' => null,
-        'alwaysUseSsl' => null,
-        'apiAccessControl' => null,
-        'enableStaticNowplaying' => null,
+        'app_unique_identifier' => null,
+        'base_url' => null,
+        'instance_name' => null,
+        'prefer_browser_url' => null,
+        'use_radio_proxy' => null,
+        'history_keep_days' => null,
+        'always_use_ssl' => null,
+        'api_access_control' => null,
+        'enable_static_nowplaying' => null,
         'analytics' => null,
-        'checkForUpdates' => null,
-        'updateResults' => null,
-        'updateLastRun' => null,
-        'publicTheme' => null,
-        'hideAlbumArt' => null,
-        'homepageRedirectUrl' => null,
-        'defaultAlbumArtUrl' => null,
-        'useExternalAlbumArtWhenProcessingMedia' => null,
-        'useExternalAlbumArtInApis' => null,
-        'lastFmApiKey' => null,
-        'hideProductName' => null,
-        'publicCustomCss' => null,
-        'publicCustomJs' => null,
-        'internalCustomCss' => null,
-        'backupEnabled' => null,
-        'backupTimeCode' => null,
-        'backupExcludeMedia' => null,
-        'backupKeepCopies' => null,
-        'backupStorageLocation' => null,
-        'backupFormat' => null,
-        'backupLastRun' => null,
-        'backupLastOutput' => null,
-        'setupCompleteTime' => null,
-        'syncDisabled' => null,
-        'syncLastRun' => null,
-        'externalIp' => null,
-        'geoliteLicenseKey' => null,
-        'geoliteLastRun' => null,
-        'enableAdvancedFeatures' => null,
-        'mailEnabled' => null,
-        'mailSenderName' => null,
-        'mailSenderEmail' => null,
-        'mailSmtpHost' => null,
-        'mailSmtpPort' => null,
-        'mailSmtpUsername' => null,
-        'mailSmtpPassword' => null,
-        'mailSmtpSecure' => null,
-        'avatarService' => null,
-        'avatarDefaultUrl' => null,
-        'acmeEmail' => null,
-        'acmeDomains' => null,
-        'ipSource' => null
+        'check_for_updates' => null,
+        'update_results' => null,
+        'update_last_run' => null,
+        'public_theme' => null,
+        'hide_album_art' => null,
+        'homepage_redirect_url' => null,
+        'default_album_art_url' => null,
+        'use_external_album_art_when_processing_media' => null,
+        'use_external_album_art_in_apis' => null,
+        'last_fm_api_key' => null,
+        'hide_product_name' => null,
+        'public_custom_css' => null,
+        'public_custom_js' => null,
+        'internal_custom_css' => null,
+        'backup_enabled' => null,
+        'backup_time_code' => null,
+        'backup_exclude_media' => null,
+        'backup_keep_copies' => null,
+        'backup_storage_location' => null,
+        'backup_format' => null,
+        'backup_last_run' => null,
+        'backup_last_output' => null,
+        'setup_complete_time' => null,
+        'sync_disabled' => null,
+        'sync_last_run' => null,
+        'external_ip' => null,
+        'geolite_license_key' => null,
+        'geolite_last_run' => null,
+        'enable_advanced_features' => null,
+        'mail_enabled' => null,
+        'mail_sender_name' => null,
+        'mail_sender_email' => null,
+        'mail_smtp_host' => null,
+        'mail_smtp_port' => null,
+        'mail_smtp_username' => null,
+        'mail_smtp_password' => null,
+        'mail_smtp_secure' => null,
+        'avatar_service' => null,
+        'avatar_default_url' => null,
+        'acme_email' => null,
+        'acme_domains' => null,
+        'ip_source' => null
     ];
 
     /**
@@ -179,58 +179,58 @@ class Settings implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'appUniqueIdentifier' => false,
-        'baseUrl' => true,
-        'instanceName' => true,
-        'preferBrowserUrl' => false,
-        'useRadioProxy' => false,
-        'historyKeepDays' => false,
-        'alwaysUseSsl' => false,
-        'apiAccessControl' => true,
-        'enableStaticNowplaying' => false,
+        'app_unique_identifier' => false,
+        'base_url' => true,
+        'instance_name' => true,
+        'prefer_browser_url' => false,
+        'use_radio_proxy' => false,
+        'history_keep_days' => false,
+        'always_use_ssl' => false,
+        'api_access_control' => true,
+        'enable_static_nowplaying' => false,
         'analytics' => true,
-        'checkForUpdates' => false,
-        'updateResults' => true,
-        'updateLastRun' => false,
-        'publicTheme' => true,
-        'hideAlbumArt' => false,
-        'homepageRedirectUrl' => true,
-        'defaultAlbumArtUrl' => true,
-        'useExternalAlbumArtWhenProcessingMedia' => false,
-        'useExternalAlbumArtInApis' => false,
-        'lastFmApiKey' => true,
-        'hideProductName' => false,
-        'publicCustomCss' => true,
-        'publicCustomJs' => true,
-        'internalCustomCss' => true,
-        'backupEnabled' => false,
-        'backupTimeCode' => true,
-        'backupExcludeMedia' => false,
-        'backupKeepCopies' => false,
-        'backupStorageLocation' => true,
-        'backupFormat' => true,
-        'backupLastRun' => false,
-        'backupLastOutput' => true,
-        'setupCompleteTime' => false,
-        'syncDisabled' => false,
-        'syncLastRun' => false,
-        'externalIp' => true,
-        'geoliteLicenseKey' => true,
-        'geoliteLastRun' => false,
-        'enableAdvancedFeatures' => false,
-        'mailEnabled' => false,
-        'mailSenderName' => true,
-        'mailSenderEmail' => true,
-        'mailSmtpHost' => true,
-        'mailSmtpPort' => false,
-        'mailSmtpUsername' => true,
-        'mailSmtpPassword' => true,
-        'mailSmtpSecure' => false,
-        'avatarService' => true,
-        'avatarDefaultUrl' => true,
-        'acmeEmail' => true,
-        'acmeDomains' => true,
-        'ipSource' => true
+        'check_for_updates' => false,
+        'update_results' => true,
+        'update_last_run' => false,
+        'public_theme' => true,
+        'hide_album_art' => false,
+        'homepage_redirect_url' => true,
+        'default_album_art_url' => true,
+        'use_external_album_art_when_processing_media' => false,
+        'use_external_album_art_in_apis' => false,
+        'last_fm_api_key' => true,
+        'hide_product_name' => false,
+        'public_custom_css' => true,
+        'public_custom_js' => true,
+        'internal_custom_css' => true,
+        'backup_enabled' => false,
+        'backup_time_code' => true,
+        'backup_exclude_media' => false,
+        'backup_keep_copies' => false,
+        'backup_storage_location' => true,
+        'backup_format' => true,
+        'backup_last_run' => false,
+        'backup_last_output' => true,
+        'setup_complete_time' => false,
+        'sync_disabled' => false,
+        'sync_last_run' => false,
+        'external_ip' => true,
+        'geolite_license_key' => true,
+        'geolite_last_run' => false,
+        'enable_advanced_features' => false,
+        'mail_enabled' => false,
+        'mail_sender_name' => true,
+        'mail_sender_email' => true,
+        'mail_smtp_host' => true,
+        'mail_smtp_port' => false,
+        'mail_smtp_username' => true,
+        'mail_smtp_password' => true,
+        'mail_smtp_secure' => false,
+        'avatar_service' => true,
+        'avatar_default_url' => true,
+        'acme_email' => true,
+        'acme_domains' => true,
+        'ip_source' => true
     ];
 
     /**
@@ -319,58 +319,58 @@ class Settings implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'appUniqueIdentifier' => 'app_unique_identifier',
-        'baseUrl' => 'base_url',
-        'instanceName' => 'instance_name',
-        'preferBrowserUrl' => 'prefer_browser_url',
-        'useRadioProxy' => 'use_radio_proxy',
-        'historyKeepDays' => 'history_keep_days',
-        'alwaysUseSsl' => 'always_use_ssl',
-        'apiAccessControl' => 'api_access_control',
-        'enableStaticNowplaying' => 'enable_static_nowplaying',
+        'app_unique_identifier' => 'app_unique_identifier',
+        'base_url' => 'base_url',
+        'instance_name' => 'instance_name',
+        'prefer_browser_url' => 'prefer_browser_url',
+        'use_radio_proxy' => 'use_radio_proxy',
+        'history_keep_days' => 'history_keep_days',
+        'always_use_ssl' => 'always_use_ssl',
+        'api_access_control' => 'api_access_control',
+        'enable_static_nowplaying' => 'enable_static_nowplaying',
         'analytics' => 'analytics',
-        'checkForUpdates' => 'check_for_updates',
-        'updateResults' => 'update_results',
-        'updateLastRun' => 'update_last_run',
-        'publicTheme' => 'public_theme',
-        'hideAlbumArt' => 'hide_album_art',
-        'homepageRedirectUrl' => 'homepage_redirect_url',
-        'defaultAlbumArtUrl' => 'default_album_art_url',
-        'useExternalAlbumArtWhenProcessingMedia' => 'use_external_album_art_when_processing_media',
-        'useExternalAlbumArtInApis' => 'use_external_album_art_in_apis',
-        'lastFmApiKey' => 'last_fm_api_key',
-        'hideProductName' => 'hide_product_name',
-        'publicCustomCss' => 'public_custom_css',
-        'publicCustomJs' => 'public_custom_js',
-        'internalCustomCss' => 'internal_custom_css',
-        'backupEnabled' => 'backup_enabled',
-        'backupTimeCode' => 'backup_time_code',
-        'backupExcludeMedia' => 'backup_exclude_media',
-        'backupKeepCopies' => 'backup_keep_copies',
-        'backupStorageLocation' => 'backup_storage_location',
-        'backupFormat' => 'backup_format',
-        'backupLastRun' => 'backup_last_run',
-        'backupLastOutput' => 'backup_last_output',
-        'setupCompleteTime' => 'setup_complete_time',
-        'syncDisabled' => 'sync_disabled',
-        'syncLastRun' => 'sync_last_run',
-        'externalIp' => 'external_ip',
-        'geoliteLicenseKey' => 'geolite_license_key',
-        'geoliteLastRun' => 'geolite_last_run',
-        'enableAdvancedFeatures' => 'enable_advanced_features',
-        'mailEnabled' => 'mail_enabled',
-        'mailSenderName' => 'mail_sender_name',
-        'mailSenderEmail' => 'mail_sender_email',
-        'mailSmtpHost' => 'mail_smtp_host',
-        'mailSmtpPort' => 'mail_smtp_port',
-        'mailSmtpUsername' => 'mail_smtp_username',
-        'mailSmtpPassword' => 'mail_smtp_password',
-        'mailSmtpSecure' => 'mail_smtp_secure',
-        'avatarService' => 'avatar_service',
-        'avatarDefaultUrl' => 'avatar_default_url',
-        'acmeEmail' => 'acme_email',
-        'acmeDomains' => 'acme_domains',
-        'ipSource' => 'ip_source'
+        'check_for_updates' => 'check_for_updates',
+        'update_results' => 'update_results',
+        'update_last_run' => 'update_last_run',
+        'public_theme' => 'public_theme',
+        'hide_album_art' => 'hide_album_art',
+        'homepage_redirect_url' => 'homepage_redirect_url',
+        'default_album_art_url' => 'default_album_art_url',
+        'use_external_album_art_when_processing_media' => 'use_external_album_art_when_processing_media',
+        'use_external_album_art_in_apis' => 'use_external_album_art_in_apis',
+        'last_fm_api_key' => 'last_fm_api_key',
+        'hide_product_name' => 'hide_product_name',
+        'public_custom_css' => 'public_custom_css',
+        'public_custom_js' => 'public_custom_js',
+        'internal_custom_css' => 'internal_custom_css',
+        'backup_enabled' => 'backup_enabled',
+        'backup_time_code' => 'backup_time_code',
+        'backup_exclude_media' => 'backup_exclude_media',
+        'backup_keep_copies' => 'backup_keep_copies',
+        'backup_storage_location' => 'backup_storage_location',
+        'backup_format' => 'backup_format',
+        'backup_last_run' => 'backup_last_run',
+        'backup_last_output' => 'backup_last_output',
+        'setup_complete_time' => 'setup_complete_time',
+        'sync_disabled' => 'sync_disabled',
+        'sync_last_run' => 'sync_last_run',
+        'external_ip' => 'external_ip',
+        'geolite_license_key' => 'geolite_license_key',
+        'geolite_last_run' => 'geolite_last_run',
+        'enable_advanced_features' => 'enable_advanced_features',
+        'mail_enabled' => 'mail_enabled',
+        'mail_sender_name' => 'mail_sender_name',
+        'mail_sender_email' => 'mail_sender_email',
+        'mail_smtp_host' => 'mail_smtp_host',
+        'mail_smtp_port' => 'mail_smtp_port',
+        'mail_smtp_username' => 'mail_smtp_username',
+        'mail_smtp_password' => 'mail_smtp_password',
+        'mail_smtp_secure' => 'mail_smtp_secure',
+        'avatar_service' => 'avatar_service',
+        'avatar_default_url' => 'avatar_default_url',
+        'acme_email' => 'acme_email',
+        'acme_domains' => 'acme_domains',
+        'ip_source' => 'ip_source'
     ];
 
     /**
@@ -379,58 +379,58 @@ class Settings implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'appUniqueIdentifier' => 'setAppUniqueIdentifier',
-        'baseUrl' => 'setBaseUrl',
-        'instanceName' => 'setInstanceName',
-        'preferBrowserUrl' => 'setPreferBrowserUrl',
-        'useRadioProxy' => 'setUseRadioProxy',
-        'historyKeepDays' => 'setHistoryKeepDays',
-        'alwaysUseSsl' => 'setAlwaysUseSsl',
-        'apiAccessControl' => 'setApiAccessControl',
-        'enableStaticNowplaying' => 'setEnableStaticNowplaying',
+        'app_unique_identifier' => 'setAppUniqueIdentifier',
+        'base_url' => 'setBaseUrl',
+        'instance_name' => 'setInstanceName',
+        'prefer_browser_url' => 'setPreferBrowserUrl',
+        'use_radio_proxy' => 'setUseRadioProxy',
+        'history_keep_days' => 'setHistoryKeepDays',
+        'always_use_ssl' => 'setAlwaysUseSsl',
+        'api_access_control' => 'setApiAccessControl',
+        'enable_static_nowplaying' => 'setEnableStaticNowplaying',
         'analytics' => 'setAnalytics',
-        'checkForUpdates' => 'setCheckForUpdates',
-        'updateResults' => 'setUpdateResults',
-        'updateLastRun' => 'setUpdateLastRun',
-        'publicTheme' => 'setPublicTheme',
-        'hideAlbumArt' => 'setHideAlbumArt',
-        'homepageRedirectUrl' => 'setHomepageRedirectUrl',
-        'defaultAlbumArtUrl' => 'setDefaultAlbumArtUrl',
-        'useExternalAlbumArtWhenProcessingMedia' => 'setUseExternalAlbumArtWhenProcessingMedia',
-        'useExternalAlbumArtInApis' => 'setUseExternalAlbumArtInApis',
-        'lastFmApiKey' => 'setLastFmApiKey',
-        'hideProductName' => 'setHideProductName',
-        'publicCustomCss' => 'setPublicCustomCss',
-        'publicCustomJs' => 'setPublicCustomJs',
-        'internalCustomCss' => 'setInternalCustomCss',
-        'backupEnabled' => 'setBackupEnabled',
-        'backupTimeCode' => 'setBackupTimeCode',
-        'backupExcludeMedia' => 'setBackupExcludeMedia',
-        'backupKeepCopies' => 'setBackupKeepCopies',
-        'backupStorageLocation' => 'setBackupStorageLocation',
-        'backupFormat' => 'setBackupFormat',
-        'backupLastRun' => 'setBackupLastRun',
-        'backupLastOutput' => 'setBackupLastOutput',
-        'setupCompleteTime' => 'setSetupCompleteTime',
-        'syncDisabled' => 'setSyncDisabled',
-        'syncLastRun' => 'setSyncLastRun',
-        'externalIp' => 'setExternalIp',
-        'geoliteLicenseKey' => 'setGeoliteLicenseKey',
-        'geoliteLastRun' => 'setGeoliteLastRun',
-        'enableAdvancedFeatures' => 'setEnableAdvancedFeatures',
-        'mailEnabled' => 'setMailEnabled',
-        'mailSenderName' => 'setMailSenderName',
-        'mailSenderEmail' => 'setMailSenderEmail',
-        'mailSmtpHost' => 'setMailSmtpHost',
-        'mailSmtpPort' => 'setMailSmtpPort',
-        'mailSmtpUsername' => 'setMailSmtpUsername',
-        'mailSmtpPassword' => 'setMailSmtpPassword',
-        'mailSmtpSecure' => 'setMailSmtpSecure',
-        'avatarService' => 'setAvatarService',
-        'avatarDefaultUrl' => 'setAvatarDefaultUrl',
-        'acmeEmail' => 'setAcmeEmail',
-        'acmeDomains' => 'setAcmeDomains',
-        'ipSource' => 'setIpSource'
+        'check_for_updates' => 'setCheckForUpdates',
+        'update_results' => 'setUpdateResults',
+        'update_last_run' => 'setUpdateLastRun',
+        'public_theme' => 'setPublicTheme',
+        'hide_album_art' => 'setHideAlbumArt',
+        'homepage_redirect_url' => 'setHomepageRedirectUrl',
+        'default_album_art_url' => 'setDefaultAlbumArtUrl',
+        'use_external_album_art_when_processing_media' => 'setUseExternalAlbumArtWhenProcessingMedia',
+        'use_external_album_art_in_apis' => 'setUseExternalAlbumArtInApis',
+        'last_fm_api_key' => 'setLastFmApiKey',
+        'hide_product_name' => 'setHideProductName',
+        'public_custom_css' => 'setPublicCustomCss',
+        'public_custom_js' => 'setPublicCustomJs',
+        'internal_custom_css' => 'setInternalCustomCss',
+        'backup_enabled' => 'setBackupEnabled',
+        'backup_time_code' => 'setBackupTimeCode',
+        'backup_exclude_media' => 'setBackupExcludeMedia',
+        'backup_keep_copies' => 'setBackupKeepCopies',
+        'backup_storage_location' => 'setBackupStorageLocation',
+        'backup_format' => 'setBackupFormat',
+        'backup_last_run' => 'setBackupLastRun',
+        'backup_last_output' => 'setBackupLastOutput',
+        'setup_complete_time' => 'setSetupCompleteTime',
+        'sync_disabled' => 'setSyncDisabled',
+        'sync_last_run' => 'setSyncLastRun',
+        'external_ip' => 'setExternalIp',
+        'geolite_license_key' => 'setGeoliteLicenseKey',
+        'geolite_last_run' => 'setGeoliteLastRun',
+        'enable_advanced_features' => 'setEnableAdvancedFeatures',
+        'mail_enabled' => 'setMailEnabled',
+        'mail_sender_name' => 'setMailSenderName',
+        'mail_sender_email' => 'setMailSenderEmail',
+        'mail_smtp_host' => 'setMailSmtpHost',
+        'mail_smtp_port' => 'setMailSmtpPort',
+        'mail_smtp_username' => 'setMailSmtpUsername',
+        'mail_smtp_password' => 'setMailSmtpPassword',
+        'mail_smtp_secure' => 'setMailSmtpSecure',
+        'avatar_service' => 'setAvatarService',
+        'avatar_default_url' => 'setAvatarDefaultUrl',
+        'acme_email' => 'setAcmeEmail',
+        'acme_domains' => 'setAcmeDomains',
+        'ip_source' => 'setIpSource'
     ];
 
     /**
@@ -439,58 +439,58 @@ class Settings implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'appUniqueIdentifier' => 'getAppUniqueIdentifier',
-        'baseUrl' => 'getBaseUrl',
-        'instanceName' => 'getInstanceName',
-        'preferBrowserUrl' => 'getPreferBrowserUrl',
-        'useRadioProxy' => 'getUseRadioProxy',
-        'historyKeepDays' => 'getHistoryKeepDays',
-        'alwaysUseSsl' => 'getAlwaysUseSsl',
-        'apiAccessControl' => 'getApiAccessControl',
-        'enableStaticNowplaying' => 'getEnableStaticNowplaying',
+        'app_unique_identifier' => 'getAppUniqueIdentifier',
+        'base_url' => 'getBaseUrl',
+        'instance_name' => 'getInstanceName',
+        'prefer_browser_url' => 'getPreferBrowserUrl',
+        'use_radio_proxy' => 'getUseRadioProxy',
+        'history_keep_days' => 'getHistoryKeepDays',
+        'always_use_ssl' => 'getAlwaysUseSsl',
+        'api_access_control' => 'getApiAccessControl',
+        'enable_static_nowplaying' => 'getEnableStaticNowplaying',
         'analytics' => 'getAnalytics',
-        'checkForUpdates' => 'getCheckForUpdates',
-        'updateResults' => 'getUpdateResults',
-        'updateLastRun' => 'getUpdateLastRun',
-        'publicTheme' => 'getPublicTheme',
-        'hideAlbumArt' => 'getHideAlbumArt',
-        'homepageRedirectUrl' => 'getHomepageRedirectUrl',
-        'defaultAlbumArtUrl' => 'getDefaultAlbumArtUrl',
-        'useExternalAlbumArtWhenProcessingMedia' => 'getUseExternalAlbumArtWhenProcessingMedia',
-        'useExternalAlbumArtInApis' => 'getUseExternalAlbumArtInApis',
-        'lastFmApiKey' => 'getLastFmApiKey',
-        'hideProductName' => 'getHideProductName',
-        'publicCustomCss' => 'getPublicCustomCss',
-        'publicCustomJs' => 'getPublicCustomJs',
-        'internalCustomCss' => 'getInternalCustomCss',
-        'backupEnabled' => 'getBackupEnabled',
-        'backupTimeCode' => 'getBackupTimeCode',
-        'backupExcludeMedia' => 'getBackupExcludeMedia',
-        'backupKeepCopies' => 'getBackupKeepCopies',
-        'backupStorageLocation' => 'getBackupStorageLocation',
-        'backupFormat' => 'getBackupFormat',
-        'backupLastRun' => 'getBackupLastRun',
-        'backupLastOutput' => 'getBackupLastOutput',
-        'setupCompleteTime' => 'getSetupCompleteTime',
-        'syncDisabled' => 'getSyncDisabled',
-        'syncLastRun' => 'getSyncLastRun',
-        'externalIp' => 'getExternalIp',
-        'geoliteLicenseKey' => 'getGeoliteLicenseKey',
-        'geoliteLastRun' => 'getGeoliteLastRun',
-        'enableAdvancedFeatures' => 'getEnableAdvancedFeatures',
-        'mailEnabled' => 'getMailEnabled',
-        'mailSenderName' => 'getMailSenderName',
-        'mailSenderEmail' => 'getMailSenderEmail',
-        'mailSmtpHost' => 'getMailSmtpHost',
-        'mailSmtpPort' => 'getMailSmtpPort',
-        'mailSmtpUsername' => 'getMailSmtpUsername',
-        'mailSmtpPassword' => 'getMailSmtpPassword',
-        'mailSmtpSecure' => 'getMailSmtpSecure',
-        'avatarService' => 'getAvatarService',
-        'avatarDefaultUrl' => 'getAvatarDefaultUrl',
-        'acmeEmail' => 'getAcmeEmail',
-        'acmeDomains' => 'getAcmeDomains',
-        'ipSource' => 'getIpSource'
+        'check_for_updates' => 'getCheckForUpdates',
+        'update_results' => 'getUpdateResults',
+        'update_last_run' => 'getUpdateLastRun',
+        'public_theme' => 'getPublicTheme',
+        'hide_album_art' => 'getHideAlbumArt',
+        'homepage_redirect_url' => 'getHomepageRedirectUrl',
+        'default_album_art_url' => 'getDefaultAlbumArtUrl',
+        'use_external_album_art_when_processing_media' => 'getUseExternalAlbumArtWhenProcessingMedia',
+        'use_external_album_art_in_apis' => 'getUseExternalAlbumArtInApis',
+        'last_fm_api_key' => 'getLastFmApiKey',
+        'hide_product_name' => 'getHideProductName',
+        'public_custom_css' => 'getPublicCustomCss',
+        'public_custom_js' => 'getPublicCustomJs',
+        'internal_custom_css' => 'getInternalCustomCss',
+        'backup_enabled' => 'getBackupEnabled',
+        'backup_time_code' => 'getBackupTimeCode',
+        'backup_exclude_media' => 'getBackupExcludeMedia',
+        'backup_keep_copies' => 'getBackupKeepCopies',
+        'backup_storage_location' => 'getBackupStorageLocation',
+        'backup_format' => 'getBackupFormat',
+        'backup_last_run' => 'getBackupLastRun',
+        'backup_last_output' => 'getBackupLastOutput',
+        'setup_complete_time' => 'getSetupCompleteTime',
+        'sync_disabled' => 'getSyncDisabled',
+        'sync_last_run' => 'getSyncLastRun',
+        'external_ip' => 'getExternalIp',
+        'geolite_license_key' => 'getGeoliteLicenseKey',
+        'geolite_last_run' => 'getGeoliteLastRun',
+        'enable_advanced_features' => 'getEnableAdvancedFeatures',
+        'mail_enabled' => 'getMailEnabled',
+        'mail_sender_name' => 'getMailSenderName',
+        'mail_sender_email' => 'getMailSenderEmail',
+        'mail_smtp_host' => 'getMailSmtpHost',
+        'mail_smtp_port' => 'getMailSmtpPort',
+        'mail_smtp_username' => 'getMailSmtpUsername',
+        'mail_smtp_password' => 'getMailSmtpPassword',
+        'mail_smtp_secure' => 'getMailSmtpSecure',
+        'avatar_service' => 'getAvatarService',
+        'avatar_default_url' => 'getAvatarDefaultUrl',
+        'acme_email' => 'getAcmeEmail',
+        'acme_domains' => 'getAcmeDomains',
+        'ip_source' => 'getIpSource'
     ];
 
     /**
@@ -550,58 +550,58 @@ class Settings implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('appUniqueIdentifier', $data ?? [], null);
-        $this->setIfExists('baseUrl', $data ?? [], null);
-        $this->setIfExists('instanceName', $data ?? [], null);
-        $this->setIfExists('preferBrowserUrl', $data ?? [], null);
-        $this->setIfExists('useRadioProxy', $data ?? [], null);
-        $this->setIfExists('historyKeepDays', $data ?? [], null);
-        $this->setIfExists('alwaysUseSsl', $data ?? [], null);
-        $this->setIfExists('apiAccessControl', $data ?? [], null);
-        $this->setIfExists('enableStaticNowplaying', $data ?? [], null);
+        $this->setIfExists('app_unique_identifier', $data ?? [], null);
+        $this->setIfExists('base_url', $data ?? [], null);
+        $this->setIfExists('instance_name', $data ?? [], null);
+        $this->setIfExists('prefer_browser_url', $data ?? [], null);
+        $this->setIfExists('use_radio_proxy', $data ?? [], null);
+        $this->setIfExists('history_keep_days', $data ?? [], null);
+        $this->setIfExists('always_use_ssl', $data ?? [], null);
+        $this->setIfExists('api_access_control', $data ?? [], null);
+        $this->setIfExists('enable_static_nowplaying', $data ?? [], null);
         $this->setIfExists('analytics', $data ?? [], null);
-        $this->setIfExists('checkForUpdates', $data ?? [], null);
-        $this->setIfExists('updateResults', $data ?? [], null);
-        $this->setIfExists('updateLastRun', $data ?? [], null);
-        $this->setIfExists('publicTheme', $data ?? [], null);
-        $this->setIfExists('hideAlbumArt', $data ?? [], null);
-        $this->setIfExists('homepageRedirectUrl', $data ?? [], null);
-        $this->setIfExists('defaultAlbumArtUrl', $data ?? [], null);
-        $this->setIfExists('useExternalAlbumArtWhenProcessingMedia', $data ?? [], null);
-        $this->setIfExists('useExternalAlbumArtInApis', $data ?? [], null);
-        $this->setIfExists('lastFmApiKey', $data ?? [], null);
-        $this->setIfExists('hideProductName', $data ?? [], null);
-        $this->setIfExists('publicCustomCss', $data ?? [], null);
-        $this->setIfExists('publicCustomJs', $data ?? [], null);
-        $this->setIfExists('internalCustomCss', $data ?? [], null);
-        $this->setIfExists('backupEnabled', $data ?? [], null);
-        $this->setIfExists('backupTimeCode', $data ?? [], null);
-        $this->setIfExists('backupExcludeMedia', $data ?? [], null);
-        $this->setIfExists('backupKeepCopies', $data ?? [], null);
-        $this->setIfExists('backupStorageLocation', $data ?? [], null);
-        $this->setIfExists('backupFormat', $data ?? [], null);
-        $this->setIfExists('backupLastRun', $data ?? [], null);
-        $this->setIfExists('backupLastOutput', $data ?? [], null);
-        $this->setIfExists('setupCompleteTime', $data ?? [], null);
-        $this->setIfExists('syncDisabled', $data ?? [], null);
-        $this->setIfExists('syncLastRun', $data ?? [], null);
-        $this->setIfExists('externalIp', $data ?? [], null);
-        $this->setIfExists('geoliteLicenseKey', $data ?? [], null);
-        $this->setIfExists('geoliteLastRun', $data ?? [], null);
-        $this->setIfExists('enableAdvancedFeatures', $data ?? [], null);
-        $this->setIfExists('mailEnabled', $data ?? [], null);
-        $this->setIfExists('mailSenderName', $data ?? [], null);
-        $this->setIfExists('mailSenderEmail', $data ?? [], null);
-        $this->setIfExists('mailSmtpHost', $data ?? [], null);
-        $this->setIfExists('mailSmtpPort', $data ?? [], null);
-        $this->setIfExists('mailSmtpUsername', $data ?? [], null);
-        $this->setIfExists('mailSmtpPassword', $data ?? [], null);
-        $this->setIfExists('mailSmtpSecure', $data ?? [], null);
-        $this->setIfExists('avatarService', $data ?? [], null);
-        $this->setIfExists('avatarDefaultUrl', $data ?? [], null);
-        $this->setIfExists('acmeEmail', $data ?? [], null);
-        $this->setIfExists('acmeDomains', $data ?? [], null);
-        $this->setIfExists('ipSource', $data ?? [], null);
+        $this->setIfExists('check_for_updates', $data ?? [], null);
+        $this->setIfExists('update_results', $data ?? [], null);
+        $this->setIfExists('update_last_run', $data ?? [], null);
+        $this->setIfExists('public_theme', $data ?? [], null);
+        $this->setIfExists('hide_album_art', $data ?? [], null);
+        $this->setIfExists('homepage_redirect_url', $data ?? [], null);
+        $this->setIfExists('default_album_art_url', $data ?? [], null);
+        $this->setIfExists('use_external_album_art_when_processing_media', $data ?? [], null);
+        $this->setIfExists('use_external_album_art_in_apis', $data ?? [], null);
+        $this->setIfExists('last_fm_api_key', $data ?? [], null);
+        $this->setIfExists('hide_product_name', $data ?? [], null);
+        $this->setIfExists('public_custom_css', $data ?? [], null);
+        $this->setIfExists('public_custom_js', $data ?? [], null);
+        $this->setIfExists('internal_custom_css', $data ?? [], null);
+        $this->setIfExists('backup_enabled', $data ?? [], null);
+        $this->setIfExists('backup_time_code', $data ?? [], null);
+        $this->setIfExists('backup_exclude_media', $data ?? [], null);
+        $this->setIfExists('backup_keep_copies', $data ?? [], null);
+        $this->setIfExists('backup_storage_location', $data ?? [], null);
+        $this->setIfExists('backup_format', $data ?? [], null);
+        $this->setIfExists('backup_last_run', $data ?? [], null);
+        $this->setIfExists('backup_last_output', $data ?? [], null);
+        $this->setIfExists('setup_complete_time', $data ?? [], null);
+        $this->setIfExists('sync_disabled', $data ?? [], null);
+        $this->setIfExists('sync_last_run', $data ?? [], null);
+        $this->setIfExists('external_ip', $data ?? [], null);
+        $this->setIfExists('geolite_license_key', $data ?? [], null);
+        $this->setIfExists('geolite_last_run', $data ?? [], null);
+        $this->setIfExists('enable_advanced_features', $data ?? [], null);
+        $this->setIfExists('mail_enabled', $data ?? [], null);
+        $this->setIfExists('mail_sender_name', $data ?? [], null);
+        $this->setIfExists('mail_sender_email', $data ?? [], null);
+        $this->setIfExists('mail_smtp_host', $data ?? [], null);
+        $this->setIfExists('mail_smtp_port', $data ?? [], null);
+        $this->setIfExists('mail_smtp_username', $data ?? [], null);
+        $this->setIfExists('mail_smtp_password', $data ?? [], null);
+        $this->setIfExists('mail_smtp_secure', $data ?? [], null);
+        $this->setIfExists('avatar_service', $data ?? [], null);
+        $this->setIfExists('avatar_default_url', $data ?? [], null);
+        $this->setIfExists('acme_email', $data ?? [], null);
+        $this->setIfExists('acme_domains', $data ?? [], null);
+        $this->setIfExists('ip_source', $data ?? [], null);
     }
 
     /**
@@ -647,265 +647,265 @@ class Settings implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets appUniqueIdentifier
+     * Gets app_unique_identifier
      *
      * @return string|null
      */
     public function getAppUniqueIdentifier()
     {
-        return $this->container['appUniqueIdentifier'];
+        return $this->container['app_unique_identifier'];
     }
 
     /**
-     * Sets appUniqueIdentifier
+     * Sets app_unique_identifier
      *
-     * @param string|null $appUniqueIdentifier appUniqueIdentifier
+     * @param string|null $app_unique_identifier app_unique_identifier
      *
      * @return self
      */
-    public function setAppUniqueIdentifier($appUniqueIdentifier)
+    public function setAppUniqueIdentifier($app_unique_identifier)
     {
-        if (is_null($appUniqueIdentifier)) {
-            throw new \InvalidArgumentException('non-nullable appUniqueIdentifier cannot be null');
+        if (is_null($app_unique_identifier)) {
+            throw new \InvalidArgumentException('non-nullable app_unique_identifier cannot be null');
         }
-        $this->container['appUniqueIdentifier'] = $appUniqueIdentifier;
+        $this->container['app_unique_identifier'] = $app_unique_identifier;
 
         return $this;
     }
 
     /**
-     * Gets baseUrl
+     * Gets base_url
      *
      * @return string|null
      */
     public function getBaseUrl()
     {
-        return $this->container['baseUrl'];
+        return $this->container['base_url'];
     }
 
     /**
-     * Sets baseUrl
+     * Sets base_url
      *
-     * @param string|null $baseUrl Site Base URL
+     * @param string|null $base_url Site Base URL
      *
      * @return self
      */
-    public function setBaseUrl($baseUrl)
+    public function setBaseUrl($base_url)
     {
-        if (is_null($baseUrl)) {
-            array_push($this->openAPINullablesSetToNull, 'baseUrl');
+        if (is_null($base_url)) {
+            array_push($this->openAPINullablesSetToNull, 'base_url');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('baseUrl', $nullablesSetToNull);
+            $index = array_search('base_url', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['baseUrl'] = $baseUrl;
+        $this->container['base_url'] = $base_url;
 
         return $this;
     }
 
     /**
-     * Gets instanceName
+     * Gets instance_name
      *
      * @return string|null
      */
     public function getInstanceName()
     {
-        return $this->container['instanceName'];
+        return $this->container['instance_name'];
     }
 
     /**
-     * Sets instanceName
+     * Sets instance_name
      *
-     * @param string|null $instanceName AzuraCast Instance Name
+     * @param string|null $instance_name AzuraCast Instance Name
      *
      * @return self
      */
-    public function setInstanceName($instanceName)
+    public function setInstanceName($instance_name)
     {
-        if (is_null($instanceName)) {
-            array_push($this->openAPINullablesSetToNull, 'instanceName');
+        if (is_null($instance_name)) {
+            array_push($this->openAPINullablesSetToNull, 'instance_name');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('instanceName', $nullablesSetToNull);
+            $index = array_search('instance_name', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['instanceName'] = $instanceName;
+        $this->container['instance_name'] = $instance_name;
 
         return $this;
     }
 
     /**
-     * Gets preferBrowserUrl
+     * Gets prefer_browser_url
      *
      * @return bool|null
      */
     public function getPreferBrowserUrl()
     {
-        return $this->container['preferBrowserUrl'];
+        return $this->container['prefer_browser_url'];
     }
 
     /**
-     * Sets preferBrowserUrl
+     * Sets prefer_browser_url
      *
-     * @param bool|null $preferBrowserUrl Prefer Browser URL (If Available)
+     * @param bool|null $prefer_browser_url Prefer Browser URL (If Available)
      *
      * @return self
      */
-    public function setPreferBrowserUrl($preferBrowserUrl)
+    public function setPreferBrowserUrl($prefer_browser_url)
     {
-        if (is_null($preferBrowserUrl)) {
-            throw new \InvalidArgumentException('non-nullable preferBrowserUrl cannot be null');
+        if (is_null($prefer_browser_url)) {
+            throw new \InvalidArgumentException('non-nullable prefer_browser_url cannot be null');
         }
-        $this->container['preferBrowserUrl'] = $preferBrowserUrl;
+        $this->container['prefer_browser_url'] = $prefer_browser_url;
 
         return $this;
     }
 
     /**
-     * Gets useRadioProxy
+     * Gets use_radio_proxy
      *
      * @return bool|null
      */
     public function getUseRadioProxy()
     {
-        return $this->container['useRadioProxy'];
+        return $this->container['use_radio_proxy'];
     }
 
     /**
-     * Sets useRadioProxy
+     * Sets use_radio_proxy
      *
-     * @param bool|null $useRadioProxy Use Web Proxy for Radio
+     * @param bool|null $use_radio_proxy Use Web Proxy for Radio
      *
      * @return self
      */
-    public function setUseRadioProxy($useRadioProxy)
+    public function setUseRadioProxy($use_radio_proxy)
     {
-        if (is_null($useRadioProxy)) {
-            throw new \InvalidArgumentException('non-nullable useRadioProxy cannot be null');
+        if (is_null($use_radio_proxy)) {
+            throw new \InvalidArgumentException('non-nullable use_radio_proxy cannot be null');
         }
-        $this->container['useRadioProxy'] = $useRadioProxy;
+        $this->container['use_radio_proxy'] = $use_radio_proxy;
 
         return $this;
     }
 
     /**
-     * Gets historyKeepDays
+     * Gets history_keep_days
      *
      * @return int|null
      */
     public function getHistoryKeepDays()
     {
-        return $this->container['historyKeepDays'];
+        return $this->container['history_keep_days'];
     }
 
     /**
-     * Sets historyKeepDays
+     * Sets history_keep_days
      *
-     * @param int|null $historyKeepDays Days of Playback History to Keep
+     * @param int|null $history_keep_days Days of Playback History to Keep
      *
      * @return self
      */
-    public function setHistoryKeepDays($historyKeepDays)
+    public function setHistoryKeepDays($history_keep_days)
     {
-        if (is_null($historyKeepDays)) {
-            throw new \InvalidArgumentException('non-nullable historyKeepDays cannot be null');
+        if (is_null($history_keep_days)) {
+            throw new \InvalidArgumentException('non-nullable history_keep_days cannot be null');
         }
-        $this->container['historyKeepDays'] = $historyKeepDays;
+        $this->container['history_keep_days'] = $history_keep_days;
 
         return $this;
     }
 
     /**
-     * Gets alwaysUseSsl
+     * Gets always_use_ssl
      *
      * @return bool|null
      */
     public function getAlwaysUseSsl()
     {
-        return $this->container['alwaysUseSsl'];
+        return $this->container['always_use_ssl'];
     }
 
     /**
-     * Sets alwaysUseSsl
+     * Sets always_use_ssl
      *
-     * @param bool|null $alwaysUseSsl Always Use HTTPS
+     * @param bool|null $always_use_ssl Always Use HTTPS
      *
      * @return self
      */
-    public function setAlwaysUseSsl($alwaysUseSsl)
+    public function setAlwaysUseSsl($always_use_ssl)
     {
-        if (is_null($alwaysUseSsl)) {
-            throw new \InvalidArgumentException('non-nullable alwaysUseSsl cannot be null');
+        if (is_null($always_use_ssl)) {
+            throw new \InvalidArgumentException('non-nullable always_use_ssl cannot be null');
         }
-        $this->container['alwaysUseSsl'] = $alwaysUseSsl;
+        $this->container['always_use_ssl'] = $always_use_ssl;
 
         return $this;
     }
 
     /**
-     * Gets apiAccessControl
+     * Gets api_access_control
      *
      * @return string|null
      */
     public function getApiAccessControl()
     {
-        return $this->container['apiAccessControl'];
+        return $this->container['api_access_control'];
     }
 
     /**
-     * Sets apiAccessControl
+     * Sets api_access_control
      *
-     * @param string|null $apiAccessControl API 'Access-Control-Allow-Origin' header
+     * @param string|null $api_access_control API 'Access-Control-Allow-Origin' header
      *
      * @return self
      */
-    public function setApiAccessControl($apiAccessControl)
+    public function setApiAccessControl($api_access_control)
     {
-        if (is_null($apiAccessControl)) {
-            array_push($this->openAPINullablesSetToNull, 'apiAccessControl');
+        if (is_null($api_access_control)) {
+            array_push($this->openAPINullablesSetToNull, 'api_access_control');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('apiAccessControl', $nullablesSetToNull);
+            $index = array_search('api_access_control', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['apiAccessControl'] = $apiAccessControl;
+        $this->container['api_access_control'] = $api_access_control;
 
         return $this;
     }
 
     /**
-     * Gets enableStaticNowplaying
+     * Gets enable_static_nowplaying
      *
      * @return bool|null
      */
     public function getEnableStaticNowplaying()
     {
-        return $this->container['enableStaticNowplaying'];
+        return $this->container['enable_static_nowplaying'];
     }
 
     /**
-     * Sets enableStaticNowplaying
+     * Sets enable_static_nowplaying
      *
-     * @param bool|null $enableStaticNowplaying Whether to use high-performance static JSON for Now Playing data updates.
+     * @param bool|null $enable_static_nowplaying Whether to use high-performance static JSON for Now Playing data updates.
      *
      * @return self
      */
-    public function setEnableStaticNowplaying($enableStaticNowplaying)
+    public function setEnableStaticNowplaying($enable_static_nowplaying)
     {
-        if (is_null($enableStaticNowplaying)) {
-            throw new \InvalidArgumentException('non-nullable enableStaticNowplaying cannot be null');
+        if (is_null($enable_static_nowplaying)) {
+            throw new \InvalidArgumentException('non-nullable enable_static_nowplaying cannot be null');
         }
-        $this->container['enableStaticNowplaying'] = $enableStaticNowplaying;
+        $this->container['enable_static_nowplaying'] = $enable_static_nowplaying;
 
         return $this;
     }
@@ -945,1303 +945,1303 @@ class Settings implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets checkForUpdates
+     * Gets check_for_updates
      *
      * @return bool|null
      */
     public function getCheckForUpdates()
     {
-        return $this->container['checkForUpdates'];
+        return $this->container['check_for_updates'];
     }
 
     /**
-     * Sets checkForUpdates
+     * Sets check_for_updates
      *
-     * @param bool|null $checkForUpdates Check for Updates and Announcements
+     * @param bool|null $check_for_updates Check for Updates and Announcements
      *
      * @return self
      */
-    public function setCheckForUpdates($checkForUpdates)
+    public function setCheckForUpdates($check_for_updates)
     {
-        if (is_null($checkForUpdates)) {
-            throw new \InvalidArgumentException('non-nullable checkForUpdates cannot be null');
+        if (is_null($check_for_updates)) {
+            throw new \InvalidArgumentException('non-nullable check_for_updates cannot be null');
         }
-        $this->container['checkForUpdates'] = $checkForUpdates;
+        $this->container['check_for_updates'] = $check_for_updates;
 
         return $this;
     }
 
     /**
-     * Gets updateResults
+     * Gets update_results
      *
      * @return mixed[]|null
      */
     public function getUpdateResults()
     {
-        return $this->container['updateResults'];
+        return $this->container['update_results'];
     }
 
     /**
-     * Sets updateResults
+     * Sets update_results
      *
-     * @param mixed[]|null $updateResults Results of the latest update check.
+     * @param mixed[]|null $update_results Results of the latest update check.
      *
      * @return self
      */
-    public function setUpdateResults($updateResults)
+    public function setUpdateResults($update_results)
     {
-        if (is_null($updateResults)) {
-            array_push($this->openAPINullablesSetToNull, 'updateResults');
+        if (is_null($update_results)) {
+            array_push($this->openAPINullablesSetToNull, 'update_results');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('updateResults', $nullablesSetToNull);
+            $index = array_search('update_results', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['updateResults'] = $updateResults;
+        $this->container['update_results'] = $update_results;
 
         return $this;
     }
 
     /**
-     * Gets updateLastRun
+     * Gets update_last_run
      *
      * @return int|null
      */
     public function getUpdateLastRun()
     {
-        return $this->container['updateLastRun'];
+        return $this->container['update_last_run'];
     }
 
     /**
-     * Sets updateLastRun
+     * Sets update_last_run
      *
-     * @param int|null $updateLastRun The UNIX timestamp when updates were last checked.
+     * @param int|null $update_last_run The UNIX timestamp when updates were last checked.
      *
      * @return self
      */
-    public function setUpdateLastRun($updateLastRun)
+    public function setUpdateLastRun($update_last_run)
     {
-        if (is_null($updateLastRun)) {
-            throw new \InvalidArgumentException('non-nullable updateLastRun cannot be null');
+        if (is_null($update_last_run)) {
+            throw new \InvalidArgumentException('non-nullable update_last_run cannot be null');
         }
-        $this->container['updateLastRun'] = $updateLastRun;
+        $this->container['update_last_run'] = $update_last_run;
 
         return $this;
     }
 
     /**
-     * Gets publicTheme
+     * Gets public_theme
      *
      * @return mixed|null
      */
     public function getPublicTheme()
     {
-        return $this->container['publicTheme'];
+        return $this->container['public_theme'];
     }
 
     /**
-     * Sets publicTheme
+     * Sets public_theme
      *
-     * @param mixed|null $publicTheme Base Theme for Public Pages
+     * @param mixed|null $public_theme Base Theme for Public Pages
      *
      * @return self
      */
-    public function setPublicTheme($publicTheme)
+    public function setPublicTheme($public_theme)
     {
-        if (is_null($publicTheme)) {
-            array_push($this->openAPINullablesSetToNull, 'publicTheme');
+        if (is_null($public_theme)) {
+            array_push($this->openAPINullablesSetToNull, 'public_theme');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('publicTheme', $nullablesSetToNull);
+            $index = array_search('public_theme', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['publicTheme'] = $publicTheme;
+        $this->container['public_theme'] = $public_theme;
 
         return $this;
     }
 
     /**
-     * Gets hideAlbumArt
+     * Gets hide_album_art
      *
      * @return bool|null
      */
     public function getHideAlbumArt()
     {
-        return $this->container['hideAlbumArt'];
+        return $this->container['hide_album_art'];
     }
 
     /**
-     * Sets hideAlbumArt
+     * Sets hide_album_art
      *
-     * @param bool|null $hideAlbumArt Hide Album Art on Public Pages
+     * @param bool|null $hide_album_art Hide Album Art on Public Pages
      *
      * @return self
      */
-    public function setHideAlbumArt($hideAlbumArt)
+    public function setHideAlbumArt($hide_album_art)
     {
-        if (is_null($hideAlbumArt)) {
-            throw new \InvalidArgumentException('non-nullable hideAlbumArt cannot be null');
+        if (is_null($hide_album_art)) {
+            throw new \InvalidArgumentException('non-nullable hide_album_art cannot be null');
         }
-        $this->container['hideAlbumArt'] = $hideAlbumArt;
+        $this->container['hide_album_art'] = $hide_album_art;
 
         return $this;
     }
 
     /**
-     * Gets homepageRedirectUrl
+     * Gets homepage_redirect_url
      *
      * @return string|null
      */
     public function getHomepageRedirectUrl()
     {
-        return $this->container['homepageRedirectUrl'];
+        return $this->container['homepage_redirect_url'];
     }
 
     /**
-     * Sets homepageRedirectUrl
+     * Sets homepage_redirect_url
      *
-     * @param string|null $homepageRedirectUrl Homepage Redirect URL
+     * @param string|null $homepage_redirect_url Homepage Redirect URL
      *
      * @return self
      */
-    public function setHomepageRedirectUrl($homepageRedirectUrl)
+    public function setHomepageRedirectUrl($homepage_redirect_url)
     {
-        if (is_null($homepageRedirectUrl)) {
-            array_push($this->openAPINullablesSetToNull, 'homepageRedirectUrl');
+        if (is_null($homepage_redirect_url)) {
+            array_push($this->openAPINullablesSetToNull, 'homepage_redirect_url');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('homepageRedirectUrl', $nullablesSetToNull);
+            $index = array_search('homepage_redirect_url', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['homepageRedirectUrl'] = $homepageRedirectUrl;
+        $this->container['homepage_redirect_url'] = $homepage_redirect_url;
 
         return $this;
     }
 
     /**
-     * Gets defaultAlbumArtUrl
+     * Gets default_album_art_url
      *
      * @return string|null
      */
     public function getDefaultAlbumArtUrl()
     {
-        return $this->container['defaultAlbumArtUrl'];
+        return $this->container['default_album_art_url'];
     }
 
     /**
-     * Sets defaultAlbumArtUrl
+     * Sets default_album_art_url
      *
-     * @param string|null $defaultAlbumArtUrl Default Album Art URL
+     * @param string|null $default_album_art_url Default Album Art URL
      *
      * @return self
      */
-    public function setDefaultAlbumArtUrl($defaultAlbumArtUrl)
+    public function setDefaultAlbumArtUrl($default_album_art_url)
     {
-        if (is_null($defaultAlbumArtUrl)) {
-            array_push($this->openAPINullablesSetToNull, 'defaultAlbumArtUrl');
+        if (is_null($default_album_art_url)) {
+            array_push($this->openAPINullablesSetToNull, 'default_album_art_url');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('defaultAlbumArtUrl', $nullablesSetToNull);
+            $index = array_search('default_album_art_url', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['defaultAlbumArtUrl'] = $defaultAlbumArtUrl;
+        $this->container['default_album_art_url'] = $default_album_art_url;
 
         return $this;
     }
 
     /**
-     * Gets useExternalAlbumArtWhenProcessingMedia
+     * Gets use_external_album_art_when_processing_media
      *
      * @return bool|null
      */
     public function getUseExternalAlbumArtWhenProcessingMedia()
     {
-        return $this->container['useExternalAlbumArtWhenProcessingMedia'];
+        return $this->container['use_external_album_art_when_processing_media'];
     }
 
     /**
-     * Sets useExternalAlbumArtWhenProcessingMedia
+     * Sets use_external_album_art_when_processing_media
      *
-     * @param bool|null $useExternalAlbumArtWhenProcessingMedia Attempt to fetch album art from external sources when processing media.
+     * @param bool|null $use_external_album_art_when_processing_media Attempt to fetch album art from external sources when processing media.
      *
      * @return self
      */
-    public function setUseExternalAlbumArtWhenProcessingMedia($useExternalAlbumArtWhenProcessingMedia)
+    public function setUseExternalAlbumArtWhenProcessingMedia($use_external_album_art_when_processing_media)
     {
-        if (is_null($useExternalAlbumArtWhenProcessingMedia)) {
-            throw new \InvalidArgumentException('non-nullable useExternalAlbumArtWhenProcessingMedia cannot be null');
+        if (is_null($use_external_album_art_when_processing_media)) {
+            throw new \InvalidArgumentException('non-nullable use_external_album_art_when_processing_media cannot be null');
         }
-        $this->container['useExternalAlbumArtWhenProcessingMedia'] = $useExternalAlbumArtWhenProcessingMedia;
+        $this->container['use_external_album_art_when_processing_media'] = $use_external_album_art_when_processing_media;
 
         return $this;
     }
 
     /**
-     * Gets useExternalAlbumArtInApis
+     * Gets use_external_album_art_in_apis
      *
      * @return bool|null
      */
     public function getUseExternalAlbumArtInApis()
     {
-        return $this->container['useExternalAlbumArtInApis'];
+        return $this->container['use_external_album_art_in_apis'];
     }
 
     /**
-     * Sets useExternalAlbumArtInApis
+     * Sets use_external_album_art_in_apis
      *
-     * @param bool|null $useExternalAlbumArtInApis Attempt to fetch album art from external sources in API requests.
+     * @param bool|null $use_external_album_art_in_apis Attempt to fetch album art from external sources in API requests.
      *
      * @return self
      */
-    public function setUseExternalAlbumArtInApis($useExternalAlbumArtInApis)
+    public function setUseExternalAlbumArtInApis($use_external_album_art_in_apis)
     {
-        if (is_null($useExternalAlbumArtInApis)) {
-            throw new \InvalidArgumentException('non-nullable useExternalAlbumArtInApis cannot be null');
+        if (is_null($use_external_album_art_in_apis)) {
+            throw new \InvalidArgumentException('non-nullable use_external_album_art_in_apis cannot be null');
         }
-        $this->container['useExternalAlbumArtInApis'] = $useExternalAlbumArtInApis;
+        $this->container['use_external_album_art_in_apis'] = $use_external_album_art_in_apis;
 
         return $this;
     }
 
     /**
-     * Gets lastFmApiKey
+     * Gets last_fm_api_key
      *
      * @return string|null
      */
     public function getLastFmApiKey()
     {
-        return $this->container['lastFmApiKey'];
+        return $this->container['last_fm_api_key'];
     }
 
     /**
-     * Sets lastFmApiKey
+     * Sets last_fm_api_key
      *
-     * @param string|null $lastFmApiKey An API key to connect to Last.fm services, if provided.
+     * @param string|null $last_fm_api_key An API key to connect to Last.fm services, if provided.
      *
      * @return self
      */
-    public function setLastFmApiKey($lastFmApiKey)
+    public function setLastFmApiKey($last_fm_api_key)
     {
-        if (is_null($lastFmApiKey)) {
-            array_push($this->openAPINullablesSetToNull, 'lastFmApiKey');
+        if (is_null($last_fm_api_key)) {
+            array_push($this->openAPINullablesSetToNull, 'last_fm_api_key');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('lastFmApiKey', $nullablesSetToNull);
+            $index = array_search('last_fm_api_key', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['lastFmApiKey'] = $lastFmApiKey;
+        $this->container['last_fm_api_key'] = $last_fm_api_key;
 
         return $this;
     }
 
     /**
-     * Gets hideProductName
+     * Gets hide_product_name
      *
      * @return bool|null
      */
     public function getHideProductName()
     {
-        return $this->container['hideProductName'];
+        return $this->container['hide_product_name'];
     }
 
     /**
-     * Sets hideProductName
+     * Sets hide_product_name
      *
-     * @param bool|null $hideProductName Hide AzuraCast Branding on Public Pages
+     * @param bool|null $hide_product_name Hide AzuraCast Branding on Public Pages
      *
      * @return self
      */
-    public function setHideProductName($hideProductName)
+    public function setHideProductName($hide_product_name)
     {
-        if (is_null($hideProductName)) {
-            throw new \InvalidArgumentException('non-nullable hideProductName cannot be null');
+        if (is_null($hide_product_name)) {
+            throw new \InvalidArgumentException('non-nullable hide_product_name cannot be null');
         }
-        $this->container['hideProductName'] = $hideProductName;
+        $this->container['hide_product_name'] = $hide_product_name;
 
         return $this;
     }
 
     /**
-     * Gets publicCustomCss
+     * Gets public_custom_css
      *
      * @return string|null
      */
     public function getPublicCustomCss()
     {
-        return $this->container['publicCustomCss'];
+        return $this->container['public_custom_css'];
     }
 
     /**
-     * Sets publicCustomCss
+     * Sets public_custom_css
      *
-     * @param string|null $publicCustomCss Custom CSS for Public Pages
+     * @param string|null $public_custom_css Custom CSS for Public Pages
      *
      * @return self
      */
-    public function setPublicCustomCss($publicCustomCss)
+    public function setPublicCustomCss($public_custom_css)
     {
-        if (is_null($publicCustomCss)) {
-            array_push($this->openAPINullablesSetToNull, 'publicCustomCss');
+        if (is_null($public_custom_css)) {
+            array_push($this->openAPINullablesSetToNull, 'public_custom_css');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('publicCustomCss', $nullablesSetToNull);
+            $index = array_search('public_custom_css', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['publicCustomCss'] = $publicCustomCss;
+        $this->container['public_custom_css'] = $public_custom_css;
 
         return $this;
     }
 
     /**
-     * Gets publicCustomJs
+     * Gets public_custom_js
      *
      * @return string|null
      */
     public function getPublicCustomJs()
     {
-        return $this->container['publicCustomJs'];
+        return $this->container['public_custom_js'];
     }
 
     /**
-     * Sets publicCustomJs
+     * Sets public_custom_js
      *
-     * @param string|null $publicCustomJs Custom JS for Public Pages
+     * @param string|null $public_custom_js Custom JS for Public Pages
      *
      * @return self
      */
-    public function setPublicCustomJs($publicCustomJs)
+    public function setPublicCustomJs($public_custom_js)
     {
-        if (is_null($publicCustomJs)) {
-            array_push($this->openAPINullablesSetToNull, 'publicCustomJs');
+        if (is_null($public_custom_js)) {
+            array_push($this->openAPINullablesSetToNull, 'public_custom_js');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('publicCustomJs', $nullablesSetToNull);
+            $index = array_search('public_custom_js', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['publicCustomJs'] = $publicCustomJs;
+        $this->container['public_custom_js'] = $public_custom_js;
 
         return $this;
     }
 
     /**
-     * Gets internalCustomCss
+     * Gets internal_custom_css
      *
      * @return string|null
      */
     public function getInternalCustomCss()
     {
-        return $this->container['internalCustomCss'];
+        return $this->container['internal_custom_css'];
     }
 
     /**
-     * Sets internalCustomCss
+     * Sets internal_custom_css
      *
-     * @param string|null $internalCustomCss Custom CSS for Internal Pages
+     * @param string|null $internal_custom_css Custom CSS for Internal Pages
      *
      * @return self
      */
-    public function setInternalCustomCss($internalCustomCss)
+    public function setInternalCustomCss($internal_custom_css)
     {
-        if (is_null($internalCustomCss)) {
-            array_push($this->openAPINullablesSetToNull, 'internalCustomCss');
+        if (is_null($internal_custom_css)) {
+            array_push($this->openAPINullablesSetToNull, 'internal_custom_css');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('internalCustomCss', $nullablesSetToNull);
+            $index = array_search('internal_custom_css', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['internalCustomCss'] = $internalCustomCss;
+        $this->container['internal_custom_css'] = $internal_custom_css;
 
         return $this;
     }
 
     /**
-     * Gets backupEnabled
+     * Gets backup_enabled
      *
      * @return bool|null
      */
     public function getBackupEnabled()
     {
-        return $this->container['backupEnabled'];
+        return $this->container['backup_enabled'];
     }
 
     /**
-     * Sets backupEnabled
+     * Sets backup_enabled
      *
-     * @param bool|null $backupEnabled Whether backup is enabled.
+     * @param bool|null $backup_enabled Whether backup is enabled.
      *
      * @return self
      */
-    public function setBackupEnabled($backupEnabled)
+    public function setBackupEnabled($backup_enabled)
     {
-        if (is_null($backupEnabled)) {
-            throw new \InvalidArgumentException('non-nullable backupEnabled cannot be null');
+        if (is_null($backup_enabled)) {
+            throw new \InvalidArgumentException('non-nullable backup_enabled cannot be null');
         }
-        $this->container['backupEnabled'] = $backupEnabled;
+        $this->container['backup_enabled'] = $backup_enabled;
 
         return $this;
     }
 
     /**
-     * Gets backupTimeCode
+     * Gets backup_time_code
      *
      * @return string|null
      */
     public function getBackupTimeCode()
     {
-        return $this->container['backupTimeCode'];
+        return $this->container['backup_time_code'];
     }
 
     /**
-     * Sets backupTimeCode
+     * Sets backup_time_code
      *
-     * @param string|null $backupTimeCode The timecode (i.e. 400 for 4:00AM) when automated backups should run.
+     * @param string|null $backup_time_code The timecode (i.e. 400 for 4:00AM) when automated backups should run.
      *
      * @return self
      */
-    public function setBackupTimeCode($backupTimeCode)
+    public function setBackupTimeCode($backup_time_code)
     {
-        if (is_null($backupTimeCode)) {
-            array_push($this->openAPINullablesSetToNull, 'backupTimeCode');
+        if (is_null($backup_time_code)) {
+            array_push($this->openAPINullablesSetToNull, 'backup_time_code');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('backupTimeCode', $nullablesSetToNull);
+            $index = array_search('backup_time_code', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['backupTimeCode'] = $backupTimeCode;
+        $this->container['backup_time_code'] = $backup_time_code;
 
         return $this;
     }
 
     /**
-     * Gets backupExcludeMedia
+     * Gets backup_exclude_media
      *
      * @return bool|null
      */
     public function getBackupExcludeMedia()
     {
-        return $this->container['backupExcludeMedia'];
+        return $this->container['backup_exclude_media'];
     }
 
     /**
-     * Sets backupExcludeMedia
+     * Sets backup_exclude_media
      *
-     * @param bool|null $backupExcludeMedia Whether to exclude media in automated backups.
+     * @param bool|null $backup_exclude_media Whether to exclude media in automated backups.
      *
      * @return self
      */
-    public function setBackupExcludeMedia($backupExcludeMedia)
+    public function setBackupExcludeMedia($backup_exclude_media)
     {
-        if (is_null($backupExcludeMedia)) {
-            throw new \InvalidArgumentException('non-nullable backupExcludeMedia cannot be null');
+        if (is_null($backup_exclude_media)) {
+            throw new \InvalidArgumentException('non-nullable backup_exclude_media cannot be null');
         }
-        $this->container['backupExcludeMedia'] = $backupExcludeMedia;
+        $this->container['backup_exclude_media'] = $backup_exclude_media;
 
         return $this;
     }
 
     /**
-     * Gets backupKeepCopies
+     * Gets backup_keep_copies
      *
      * @return int|null
      */
     public function getBackupKeepCopies()
     {
-        return $this->container['backupKeepCopies'];
+        return $this->container['backup_keep_copies'];
     }
 
     /**
-     * Sets backupKeepCopies
+     * Sets backup_keep_copies
      *
-     * @param int|null $backupKeepCopies Number of backups to keep, or infinite if zero/null.
+     * @param int|null $backup_keep_copies Number of backups to keep, or infinite if zero/null.
      *
      * @return self
      */
-    public function setBackupKeepCopies($backupKeepCopies)
+    public function setBackupKeepCopies($backup_keep_copies)
     {
-        if (is_null($backupKeepCopies)) {
-            throw new \InvalidArgumentException('non-nullable backupKeepCopies cannot be null');
+        if (is_null($backup_keep_copies)) {
+            throw new \InvalidArgumentException('non-nullable backup_keep_copies cannot be null');
         }
-        $this->container['backupKeepCopies'] = $backupKeepCopies;
+        $this->container['backup_keep_copies'] = $backup_keep_copies;
 
         return $this;
     }
 
     /**
-     * Gets backupStorageLocation
+     * Gets backup_storage_location
      *
      * @return int|null
      */
     public function getBackupStorageLocation()
     {
-        return $this->container['backupStorageLocation'];
+        return $this->container['backup_storage_location'];
     }
 
     /**
-     * Sets backupStorageLocation
+     * Sets backup_storage_location
      *
-     * @param int|null $backupStorageLocation The storage location ID for automated backups.
+     * @param int|null $backup_storage_location The storage location ID for automated backups.
      *
      * @return self
      */
-    public function setBackupStorageLocation($backupStorageLocation)
+    public function setBackupStorageLocation($backup_storage_location)
     {
-        if (is_null($backupStorageLocation)) {
-            array_push($this->openAPINullablesSetToNull, 'backupStorageLocation');
+        if (is_null($backup_storage_location)) {
+            array_push($this->openAPINullablesSetToNull, 'backup_storage_location');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('backupStorageLocation', $nullablesSetToNull);
+            $index = array_search('backup_storage_location', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['backupStorageLocation'] = $backupStorageLocation;
+        $this->container['backup_storage_location'] = $backup_storage_location;
 
         return $this;
     }
 
     /**
-     * Gets backupFormat
+     * Gets backup_format
      *
      * @return string|null
      */
     public function getBackupFormat()
     {
-        return $this->container['backupFormat'];
+        return $this->container['backup_format'];
     }
 
     /**
-     * Sets backupFormat
+     * Sets backup_format
      *
-     * @param string|null $backupFormat The output format for the automated backup.
+     * @param string|null $backup_format The output format for the automated backup.
      *
      * @return self
      */
-    public function setBackupFormat($backupFormat)
+    public function setBackupFormat($backup_format)
     {
-        if (is_null($backupFormat)) {
-            array_push($this->openAPINullablesSetToNull, 'backupFormat');
+        if (is_null($backup_format)) {
+            array_push($this->openAPINullablesSetToNull, 'backup_format');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('backupFormat', $nullablesSetToNull);
+            $index = array_search('backup_format', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['backupFormat'] = $backupFormat;
+        $this->container['backup_format'] = $backup_format;
 
         return $this;
     }
 
     /**
-     * Gets backupLastRun
+     * Gets backup_last_run
      *
      * @return int|null
      */
     public function getBackupLastRun()
     {
-        return $this->container['backupLastRun'];
+        return $this->container['backup_last_run'];
     }
 
     /**
-     * Sets backupLastRun
+     * Sets backup_last_run
      *
-     * @param int|null $backupLastRun The UNIX timestamp when automated backup was last run.
+     * @param int|null $backup_last_run The UNIX timestamp when automated backup was last run.
      *
      * @return self
      */
-    public function setBackupLastRun($backupLastRun)
+    public function setBackupLastRun($backup_last_run)
     {
-        if (is_null($backupLastRun)) {
-            throw new \InvalidArgumentException('non-nullable backupLastRun cannot be null');
+        if (is_null($backup_last_run)) {
+            throw new \InvalidArgumentException('non-nullable backup_last_run cannot be null');
         }
-        $this->container['backupLastRun'] = $backupLastRun;
+        $this->container['backup_last_run'] = $backup_last_run;
 
         return $this;
     }
 
     /**
-     * Gets backupLastOutput
+     * Gets backup_last_output
      *
      * @return string|null
      */
     public function getBackupLastOutput()
     {
-        return $this->container['backupLastOutput'];
+        return $this->container['backup_last_output'];
     }
 
     /**
-     * Sets backupLastOutput
+     * Sets backup_last_output
      *
-     * @param string|null $backupLastOutput The output of the latest automated backup task.
+     * @param string|null $backup_last_output The output of the latest automated backup task.
      *
      * @return self
      */
-    public function setBackupLastOutput($backupLastOutput)
+    public function setBackupLastOutput($backup_last_output)
     {
-        if (is_null($backupLastOutput)) {
-            array_push($this->openAPINullablesSetToNull, 'backupLastOutput');
+        if (is_null($backup_last_output)) {
+            array_push($this->openAPINullablesSetToNull, 'backup_last_output');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('backupLastOutput', $nullablesSetToNull);
+            $index = array_search('backup_last_output', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['backupLastOutput'] = $backupLastOutput;
+        $this->container['backup_last_output'] = $backup_last_output;
 
         return $this;
     }
 
     /**
-     * Gets setupCompleteTime
+     * Gets setup_complete_time
      *
      * @return int|null
      */
     public function getSetupCompleteTime()
     {
-        return $this->container['setupCompleteTime'];
+        return $this->container['setup_complete_time'];
     }
 
     /**
-     * Sets setupCompleteTime
+     * Sets setup_complete_time
      *
-     * @param int|null $setupCompleteTime The UNIX timestamp when setup was last completed.
+     * @param int|null $setup_complete_time The UNIX timestamp when setup was last completed.
      *
      * @return self
      */
-    public function setSetupCompleteTime($setupCompleteTime)
+    public function setSetupCompleteTime($setup_complete_time)
     {
-        if (is_null($setupCompleteTime)) {
-            throw new \InvalidArgumentException('non-nullable setupCompleteTime cannot be null');
+        if (is_null($setup_complete_time)) {
+            throw new \InvalidArgumentException('non-nullable setup_complete_time cannot be null');
         }
-        $this->container['setupCompleteTime'] = $setupCompleteTime;
+        $this->container['setup_complete_time'] = $setup_complete_time;
 
         return $this;
     }
 
     /**
-     * Gets syncDisabled
+     * Gets sync_disabled
      *
      * @return bool|null
      */
     public function getSyncDisabled()
     {
-        return $this->container['syncDisabled'];
+        return $this->container['sync_disabled'];
     }
 
     /**
-     * Sets syncDisabled
+     * Sets sync_disabled
      *
-     * @param bool|null $syncDisabled Temporarily disable all sync tasks.
+     * @param bool|null $sync_disabled Temporarily disable all sync tasks.
      *
      * @return self
      */
-    public function setSyncDisabled($syncDisabled)
+    public function setSyncDisabled($sync_disabled)
     {
-        if (is_null($syncDisabled)) {
-            throw new \InvalidArgumentException('non-nullable syncDisabled cannot be null');
+        if (is_null($sync_disabled)) {
+            throw new \InvalidArgumentException('non-nullable sync_disabled cannot be null');
         }
-        $this->container['syncDisabled'] = $syncDisabled;
+        $this->container['sync_disabled'] = $sync_disabled;
 
         return $this;
     }
 
     /**
-     * Gets syncLastRun
+     * Gets sync_last_run
      *
      * @return int|null
      */
     public function getSyncLastRun()
     {
-        return $this->container['syncLastRun'];
+        return $this->container['sync_last_run'];
     }
 
     /**
-     * Sets syncLastRun
+     * Sets sync_last_run
      *
-     * @param int|null $syncLastRun The last run timestamp for the unified sync task.
+     * @param int|null $sync_last_run The last run timestamp for the unified sync task.
      *
      * @return self
      */
-    public function setSyncLastRun($syncLastRun)
+    public function setSyncLastRun($sync_last_run)
     {
-        if (is_null($syncLastRun)) {
-            throw new \InvalidArgumentException('non-nullable syncLastRun cannot be null');
+        if (is_null($sync_last_run)) {
+            throw new \InvalidArgumentException('non-nullable sync_last_run cannot be null');
         }
-        $this->container['syncLastRun'] = $syncLastRun;
+        $this->container['sync_last_run'] = $sync_last_run;
 
         return $this;
     }
 
     /**
-     * Gets externalIp
+     * Gets external_ip
      *
      * @return string|null
      */
     public function getExternalIp()
     {
-        return $this->container['externalIp'];
+        return $this->container['external_ip'];
     }
 
     /**
-     * Sets externalIp
+     * Sets external_ip
      *
-     * @param string|null $externalIp This installation's external IP.
+     * @param string|null $external_ip This installation's external IP.
      *
      * @return self
      */
-    public function setExternalIp($externalIp)
+    public function setExternalIp($external_ip)
     {
-        if (is_null($externalIp)) {
-            array_push($this->openAPINullablesSetToNull, 'externalIp');
+        if (is_null($external_ip)) {
+            array_push($this->openAPINullablesSetToNull, 'external_ip');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('externalIp', $nullablesSetToNull);
+            $index = array_search('external_ip', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['externalIp'] = $externalIp;
+        $this->container['external_ip'] = $external_ip;
 
         return $this;
     }
 
     /**
-     * Gets geoliteLicenseKey
+     * Gets geolite_license_key
      *
      * @return string|null
      */
     public function getGeoliteLicenseKey()
     {
-        return $this->container['geoliteLicenseKey'];
+        return $this->container['geolite_license_key'];
     }
 
     /**
-     * Sets geoliteLicenseKey
+     * Sets geolite_license_key
      *
-     * @param string|null $geoliteLicenseKey The license key for the Maxmind Geolite download.
+     * @param string|null $geolite_license_key The license key for the Maxmind Geolite download.
      *
      * @return self
      */
-    public function setGeoliteLicenseKey($geoliteLicenseKey)
+    public function setGeoliteLicenseKey($geolite_license_key)
     {
-        if (is_null($geoliteLicenseKey)) {
-            array_push($this->openAPINullablesSetToNull, 'geoliteLicenseKey');
+        if (is_null($geolite_license_key)) {
+            array_push($this->openAPINullablesSetToNull, 'geolite_license_key');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('geoliteLicenseKey', $nullablesSetToNull);
+            $index = array_search('geolite_license_key', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['geoliteLicenseKey'] = $geoliteLicenseKey;
+        $this->container['geolite_license_key'] = $geolite_license_key;
 
         return $this;
     }
 
     /**
-     * Gets geoliteLastRun
+     * Gets geolite_last_run
      *
      * @return int|null
      */
     public function getGeoliteLastRun()
     {
-        return $this->container['geoliteLastRun'];
+        return $this->container['geolite_last_run'];
     }
 
     /**
-     * Sets geoliteLastRun
+     * Sets geolite_last_run
      *
-     * @param int|null $geoliteLastRun The UNIX timestamp when the Maxmind Geolite was last downloaded.
+     * @param int|null $geolite_last_run The UNIX timestamp when the Maxmind Geolite was last downloaded.
      *
      * @return self
      */
-    public function setGeoliteLastRun($geoliteLastRun)
+    public function setGeoliteLastRun($geolite_last_run)
     {
-        if (is_null($geoliteLastRun)) {
-            throw new \InvalidArgumentException('non-nullable geoliteLastRun cannot be null');
+        if (is_null($geolite_last_run)) {
+            throw new \InvalidArgumentException('non-nullable geolite_last_run cannot be null');
         }
-        $this->container['geoliteLastRun'] = $geoliteLastRun;
+        $this->container['geolite_last_run'] = $geolite_last_run;
 
         return $this;
     }
 
     /**
-     * Gets enableAdvancedFeatures
+     * Gets enable_advanced_features
      *
      * @return bool|null
      */
     public function getEnableAdvancedFeatures()
     {
-        return $this->container['enableAdvancedFeatures'];
+        return $this->container['enable_advanced_features'];
     }
 
     /**
-     * Sets enableAdvancedFeatures
+     * Sets enable_advanced_features
      *
-     * @param bool|null $enableAdvancedFeatures Whether to enable 'advanced' functionality in the system that is intended for power users.
+     * @param bool|null $enable_advanced_features Whether to enable 'advanced' functionality in the system that is intended for power users.
      *
      * @return self
      */
-    public function setEnableAdvancedFeatures($enableAdvancedFeatures)
+    public function setEnableAdvancedFeatures($enable_advanced_features)
     {
-        if (is_null($enableAdvancedFeatures)) {
-            throw new \InvalidArgumentException('non-nullable enableAdvancedFeatures cannot be null');
+        if (is_null($enable_advanced_features)) {
+            throw new \InvalidArgumentException('non-nullable enable_advanced_features cannot be null');
         }
-        $this->container['enableAdvancedFeatures'] = $enableAdvancedFeatures;
+        $this->container['enable_advanced_features'] = $enable_advanced_features;
 
         return $this;
     }
 
     /**
-     * Gets mailEnabled
+     * Gets mail_enabled
      *
      * @return bool|null
      */
     public function getMailEnabled()
     {
-        return $this->container['mailEnabled'];
+        return $this->container['mail_enabled'];
     }
 
     /**
-     * Sets mailEnabled
+     * Sets mail_enabled
      *
-     * @param bool|null $mailEnabled Enable e-mail delivery across the application.
+     * @param bool|null $mail_enabled Enable e-mail delivery across the application.
      *
      * @return self
      */
-    public function setMailEnabled($mailEnabled)
+    public function setMailEnabled($mail_enabled)
     {
-        if (is_null($mailEnabled)) {
-            throw new \InvalidArgumentException('non-nullable mailEnabled cannot be null');
+        if (is_null($mail_enabled)) {
+            throw new \InvalidArgumentException('non-nullable mail_enabled cannot be null');
         }
-        $this->container['mailEnabled'] = $mailEnabled;
+        $this->container['mail_enabled'] = $mail_enabled;
 
         return $this;
     }
 
     /**
-     * Gets mailSenderName
+     * Gets mail_sender_name
      *
      * @return string|null
      */
     public function getMailSenderName()
     {
-        return $this->container['mailSenderName'];
+        return $this->container['mail_sender_name'];
     }
 
     /**
-     * Sets mailSenderName
+     * Sets mail_sender_name
      *
-     * @param string|null $mailSenderName The name of the sender of system e-mails.
+     * @param string|null $mail_sender_name The name of the sender of system e-mails.
      *
      * @return self
      */
-    public function setMailSenderName($mailSenderName)
+    public function setMailSenderName($mail_sender_name)
     {
-        if (is_null($mailSenderName)) {
-            array_push($this->openAPINullablesSetToNull, 'mailSenderName');
+        if (is_null($mail_sender_name)) {
+            array_push($this->openAPINullablesSetToNull, 'mail_sender_name');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('mailSenderName', $nullablesSetToNull);
+            $index = array_search('mail_sender_name', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['mailSenderName'] = $mailSenderName;
+        $this->container['mail_sender_name'] = $mail_sender_name;
 
         return $this;
     }
 
     /**
-     * Gets mailSenderEmail
+     * Gets mail_sender_email
      *
      * @return string|null
      */
     public function getMailSenderEmail()
     {
-        return $this->container['mailSenderEmail'];
+        return $this->container['mail_sender_email'];
     }
 
     /**
-     * Sets mailSenderEmail
+     * Sets mail_sender_email
      *
-     * @param string|null $mailSenderEmail The e-mail address of the sender of system e-mails.
+     * @param string|null $mail_sender_email The e-mail address of the sender of system e-mails.
      *
      * @return self
      */
-    public function setMailSenderEmail($mailSenderEmail)
+    public function setMailSenderEmail($mail_sender_email)
     {
-        if (is_null($mailSenderEmail)) {
-            array_push($this->openAPINullablesSetToNull, 'mailSenderEmail');
+        if (is_null($mail_sender_email)) {
+            array_push($this->openAPINullablesSetToNull, 'mail_sender_email');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('mailSenderEmail', $nullablesSetToNull);
+            $index = array_search('mail_sender_email', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['mailSenderEmail'] = $mailSenderEmail;
+        $this->container['mail_sender_email'] = $mail_sender_email;
 
         return $this;
     }
 
     /**
-     * Gets mailSmtpHost
+     * Gets mail_smtp_host
      *
      * @return string|null
      */
     public function getMailSmtpHost()
     {
-        return $this->container['mailSmtpHost'];
+        return $this->container['mail_smtp_host'];
     }
 
     /**
-     * Sets mailSmtpHost
+     * Sets mail_smtp_host
      *
-     * @param string|null $mailSmtpHost The host to send outbound SMTP mail.
+     * @param string|null $mail_smtp_host The host to send outbound SMTP mail.
      *
      * @return self
      */
-    public function setMailSmtpHost($mailSmtpHost)
+    public function setMailSmtpHost($mail_smtp_host)
     {
-        if (is_null($mailSmtpHost)) {
-            array_push($this->openAPINullablesSetToNull, 'mailSmtpHost');
+        if (is_null($mail_smtp_host)) {
+            array_push($this->openAPINullablesSetToNull, 'mail_smtp_host');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('mailSmtpHost', $nullablesSetToNull);
+            $index = array_search('mail_smtp_host', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['mailSmtpHost'] = $mailSmtpHost;
+        $this->container['mail_smtp_host'] = $mail_smtp_host;
 
         return $this;
     }
 
     /**
-     * Gets mailSmtpPort
+     * Gets mail_smtp_port
      *
      * @return int|null
      */
     public function getMailSmtpPort()
     {
-        return $this->container['mailSmtpPort'];
+        return $this->container['mail_smtp_port'];
     }
 
     /**
-     * Sets mailSmtpPort
+     * Sets mail_smtp_port
      *
-     * @param int|null $mailSmtpPort The port for sending outbound SMTP mail.
+     * @param int|null $mail_smtp_port The port for sending outbound SMTP mail.
      *
      * @return self
      */
-    public function setMailSmtpPort($mailSmtpPort)
+    public function setMailSmtpPort($mail_smtp_port)
     {
-        if (is_null($mailSmtpPort)) {
-            throw new \InvalidArgumentException('non-nullable mailSmtpPort cannot be null');
+        if (is_null($mail_smtp_port)) {
+            throw new \InvalidArgumentException('non-nullable mail_smtp_port cannot be null');
         }
-        $this->container['mailSmtpPort'] = $mailSmtpPort;
+        $this->container['mail_smtp_port'] = $mail_smtp_port;
 
         return $this;
     }
 
     /**
-     * Gets mailSmtpUsername
+     * Gets mail_smtp_username
      *
      * @return string|null
      */
     public function getMailSmtpUsername()
     {
-        return $this->container['mailSmtpUsername'];
+        return $this->container['mail_smtp_username'];
     }
 
     /**
-     * Sets mailSmtpUsername
+     * Sets mail_smtp_username
      *
-     * @param string|null $mailSmtpUsername The username when connecting to SMTP mail.
+     * @param string|null $mail_smtp_username The username when connecting to SMTP mail.
      *
      * @return self
      */
-    public function setMailSmtpUsername($mailSmtpUsername)
+    public function setMailSmtpUsername($mail_smtp_username)
     {
-        if (is_null($mailSmtpUsername)) {
-            array_push($this->openAPINullablesSetToNull, 'mailSmtpUsername');
+        if (is_null($mail_smtp_username)) {
+            array_push($this->openAPINullablesSetToNull, 'mail_smtp_username');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('mailSmtpUsername', $nullablesSetToNull);
+            $index = array_search('mail_smtp_username', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['mailSmtpUsername'] = $mailSmtpUsername;
+        $this->container['mail_smtp_username'] = $mail_smtp_username;
 
         return $this;
     }
 
     /**
-     * Gets mailSmtpPassword
+     * Gets mail_smtp_password
      *
      * @return string|null
      */
     public function getMailSmtpPassword()
     {
-        return $this->container['mailSmtpPassword'];
+        return $this->container['mail_smtp_password'];
     }
 
     /**
-     * Sets mailSmtpPassword
+     * Sets mail_smtp_password
      *
-     * @param string|null $mailSmtpPassword The password when connecting to SMTP mail.
+     * @param string|null $mail_smtp_password The password when connecting to SMTP mail.
      *
      * @return self
      */
-    public function setMailSmtpPassword($mailSmtpPassword)
+    public function setMailSmtpPassword($mail_smtp_password)
     {
-        if (is_null($mailSmtpPassword)) {
-            array_push($this->openAPINullablesSetToNull, 'mailSmtpPassword');
+        if (is_null($mail_smtp_password)) {
+            array_push($this->openAPINullablesSetToNull, 'mail_smtp_password');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('mailSmtpPassword', $nullablesSetToNull);
+            $index = array_search('mail_smtp_password', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['mailSmtpPassword'] = $mailSmtpPassword;
+        $this->container['mail_smtp_password'] = $mail_smtp_password;
 
         return $this;
     }
 
     /**
-     * Gets mailSmtpSecure
+     * Gets mail_smtp_secure
      *
      * @return bool|null
      */
     public function getMailSmtpSecure()
     {
-        return $this->container['mailSmtpSecure'];
+        return $this->container['mail_smtp_secure'];
     }
 
     /**
-     * Sets mailSmtpSecure
+     * Sets mail_smtp_secure
      *
-     * @param bool|null $mailSmtpSecure Whether to use a secure (TLS) connection when sending SMTP mail.
+     * @param bool|null $mail_smtp_secure Whether to use a secure (TLS) connection when sending SMTP mail.
      *
      * @return self
      */
-    public function setMailSmtpSecure($mailSmtpSecure)
+    public function setMailSmtpSecure($mail_smtp_secure)
     {
-        if (is_null($mailSmtpSecure)) {
-            throw new \InvalidArgumentException('non-nullable mailSmtpSecure cannot be null');
+        if (is_null($mail_smtp_secure)) {
+            throw new \InvalidArgumentException('non-nullable mail_smtp_secure cannot be null');
         }
-        $this->container['mailSmtpSecure'] = $mailSmtpSecure;
+        $this->container['mail_smtp_secure'] = $mail_smtp_secure;
 
         return $this;
     }
 
     /**
-     * Gets avatarService
+     * Gets avatar_service
      *
      * @return string|null
      */
     public function getAvatarService()
     {
-        return $this->container['avatarService'];
+        return $this->container['avatar_service'];
     }
 
     /**
-     * Sets avatarService
+     * Sets avatar_service
      *
-     * @param string|null $avatarService The external avatar service to use when fetching avatars.
+     * @param string|null $avatar_service The external avatar service to use when fetching avatars.
      *
      * @return self
      */
-    public function setAvatarService($avatarService)
+    public function setAvatarService($avatar_service)
     {
-        if (is_null($avatarService)) {
-            array_push($this->openAPINullablesSetToNull, 'avatarService');
+        if (is_null($avatar_service)) {
+            array_push($this->openAPINullablesSetToNull, 'avatar_service');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('avatarService', $nullablesSetToNull);
+            $index = array_search('avatar_service', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['avatarService'] = $avatarService;
+        $this->container['avatar_service'] = $avatar_service;
 
         return $this;
     }
 
     /**
-     * Gets avatarDefaultUrl
+     * Gets avatar_default_url
      *
      * @return string|null
      */
     public function getAvatarDefaultUrl()
     {
-        return $this->container['avatarDefaultUrl'];
+        return $this->container['avatar_default_url'];
     }
 
     /**
-     * Sets avatarDefaultUrl
+     * Sets avatar_default_url
      *
-     * @param string|null $avatarDefaultUrl The default avatar URL.
+     * @param string|null $avatar_default_url The default avatar URL.
      *
      * @return self
      */
-    public function setAvatarDefaultUrl($avatarDefaultUrl)
+    public function setAvatarDefaultUrl($avatar_default_url)
     {
-        if (is_null($avatarDefaultUrl)) {
-            array_push($this->openAPINullablesSetToNull, 'avatarDefaultUrl');
+        if (is_null($avatar_default_url)) {
+            array_push($this->openAPINullablesSetToNull, 'avatar_default_url');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('avatarDefaultUrl', $nullablesSetToNull);
+            $index = array_search('avatar_default_url', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['avatarDefaultUrl'] = $avatarDefaultUrl;
+        $this->container['avatar_default_url'] = $avatar_default_url;
 
         return $this;
     }
 
     /**
-     * Gets acmeEmail
+     * Gets acme_email
      *
      * @return string|null
      */
     public function getAcmeEmail()
     {
-        return $this->container['acmeEmail'];
+        return $this->container['acme_email'];
     }
 
     /**
-     * Sets acmeEmail
+     * Sets acme_email
      *
-     * @param string|null $acmeEmail ACME (LetsEncrypt) e-mail address.
+     * @param string|null $acme_email ACME (LetsEncrypt) e-mail address.
      *
      * @return self
      */
-    public function setAcmeEmail($acmeEmail)
+    public function setAcmeEmail($acme_email)
     {
-        if (is_null($acmeEmail)) {
-            array_push($this->openAPINullablesSetToNull, 'acmeEmail');
+        if (is_null($acme_email)) {
+            array_push($this->openAPINullablesSetToNull, 'acme_email');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('acmeEmail', $nullablesSetToNull);
+            $index = array_search('acme_email', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['acmeEmail'] = $acmeEmail;
+        $this->container['acme_email'] = $acme_email;
 
         return $this;
     }
 
     /**
-     * Gets acmeDomains
+     * Gets acme_domains
      *
      * @return string|null
      */
     public function getAcmeDomains()
     {
-        return $this->container['acmeDomains'];
+        return $this->container['acme_domains'];
     }
 
     /**
-     * Sets acmeDomains
+     * Sets acme_domains
      *
-     * @param string|null $acmeDomains ACME (LetsEncrypt) domain name(s).
+     * @param string|null $acme_domains ACME (LetsEncrypt) domain name(s).
      *
      * @return self
      */
-    public function setAcmeDomains($acmeDomains)
+    public function setAcmeDomains($acme_domains)
     {
-        if (is_null($acmeDomains)) {
-            array_push($this->openAPINullablesSetToNull, 'acmeDomains');
+        if (is_null($acme_domains)) {
+            array_push($this->openAPINullablesSetToNull, 'acme_domains');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('acmeDomains', $nullablesSetToNull);
+            $index = array_search('acme_domains', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['acmeDomains'] = $acmeDomains;
+        $this->container['acme_domains'] = $acme_domains;
 
         return $this;
     }
 
     /**
-     * Gets ipSource
+     * Gets ip_source
      *
      * @return mixed|null
      */
     public function getIpSource()
     {
-        return $this->container['ipSource'];
+        return $this->container['ip_source'];
     }
 
     /**
-     * Sets ipSource
+     * Sets ip_source
      *
-     * @param mixed|null $ipSource IP Address Source
+     * @param mixed|null $ip_source IP Address Source
      *
      * @return self
      */
-    public function setIpSource($ipSource)
+    public function setIpSource($ip_source)
     {
-        if (is_null($ipSource)) {
-            array_push($this->openAPINullablesSetToNull, 'ipSource');
+        if (is_null($ip_source)) {
+            array_push($this->openAPINullablesSetToNull, 'ip_source');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('ipSource', $nullablesSetToNull);
+            $index = array_search('ip_source', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['ipSource'] = $ipSource;
+        $this->container['ip_source'] = $ip_source;
 
         return $this;
     }

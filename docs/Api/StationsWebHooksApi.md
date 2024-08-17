@@ -14,7 +14,7 @@ All URIs are relative to https://demo.azuracast.com/api, except if the operation
 ## `addWebhook()`
 
 ```php
-addWebhook($stationId, $stationWebhook): \AzuraCast\Model\StationWebhook
+addWebhook($station_id, $station_webhook): \AzuraCast\Model\StationWebhook
 ```
 
 
@@ -40,11 +40,11 @@ $apiInstance = new AzuraCast\Api\StationsWebHooksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
-$stationWebhook = new \AzuraCast\Model\StationWebhook(); // \AzuraCast\Model\StationWebhook
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_webhook = new \AzuraCast\Model\StationWebhook(); // \AzuraCast\Model\StationWebhook
 
 try {
-    $result = $apiInstance->addWebhook($stationId, $stationWebhook);
+    $result = $apiInstance->addWebhook($station_id, $station_webhook);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsWebHooksApi->addWebhook: ', $e->getMessage(), PHP_EOL;
@@ -55,8 +55,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
-| **stationWebhook** | [**\AzuraCast\Model\StationWebhook**](../Model/StationWebhook.md)|  | [optional] |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_webhook** | [**\AzuraCast\Model\StationWebhook**](../Model/StationWebhook.md)|  | [optional] |
 
 ### Return type
 
@@ -78,7 +78,7 @@ try {
 ## `deleteWebhook()`
 
 ```php
-deleteWebhook($stationId, $id): \AzuraCast\Model\ApiStatus
+deleteWebhook($station_id, $id): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -104,11 +104,11 @@ $apiInstance = new AzuraCast\Api\StationsWebHooksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 56; // int | Web Hook ID
 
 try {
-    $result = $apiInstance->deleteWebhook($stationId, $id);
+    $result = $apiInstance->deleteWebhook($station_id, $id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsWebHooksApi->deleteWebhook: ', $e->getMessage(), PHP_EOL;
@@ -119,7 +119,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **int**| Web Hook ID | |
 
 ### Return type
@@ -142,7 +142,7 @@ try {
 ## `editWebhook()`
 
 ```php
-editWebhook($stationId, $id, $stationWebhook): \AzuraCast\Model\ApiStatus
+editWebhook($station_id, $id, $station_webhook): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -168,12 +168,12 @@ $apiInstance = new AzuraCast\Api\StationsWebHooksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 56; // int | Web Hook ID
-$stationWebhook = new \AzuraCast\Model\StationWebhook(); // \AzuraCast\Model\StationWebhook
+$station_webhook = new \AzuraCast\Model\StationWebhook(); // \AzuraCast\Model\StationWebhook
 
 try {
-    $result = $apiInstance->editWebhook($stationId, $id, $stationWebhook);
+    $result = $apiInstance->editWebhook($station_id, $id, $station_webhook);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsWebHooksApi->editWebhook: ', $e->getMessage(), PHP_EOL;
@@ -184,9 +184,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **int**| Web Hook ID | |
-| **stationWebhook** | [**\AzuraCast\Model\StationWebhook**](../Model/StationWebhook.md)|  | [optional] |
+| **station_webhook** | [**\AzuraCast\Model\StationWebhook**](../Model/StationWebhook.md)|  | [optional] |
 
 ### Return type
 
@@ -208,7 +208,7 @@ try {
 ## `getWebhook()`
 
 ```php
-getWebhook($stationId, $id): \AzuraCast\Model\StationWebhook
+getWebhook($station_id, $id): \AzuraCast\Model\StationWebhook
 ```
 
 
@@ -234,11 +234,11 @@ $apiInstance = new AzuraCast\Api\StationsWebHooksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 56; // int | Web Hook ID
 
 try {
-    $result = $apiInstance->getWebhook($stationId, $id);
+    $result = $apiInstance->getWebhook($station_id, $id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsWebHooksApi->getWebhook: ', $e->getMessage(), PHP_EOL;
@@ -249,7 +249,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **int**| Web Hook ID | |
 
 ### Return type
@@ -272,7 +272,7 @@ try {
 ## `getWebhooks()`
 
 ```php
-getWebhooks($stationId): \AzuraCast\Model\StationWebhook[]
+getWebhooks($station_id): \AzuraCast\Model\StationWebhook[]
 ```
 
 
@@ -298,10 +298,10 @@ $apiInstance = new AzuraCast\Api\StationsWebHooksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 
 try {
-    $result = $apiInstance->getWebhooks($stationId);
+    $result = $apiInstance->getWebhooks($station_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsWebHooksApi->getWebhooks: ', $e->getMessage(), PHP_EOL;
@@ -312,7 +312,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 
 ### Return type
 

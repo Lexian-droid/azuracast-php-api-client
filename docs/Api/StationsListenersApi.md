@@ -10,7 +10,7 @@ All URIs are relative to https://demo.azuracast.com/api, except if the operation
 ## `getStationListeners()`
 
 ```php
-getStationListeners($stationId): \AzuraCast\Model\ApiListener[]
+getStationListeners($station_id): \AzuraCast\Model\ApiListener[]
 ```
 
 
@@ -36,10 +36,10 @@ $apiInstance = new AzuraCast\Api\StationsListenersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 
 try {
-    $result = $apiInstance->getStationListeners($stationId);
+    $result = $apiInstance->getStationListeners($station_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsListenersApi->getStationListeners: ', $e->getMessage(), PHP_EOL;
@@ -50,7 +50,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 
 ### Return type
 

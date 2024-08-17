@@ -58,11 +58,11 @@ class Relay implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'baseUrl' => 'string',
+        'base_url' => 'string',
         'name' => 'string',
-        'isVisibleOnPublicPages' => 'bool',
-        'createdAt' => 'int',
-        'updatedAt' => 'int'
+        'is_visible_on_public_pages' => 'bool',
+        'created_at' => 'int',
+        'updated_at' => 'int'
     ];
 
     /**
@@ -74,11 +74,11 @@ class Relay implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => null,
-        'baseUrl' => null,
+        'base_url' => null,
         'name' => null,
-        'isVisibleOnPublicPages' => null,
-        'createdAt' => null,
-        'updatedAt' => null
+        'is_visible_on_public_pages' => null,
+        'created_at' => null,
+        'updated_at' => null
     ];
 
     /**
@@ -88,11 +88,11 @@ class Relay implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => true,
-        'baseUrl' => false,
+        'base_url' => false,
         'name' => true,
-        'isVisibleOnPublicPages' => false,
-        'createdAt' => false,
-        'updatedAt' => false
+        'is_visible_on_public_pages' => false,
+        'created_at' => false,
+        'updated_at' => false
     ];
 
     /**
@@ -182,11 +182,11 @@ class Relay implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'baseUrl' => 'base_url',
+        'base_url' => 'base_url',
         'name' => 'name',
-        'isVisibleOnPublicPages' => 'is_visible_on_public_pages',
-        'createdAt' => 'created_at',
-        'updatedAt' => 'updated_at'
+        'is_visible_on_public_pages' => 'is_visible_on_public_pages',
+        'created_at' => 'created_at',
+        'updated_at' => 'updated_at'
     ];
 
     /**
@@ -196,11 +196,11 @@ class Relay implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'baseUrl' => 'setBaseUrl',
+        'base_url' => 'setBaseUrl',
         'name' => 'setName',
-        'isVisibleOnPublicPages' => 'setIsVisibleOnPublicPages',
-        'createdAt' => 'setCreatedAt',
-        'updatedAt' => 'setUpdatedAt'
+        'is_visible_on_public_pages' => 'setIsVisibleOnPublicPages',
+        'created_at' => 'setCreatedAt',
+        'updated_at' => 'setUpdatedAt'
     ];
 
     /**
@@ -210,11 +210,11 @@ class Relay implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'baseUrl' => 'getBaseUrl',
+        'base_url' => 'getBaseUrl',
         'name' => 'getName',
-        'isVisibleOnPublicPages' => 'getIsVisibleOnPublicPages',
-        'createdAt' => 'getCreatedAt',
-        'updatedAt' => 'getUpdatedAt'
+        'is_visible_on_public_pages' => 'getIsVisibleOnPublicPages',
+        'created_at' => 'getCreatedAt',
+        'updated_at' => 'getUpdatedAt'
     ];
 
     /**
@@ -275,11 +275,11 @@ class Relay implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('baseUrl', $data ?? [], null);
+        $this->setIfExists('base_url', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('isVisibleOnPublicPages', $data ?? [], null);
-        $this->setIfExists('createdAt', $data ?? [], null);
-        $this->setIfExists('updatedAt', $data ?? [], null);
+        $this->setIfExists('is_visible_on_public_pages', $data ?? [], null);
+        $this->setIfExists('created_at', $data ?? [], null);
+        $this->setIfExists('updated_at', $data ?? [], null);
     }
 
     /**
@@ -359,28 +359,28 @@ class Relay implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets baseUrl
+     * Gets base_url
      *
      * @return string|null
      */
     public function getBaseUrl()
     {
-        return $this->container['baseUrl'];
+        return $this->container['base_url'];
     }
 
     /**
-     * Sets baseUrl
+     * Sets base_url
      *
-     * @param string|null $baseUrl baseUrl
+     * @param string|null $base_url base_url
      *
      * @return self
      */
-    public function setBaseUrl($baseUrl)
+    public function setBaseUrl($base_url)
     {
-        if (is_null($baseUrl)) {
-            throw new \InvalidArgumentException('non-nullable baseUrl cannot be null');
+        if (is_null($base_url)) {
+            throw new \InvalidArgumentException('non-nullable base_url cannot be null');
         }
-        $this->container['baseUrl'] = $baseUrl;
+        $this->container['base_url'] = $base_url;
 
         return $this;
     }
@@ -420,82 +420,82 @@ class Relay implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets isVisibleOnPublicPages
+     * Gets is_visible_on_public_pages
      *
      * @return bool|null
      */
     public function getIsVisibleOnPublicPages()
     {
-        return $this->container['isVisibleOnPublicPages'];
+        return $this->container['is_visible_on_public_pages'];
     }
 
     /**
-     * Sets isVisibleOnPublicPages
+     * Sets is_visible_on_public_pages
      *
-     * @param bool|null $isVisibleOnPublicPages isVisibleOnPublicPages
+     * @param bool|null $is_visible_on_public_pages is_visible_on_public_pages
      *
      * @return self
      */
-    public function setIsVisibleOnPublicPages($isVisibleOnPublicPages)
+    public function setIsVisibleOnPublicPages($is_visible_on_public_pages)
     {
-        if (is_null($isVisibleOnPublicPages)) {
-            throw new \InvalidArgumentException('non-nullable isVisibleOnPublicPages cannot be null');
+        if (is_null($is_visible_on_public_pages)) {
+            throw new \InvalidArgumentException('non-nullable is_visible_on_public_pages cannot be null');
         }
-        $this->container['isVisibleOnPublicPages'] = $isVisibleOnPublicPages;
+        $this->container['is_visible_on_public_pages'] = $is_visible_on_public_pages;
 
         return $this;
     }
 
     /**
-     * Gets createdAt
+     * Gets created_at
      *
      * @return int|null
      */
     public function getCreatedAt()
     {
-        return $this->container['createdAt'];
+        return $this->container['created_at'];
     }
 
     /**
-     * Sets createdAt
+     * Sets created_at
      *
-     * @param int|null $createdAt createdAt
+     * @param int|null $created_at created_at
      *
      * @return self
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt($created_at)
     {
-        if (is_null($createdAt)) {
-            throw new \InvalidArgumentException('non-nullable createdAt cannot be null');
+        if (is_null($created_at)) {
+            throw new \InvalidArgumentException('non-nullable created_at cannot be null');
         }
-        $this->container['createdAt'] = $createdAt;
+        $this->container['created_at'] = $created_at;
 
         return $this;
     }
 
     /**
-     * Gets updatedAt
+     * Gets updated_at
      *
      * @return int|null
      */
     public function getUpdatedAt()
     {
-        return $this->container['updatedAt'];
+        return $this->container['updated_at'];
     }
 
     /**
-     * Sets updatedAt
+     * Sets updated_at
      *
-     * @param int|null $updatedAt updatedAt
+     * @param int|null $updated_at updated_at
      *
      * @return self
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt($updated_at)
     {
-        if (is_null($updatedAt)) {
-            throw new \InvalidArgumentException('non-nullable updatedAt cannot be null');
+        if (is_null($updated_at)) {
+            throw new \InvalidArgumentException('non-nullable updated_at cannot be null');
         }
-        $this->container['updatedAt'] = $updatedAt;
+        $this->container['updated_at'] = $updated_at;
 
         return $this;
     }

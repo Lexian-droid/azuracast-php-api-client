@@ -125,7 +125,7 @@ class StationsHistoryApi
     /**
      * Operation getStationHistory
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  string $start The start date for records, in PHP-supported date/time format. (https://www.php.net/manual/en/datetime.formats.php) (optional)
      * @param  string $end The end date for records, in PHP-supported date/time format. (https://www.php.net/manual/en/datetime.formats.php) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStationHistory'] to see the possible values for this operation
@@ -134,16 +134,16 @@ class StationsHistoryApi
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiDetailedSongHistory[]|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function getStationHistory($stationId, $start = null, $end = null, string $contentType = self::contentTypes['getStationHistory'][0])
+    public function getStationHistory($station_id, $start = null, $end = null, string $contentType = self::contentTypes['getStationHistory'][0])
     {
-        list($response) = $this->getStationHistoryWithHttpInfo($stationId, $start, $end, $contentType);
+        list($response) = $this->getStationHistoryWithHttpInfo($station_id, $start, $end, $contentType);
         return $response;
     }
 
     /**
      * Operation getStationHistoryWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $start The start date for records, in PHP-supported date/time format. (https://www.php.net/manual/en/datetime.formats.php) (optional)
      * @param  string $end The end date for records, in PHP-supported date/time format. (https://www.php.net/manual/en/datetime.formats.php) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStationHistory'] to see the possible values for this operation
@@ -152,9 +152,9 @@ class StationsHistoryApi
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiDetailedSongHistory[]|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getStationHistoryWithHttpInfo($stationId, $start = null, $end = null, string $contentType = self::contentTypes['getStationHistory'][0])
+    public function getStationHistoryWithHttpInfo($station_id, $start = null, $end = null, string $contentType = self::contentTypes['getStationHistory'][0])
     {
-        $request = $this->getStationHistoryRequest($stationId, $start, $end, $contentType);
+        $request = $this->getStationHistoryRequest($station_id, $start, $end, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -372,7 +372,7 @@ class StationsHistoryApi
     /**
      * Operation getStationHistoryAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $start The start date for records, in PHP-supported date/time format. (https://www.php.net/manual/en/datetime.formats.php) (optional)
      * @param  string $end The end date for records, in PHP-supported date/time format. (https://www.php.net/manual/en/datetime.formats.php) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStationHistory'] to see the possible values for this operation
@@ -380,9 +380,9 @@ class StationsHistoryApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStationHistoryAsync($stationId, $start = null, $end = null, string $contentType = self::contentTypes['getStationHistory'][0])
+    public function getStationHistoryAsync($station_id, $start = null, $end = null, string $contentType = self::contentTypes['getStationHistory'][0])
     {
-        return $this->getStationHistoryAsyncWithHttpInfo($stationId, $start, $end, $contentType)
+        return $this->getStationHistoryAsyncWithHttpInfo($station_id, $start, $end, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -393,7 +393,7 @@ class StationsHistoryApi
     /**
      * Operation getStationHistoryAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $start The start date for records, in PHP-supported date/time format. (https://www.php.net/manual/en/datetime.formats.php) (optional)
      * @param  string $end The end date for records, in PHP-supported date/time format. (https://www.php.net/manual/en/datetime.formats.php) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStationHistory'] to see the possible values for this operation
@@ -401,10 +401,10 @@ class StationsHistoryApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStationHistoryAsyncWithHttpInfo($stationId, $start = null, $end = null, string $contentType = self::contentTypes['getStationHistory'][0])
+    public function getStationHistoryAsyncWithHttpInfo($station_id, $start = null, $end = null, string $contentType = self::contentTypes['getStationHistory'][0])
     {
         $returnType = '\AzuraCast\Model\ApiDetailedSongHistory[]';
-        $request = $this->getStationHistoryRequest($stationId, $start, $end, $contentType);
+        $request = $this->getStationHistoryRequest($station_id, $start, $end, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -445,7 +445,7 @@ class StationsHistoryApi
     /**
      * Create request for operation 'getStationHistory'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $start The start date for records, in PHP-supported date/time format. (https://www.php.net/manual/en/datetime.formats.php) (optional)
      * @param  string $end The end date for records, in PHP-supported date/time format. (https://www.php.net/manual/en/datetime.formats.php) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStationHistory'] to see the possible values for this operation
@@ -453,13 +453,13 @@ class StationsHistoryApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getStationHistoryRequest($stationId, $start = null, $end = null, string $contentType = self::contentTypes['getStationHistory'][0])
+    public function getStationHistoryRequest($station_id, $start = null, $end = null, string $contentType = self::contentTypes['getStationHistory'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling getStationHistory'
+                'Missing the required parameter $station_id when calling getStationHistory'
             );
         }
 
@@ -494,10 +494,10 @@ class StationsHistoryApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }

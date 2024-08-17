@@ -57,7 +57,7 @@ class HasSongFields implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'songId' => 'string',
+        'song_id' => 'string',
         'text' => 'string',
         'artist' => 'string',
         'title' => 'string'
@@ -71,7 +71,7 @@ class HasSongFields implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'songId' => null,
+        'song_id' => null,
         'text' => null,
         'artist' => null,
         'title' => null
@@ -83,7 +83,7 @@ class HasSongFields implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'songId' => false,
+        'song_id' => false,
         'text' => true,
         'artist' => true,
         'title' => true
@@ -175,7 +175,7 @@ class HasSongFields implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'songId' => 'song_id',
+        'song_id' => 'song_id',
         'text' => 'text',
         'artist' => 'artist',
         'title' => 'title'
@@ -187,7 +187,7 @@ class HasSongFields implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'songId' => 'setSongId',
+        'song_id' => 'setSongId',
         'text' => 'setText',
         'artist' => 'setArtist',
         'title' => 'setTitle'
@@ -199,7 +199,7 @@ class HasSongFields implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'songId' => 'getSongId',
+        'song_id' => 'getSongId',
         'text' => 'getText',
         'artist' => 'getArtist',
         'title' => 'getTitle'
@@ -262,7 +262,7 @@ class HasSongFields implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('songId', $data ?? [], null);
+        $this->setIfExists('song_id', $data ?? [], null);
         $this->setIfExists('text', $data ?? [], null);
         $this->setIfExists('artist', $data ?? [], null);
         $this->setIfExists('title', $data ?? [], null);
@@ -311,28 +311,28 @@ class HasSongFields implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets songId
+     * Gets song_id
      *
      * @return string|null
      */
     public function getSongId()
     {
-        return $this->container['songId'];
+        return $this->container['song_id'];
     }
 
     /**
-     * Sets songId
+     * Sets song_id
      *
-     * @param string|null $songId songId
+     * @param string|null $song_id song_id
      *
      * @return self
      */
-    public function setSongId($songId)
+    public function setSongId($song_id)
     {
-        if (is_null($songId)) {
-            throw new \InvalidArgumentException('non-nullable songId cannot be null');
+        if (is_null($song_id)) {
+            throw new \InvalidArgumentException('non-nullable song_id cannot be null');
         }
-        $this->container['songId'] = $songId;
+        $this->container['song_id'] = $song_id;
 
         return $this;
     }

@@ -62,29 +62,29 @@ class ApiAdminStorageLocation implements ModelInterface, ArrayAccess, \JsonSeria
         'type' => 'string',
         'adapter' => 'string',
         'path' => 'string',
-        's3CredentialKey' => 'string',
-        's3CredentialSecret' => 'string',
-        's3Region' => 'string',
-        's3Version' => 'string',
-        's3Bucket' => 'string',
-        's3Endpoint' => 'string',
-        'dropboxAppKey' => 'string',
-        'dropboxAppSecret' => 'string',
-        'dropboxAuthToken' => 'string',
-        'sftpHost' => 'string',
-        'sftpUsername' => 'string',
-        'sftpPassword' => 'string',
-        'sftpPort' => 'int',
-        'sftpPrivateKey' => 'string',
-        'sftpPrivateKeyPassPhrase' => 'string',
-        'storageQuota' => 'string',
-        'storageQuotaBytes' => 'string',
-        'storageUsed' => 'string',
-        'storageUsedBytes' => 'string',
-        'storageAvailable' => 'string',
-        'storageAvailableBytes' => 'string',
-        'storageUsedPercent' => 'int',
-        'isFull' => 'bool',
+        's3_credential_key' => 'string',
+        's3_credential_secret' => 'string',
+        's3_region' => 'string',
+        's3_version' => 'string',
+        's3_bucket' => 'string',
+        's3_endpoint' => 'string',
+        'dropbox_app_key' => 'string',
+        'dropbox_app_secret' => 'string',
+        'dropbox_auth_token' => 'string',
+        'sftp_host' => 'string',
+        'sftp_username' => 'string',
+        'sftp_password' => 'string',
+        'sftp_port' => 'int',
+        'sftp_private_key' => 'string',
+        'sftp_private_key_pass_phrase' => 'string',
+        'storage_quota' => 'string',
+        'storage_quota_bytes' => 'string',
+        'storage_used' => 'string',
+        'storage_used_bytes' => 'string',
+        'storage_available' => 'string',
+        'storage_available_bytes' => 'string',
+        'storage_used_percent' => 'int',
+        'is_full' => 'bool',
         'uri' => 'string',
         'stations' => 'string[]'
     ];
@@ -102,29 +102,29 @@ class ApiAdminStorageLocation implements ModelInterface, ArrayAccess, \JsonSeria
         'type' => null,
         'adapter' => null,
         'path' => null,
-        's3CredentialKey' => null,
-        's3CredentialSecret' => null,
-        's3Region' => null,
-        's3Version' => null,
-        's3Bucket' => null,
-        's3Endpoint' => null,
-        'dropboxAppKey' => null,
-        'dropboxAppSecret' => null,
-        'dropboxAuthToken' => null,
-        'sftpHost' => null,
-        'sftpUsername' => null,
-        'sftpPassword' => null,
-        'sftpPort' => null,
-        'sftpPrivateKey' => null,
-        'sftpPrivateKeyPassPhrase' => null,
-        'storageQuota' => null,
-        'storageQuotaBytes' => null,
-        'storageUsed' => null,
-        'storageUsedBytes' => null,
-        'storageAvailable' => null,
-        'storageAvailableBytes' => null,
-        'storageUsedPercent' => null,
-        'isFull' => null,
+        's3_credential_key' => null,
+        's3_credential_secret' => null,
+        's3_region' => null,
+        's3_version' => null,
+        's3_bucket' => null,
+        's3_endpoint' => null,
+        'dropbox_app_key' => null,
+        'dropbox_app_secret' => null,
+        'dropbox_auth_token' => null,
+        'sftp_host' => null,
+        'sftp_username' => null,
+        'sftp_password' => null,
+        'sftp_port' => null,
+        'sftp_private_key' => null,
+        'sftp_private_key_pass_phrase' => null,
+        'storage_quota' => null,
+        'storage_quota_bytes' => null,
+        'storage_used' => null,
+        'storage_used_bytes' => null,
+        'storage_available' => null,
+        'storage_available_bytes' => null,
+        'storage_used_percent' => null,
+        'is_full' => null,
         'uri' => null,
         'stations' => null
     ];
@@ -140,29 +140,29 @@ class ApiAdminStorageLocation implements ModelInterface, ArrayAccess, \JsonSeria
         'type' => false,
         'adapter' => false,
         'path' => true,
-        's3CredentialKey' => true,
-        's3CredentialSecret' => true,
-        's3Region' => true,
-        's3Version' => true,
-        's3Bucket' => true,
-        's3Endpoint' => true,
-        'dropboxAppKey' => true,
-        'dropboxAppSecret' => true,
-        'dropboxAuthToken' => true,
-        'sftpHost' => true,
-        'sftpUsername' => true,
-        'sftpPassword' => true,
-        'sftpPort' => true,
-        'sftpPrivateKey' => true,
-        'sftpPrivateKeyPassPhrase' => true,
-        'storageQuota' => true,
-        'storageQuotaBytes' => true,
-        'storageUsed' => true,
-        'storageUsedBytes' => true,
-        'storageAvailable' => true,
-        'storageAvailableBytes' => true,
-        'storageUsedPercent' => true,
-        'isFull' => false,
+        's3_credential_key' => true,
+        's3_credential_secret' => true,
+        's3_region' => true,
+        's3_version' => true,
+        's3_bucket' => true,
+        's3_endpoint' => true,
+        'dropbox_app_key' => true,
+        'dropbox_app_secret' => true,
+        'dropbox_auth_token' => true,
+        'sftp_host' => true,
+        'sftp_username' => true,
+        'sftp_password' => true,
+        'sftp_port' => true,
+        'sftp_private_key' => true,
+        'sftp_private_key_pass_phrase' => true,
+        'storage_quota' => true,
+        'storage_quota_bytes' => true,
+        'storage_used' => true,
+        'storage_used_bytes' => true,
+        'storage_available' => true,
+        'storage_available_bytes' => true,
+        'storage_used_percent' => true,
+        'is_full' => false,
         'uri' => false,
         'stations' => true
     ];
@@ -258,29 +258,29 @@ class ApiAdminStorageLocation implements ModelInterface, ArrayAccess, \JsonSeria
         'type' => 'type',
         'adapter' => 'adapter',
         'path' => 'path',
-        's3CredentialKey' => 's3CredentialKey',
-        's3CredentialSecret' => 's3CredentialSecret',
-        's3Region' => 's3Region',
-        's3Version' => 's3Version',
-        's3Bucket' => 's3Bucket',
-        's3Endpoint' => 's3Endpoint',
-        'dropboxAppKey' => 'dropboxAppKey',
-        'dropboxAppSecret' => 'dropboxAppSecret',
-        'dropboxAuthToken' => 'dropboxAuthToken',
-        'sftpHost' => 'sftpHost',
-        'sftpUsername' => 'sftpUsername',
-        'sftpPassword' => 'sftpPassword',
-        'sftpPort' => 'sftpPort',
-        'sftpPrivateKey' => 'sftpPrivateKey',
-        'sftpPrivateKeyPassPhrase' => 'sftpPrivateKeyPassPhrase',
-        'storageQuota' => 'storageQuota',
-        'storageQuotaBytes' => 'storageQuotaBytes',
-        'storageUsed' => 'storageUsed',
-        'storageUsedBytes' => 'storageUsedBytes',
-        'storageAvailable' => 'storageAvailable',
-        'storageAvailableBytes' => 'storageAvailableBytes',
-        'storageUsedPercent' => 'storageUsedPercent',
-        'isFull' => 'isFull',
+        's3_credential_key' => 's3CredentialKey',
+        's3_credential_secret' => 's3CredentialSecret',
+        's3_region' => 's3Region',
+        's3_version' => 's3Version',
+        's3_bucket' => 's3Bucket',
+        's3_endpoint' => 's3Endpoint',
+        'dropbox_app_key' => 'dropboxAppKey',
+        'dropbox_app_secret' => 'dropboxAppSecret',
+        'dropbox_auth_token' => 'dropboxAuthToken',
+        'sftp_host' => 'sftpHost',
+        'sftp_username' => 'sftpUsername',
+        'sftp_password' => 'sftpPassword',
+        'sftp_port' => 'sftpPort',
+        'sftp_private_key' => 'sftpPrivateKey',
+        'sftp_private_key_pass_phrase' => 'sftpPrivateKeyPassPhrase',
+        'storage_quota' => 'storageQuota',
+        'storage_quota_bytes' => 'storageQuotaBytes',
+        'storage_used' => 'storageUsed',
+        'storage_used_bytes' => 'storageUsedBytes',
+        'storage_available' => 'storageAvailable',
+        'storage_available_bytes' => 'storageAvailableBytes',
+        'storage_used_percent' => 'storageUsedPercent',
+        'is_full' => 'isFull',
         'uri' => 'uri',
         'stations' => 'stations'
     ];
@@ -296,29 +296,29 @@ class ApiAdminStorageLocation implements ModelInterface, ArrayAccess, \JsonSeria
         'type' => 'setType',
         'adapter' => 'setAdapter',
         'path' => 'setPath',
-        's3CredentialKey' => 'setS3CredentialKey',
-        's3CredentialSecret' => 'setS3CredentialSecret',
-        's3Region' => 'setS3Region',
-        's3Version' => 'setS3Version',
-        's3Bucket' => 'setS3Bucket',
-        's3Endpoint' => 'setS3Endpoint',
-        'dropboxAppKey' => 'setDropboxAppKey',
-        'dropboxAppSecret' => 'setDropboxAppSecret',
-        'dropboxAuthToken' => 'setDropboxAuthToken',
-        'sftpHost' => 'setSftpHost',
-        'sftpUsername' => 'setSftpUsername',
-        'sftpPassword' => 'setSftpPassword',
-        'sftpPort' => 'setSftpPort',
-        'sftpPrivateKey' => 'setSftpPrivateKey',
-        'sftpPrivateKeyPassPhrase' => 'setSftpPrivateKeyPassPhrase',
-        'storageQuota' => 'setStorageQuota',
-        'storageQuotaBytes' => 'setStorageQuotaBytes',
-        'storageUsed' => 'setStorageUsed',
-        'storageUsedBytes' => 'setStorageUsedBytes',
-        'storageAvailable' => 'setStorageAvailable',
-        'storageAvailableBytes' => 'setStorageAvailableBytes',
-        'storageUsedPercent' => 'setStorageUsedPercent',
-        'isFull' => 'setIsFull',
+        's3_credential_key' => 'setS3CredentialKey',
+        's3_credential_secret' => 'setS3CredentialSecret',
+        's3_region' => 'setS3Region',
+        's3_version' => 'setS3Version',
+        's3_bucket' => 'setS3Bucket',
+        's3_endpoint' => 'setS3Endpoint',
+        'dropbox_app_key' => 'setDropboxAppKey',
+        'dropbox_app_secret' => 'setDropboxAppSecret',
+        'dropbox_auth_token' => 'setDropboxAuthToken',
+        'sftp_host' => 'setSftpHost',
+        'sftp_username' => 'setSftpUsername',
+        'sftp_password' => 'setSftpPassword',
+        'sftp_port' => 'setSftpPort',
+        'sftp_private_key' => 'setSftpPrivateKey',
+        'sftp_private_key_pass_phrase' => 'setSftpPrivateKeyPassPhrase',
+        'storage_quota' => 'setStorageQuota',
+        'storage_quota_bytes' => 'setStorageQuotaBytes',
+        'storage_used' => 'setStorageUsed',
+        'storage_used_bytes' => 'setStorageUsedBytes',
+        'storage_available' => 'setStorageAvailable',
+        'storage_available_bytes' => 'setStorageAvailableBytes',
+        'storage_used_percent' => 'setStorageUsedPercent',
+        'is_full' => 'setIsFull',
         'uri' => 'setUri',
         'stations' => 'setStations'
     ];
@@ -334,29 +334,29 @@ class ApiAdminStorageLocation implements ModelInterface, ArrayAccess, \JsonSeria
         'type' => 'getType',
         'adapter' => 'getAdapter',
         'path' => 'getPath',
-        's3CredentialKey' => 'getS3CredentialKey',
-        's3CredentialSecret' => 'getS3CredentialSecret',
-        's3Region' => 'getS3Region',
-        's3Version' => 'getS3Version',
-        's3Bucket' => 'getS3Bucket',
-        's3Endpoint' => 'getS3Endpoint',
-        'dropboxAppKey' => 'getDropboxAppKey',
-        'dropboxAppSecret' => 'getDropboxAppSecret',
-        'dropboxAuthToken' => 'getDropboxAuthToken',
-        'sftpHost' => 'getSftpHost',
-        'sftpUsername' => 'getSftpUsername',
-        'sftpPassword' => 'getSftpPassword',
-        'sftpPort' => 'getSftpPort',
-        'sftpPrivateKey' => 'getSftpPrivateKey',
-        'sftpPrivateKeyPassPhrase' => 'getSftpPrivateKeyPassPhrase',
-        'storageQuota' => 'getStorageQuota',
-        'storageQuotaBytes' => 'getStorageQuotaBytes',
-        'storageUsed' => 'getStorageUsed',
-        'storageUsedBytes' => 'getStorageUsedBytes',
-        'storageAvailable' => 'getStorageAvailable',
-        'storageAvailableBytes' => 'getStorageAvailableBytes',
-        'storageUsedPercent' => 'getStorageUsedPercent',
-        'isFull' => 'getIsFull',
+        's3_credential_key' => 'getS3CredentialKey',
+        's3_credential_secret' => 'getS3CredentialSecret',
+        's3_region' => 'getS3Region',
+        's3_version' => 'getS3Version',
+        's3_bucket' => 'getS3Bucket',
+        's3_endpoint' => 'getS3Endpoint',
+        'dropbox_app_key' => 'getDropboxAppKey',
+        'dropbox_app_secret' => 'getDropboxAppSecret',
+        'dropbox_auth_token' => 'getDropboxAuthToken',
+        'sftp_host' => 'getSftpHost',
+        'sftp_username' => 'getSftpUsername',
+        'sftp_password' => 'getSftpPassword',
+        'sftp_port' => 'getSftpPort',
+        'sftp_private_key' => 'getSftpPrivateKey',
+        'sftp_private_key_pass_phrase' => 'getSftpPrivateKeyPassPhrase',
+        'storage_quota' => 'getStorageQuota',
+        'storage_quota_bytes' => 'getStorageQuotaBytes',
+        'storage_used' => 'getStorageUsed',
+        'storage_used_bytes' => 'getStorageUsedBytes',
+        'storage_available' => 'getStorageAvailable',
+        'storage_available_bytes' => 'getStorageAvailableBytes',
+        'storage_used_percent' => 'getStorageUsedPercent',
+        'is_full' => 'getIsFull',
         'uri' => 'getUri',
         'stations' => 'getStations'
     ];
@@ -423,29 +423,29 @@ class ApiAdminStorageLocation implements ModelInterface, ArrayAccess, \JsonSeria
         $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('adapter', $data ?? [], null);
         $this->setIfExists('path', $data ?? [], null);
-        $this->setIfExists('s3CredentialKey', $data ?? [], null);
-        $this->setIfExists('s3CredentialSecret', $data ?? [], null);
-        $this->setIfExists('s3Region', $data ?? [], null);
-        $this->setIfExists('s3Version', $data ?? [], null);
-        $this->setIfExists('s3Bucket', $data ?? [], null);
-        $this->setIfExists('s3Endpoint', $data ?? [], null);
-        $this->setIfExists('dropboxAppKey', $data ?? [], null);
-        $this->setIfExists('dropboxAppSecret', $data ?? [], null);
-        $this->setIfExists('dropboxAuthToken', $data ?? [], null);
-        $this->setIfExists('sftpHost', $data ?? [], null);
-        $this->setIfExists('sftpUsername', $data ?? [], null);
-        $this->setIfExists('sftpPassword', $data ?? [], null);
-        $this->setIfExists('sftpPort', $data ?? [], null);
-        $this->setIfExists('sftpPrivateKey', $data ?? [], null);
-        $this->setIfExists('sftpPrivateKeyPassPhrase', $data ?? [], null);
-        $this->setIfExists('storageQuota', $data ?? [], null);
-        $this->setIfExists('storageQuotaBytes', $data ?? [], null);
-        $this->setIfExists('storageUsed', $data ?? [], null);
-        $this->setIfExists('storageUsedBytes', $data ?? [], null);
-        $this->setIfExists('storageAvailable', $data ?? [], null);
-        $this->setIfExists('storageAvailableBytes', $data ?? [], null);
-        $this->setIfExists('storageUsedPercent', $data ?? [], null);
-        $this->setIfExists('isFull', $data ?? [], null);
+        $this->setIfExists('s3_credential_key', $data ?? [], null);
+        $this->setIfExists('s3_credential_secret', $data ?? [], null);
+        $this->setIfExists('s3_region', $data ?? [], null);
+        $this->setIfExists('s3_version', $data ?? [], null);
+        $this->setIfExists('s3_bucket', $data ?? [], null);
+        $this->setIfExists('s3_endpoint', $data ?? [], null);
+        $this->setIfExists('dropbox_app_key', $data ?? [], null);
+        $this->setIfExists('dropbox_app_secret', $data ?? [], null);
+        $this->setIfExists('dropbox_auth_token', $data ?? [], null);
+        $this->setIfExists('sftp_host', $data ?? [], null);
+        $this->setIfExists('sftp_username', $data ?? [], null);
+        $this->setIfExists('sftp_password', $data ?? [], null);
+        $this->setIfExists('sftp_port', $data ?? [], null);
+        $this->setIfExists('sftp_private_key', $data ?? [], null);
+        $this->setIfExists('sftp_private_key_pass_phrase', $data ?? [], null);
+        $this->setIfExists('storage_quota', $data ?? [], null);
+        $this->setIfExists('storage_quota_bytes', $data ?? [], null);
+        $this->setIfExists('storage_used', $data ?? [], null);
+        $this->setIfExists('storage_used_bytes', $data ?? [], null);
+        $this->setIfExists('storage_available', $data ?? [], null);
+        $this->setIfExists('storage_available_bytes', $data ?? [], null);
+        $this->setIfExists('storage_used_percent', $data ?? [], null);
+        $this->setIfExists('is_full', $data ?? [], null);
         $this->setIfExists('uri', $data ?? [], null);
         $this->setIfExists('stations', $data ?? [], null);
     }
@@ -635,776 +635,776 @@ class ApiAdminStorageLocation implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
-     * Gets s3CredentialKey
+     * Gets s3_credential_key
      *
      * @return string|null
      */
     public function getS3CredentialKey()
     {
-        return $this->container['s3CredentialKey'];
+        return $this->container['s3_credential_key'];
     }
 
     /**
-     * Sets s3CredentialKey
+     * Sets s3_credential_key
      *
-     * @param string|null $s3CredentialKey The credential key for S3 adapters.
+     * @param string|null $s3_credential_key The credential key for S3 adapters.
      *
      * @return self
      */
-    public function setS3CredentialKey($s3CredentialKey)
+    public function setS3CredentialKey($s3_credential_key)
     {
-        if (is_null($s3CredentialKey)) {
-            array_push($this->openAPINullablesSetToNull, 's3CredentialKey');
+        if (is_null($s3_credential_key)) {
+            array_push($this->openAPINullablesSetToNull, 's3_credential_key');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('s3CredentialKey', $nullablesSetToNull);
+            $index = array_search('s3_credential_key', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['s3CredentialKey'] = $s3CredentialKey;
+        $this->container['s3_credential_key'] = $s3_credential_key;
 
         return $this;
     }
 
     /**
-     * Gets s3CredentialSecret
+     * Gets s3_credential_secret
      *
      * @return string|null
      */
     public function getS3CredentialSecret()
     {
-        return $this->container['s3CredentialSecret'];
+        return $this->container['s3_credential_secret'];
     }
 
     /**
-     * Sets s3CredentialSecret
+     * Sets s3_credential_secret
      *
-     * @param string|null $s3CredentialSecret The credential secret for S3 adapters.
+     * @param string|null $s3_credential_secret The credential secret for S3 adapters.
      *
      * @return self
      */
-    public function setS3CredentialSecret($s3CredentialSecret)
+    public function setS3CredentialSecret($s3_credential_secret)
     {
-        if (is_null($s3CredentialSecret)) {
-            array_push($this->openAPINullablesSetToNull, 's3CredentialSecret');
+        if (is_null($s3_credential_secret)) {
+            array_push($this->openAPINullablesSetToNull, 's3_credential_secret');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('s3CredentialSecret', $nullablesSetToNull);
+            $index = array_search('s3_credential_secret', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['s3CredentialSecret'] = $s3CredentialSecret;
+        $this->container['s3_credential_secret'] = $s3_credential_secret;
 
         return $this;
     }
 
     /**
-     * Gets s3Region
+     * Gets s3_region
      *
      * @return string|null
      */
     public function getS3Region()
     {
-        return $this->container['s3Region'];
+        return $this->container['s3_region'];
     }
 
     /**
-     * Sets s3Region
+     * Sets s3_region
      *
-     * @param string|null $s3Region The region for S3 adapters.
+     * @param string|null $s3_region The region for S3 adapters.
      *
      * @return self
      */
-    public function setS3Region($s3Region)
+    public function setS3Region($s3_region)
     {
-        if (is_null($s3Region)) {
-            array_push($this->openAPINullablesSetToNull, 's3Region');
+        if (is_null($s3_region)) {
+            array_push($this->openAPINullablesSetToNull, 's3_region');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('s3Region', $nullablesSetToNull);
+            $index = array_search('s3_region', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['s3Region'] = $s3Region;
+        $this->container['s3_region'] = $s3_region;
 
         return $this;
     }
 
     /**
-     * Gets s3Version
+     * Gets s3_version
      *
      * @return string|null
      */
     public function getS3Version()
     {
-        return $this->container['s3Version'];
+        return $this->container['s3_version'];
     }
 
     /**
-     * Sets s3Version
+     * Sets s3_version
      *
-     * @param string|null $s3Version The API version for S3 adapters.
+     * @param string|null $s3_version The API version for S3 adapters.
      *
      * @return self
      */
-    public function setS3Version($s3Version)
+    public function setS3Version($s3_version)
     {
-        if (is_null($s3Version)) {
-            array_push($this->openAPINullablesSetToNull, 's3Version');
+        if (is_null($s3_version)) {
+            array_push($this->openAPINullablesSetToNull, 's3_version');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('s3Version', $nullablesSetToNull);
+            $index = array_search('s3_version', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['s3Version'] = $s3Version;
+        $this->container['s3_version'] = $s3_version;
 
         return $this;
     }
 
     /**
-     * Gets s3Bucket
+     * Gets s3_bucket
      *
      * @return string|null
      */
     public function getS3Bucket()
     {
-        return $this->container['s3Bucket'];
+        return $this->container['s3_bucket'];
     }
 
     /**
-     * Sets s3Bucket
+     * Sets s3_bucket
      *
-     * @param string|null $s3Bucket The S3 bucket name for S3 adapters.
+     * @param string|null $s3_bucket The S3 bucket name for S3 adapters.
      *
      * @return self
      */
-    public function setS3Bucket($s3Bucket)
+    public function setS3Bucket($s3_bucket)
     {
-        if (is_null($s3Bucket)) {
-            array_push($this->openAPINullablesSetToNull, 's3Bucket');
+        if (is_null($s3_bucket)) {
+            array_push($this->openAPINullablesSetToNull, 's3_bucket');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('s3Bucket', $nullablesSetToNull);
+            $index = array_search('s3_bucket', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['s3Bucket'] = $s3Bucket;
+        $this->container['s3_bucket'] = $s3_bucket;
 
         return $this;
     }
 
     /**
-     * Gets s3Endpoint
+     * Gets s3_endpoint
      *
      * @return string|null
      */
     public function getS3Endpoint()
     {
-        return $this->container['s3Endpoint'];
+        return $this->container['s3_endpoint'];
     }
 
     /**
-     * Sets s3Endpoint
+     * Sets s3_endpoint
      *
-     * @param string|null $s3Endpoint The optional custom S3 endpoint S3 adapters.
+     * @param string|null $s3_endpoint The optional custom S3 endpoint S3 adapters.
      *
      * @return self
      */
-    public function setS3Endpoint($s3Endpoint)
+    public function setS3Endpoint($s3_endpoint)
     {
-        if (is_null($s3Endpoint)) {
-            array_push($this->openAPINullablesSetToNull, 's3Endpoint');
+        if (is_null($s3_endpoint)) {
+            array_push($this->openAPINullablesSetToNull, 's3_endpoint');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('s3Endpoint', $nullablesSetToNull);
+            $index = array_search('s3_endpoint', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['s3Endpoint'] = $s3Endpoint;
+        $this->container['s3_endpoint'] = $s3_endpoint;
 
         return $this;
     }
 
     /**
-     * Gets dropboxAppKey
+     * Gets dropbox_app_key
      *
      * @return string|null
      */
     public function getDropboxAppKey()
     {
-        return $this->container['dropboxAppKey'];
+        return $this->container['dropbox_app_key'];
     }
 
     /**
-     * Sets dropboxAppKey
+     * Sets dropbox_app_key
      *
-     * @param string|null $dropboxAppKey The optional Dropbox App Key.
+     * @param string|null $dropbox_app_key The optional Dropbox App Key.
      *
      * @return self
      */
-    public function setDropboxAppKey($dropboxAppKey)
+    public function setDropboxAppKey($dropbox_app_key)
     {
-        if (is_null($dropboxAppKey)) {
-            array_push($this->openAPINullablesSetToNull, 'dropboxAppKey');
+        if (is_null($dropbox_app_key)) {
+            array_push($this->openAPINullablesSetToNull, 'dropbox_app_key');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('dropboxAppKey', $nullablesSetToNull);
+            $index = array_search('dropbox_app_key', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['dropboxAppKey'] = $dropboxAppKey;
+        $this->container['dropbox_app_key'] = $dropbox_app_key;
 
         return $this;
     }
 
     /**
-     * Gets dropboxAppSecret
+     * Gets dropbox_app_secret
      *
      * @return string|null
      */
     public function getDropboxAppSecret()
     {
-        return $this->container['dropboxAppSecret'];
+        return $this->container['dropbox_app_secret'];
     }
 
     /**
-     * Sets dropboxAppSecret
+     * Sets dropbox_app_secret
      *
-     * @param string|null $dropboxAppSecret The optional Dropbox App Secret.
+     * @param string|null $dropbox_app_secret The optional Dropbox App Secret.
      *
      * @return self
      */
-    public function setDropboxAppSecret($dropboxAppSecret)
+    public function setDropboxAppSecret($dropbox_app_secret)
     {
-        if (is_null($dropboxAppSecret)) {
-            array_push($this->openAPINullablesSetToNull, 'dropboxAppSecret');
+        if (is_null($dropbox_app_secret)) {
+            array_push($this->openAPINullablesSetToNull, 'dropbox_app_secret');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('dropboxAppSecret', $nullablesSetToNull);
+            $index = array_search('dropbox_app_secret', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['dropboxAppSecret'] = $dropboxAppSecret;
+        $this->container['dropbox_app_secret'] = $dropbox_app_secret;
 
         return $this;
     }
 
     /**
-     * Gets dropboxAuthToken
+     * Gets dropbox_auth_token
      *
      * @return string|null
      */
     public function getDropboxAuthToken()
     {
-        return $this->container['dropboxAuthToken'];
+        return $this->container['dropbox_auth_token'];
     }
 
     /**
-     * Sets dropboxAuthToken
+     * Sets dropbox_auth_token
      *
-     * @param string|null $dropboxAuthToken The optional Dropbox Auth Token.
+     * @param string|null $dropbox_auth_token The optional Dropbox Auth Token.
      *
      * @return self
      */
-    public function setDropboxAuthToken($dropboxAuthToken)
+    public function setDropboxAuthToken($dropbox_auth_token)
     {
-        if (is_null($dropboxAuthToken)) {
-            array_push($this->openAPINullablesSetToNull, 'dropboxAuthToken');
+        if (is_null($dropbox_auth_token)) {
+            array_push($this->openAPINullablesSetToNull, 'dropbox_auth_token');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('dropboxAuthToken', $nullablesSetToNull);
+            $index = array_search('dropbox_auth_token', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['dropboxAuthToken'] = $dropboxAuthToken;
+        $this->container['dropbox_auth_token'] = $dropbox_auth_token;
 
         return $this;
     }
 
     /**
-     * Gets sftpHost
+     * Gets sftp_host
      *
      * @return string|null
      */
     public function getSftpHost()
     {
-        return $this->container['sftpHost'];
+        return $this->container['sftp_host'];
     }
 
     /**
-     * Sets sftpHost
+     * Sets sftp_host
      *
-     * @param string|null $sftpHost The host for SFTP adapters
+     * @param string|null $sftp_host The host for SFTP adapters
      *
      * @return self
      */
-    public function setSftpHost($sftpHost)
+    public function setSftpHost($sftp_host)
     {
-        if (is_null($sftpHost)) {
-            array_push($this->openAPINullablesSetToNull, 'sftpHost');
+        if (is_null($sftp_host)) {
+            array_push($this->openAPINullablesSetToNull, 'sftp_host');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('sftpHost', $nullablesSetToNull);
+            $index = array_search('sftp_host', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['sftpHost'] = $sftpHost;
+        $this->container['sftp_host'] = $sftp_host;
 
         return $this;
     }
 
     /**
-     * Gets sftpUsername
+     * Gets sftp_username
      *
      * @return string|null
      */
     public function getSftpUsername()
     {
-        return $this->container['sftpUsername'];
+        return $this->container['sftp_username'];
     }
 
     /**
-     * Sets sftpUsername
+     * Sets sftp_username
      *
-     * @param string|null $sftpUsername The username for SFTP adapters
+     * @param string|null $sftp_username The username for SFTP adapters
      *
      * @return self
      */
-    public function setSftpUsername($sftpUsername)
+    public function setSftpUsername($sftp_username)
     {
-        if (is_null($sftpUsername)) {
-            array_push($this->openAPINullablesSetToNull, 'sftpUsername');
+        if (is_null($sftp_username)) {
+            array_push($this->openAPINullablesSetToNull, 'sftp_username');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('sftpUsername', $nullablesSetToNull);
+            $index = array_search('sftp_username', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['sftpUsername'] = $sftpUsername;
+        $this->container['sftp_username'] = $sftp_username;
 
         return $this;
     }
 
     /**
-     * Gets sftpPassword
+     * Gets sftp_password
      *
      * @return string|null
      */
     public function getSftpPassword()
     {
-        return $this->container['sftpPassword'];
+        return $this->container['sftp_password'];
     }
 
     /**
-     * Sets sftpPassword
+     * Sets sftp_password
      *
-     * @param string|null $sftpPassword The password for SFTP adapters
+     * @param string|null $sftp_password The password for SFTP adapters
      *
      * @return self
      */
-    public function setSftpPassword($sftpPassword)
+    public function setSftpPassword($sftp_password)
     {
-        if (is_null($sftpPassword)) {
-            array_push($this->openAPINullablesSetToNull, 'sftpPassword');
+        if (is_null($sftp_password)) {
+            array_push($this->openAPINullablesSetToNull, 'sftp_password');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('sftpPassword', $nullablesSetToNull);
+            $index = array_search('sftp_password', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['sftpPassword'] = $sftpPassword;
+        $this->container['sftp_password'] = $sftp_password;
 
         return $this;
     }
 
     /**
-     * Gets sftpPort
+     * Gets sftp_port
      *
      * @return int|null
      */
     public function getSftpPort()
     {
-        return $this->container['sftpPort'];
+        return $this->container['sftp_port'];
     }
 
     /**
-     * Sets sftpPort
+     * Sets sftp_port
      *
-     * @param int|null $sftpPort The port for SFTP adapters
+     * @param int|null $sftp_port The port for SFTP adapters
      *
      * @return self
      */
-    public function setSftpPort($sftpPort)
+    public function setSftpPort($sftp_port)
     {
-        if (is_null($sftpPort)) {
-            array_push($this->openAPINullablesSetToNull, 'sftpPort');
+        if (is_null($sftp_port)) {
+            array_push($this->openAPINullablesSetToNull, 'sftp_port');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('sftpPort', $nullablesSetToNull);
+            $index = array_search('sftp_port', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['sftpPort'] = $sftpPort;
+        $this->container['sftp_port'] = $sftp_port;
 
         return $this;
     }
 
     /**
-     * Gets sftpPrivateKey
+     * Gets sftp_private_key
      *
      * @return string|null
      */
     public function getSftpPrivateKey()
     {
-        return $this->container['sftpPrivateKey'];
+        return $this->container['sftp_private_key'];
     }
 
     /**
-     * Sets sftpPrivateKey
+     * Sets sftp_private_key
      *
-     * @param string|null $sftpPrivateKey The private key for SFTP adapters
+     * @param string|null $sftp_private_key The private key for SFTP adapters
      *
      * @return self
      */
-    public function setSftpPrivateKey($sftpPrivateKey)
+    public function setSftpPrivateKey($sftp_private_key)
     {
-        if (is_null($sftpPrivateKey)) {
-            array_push($this->openAPINullablesSetToNull, 'sftpPrivateKey');
+        if (is_null($sftp_private_key)) {
+            array_push($this->openAPINullablesSetToNull, 'sftp_private_key');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('sftpPrivateKey', $nullablesSetToNull);
+            $index = array_search('sftp_private_key', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['sftpPrivateKey'] = $sftpPrivateKey;
+        $this->container['sftp_private_key'] = $sftp_private_key;
 
         return $this;
     }
 
     /**
-     * Gets sftpPrivateKeyPassPhrase
+     * Gets sftp_private_key_pass_phrase
      *
      * @return string|null
      */
     public function getSftpPrivateKeyPassPhrase()
     {
-        return $this->container['sftpPrivateKeyPassPhrase'];
+        return $this->container['sftp_private_key_pass_phrase'];
     }
 
     /**
-     * Sets sftpPrivateKeyPassPhrase
+     * Sets sftp_private_key_pass_phrase
      *
-     * @param string|null $sftpPrivateKeyPassPhrase The private key pass phrase for SFTP adapters
+     * @param string|null $sftp_private_key_pass_phrase The private key pass phrase for SFTP adapters
      *
      * @return self
      */
-    public function setSftpPrivateKeyPassPhrase($sftpPrivateKeyPassPhrase)
+    public function setSftpPrivateKeyPassPhrase($sftp_private_key_pass_phrase)
     {
-        if (is_null($sftpPrivateKeyPassPhrase)) {
-            array_push($this->openAPINullablesSetToNull, 'sftpPrivateKeyPassPhrase');
+        if (is_null($sftp_private_key_pass_phrase)) {
+            array_push($this->openAPINullablesSetToNull, 'sftp_private_key_pass_phrase');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('sftpPrivateKeyPassPhrase', $nullablesSetToNull);
+            $index = array_search('sftp_private_key_pass_phrase', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['sftpPrivateKeyPassPhrase'] = $sftpPrivateKeyPassPhrase;
+        $this->container['sftp_private_key_pass_phrase'] = $sftp_private_key_pass_phrase;
 
         return $this;
     }
 
     /**
-     * Gets storageQuota
+     * Gets storage_quota
      *
      * @return string|null
      */
     public function getStorageQuota()
     {
-        return $this->container['storageQuota'];
+        return $this->container['storage_quota'];
     }
 
     /**
-     * Sets storageQuota
+     * Sets storage_quota
      *
-     * @param string|null $storageQuota storageQuota
+     * @param string|null $storage_quota storage_quota
      *
      * @return self
      */
-    public function setStorageQuota($storageQuota)
+    public function setStorageQuota($storage_quota)
     {
-        if (is_null($storageQuota)) {
-            array_push($this->openAPINullablesSetToNull, 'storageQuota');
+        if (is_null($storage_quota)) {
+            array_push($this->openAPINullablesSetToNull, 'storage_quota');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('storageQuota', $nullablesSetToNull);
+            $index = array_search('storage_quota', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['storageQuota'] = $storageQuota;
+        $this->container['storage_quota'] = $storage_quota;
 
         return $this;
     }
 
     /**
-     * Gets storageQuotaBytes
+     * Gets storage_quota_bytes
      *
      * @return string|null
      */
     public function getStorageQuotaBytes()
     {
-        return $this->container['storageQuotaBytes'];
+        return $this->container['storage_quota_bytes'];
     }
 
     /**
-     * Sets storageQuotaBytes
+     * Sets storage_quota_bytes
      *
-     * @param string|null $storageQuotaBytes storageQuotaBytes
+     * @param string|null $storage_quota_bytes storage_quota_bytes
      *
      * @return self
      */
-    public function setStorageQuotaBytes($storageQuotaBytes)
+    public function setStorageQuotaBytes($storage_quota_bytes)
     {
-        if (is_null($storageQuotaBytes)) {
-            array_push($this->openAPINullablesSetToNull, 'storageQuotaBytes');
+        if (is_null($storage_quota_bytes)) {
+            array_push($this->openAPINullablesSetToNull, 'storage_quota_bytes');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('storageQuotaBytes', $nullablesSetToNull);
+            $index = array_search('storage_quota_bytes', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['storageQuotaBytes'] = $storageQuotaBytes;
+        $this->container['storage_quota_bytes'] = $storage_quota_bytes;
 
         return $this;
     }
 
     /**
-     * Gets storageUsed
+     * Gets storage_used
      *
      * @return string|null
      */
     public function getStorageUsed()
     {
-        return $this->container['storageUsed'];
+        return $this->container['storage_used'];
     }
 
     /**
-     * Sets storageUsed
+     * Sets storage_used
      *
-     * @param string|null $storageUsed storageUsed
+     * @param string|null $storage_used storage_used
      *
      * @return self
      */
-    public function setStorageUsed($storageUsed)
+    public function setStorageUsed($storage_used)
     {
-        if (is_null($storageUsed)) {
-            array_push($this->openAPINullablesSetToNull, 'storageUsed');
+        if (is_null($storage_used)) {
+            array_push($this->openAPINullablesSetToNull, 'storage_used');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('storageUsed', $nullablesSetToNull);
+            $index = array_search('storage_used', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['storageUsed'] = $storageUsed;
+        $this->container['storage_used'] = $storage_used;
 
         return $this;
     }
 
     /**
-     * Gets storageUsedBytes
+     * Gets storage_used_bytes
      *
      * @return string|null
      */
     public function getStorageUsedBytes()
     {
-        return $this->container['storageUsedBytes'];
+        return $this->container['storage_used_bytes'];
     }
 
     /**
-     * Sets storageUsedBytes
+     * Sets storage_used_bytes
      *
-     * @param string|null $storageUsedBytes storageUsedBytes
+     * @param string|null $storage_used_bytes storage_used_bytes
      *
      * @return self
      */
-    public function setStorageUsedBytes($storageUsedBytes)
+    public function setStorageUsedBytes($storage_used_bytes)
     {
-        if (is_null($storageUsedBytes)) {
-            array_push($this->openAPINullablesSetToNull, 'storageUsedBytes');
+        if (is_null($storage_used_bytes)) {
+            array_push($this->openAPINullablesSetToNull, 'storage_used_bytes');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('storageUsedBytes', $nullablesSetToNull);
+            $index = array_search('storage_used_bytes', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['storageUsedBytes'] = $storageUsedBytes;
+        $this->container['storage_used_bytes'] = $storage_used_bytes;
 
         return $this;
     }
 
     /**
-     * Gets storageAvailable
+     * Gets storage_available
      *
      * @return string|null
      */
     public function getStorageAvailable()
     {
-        return $this->container['storageAvailable'];
+        return $this->container['storage_available'];
     }
 
     /**
-     * Sets storageAvailable
+     * Sets storage_available
      *
-     * @param string|null $storageAvailable storageAvailable
+     * @param string|null $storage_available storage_available
      *
      * @return self
      */
-    public function setStorageAvailable($storageAvailable)
+    public function setStorageAvailable($storage_available)
     {
-        if (is_null($storageAvailable)) {
-            array_push($this->openAPINullablesSetToNull, 'storageAvailable');
+        if (is_null($storage_available)) {
+            array_push($this->openAPINullablesSetToNull, 'storage_available');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('storageAvailable', $nullablesSetToNull);
+            $index = array_search('storage_available', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['storageAvailable'] = $storageAvailable;
+        $this->container['storage_available'] = $storage_available;
 
         return $this;
     }
 
     /**
-     * Gets storageAvailableBytes
+     * Gets storage_available_bytes
      *
      * @return string|null
      */
     public function getStorageAvailableBytes()
     {
-        return $this->container['storageAvailableBytes'];
+        return $this->container['storage_available_bytes'];
     }
 
     /**
-     * Sets storageAvailableBytes
+     * Sets storage_available_bytes
      *
-     * @param string|null $storageAvailableBytes storageAvailableBytes
+     * @param string|null $storage_available_bytes storage_available_bytes
      *
      * @return self
      */
-    public function setStorageAvailableBytes($storageAvailableBytes)
+    public function setStorageAvailableBytes($storage_available_bytes)
     {
-        if (is_null($storageAvailableBytes)) {
-            array_push($this->openAPINullablesSetToNull, 'storageAvailableBytes');
+        if (is_null($storage_available_bytes)) {
+            array_push($this->openAPINullablesSetToNull, 'storage_available_bytes');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('storageAvailableBytes', $nullablesSetToNull);
+            $index = array_search('storage_available_bytes', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['storageAvailableBytes'] = $storageAvailableBytes;
+        $this->container['storage_available_bytes'] = $storage_available_bytes;
 
         return $this;
     }
 
     /**
-     * Gets storageUsedPercent
+     * Gets storage_used_percent
      *
      * @return int|null
      */
     public function getStorageUsedPercent()
     {
-        return $this->container['storageUsedPercent'];
+        return $this->container['storage_used_percent'];
     }
 
     /**
-     * Sets storageUsedPercent
+     * Sets storage_used_percent
      *
-     * @param int|null $storageUsedPercent storageUsedPercent
+     * @param int|null $storage_used_percent storage_used_percent
      *
      * @return self
      */
-    public function setStorageUsedPercent($storageUsedPercent)
+    public function setStorageUsedPercent($storage_used_percent)
     {
-        if (is_null($storageUsedPercent)) {
-            array_push($this->openAPINullablesSetToNull, 'storageUsedPercent');
+        if (is_null($storage_used_percent)) {
+            array_push($this->openAPINullablesSetToNull, 'storage_used_percent');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('storageUsedPercent', $nullablesSetToNull);
+            $index = array_search('storage_used_percent', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['storageUsedPercent'] = $storageUsedPercent;
+        $this->container['storage_used_percent'] = $storage_used_percent;
 
         return $this;
     }
 
     /**
-     * Gets isFull
+     * Gets is_full
      *
      * @return bool|null
      */
     public function getIsFull()
     {
-        return $this->container['isFull'];
+        return $this->container['is_full'];
     }
 
     /**
-     * Sets isFull
+     * Sets is_full
      *
-     * @param bool|null $isFull isFull
+     * @param bool|null $is_full is_full
      *
      * @return self
      */
-    public function setIsFull($isFull)
+    public function setIsFull($is_full)
     {
-        if (is_null($isFull)) {
-            throw new \InvalidArgumentException('non-nullable isFull cannot be null');
+        if (is_null($is_full)) {
+            throw new \InvalidArgumentException('non-nullable is_full cannot be null');
         }
-        $this->container['isFull'] = $isFull;
+        $this->container['is_full'] = $is_full;
 
         return $this;
     }

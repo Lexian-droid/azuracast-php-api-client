@@ -14,7 +14,7 @@ All URIs are relative to https://demo.azuracast.com/api, except if the operation
 ## `addStorageLocation()`
 
 ```php
-addStorageLocation($apiAdminStorageLocation): \AzuraCast\Model\ApiAdminStorageLocation
+addStorageLocation($api_admin_storage_location): \AzuraCast\Model\ApiAdminStorageLocation
 ```
 
 
@@ -40,10 +40,10 @@ $apiInstance = new AzuraCast\Api\AdministrationStorageLocationsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$apiAdminStorageLocation = new \AzuraCast\Model\ApiAdminStorageLocation(); // \AzuraCast\Model\ApiAdminStorageLocation
+$api_admin_storage_location = new \AzuraCast\Model\ApiAdminStorageLocation(); // \AzuraCast\Model\ApiAdminStorageLocation
 
 try {
-    $result = $apiInstance->addStorageLocation($apiAdminStorageLocation);
+    $result = $apiInstance->addStorageLocation($api_admin_storage_location);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AdministrationStorageLocationsApi->addStorageLocation: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **apiAdminStorageLocation** | [**\AzuraCast\Model\ApiAdminStorageLocation**](../Model/ApiAdminStorageLocation.md)|  | [optional] |
+| **api_admin_storage_location** | [**\AzuraCast\Model\ApiAdminStorageLocation**](../Model/ApiAdminStorageLocation.md)|  | [optional] |
 
 ### Return type
 
@@ -138,7 +138,7 @@ try {
 ## `editStorageLocation()`
 
 ```php
-editStorageLocation($id, $apiAdminStorageLocation): \AzuraCast\Model\ApiStatus
+editStorageLocation($id, $api_admin_storage_location): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -165,10 +165,10 @@ $apiInstance = new AzuraCast\Api\AdministrationStorageLocationsApi(
     $config
 );
 $id = 56; // int | Storage Location ID
-$apiAdminStorageLocation = new \AzuraCast\Model\ApiAdminStorageLocation(); // \AzuraCast\Model\ApiAdminStorageLocation
+$api_admin_storage_location = new \AzuraCast\Model\ApiAdminStorageLocation(); // \AzuraCast\Model\ApiAdminStorageLocation
 
 try {
-    $result = $apiInstance->editStorageLocation($id, $apiAdminStorageLocation);
+    $result = $apiInstance->editStorageLocation($id, $api_admin_storage_location);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AdministrationStorageLocationsApi->editStorageLocation: ', $e->getMessage(), PHP_EOL;
@@ -180,7 +180,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| Storage Location ID | |
-| **apiAdminStorageLocation** | [**\AzuraCast\Model\ApiAdminStorageLocation**](../Model/ApiAdminStorageLocation.md)|  | [optional] |
+| **api_admin_storage_location** | [**\AzuraCast\Model\ApiAdminStorageLocation**](../Model/ApiAdminStorageLocation.md)|  | [optional] |
 
 ### Return type
 

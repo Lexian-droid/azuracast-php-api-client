@@ -62,20 +62,20 @@ class ApiPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSerializabl
         'title' => 'string',
         'link' => 'string',
         'description' => 'string',
-        'descriptionShort' => 'string',
+        'description_short' => 'string',
         'explicit' => 'bool',
-        'seasonNumber' => 'int',
-        'episodeNumber' => 'int',
-        'createdAt' => 'int',
-        'publishAt' => 'int',
-        'isPublished' => 'bool',
-        'hasMedia' => 'bool',
-        'playlistMediaId' => 'string',
-        'playlistMedia' => '\AzuraCast\Model\ApiPodcastEpisodeAllOfPlaylistMedia',
+        'season_number' => 'int',
+        'episode_number' => 'int',
+        'created_at' => 'int',
+        'publish_at' => 'int',
+        'is_published' => 'bool',
+        'has_media' => 'bool',
+        'playlist_media_id' => 'string',
+        'playlist_media' => '\AzuraCast\Model\ApiPodcastEpisodeAllOfPlaylistMedia',
         'media' => '\AzuraCast\Model\ApiPodcastEpisodeAllOfMedia',
-        'hasCustomArt' => 'bool',
+        'has_custom_art' => 'bool',
         'art' => 'string',
-        'artUpdatedAt' => 'int'
+        'art_updated_at' => 'int'
     ];
 
     /**
@@ -91,20 +91,20 @@ class ApiPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSerializabl
         'title' => null,
         'link' => null,
         'description' => null,
-        'descriptionShort' => null,
+        'description_short' => null,
         'explicit' => null,
-        'seasonNumber' => null,
-        'episodeNumber' => null,
-        'createdAt' => null,
-        'publishAt' => null,
-        'isPublished' => null,
-        'hasMedia' => null,
-        'playlistMediaId' => null,
-        'playlistMedia' => null,
+        'season_number' => null,
+        'episode_number' => null,
+        'created_at' => null,
+        'publish_at' => null,
+        'is_published' => null,
+        'has_media' => null,
+        'playlist_media_id' => null,
+        'playlist_media' => null,
         'media' => null,
-        'hasCustomArt' => null,
+        'has_custom_art' => null,
         'art' => null,
-        'artUpdatedAt' => null
+        'art_updated_at' => null
     ];
 
     /**
@@ -118,20 +118,20 @@ class ApiPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSerializabl
         'title' => false,
         'link' => true,
         'description' => false,
-        'descriptionShort' => false,
+        'description_short' => false,
         'explicit' => false,
-        'seasonNumber' => true,
-        'episodeNumber' => true,
-        'createdAt' => false,
-        'publishAt' => false,
-        'isPublished' => false,
-        'hasMedia' => false,
-        'playlistMediaId' => true,
-        'playlistMedia' => true,
+        'season_number' => true,
+        'episode_number' => true,
+        'created_at' => false,
+        'publish_at' => false,
+        'is_published' => false,
+        'has_media' => false,
+        'playlist_media_id' => true,
+        'playlist_media' => true,
         'media' => true,
-        'hasCustomArt' => false,
+        'has_custom_art' => false,
         'art' => true,
-        'artUpdatedAt' => false
+        'art_updated_at' => false
     ];
 
     /**
@@ -225,20 +225,20 @@ class ApiPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSerializabl
         'title' => 'title',
         'link' => 'link',
         'description' => 'description',
-        'descriptionShort' => 'description_short',
+        'description_short' => 'description_short',
         'explicit' => 'explicit',
-        'seasonNumber' => 'season_number',
-        'episodeNumber' => 'episode_number',
-        'createdAt' => 'created_at',
-        'publishAt' => 'publish_at',
-        'isPublished' => 'is_published',
-        'hasMedia' => 'has_media',
-        'playlistMediaId' => 'playlist_media_id',
-        'playlistMedia' => 'playlist_media',
+        'season_number' => 'season_number',
+        'episode_number' => 'episode_number',
+        'created_at' => 'created_at',
+        'publish_at' => 'publish_at',
+        'is_published' => 'is_published',
+        'has_media' => 'has_media',
+        'playlist_media_id' => 'playlist_media_id',
+        'playlist_media' => 'playlist_media',
         'media' => 'media',
-        'hasCustomArt' => 'has_custom_art',
+        'has_custom_art' => 'has_custom_art',
         'art' => 'art',
-        'artUpdatedAt' => 'art_updated_at'
+        'art_updated_at' => 'art_updated_at'
     ];
 
     /**
@@ -252,20 +252,20 @@ class ApiPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSerializabl
         'title' => 'setTitle',
         'link' => 'setLink',
         'description' => 'setDescription',
-        'descriptionShort' => 'setDescriptionShort',
+        'description_short' => 'setDescriptionShort',
         'explicit' => 'setExplicit',
-        'seasonNumber' => 'setSeasonNumber',
-        'episodeNumber' => 'setEpisodeNumber',
-        'createdAt' => 'setCreatedAt',
-        'publishAt' => 'setPublishAt',
-        'isPublished' => 'setIsPublished',
-        'hasMedia' => 'setHasMedia',
-        'playlistMediaId' => 'setPlaylistMediaId',
-        'playlistMedia' => 'setPlaylistMedia',
+        'season_number' => 'setSeasonNumber',
+        'episode_number' => 'setEpisodeNumber',
+        'created_at' => 'setCreatedAt',
+        'publish_at' => 'setPublishAt',
+        'is_published' => 'setIsPublished',
+        'has_media' => 'setHasMedia',
+        'playlist_media_id' => 'setPlaylistMediaId',
+        'playlist_media' => 'setPlaylistMedia',
         'media' => 'setMedia',
-        'hasCustomArt' => 'setHasCustomArt',
+        'has_custom_art' => 'setHasCustomArt',
         'art' => 'setArt',
-        'artUpdatedAt' => 'setArtUpdatedAt'
+        'art_updated_at' => 'setArtUpdatedAt'
     ];
 
     /**
@@ -279,20 +279,20 @@ class ApiPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSerializabl
         'title' => 'getTitle',
         'link' => 'getLink',
         'description' => 'getDescription',
-        'descriptionShort' => 'getDescriptionShort',
+        'description_short' => 'getDescriptionShort',
         'explicit' => 'getExplicit',
-        'seasonNumber' => 'getSeasonNumber',
-        'episodeNumber' => 'getEpisodeNumber',
-        'createdAt' => 'getCreatedAt',
-        'publishAt' => 'getPublishAt',
-        'isPublished' => 'getIsPublished',
-        'hasMedia' => 'getHasMedia',
-        'playlistMediaId' => 'getPlaylistMediaId',
-        'playlistMedia' => 'getPlaylistMedia',
+        'season_number' => 'getSeasonNumber',
+        'episode_number' => 'getEpisodeNumber',
+        'created_at' => 'getCreatedAt',
+        'publish_at' => 'getPublishAt',
+        'is_published' => 'getIsPublished',
+        'has_media' => 'getHasMedia',
+        'playlist_media_id' => 'getPlaylistMediaId',
+        'playlist_media' => 'getPlaylistMedia',
         'media' => 'getMedia',
-        'hasCustomArt' => 'getHasCustomArt',
+        'has_custom_art' => 'getHasCustomArt',
         'art' => 'getArt',
-        'artUpdatedAt' => 'getArtUpdatedAt'
+        'art_updated_at' => 'getArtUpdatedAt'
     ];
 
     /**
@@ -357,20 +357,20 @@ class ApiPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSerializabl
         $this->setIfExists('title', $data ?? [], null);
         $this->setIfExists('link', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
-        $this->setIfExists('descriptionShort', $data ?? [], null);
+        $this->setIfExists('description_short', $data ?? [], null);
         $this->setIfExists('explicit', $data ?? [], null);
-        $this->setIfExists('seasonNumber', $data ?? [], null);
-        $this->setIfExists('episodeNumber', $data ?? [], null);
-        $this->setIfExists('createdAt', $data ?? [], null);
-        $this->setIfExists('publishAt', $data ?? [], null);
-        $this->setIfExists('isPublished', $data ?? [], null);
-        $this->setIfExists('hasMedia', $data ?? [], null);
-        $this->setIfExists('playlistMediaId', $data ?? [], null);
-        $this->setIfExists('playlistMedia', $data ?? [], null);
+        $this->setIfExists('season_number', $data ?? [], null);
+        $this->setIfExists('episode_number', $data ?? [], null);
+        $this->setIfExists('created_at', $data ?? [], null);
+        $this->setIfExists('publish_at', $data ?? [], null);
+        $this->setIfExists('is_published', $data ?? [], null);
+        $this->setIfExists('has_media', $data ?? [], null);
+        $this->setIfExists('playlist_media_id', $data ?? [], null);
+        $this->setIfExists('playlist_media', $data ?? [], null);
         $this->setIfExists('media', $data ?? [], null);
-        $this->setIfExists('hasCustomArt', $data ?? [], null);
+        $this->setIfExists('has_custom_art', $data ?? [], null);
         $this->setIfExists('art', $data ?? [], null);
-        $this->setIfExists('artUpdatedAt', $data ?? [], null);
+        $this->setIfExists('art_updated_at', $data ?? [], null);
     }
 
     /**
@@ -558,28 +558,28 @@ class ApiPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets descriptionShort
+     * Gets description_short
      *
      * @return string|null
      */
     public function getDescriptionShort()
     {
-        return $this->container['descriptionShort'];
+        return $this->container['description_short'];
     }
 
     /**
-     * Sets descriptionShort
+     * Sets description_short
      *
-     * @param string|null $descriptionShort descriptionShort
+     * @param string|null $description_short description_short
      *
      * @return self
      */
-    public function setDescriptionShort($descriptionShort)
+    public function setDescriptionShort($description_short)
     {
-        if (is_null($descriptionShort)) {
-            throw new \InvalidArgumentException('non-nullable descriptionShort cannot be null');
+        if (is_null($description_short)) {
+            throw new \InvalidArgumentException('non-nullable description_short cannot be null');
         }
-        $this->container['descriptionShort'] = $descriptionShort;
+        $this->container['description_short'] = $description_short;
 
         return $this;
     }
@@ -612,245 +612,245 @@ class ApiPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets seasonNumber
+     * Gets season_number
      *
      * @return int|null
      */
     public function getSeasonNumber()
     {
-        return $this->container['seasonNumber'];
+        return $this->container['season_number'];
     }
 
     /**
-     * Sets seasonNumber
+     * Sets season_number
      *
-     * @param int|null $seasonNumber seasonNumber
+     * @param int|null $season_number season_number
      *
      * @return self
      */
-    public function setSeasonNumber($seasonNumber)
+    public function setSeasonNumber($season_number)
     {
-        if (is_null($seasonNumber)) {
-            array_push($this->openAPINullablesSetToNull, 'seasonNumber');
+        if (is_null($season_number)) {
+            array_push($this->openAPINullablesSetToNull, 'season_number');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('seasonNumber', $nullablesSetToNull);
+            $index = array_search('season_number', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['seasonNumber'] = $seasonNumber;
+        $this->container['season_number'] = $season_number;
 
         return $this;
     }
 
     /**
-     * Gets episodeNumber
+     * Gets episode_number
      *
      * @return int|null
      */
     public function getEpisodeNumber()
     {
-        return $this->container['episodeNumber'];
+        return $this->container['episode_number'];
     }
 
     /**
-     * Sets episodeNumber
+     * Sets episode_number
      *
-     * @param int|null $episodeNumber episodeNumber
+     * @param int|null $episode_number episode_number
      *
      * @return self
      */
-    public function setEpisodeNumber($episodeNumber)
+    public function setEpisodeNumber($episode_number)
     {
-        if (is_null($episodeNumber)) {
-            array_push($this->openAPINullablesSetToNull, 'episodeNumber');
+        if (is_null($episode_number)) {
+            array_push($this->openAPINullablesSetToNull, 'episode_number');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('episodeNumber', $nullablesSetToNull);
+            $index = array_search('episode_number', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['episodeNumber'] = $episodeNumber;
+        $this->container['episode_number'] = $episode_number;
 
         return $this;
     }
 
     /**
-     * Gets createdAt
+     * Gets created_at
      *
      * @return int|null
      */
     public function getCreatedAt()
     {
-        return $this->container['createdAt'];
+        return $this->container['created_at'];
     }
 
     /**
-     * Sets createdAt
+     * Sets created_at
      *
-     * @param int|null $createdAt createdAt
+     * @param int|null $created_at created_at
      *
      * @return self
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt($created_at)
     {
-        if (is_null($createdAt)) {
-            throw new \InvalidArgumentException('non-nullable createdAt cannot be null');
+        if (is_null($created_at)) {
+            throw new \InvalidArgumentException('non-nullable created_at cannot be null');
         }
-        $this->container['createdAt'] = $createdAt;
+        $this->container['created_at'] = $created_at;
 
         return $this;
     }
 
     /**
-     * Gets publishAt
+     * Gets publish_at
      *
      * @return int|null
      */
     public function getPublishAt()
     {
-        return $this->container['publishAt'];
+        return $this->container['publish_at'];
     }
 
     /**
-     * Sets publishAt
+     * Sets publish_at
      *
-     * @param int|null $publishAt publishAt
+     * @param int|null $publish_at publish_at
      *
      * @return self
      */
-    public function setPublishAt($publishAt)
+    public function setPublishAt($publish_at)
     {
-        if (is_null($publishAt)) {
-            throw new \InvalidArgumentException('non-nullable publishAt cannot be null');
+        if (is_null($publish_at)) {
+            throw new \InvalidArgumentException('non-nullable publish_at cannot be null');
         }
-        $this->container['publishAt'] = $publishAt;
+        $this->container['publish_at'] = $publish_at;
 
         return $this;
     }
 
     /**
-     * Gets isPublished
+     * Gets is_published
      *
      * @return bool|null
      */
     public function getIsPublished()
     {
-        return $this->container['isPublished'];
+        return $this->container['is_published'];
     }
 
     /**
-     * Sets isPublished
+     * Sets is_published
      *
-     * @param bool|null $isPublished isPublished
+     * @param bool|null $is_published is_published
      *
      * @return self
      */
-    public function setIsPublished($isPublished)
+    public function setIsPublished($is_published)
     {
-        if (is_null($isPublished)) {
-            throw new \InvalidArgumentException('non-nullable isPublished cannot be null');
+        if (is_null($is_published)) {
+            throw new \InvalidArgumentException('non-nullable is_published cannot be null');
         }
-        $this->container['isPublished'] = $isPublished;
+        $this->container['is_published'] = $is_published;
 
         return $this;
     }
 
     /**
-     * Gets hasMedia
+     * Gets has_media
      *
      * @return bool|null
      */
     public function getHasMedia()
     {
-        return $this->container['hasMedia'];
+        return $this->container['has_media'];
     }
 
     /**
-     * Sets hasMedia
+     * Sets has_media
      *
-     * @param bool|null $hasMedia hasMedia
+     * @param bool|null $has_media has_media
      *
      * @return self
      */
-    public function setHasMedia($hasMedia)
+    public function setHasMedia($has_media)
     {
-        if (is_null($hasMedia)) {
-            throw new \InvalidArgumentException('non-nullable hasMedia cannot be null');
+        if (is_null($has_media)) {
+            throw new \InvalidArgumentException('non-nullable has_media cannot be null');
         }
-        $this->container['hasMedia'] = $hasMedia;
+        $this->container['has_media'] = $has_media;
 
         return $this;
     }
 
     /**
-     * Gets playlistMediaId
+     * Gets playlist_media_id
      *
      * @return string|null
      */
     public function getPlaylistMediaId()
     {
-        return $this->container['playlistMediaId'];
+        return $this->container['playlist_media_id'];
     }
 
     /**
-     * Sets playlistMediaId
+     * Sets playlist_media_id
      *
-     * @param string|null $playlistMediaId playlistMediaId
+     * @param string|null $playlist_media_id playlist_media_id
      *
      * @return self
      */
-    public function setPlaylistMediaId($playlistMediaId)
+    public function setPlaylistMediaId($playlist_media_id)
     {
-        if (is_null($playlistMediaId)) {
-            array_push($this->openAPINullablesSetToNull, 'playlistMediaId');
+        if (is_null($playlist_media_id)) {
+            array_push($this->openAPINullablesSetToNull, 'playlist_media_id');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('playlistMediaId', $nullablesSetToNull);
+            $index = array_search('playlist_media_id', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['playlistMediaId'] = $playlistMediaId;
+        $this->container['playlist_media_id'] = $playlist_media_id;
 
         return $this;
     }
 
     /**
-     * Gets playlistMedia
+     * Gets playlist_media
      *
      * @return \AzuraCast\Model\ApiPodcastEpisodeAllOfPlaylistMedia|null
      */
     public function getPlaylistMedia()
     {
-        return $this->container['playlistMedia'];
+        return $this->container['playlist_media'];
     }
 
     /**
-     * Sets playlistMedia
+     * Sets playlist_media
      *
-     * @param \AzuraCast\Model\ApiPodcastEpisodeAllOfPlaylistMedia|null $playlistMedia playlistMedia
+     * @param \AzuraCast\Model\ApiPodcastEpisodeAllOfPlaylistMedia|null $playlist_media playlist_media
      *
      * @return self
      */
-    public function setPlaylistMedia($playlistMedia)
+    public function setPlaylistMedia($playlist_media)
     {
-        if (is_null($playlistMedia)) {
-            array_push($this->openAPINullablesSetToNull, 'playlistMedia');
+        if (is_null($playlist_media)) {
+            array_push($this->openAPINullablesSetToNull, 'playlist_media');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('playlistMedia', $nullablesSetToNull);
+            $index = array_search('playlist_media', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['playlistMedia'] = $playlistMedia;
+        $this->container['playlist_media'] = $playlist_media;
 
         return $this;
     }
@@ -890,28 +890,28 @@ class ApiPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets hasCustomArt
+     * Gets has_custom_art
      *
      * @return bool|null
      */
     public function getHasCustomArt()
     {
-        return $this->container['hasCustomArt'];
+        return $this->container['has_custom_art'];
     }
 
     /**
-     * Sets hasCustomArt
+     * Sets has_custom_art
      *
-     * @param bool|null $hasCustomArt hasCustomArt
+     * @param bool|null $has_custom_art has_custom_art
      *
      * @return self
      */
-    public function setHasCustomArt($hasCustomArt)
+    public function setHasCustomArt($has_custom_art)
     {
-        if (is_null($hasCustomArt)) {
-            throw new \InvalidArgumentException('non-nullable hasCustomArt cannot be null');
+        if (is_null($has_custom_art)) {
+            throw new \InvalidArgumentException('non-nullable has_custom_art cannot be null');
         }
-        $this->container['hasCustomArt'] = $hasCustomArt;
+        $this->container['has_custom_art'] = $has_custom_art;
 
         return $this;
     }
@@ -951,28 +951,28 @@ class ApiPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets artUpdatedAt
+     * Gets art_updated_at
      *
      * @return int|null
      */
     public function getArtUpdatedAt()
     {
-        return $this->container['artUpdatedAt'];
+        return $this->container['art_updated_at'];
     }
 
     /**
-     * Sets artUpdatedAt
+     * Sets art_updated_at
      *
-     * @param int|null $artUpdatedAt artUpdatedAt
+     * @param int|null $art_updated_at art_updated_at
      *
      * @return self
      */
-    public function setArtUpdatedAt($artUpdatedAt)
+    public function setArtUpdatedAt($art_updated_at)
     {
-        if (is_null($artUpdatedAt)) {
-            throw new \InvalidArgumentException('non-nullable artUpdatedAt cannot be null');
+        if (is_null($art_updated_at)) {
+            throw new \InvalidArgumentException('non-nullable art_updated_at cannot be null');
         }
-        $this->container['artUpdatedAt'] = $artUpdatedAt;
+        $this->container['art_updated_at'] = $art_updated_at;
 
         return $this;
     }

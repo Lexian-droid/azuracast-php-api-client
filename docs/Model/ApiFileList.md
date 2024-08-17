@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **links** | **array<string,string>** |  | [optional]
 **path** | **string** |  | [optional]
-**pathShort** | **string** |  | [optional]
+**path_short** | **string** |  | [optional]
 **text** | **string** |  | [optional]
 **type** | [**\AzuraCast\Model\FileTypes**](FileTypes.md) |  | [optional]
 **timestamp** | **int** |  | [optional]

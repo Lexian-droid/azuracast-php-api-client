@@ -13,7 +13,7 @@ All URIs are relative to https://demo.azuracast.com/api, except if the operation
 ## `doBackendServiceAction()`
 
 ```php
-doBackendServiceAction($stationId, $action): \AzuraCast\Model\ApiStatus
+doBackendServiceAction($station_id, $action): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -39,11 +39,11 @@ $apiInstance = new AzuraCast\Api\StationsServiceControlApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $action = 'restart'; // string | The action to perform (for all: start, stop, restart, skip, disconnect)
 
 try {
-    $result = $apiInstance->doBackendServiceAction($stationId, $action);
+    $result = $apiInstance->doBackendServiceAction($station_id, $action);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsServiceControlApi->doBackendServiceAction: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **action** | **string**| The action to perform (for all: start, stop, restart, skip, disconnect) | [default to &#39;restart&#39;] |
 
 ### Return type
@@ -77,7 +77,7 @@ try {
 ## `doFrontendServiceAction()`
 
 ```php
-doFrontendServiceAction($stationId, $action): \AzuraCast\Model\ApiStatus
+doFrontendServiceAction($station_id, $action): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -103,11 +103,11 @@ $apiInstance = new AzuraCast\Api\StationsServiceControlApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $action = 'restart'; // string | The action to perform (start, stop, restart)
 
 try {
-    $result = $apiInstance->doFrontendServiceAction($stationId, $action);
+    $result = $apiInstance->doFrontendServiceAction($station_id, $action);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsServiceControlApi->doFrontendServiceAction: ', $e->getMessage(), PHP_EOL;
@@ -118,7 +118,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **action** | **string**| The action to perform (start, stop, restart) | [default to &#39;restart&#39;] |
 
 ### Return type
@@ -141,7 +141,7 @@ try {
 ## `getServiceStatus()`
 
 ```php
-getServiceStatus($stationId): \AzuraCast\Model\ApiStationServiceStatus
+getServiceStatus($station_id): \AzuraCast\Model\ApiStationServiceStatus
 ```
 
 
@@ -167,10 +167,10 @@ $apiInstance = new AzuraCast\Api\StationsServiceControlApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 
 try {
-    $result = $apiInstance->getServiceStatus($stationId);
+    $result = $apiInstance->getServiceStatus($station_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsServiceControlApi->getServiceStatus: ', $e->getMessage(), PHP_EOL;
@@ -181,7 +181,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 
 ### Return type
 
@@ -203,7 +203,7 @@ try {
 ## `restartServices()`
 
 ```php
-restartServices($stationId): \AzuraCast\Model\ApiStatus
+restartServices($station_id): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -229,10 +229,10 @@ $apiInstance = new AzuraCast\Api\StationsServiceControlApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 
 try {
-    $result = $apiInstance->restartServices($stationId);
+    $result = $apiInstance->restartServices($station_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsServiceControlApi->restartServices: ', $e->getMessage(), PHP_EOL;
@@ -243,7 +243,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 
 ### Return type
 

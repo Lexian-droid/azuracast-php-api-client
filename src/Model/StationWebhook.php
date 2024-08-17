@@ -60,7 +60,7 @@ class StationWebhook implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'int',
         'name' => 'string',
         'type' => 'mixed',
-        'isEnabled' => 'bool',
+        'is_enabled' => 'bool',
         'triggers' => 'mixed[]',
         'config' => 'mixed[]',
         'metadata' => 'mixed[]'
@@ -77,7 +77,7 @@ class StationWebhook implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => null,
         'name' => null,
         'type' => null,
-        'isEnabled' => null,
+        'is_enabled' => null,
         'triggers' => null,
         'config' => null,
         'metadata' => null
@@ -92,7 +92,7 @@ class StationWebhook implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => true,
         'name' => true,
         'type' => true,
-        'isEnabled' => false,
+        'is_enabled' => false,
         'triggers' => false,
         'config' => false,
         'metadata' => false
@@ -187,7 +187,7 @@ class StationWebhook implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'id',
         'name' => 'name',
         'type' => 'type',
-        'isEnabled' => 'is_enabled',
+        'is_enabled' => 'is_enabled',
         'triggers' => 'triggers',
         'config' => 'config',
         'metadata' => 'metadata'
@@ -202,7 +202,7 @@ class StationWebhook implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'setId',
         'name' => 'setName',
         'type' => 'setType',
-        'isEnabled' => 'setIsEnabled',
+        'is_enabled' => 'setIsEnabled',
         'triggers' => 'setTriggers',
         'config' => 'setConfig',
         'metadata' => 'setMetadata'
@@ -217,7 +217,7 @@ class StationWebhook implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'getId',
         'name' => 'getName',
         'type' => 'getType',
-        'isEnabled' => 'getIsEnabled',
+        'is_enabled' => 'getIsEnabled',
         'triggers' => 'getTriggers',
         'config' => 'getConfig',
         'metadata' => 'getMetadata'
@@ -283,7 +283,7 @@ class StationWebhook implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
-        $this->setIfExists('isEnabled', $data ?? [], null);
+        $this->setIfExists('is_enabled', $data ?? [], null);
         $this->setIfExists('triggers', $data ?? [], null);
         $this->setIfExists('config', $data ?? [], null);
         $this->setIfExists('metadata', $data ?? [], null);
@@ -434,28 +434,28 @@ class StationWebhook implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets isEnabled
+     * Gets is_enabled
      *
      * @return bool|null
      */
     public function getIsEnabled()
     {
-        return $this->container['isEnabled'];
+        return $this->container['is_enabled'];
     }
 
     /**
-     * Sets isEnabled
+     * Sets is_enabled
      *
-     * @param bool|null $isEnabled isEnabled
+     * @param bool|null $is_enabled is_enabled
      *
      * @return self
      */
-    public function setIsEnabled($isEnabled)
+    public function setIsEnabled($is_enabled)
     {
-        if (is_null($isEnabled)) {
-            throw new \InvalidArgumentException('non-nullable isEnabled cannot be null');
+        if (is_null($is_enabled)) {
+            throw new \InvalidArgumentException('non-nullable is_enabled cannot be null');
         }
-        $this->container['isEnabled'] = $isEnabled;
+        $this->container['is_enabled'] = $is_enabled;
 
         return $this;
     }

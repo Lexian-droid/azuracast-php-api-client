@@ -137,32 +137,32 @@ class AdministrationCustomFieldsApi
     /**
      * Operation addCustomField
      *
-     * @param  \AzuraCast\Model\CustomField $customField customField (optional)
+     * @param  \AzuraCast\Model\CustomField $custom_field custom_field (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addCustomField'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\CustomField|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function addCustomField($customField = null, string $contentType = self::contentTypes['addCustomField'][0])
+    public function addCustomField($custom_field = null, string $contentType = self::contentTypes['addCustomField'][0])
     {
-        list($response) = $this->addCustomFieldWithHttpInfo($customField, $contentType);
+        list($response) = $this->addCustomFieldWithHttpInfo($custom_field, $contentType);
         return $response;
     }
 
     /**
      * Operation addCustomFieldWithHttpInfo
      *
-     * @param  \AzuraCast\Model\CustomField $customField (optional)
+     * @param  \AzuraCast\Model\CustomField $custom_field (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addCustomField'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\CustomField|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function addCustomFieldWithHttpInfo($customField = null, string $contentType = self::contentTypes['addCustomField'][0])
+    public function addCustomFieldWithHttpInfo($custom_field = null, string $contentType = self::contentTypes['addCustomField'][0])
     {
-        $request = $this->addCustomFieldRequest($customField, $contentType);
+        $request = $this->addCustomFieldRequest($custom_field, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -345,15 +345,15 @@ class AdministrationCustomFieldsApi
     /**
      * Operation addCustomFieldAsync
      *
-     * @param  \AzuraCast\Model\CustomField $customField (optional)
+     * @param  \AzuraCast\Model\CustomField $custom_field (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addCustomField'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addCustomFieldAsync($customField = null, string $contentType = self::contentTypes['addCustomField'][0])
+    public function addCustomFieldAsync($custom_field = null, string $contentType = self::contentTypes['addCustomField'][0])
     {
-        return $this->addCustomFieldAsyncWithHttpInfo($customField, $contentType)
+        return $this->addCustomFieldAsyncWithHttpInfo($custom_field, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -364,16 +364,16 @@ class AdministrationCustomFieldsApi
     /**
      * Operation addCustomFieldAsyncWithHttpInfo
      *
-     * @param  \AzuraCast\Model\CustomField $customField (optional)
+     * @param  \AzuraCast\Model\CustomField $custom_field (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addCustomField'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addCustomFieldAsyncWithHttpInfo($customField = null, string $contentType = self::contentTypes['addCustomField'][0])
+    public function addCustomFieldAsyncWithHttpInfo($custom_field = null, string $contentType = self::contentTypes['addCustomField'][0])
     {
         $returnType = '\AzuraCast\Model\CustomField';
-        $request = $this->addCustomFieldRequest($customField, $contentType);
+        $request = $this->addCustomFieldRequest($custom_field, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -414,13 +414,13 @@ class AdministrationCustomFieldsApi
     /**
      * Create request for operation 'addCustomField'
      *
-     * @param  \AzuraCast\Model\CustomField $customField (optional)
+     * @param  \AzuraCast\Model\CustomField $custom_field (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addCustomField'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function addCustomFieldRequest($customField = null, string $contentType = self::contentTypes['addCustomField'][0])
+    public function addCustomFieldRequest($custom_field = null, string $contentType = self::contentTypes['addCustomField'][0])
     {
 
 
@@ -443,12 +443,12 @@ class AdministrationCustomFieldsApi
         );
 
         // for model (json/xml)
-        if (isset($customField)) {
+        if (isset($custom_field)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($customField));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($custom_field));
             } else {
-                $httpBody = $customField;
+                $httpBody = $custom_field;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -914,16 +914,16 @@ class AdministrationCustomFieldsApi
      * Operation editCustomField
      *
      * @param  int $id ID (required)
-     * @param  \AzuraCast\Model\CustomField $customField customField (optional)
+     * @param  \AzuraCast\Model\CustomField $custom_field custom_field (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editCustomField'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function editCustomField($id, $customField = null, string $contentType = self::contentTypes['editCustomField'][0])
+    public function editCustomField($id, $custom_field = null, string $contentType = self::contentTypes['editCustomField'][0])
     {
-        list($response) = $this->editCustomFieldWithHttpInfo($id, $customField, $contentType);
+        list($response) = $this->editCustomFieldWithHttpInfo($id, $custom_field, $contentType);
         return $response;
     }
 
@@ -931,16 +931,16 @@ class AdministrationCustomFieldsApi
      * Operation editCustomFieldWithHttpInfo
      *
      * @param  int $id ID (required)
-     * @param  \AzuraCast\Model\CustomField $customField (optional)
+     * @param  \AzuraCast\Model\CustomField $custom_field (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editCustomField'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function editCustomFieldWithHttpInfo($id, $customField = null, string $contentType = self::contentTypes['editCustomField'][0])
+    public function editCustomFieldWithHttpInfo($id, $custom_field = null, string $contentType = self::contentTypes['editCustomField'][0])
     {
-        $request = $this->editCustomFieldRequest($id, $customField, $contentType);
+        $request = $this->editCustomFieldRequest($id, $custom_field, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1159,15 +1159,15 @@ class AdministrationCustomFieldsApi
      * Operation editCustomFieldAsync
      *
      * @param  int $id ID (required)
-     * @param  \AzuraCast\Model\CustomField $customField (optional)
+     * @param  \AzuraCast\Model\CustomField $custom_field (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editCustomField'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function editCustomFieldAsync($id, $customField = null, string $contentType = self::contentTypes['editCustomField'][0])
+    public function editCustomFieldAsync($id, $custom_field = null, string $contentType = self::contentTypes['editCustomField'][0])
     {
-        return $this->editCustomFieldAsyncWithHttpInfo($id, $customField, $contentType)
+        return $this->editCustomFieldAsyncWithHttpInfo($id, $custom_field, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1179,16 +1179,16 @@ class AdministrationCustomFieldsApi
      * Operation editCustomFieldAsyncWithHttpInfo
      *
      * @param  int $id ID (required)
-     * @param  \AzuraCast\Model\CustomField $customField (optional)
+     * @param  \AzuraCast\Model\CustomField $custom_field (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editCustomField'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function editCustomFieldAsyncWithHttpInfo($id, $customField = null, string $contentType = self::contentTypes['editCustomField'][0])
+    public function editCustomFieldAsyncWithHttpInfo($id, $custom_field = null, string $contentType = self::contentTypes['editCustomField'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStatus';
-        $request = $this->editCustomFieldRequest($id, $customField, $contentType);
+        $request = $this->editCustomFieldRequest($id, $custom_field, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1230,13 +1230,13 @@ class AdministrationCustomFieldsApi
      * Create request for operation 'editCustomField'
      *
      * @param  int $id ID (required)
-     * @param  \AzuraCast\Model\CustomField $customField (optional)
+     * @param  \AzuraCast\Model\CustomField $custom_field (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editCustomField'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function editCustomFieldRequest($id, $customField = null, string $contentType = self::contentTypes['editCustomField'][0])
+    public function editCustomFieldRequest($id, $custom_field = null, string $contentType = self::contentTypes['editCustomField'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -1274,12 +1274,12 @@ class AdministrationCustomFieldsApi
         );
 
         // for model (json/xml)
-        if (isset($customField)) {
+        if (isset($custom_field)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($customField));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($custom_field));
             } else {
-                $httpBody = $customField;
+                $httpBody = $custom_field;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

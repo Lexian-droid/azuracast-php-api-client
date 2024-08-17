@@ -57,16 +57,16 @@ class ApiStationQueueDetailed implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'cuedAt' => 'int',
-        'playedAt' => 'int',
+        'cued_at' => 'int',
+        'played_at' => 'int',
         'duration' => 'int',
         'playlist' => 'string',
-        'isRequest' => 'bool',
+        'is_request' => 'bool',
         'song' => '\AzuraCast\Model\ApiSong',
         'links' => 'array<string,string>',
-        'sentToAutodj' => 'bool',
-        'isPlayed' => 'bool',
-        'autodjCustomUri' => 'string',
+        'sent_to_autodj' => 'bool',
+        'is_played' => 'bool',
+        'autodj_custom_uri' => 'string',
         'log' => 'mixed[]'
     ];
 
@@ -78,16 +78,16 @@ class ApiStationQueueDetailed implements ModelInterface, ArrayAccess, \JsonSeria
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'cuedAt' => null,
-        'playedAt' => null,
+        'cued_at' => null,
+        'played_at' => null,
         'duration' => null,
         'playlist' => null,
-        'isRequest' => null,
+        'is_request' => null,
         'song' => null,
         'links' => null,
-        'sentToAutodj' => null,
-        'isPlayed' => null,
-        'autodjCustomUri' => null,
+        'sent_to_autodj' => null,
+        'is_played' => null,
+        'autodj_custom_uri' => null,
         'log' => null
     ];
 
@@ -97,16 +97,16 @@ class ApiStationQueueDetailed implements ModelInterface, ArrayAccess, \JsonSeria
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'cuedAt' => false,
-        'playedAt' => false,
+        'cued_at' => false,
+        'played_at' => false,
         'duration' => false,
         'playlist' => true,
-        'isRequest' => false,
+        'is_request' => false,
         'song' => false,
         'links' => false,
-        'sentToAutodj' => false,
-        'isPlayed' => false,
-        'autodjCustomUri' => true,
+        'sent_to_autodj' => false,
+        'is_played' => false,
+        'autodj_custom_uri' => true,
         'log' => true
     ];
 
@@ -196,16 +196,16 @@ class ApiStationQueueDetailed implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $attributeMap = [
-        'cuedAt' => 'cued_at',
-        'playedAt' => 'played_at',
+        'cued_at' => 'cued_at',
+        'played_at' => 'played_at',
         'duration' => 'duration',
         'playlist' => 'playlist',
-        'isRequest' => 'is_request',
+        'is_request' => 'is_request',
         'song' => 'song',
         'links' => 'links',
-        'sentToAutodj' => 'sent_to_autodj',
-        'isPlayed' => 'is_played',
-        'autodjCustomUri' => 'autodj_custom_uri',
+        'sent_to_autodj' => 'sent_to_autodj',
+        'is_played' => 'is_played',
+        'autodj_custom_uri' => 'autodj_custom_uri',
         'log' => 'log'
     ];
 
@@ -215,16 +215,16 @@ class ApiStationQueueDetailed implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $setters = [
-        'cuedAt' => 'setCuedAt',
-        'playedAt' => 'setPlayedAt',
+        'cued_at' => 'setCuedAt',
+        'played_at' => 'setPlayedAt',
         'duration' => 'setDuration',
         'playlist' => 'setPlaylist',
-        'isRequest' => 'setIsRequest',
+        'is_request' => 'setIsRequest',
         'song' => 'setSong',
         'links' => 'setLinks',
-        'sentToAutodj' => 'setSentToAutodj',
-        'isPlayed' => 'setIsPlayed',
-        'autodjCustomUri' => 'setAutodjCustomUri',
+        'sent_to_autodj' => 'setSentToAutodj',
+        'is_played' => 'setIsPlayed',
+        'autodj_custom_uri' => 'setAutodjCustomUri',
         'log' => 'setLog'
     ];
 
@@ -234,16 +234,16 @@ class ApiStationQueueDetailed implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $getters = [
-        'cuedAt' => 'getCuedAt',
-        'playedAt' => 'getPlayedAt',
+        'cued_at' => 'getCuedAt',
+        'played_at' => 'getPlayedAt',
         'duration' => 'getDuration',
         'playlist' => 'getPlaylist',
-        'isRequest' => 'getIsRequest',
+        'is_request' => 'getIsRequest',
         'song' => 'getSong',
         'links' => 'getLinks',
-        'sentToAutodj' => 'getSentToAutodj',
-        'isPlayed' => 'getIsPlayed',
-        'autodjCustomUri' => 'getAutodjCustomUri',
+        'sent_to_autodj' => 'getSentToAutodj',
+        'is_played' => 'getIsPlayed',
+        'autodj_custom_uri' => 'getAutodjCustomUri',
         'log' => 'getLog'
     ];
 
@@ -304,16 +304,16 @@ class ApiStationQueueDetailed implements ModelInterface, ArrayAccess, \JsonSeria
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('cuedAt', $data ?? [], null);
-        $this->setIfExists('playedAt', $data ?? [], null);
+        $this->setIfExists('cued_at', $data ?? [], null);
+        $this->setIfExists('played_at', $data ?? [], null);
         $this->setIfExists('duration', $data ?? [], null);
         $this->setIfExists('playlist', $data ?? [], null);
-        $this->setIfExists('isRequest', $data ?? [], null);
+        $this->setIfExists('is_request', $data ?? [], null);
         $this->setIfExists('song', $data ?? [], null);
         $this->setIfExists('links', $data ?? [], null);
-        $this->setIfExists('sentToAutodj', $data ?? [], null);
-        $this->setIfExists('isPlayed', $data ?? [], null);
-        $this->setIfExists('autodjCustomUri', $data ?? [], null);
+        $this->setIfExists('sent_to_autodj', $data ?? [], null);
+        $this->setIfExists('is_played', $data ?? [], null);
+        $this->setIfExists('autodj_custom_uri', $data ?? [], null);
         $this->setIfExists('log', $data ?? [], null);
     }
 
@@ -360,55 +360,55 @@ class ApiStationQueueDetailed implements ModelInterface, ArrayAccess, \JsonSeria
 
 
     /**
-     * Gets cuedAt
+     * Gets cued_at
      *
      * @return int|null
      */
     public function getCuedAt()
     {
-        return $this->container['cuedAt'];
+        return $this->container['cued_at'];
     }
 
     /**
-     * Sets cuedAt
+     * Sets cued_at
      *
-     * @param int|null $cuedAt UNIX timestamp when the AutoDJ is expected to queue the song for playback.
+     * @param int|null $cued_at UNIX timestamp when the AutoDJ is expected to queue the song for playback.
      *
      * @return self
      */
-    public function setCuedAt($cuedAt)
+    public function setCuedAt($cued_at)
     {
-        if (is_null($cuedAt)) {
-            throw new \InvalidArgumentException('non-nullable cuedAt cannot be null');
+        if (is_null($cued_at)) {
+            throw new \InvalidArgumentException('non-nullable cued_at cannot be null');
         }
-        $this->container['cuedAt'] = $cuedAt;
+        $this->container['cued_at'] = $cued_at;
 
         return $this;
     }
 
     /**
-     * Gets playedAt
+     * Gets played_at
      *
      * @return int|null
      */
     public function getPlayedAt()
     {
-        return $this->container['playedAt'];
+        return $this->container['played_at'];
     }
 
     /**
-     * Sets playedAt
+     * Sets played_at
      *
-     * @param int|null $playedAt UNIX timestamp when playback is expected to start.
+     * @param int|null $played_at UNIX timestamp when playback is expected to start.
      *
      * @return self
      */
-    public function setPlayedAt($playedAt)
+    public function setPlayedAt($played_at)
     {
-        if (is_null($playedAt)) {
-            throw new \InvalidArgumentException('non-nullable playedAt cannot be null');
+        if (is_null($played_at)) {
+            throw new \InvalidArgumentException('non-nullable played_at cannot be null');
         }
-        $this->container['playedAt'] = $playedAt;
+        $this->container['played_at'] = $played_at;
 
         return $this;
     }
@@ -475,28 +475,28 @@ class ApiStationQueueDetailed implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
-     * Gets isRequest
+     * Gets is_request
      *
      * @return bool|null
      */
     public function getIsRequest()
     {
-        return $this->container['isRequest'];
+        return $this->container['is_request'];
     }
 
     /**
-     * Sets isRequest
+     * Sets is_request
      *
-     * @param bool|null $isRequest Indicates whether the song is a listener request.
+     * @param bool|null $is_request Indicates whether the song is a listener request.
      *
      * @return self
      */
-    public function setIsRequest($isRequest)
+    public function setIsRequest($is_request)
     {
-        if (is_null($isRequest)) {
-            throw new \InvalidArgumentException('non-nullable isRequest cannot be null');
+        if (is_null($is_request)) {
+            throw new \InvalidArgumentException('non-nullable is_request cannot be null');
         }
-        $this->container['isRequest'] = $isRequest;
+        $this->container['is_request'] = $is_request;
 
         return $this;
     }
@@ -556,89 +556,89 @@ class ApiStationQueueDetailed implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
-     * Gets sentToAutodj
+     * Gets sent_to_autodj
      *
      * @return bool|null
      */
     public function getSentToAutodj()
     {
-        return $this->container['sentToAutodj'];
+        return $this->container['sent_to_autodj'];
     }
 
     /**
-     * Sets sentToAutodj
+     * Sets sent_to_autodj
      *
-     * @param bool|null $sentToAutodj Indicates whether the song has been sent to the AutoDJ.
+     * @param bool|null $sent_to_autodj Indicates whether the song has been sent to the AutoDJ.
      *
      * @return self
      */
-    public function setSentToAutodj($sentToAutodj)
+    public function setSentToAutodj($sent_to_autodj)
     {
-        if (is_null($sentToAutodj)) {
-            throw new \InvalidArgumentException('non-nullable sentToAutodj cannot be null');
+        if (is_null($sent_to_autodj)) {
+            throw new \InvalidArgumentException('non-nullable sent_to_autodj cannot be null');
         }
-        $this->container['sentToAutodj'] = $sentToAutodj;
+        $this->container['sent_to_autodj'] = $sent_to_autodj;
 
         return $this;
     }
 
     /**
-     * Gets isPlayed
+     * Gets is_played
      *
      * @return bool|null
      */
     public function getIsPlayed()
     {
-        return $this->container['isPlayed'];
+        return $this->container['is_played'];
     }
 
     /**
-     * Sets isPlayed
+     * Sets is_played
      *
-     * @param bool|null $isPlayed Indicates whether the song has already been marked as played.
+     * @param bool|null $is_played Indicates whether the song has already been marked as played.
      *
      * @return self
      */
-    public function setIsPlayed($isPlayed)
+    public function setIsPlayed($is_played)
     {
-        if (is_null($isPlayed)) {
-            throw new \InvalidArgumentException('non-nullable isPlayed cannot be null');
+        if (is_null($is_played)) {
+            throw new \InvalidArgumentException('non-nullable is_played cannot be null');
         }
-        $this->container['isPlayed'] = $isPlayed;
+        $this->container['is_played'] = $is_played;
 
         return $this;
     }
 
     /**
-     * Gets autodjCustomUri
+     * Gets autodj_custom_uri
      *
      * @return string|null
      */
     public function getAutodjCustomUri()
     {
-        return $this->container['autodjCustomUri'];
+        return $this->container['autodj_custom_uri'];
     }
 
     /**
-     * Sets autodjCustomUri
+     * Sets autodj_custom_uri
      *
-     * @param string|null $autodjCustomUri Custom AutoDJ playback URI, if it exists.
+     * @param string|null $autodj_custom_uri Custom AutoDJ playback URI, if it exists.
      *
      * @return self
      */
-    public function setAutodjCustomUri($autodjCustomUri)
+    public function setAutodjCustomUri($autodj_custom_uri)
     {
-        if (is_null($autodjCustomUri)) {
-            array_push($this->openAPINullablesSetToNull, 'autodjCustomUri');
+        if (is_null($autodj_custom_uri)) {
+            array_push($this->openAPINullablesSetToNull, 'autodj_custom_uri');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('autodjCustomUri', $nullablesSetToNull);
+            $index = array_search('autodj_custom_uri', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['autodjCustomUri'] = $autodjCustomUri;
+        $this->container['autodj_custom_uri'] = $autodj_custom_uri;
 
         return $this;
     }

@@ -125,7 +125,7 @@ class StationsSchedulesApi
     /**
      * Operation getSchedule
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  string $now The date/time to compare schedule items to. Defaults to the current date and time. (optional)
      * @param  int $rows The number of upcoming/ongoing schedule entries to return. Defaults to 5. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSchedule'] to see the possible values for this operation
@@ -134,16 +134,16 @@ class StationsSchedulesApi
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStationSchedule[]|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function getSchedule($stationId, $now = null, $rows = null, string $contentType = self::contentTypes['getSchedule'][0])
+    public function getSchedule($station_id, $now = null, $rows = null, string $contentType = self::contentTypes['getSchedule'][0])
     {
-        list($response) = $this->getScheduleWithHttpInfo($stationId, $now, $rows, $contentType);
+        list($response) = $this->getScheduleWithHttpInfo($station_id, $now, $rows, $contentType);
         return $response;
     }
 
     /**
      * Operation getScheduleWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $now The date/time to compare schedule items to. Defaults to the current date and time. (optional)
      * @param  int $rows The number of upcoming/ongoing schedule entries to return. Defaults to 5. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSchedule'] to see the possible values for this operation
@@ -152,9 +152,9 @@ class StationsSchedulesApi
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStationSchedule[]|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getScheduleWithHttpInfo($stationId, $now = null, $rows = null, string $contentType = self::contentTypes['getSchedule'][0])
+    public function getScheduleWithHttpInfo($station_id, $now = null, $rows = null, string $contentType = self::contentTypes['getSchedule'][0])
     {
-        $request = $this->getScheduleRequest($stationId, $now, $rows, $contentType);
+        $request = $this->getScheduleRequest($station_id, $now, $rows, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -337,7 +337,7 @@ class StationsSchedulesApi
     /**
      * Operation getScheduleAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $now The date/time to compare schedule items to. Defaults to the current date and time. (optional)
      * @param  int $rows The number of upcoming/ongoing schedule entries to return. Defaults to 5. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSchedule'] to see the possible values for this operation
@@ -345,9 +345,9 @@ class StationsSchedulesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getScheduleAsync($stationId, $now = null, $rows = null, string $contentType = self::contentTypes['getSchedule'][0])
+    public function getScheduleAsync($station_id, $now = null, $rows = null, string $contentType = self::contentTypes['getSchedule'][0])
     {
-        return $this->getScheduleAsyncWithHttpInfo($stationId, $now, $rows, $contentType)
+        return $this->getScheduleAsyncWithHttpInfo($station_id, $now, $rows, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -358,7 +358,7 @@ class StationsSchedulesApi
     /**
      * Operation getScheduleAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $now The date/time to compare schedule items to. Defaults to the current date and time. (optional)
      * @param  int $rows The number of upcoming/ongoing schedule entries to return. Defaults to 5. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSchedule'] to see the possible values for this operation
@@ -366,10 +366,10 @@ class StationsSchedulesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getScheduleAsyncWithHttpInfo($stationId, $now = null, $rows = null, string $contentType = self::contentTypes['getSchedule'][0])
+    public function getScheduleAsyncWithHttpInfo($station_id, $now = null, $rows = null, string $contentType = self::contentTypes['getSchedule'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStationSchedule[]';
-        $request = $this->getScheduleRequest($stationId, $now, $rows, $contentType);
+        $request = $this->getScheduleRequest($station_id, $now, $rows, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -410,7 +410,7 @@ class StationsSchedulesApi
     /**
      * Create request for operation 'getSchedule'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $now The date/time to compare schedule items to. Defaults to the current date and time. (optional)
      * @param  int $rows The number of upcoming/ongoing schedule entries to return. Defaults to 5. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSchedule'] to see the possible values for this operation
@@ -418,13 +418,13 @@ class StationsSchedulesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getScheduleRequest($stationId, $now = null, $rows = null, string $contentType = self::contentTypes['getSchedule'][0])
+    public function getScheduleRequest($station_id, $now = null, $rows = null, string $contentType = self::contentTypes['getSchedule'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling getSchedule'
+                'Missing the required parameter $station_id when calling getSchedule'
             );
         }
 
@@ -459,10 +459,10 @@ class StationsSchedulesApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }

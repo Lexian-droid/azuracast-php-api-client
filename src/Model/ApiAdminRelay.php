@@ -65,8 +65,8 @@ class ApiAdminRelay implements ModelInterface, ArrayAccess, \JsonSerializable
         'genre' => 'string',
         'type' => 'string',
         'port' => 'int',
-        'relayPw' => 'string',
-        'adminPw' => 'string',
+        'relay_pw' => 'string',
+        'admin_pw' => 'string',
         'mounts' => '\AzuraCast\Model\ApiNowPlayingStationMount[]'
     ];
 
@@ -86,8 +86,8 @@ class ApiAdminRelay implements ModelInterface, ArrayAccess, \JsonSerializable
         'genre' => null,
         'type' => null,
         'port' => null,
-        'relayPw' => null,
-        'adminPw' => null,
+        'relay_pw' => null,
+        'admin_pw' => null,
         'mounts' => null
     ];
 
@@ -105,8 +105,8 @@ class ApiAdminRelay implements ModelInterface, ArrayAccess, \JsonSerializable
         'genre' => true,
         'type' => true,
         'port' => true,
-        'relayPw' => false,
-        'adminPw' => false,
+        'relay_pw' => false,
+        'admin_pw' => false,
         'mounts' => false
     ];
 
@@ -204,8 +204,8 @@ class ApiAdminRelay implements ModelInterface, ArrayAccess, \JsonSerializable
         'genre' => 'genre',
         'type' => 'type',
         'port' => 'port',
-        'relayPw' => 'relay_pw',
-        'adminPw' => 'admin_pw',
+        'relay_pw' => 'relay_pw',
+        'admin_pw' => 'admin_pw',
         'mounts' => 'mounts'
     ];
 
@@ -223,8 +223,8 @@ class ApiAdminRelay implements ModelInterface, ArrayAccess, \JsonSerializable
         'genre' => 'setGenre',
         'type' => 'setType',
         'port' => 'setPort',
-        'relayPw' => 'setRelayPw',
-        'adminPw' => 'setAdminPw',
+        'relay_pw' => 'setRelayPw',
+        'admin_pw' => 'setAdminPw',
         'mounts' => 'setMounts'
     ];
 
@@ -242,8 +242,8 @@ class ApiAdminRelay implements ModelInterface, ArrayAccess, \JsonSerializable
         'genre' => 'getGenre',
         'type' => 'getType',
         'port' => 'getPort',
-        'relayPw' => 'getRelayPw',
-        'adminPw' => 'getAdminPw',
+        'relay_pw' => 'getRelayPw',
+        'admin_pw' => 'getAdminPw',
         'mounts' => 'getMounts'
     ];
 
@@ -312,8 +312,8 @@ class ApiAdminRelay implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('genre', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('port', $data ?? [], null);
-        $this->setIfExists('relayPw', $data ?? [], null);
-        $this->setIfExists('adminPw', $data ?? [], null);
+        $this->setIfExists('relay_pw', $data ?? [], null);
+        $this->setIfExists('admin_pw', $data ?? [], null);
         $this->setIfExists('mounts', $data ?? [], null);
     }
 
@@ -625,55 +625,55 @@ class ApiAdminRelay implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets relayPw
+     * Gets relay_pw
      *
      * @return string|null
      */
     public function getRelayPw()
     {
-        return $this->container['relayPw'];
+        return $this->container['relay_pw'];
     }
 
     /**
-     * Sets relayPw
+     * Sets relay_pw
      *
-     * @param string|null $relayPw The relay password for the frontend (if applicable).
+     * @param string|null $relay_pw The relay password for the frontend (if applicable).
      *
      * @return self
      */
-    public function setRelayPw($relayPw)
+    public function setRelayPw($relay_pw)
     {
-        if (is_null($relayPw)) {
-            throw new \InvalidArgumentException('non-nullable relayPw cannot be null');
+        if (is_null($relay_pw)) {
+            throw new \InvalidArgumentException('non-nullable relay_pw cannot be null');
         }
-        $this->container['relayPw'] = $relayPw;
+        $this->container['relay_pw'] = $relay_pw;
 
         return $this;
     }
 
     /**
-     * Gets adminPw
+     * Gets admin_pw
      *
      * @return string|null
      */
     public function getAdminPw()
     {
-        return $this->container['adminPw'];
+        return $this->container['admin_pw'];
     }
 
     /**
-     * Sets adminPw
+     * Sets admin_pw
      *
-     * @param string|null $adminPw The administrator password for the frontend (if applicable).
+     * @param string|null $admin_pw The administrator password for the frontend (if applicable).
      *
      * @return self
      */
-    public function setAdminPw($adminPw)
+    public function setAdminPw($admin_pw)
     {
-        if (is_null($adminPw)) {
-            throw new \InvalidArgumentException('non-nullable adminPw cannot be null');
+        if (is_null($admin_pw)) {
+            throw new \InvalidArgumentException('non-nullable admin_pw cannot be null');
         }
-        $this->container['adminPw'] = $adminPw;
+        $this->container['admin_pw'] = $admin_pw;
 
         return $this;
     }

@@ -57,10 +57,10 @@ class ApiStationServiceStatus implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'backendRunning' => 'bool',
-        'frontendRunning' => 'bool',
-        'stationHasStarted' => 'bool',
-        'stationNeedsRestart' => 'bool'
+        'backend_running' => 'bool',
+        'frontend_running' => 'bool',
+        'station_has_started' => 'bool',
+        'station_needs_restart' => 'bool'
     ];
 
     /**
@@ -71,10 +71,10 @@ class ApiStationServiceStatus implements ModelInterface, ArrayAccess, \JsonSeria
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'backendRunning' => null,
-        'frontendRunning' => null,
-        'stationHasStarted' => null,
-        'stationNeedsRestart' => null
+        'backend_running' => null,
+        'frontend_running' => null,
+        'station_has_started' => null,
+        'station_needs_restart' => null
     ];
 
     /**
@@ -83,10 +83,10 @@ class ApiStationServiceStatus implements ModelInterface, ArrayAccess, \JsonSeria
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'backendRunning' => false,
-        'frontendRunning' => false,
-        'stationHasStarted' => false,
-        'stationNeedsRestart' => false
+        'backend_running' => false,
+        'frontend_running' => false,
+        'station_has_started' => false,
+        'station_needs_restart' => false
     ];
 
     /**
@@ -175,10 +175,10 @@ class ApiStationServiceStatus implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $attributeMap = [
-        'backendRunning' => 'backend_running',
-        'frontendRunning' => 'frontend_running',
-        'stationHasStarted' => 'station_has_started',
-        'stationNeedsRestart' => 'station_needs_restart'
+        'backend_running' => 'backend_running',
+        'frontend_running' => 'frontend_running',
+        'station_has_started' => 'station_has_started',
+        'station_needs_restart' => 'station_needs_restart'
     ];
 
     /**
@@ -187,10 +187,10 @@ class ApiStationServiceStatus implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $setters = [
-        'backendRunning' => 'setBackendRunning',
-        'frontendRunning' => 'setFrontendRunning',
-        'stationHasStarted' => 'setStationHasStarted',
-        'stationNeedsRestart' => 'setStationNeedsRestart'
+        'backend_running' => 'setBackendRunning',
+        'frontend_running' => 'setFrontendRunning',
+        'station_has_started' => 'setStationHasStarted',
+        'station_needs_restart' => 'setStationNeedsRestart'
     ];
 
     /**
@@ -199,10 +199,10 @@ class ApiStationServiceStatus implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $getters = [
-        'backendRunning' => 'getBackendRunning',
-        'frontendRunning' => 'getFrontendRunning',
-        'stationHasStarted' => 'getStationHasStarted',
-        'stationNeedsRestart' => 'getStationNeedsRestart'
+        'backend_running' => 'getBackendRunning',
+        'frontend_running' => 'getFrontendRunning',
+        'station_has_started' => 'getStationHasStarted',
+        'station_needs_restart' => 'getStationNeedsRestart'
     ];
 
     /**
@@ -262,10 +262,10 @@ class ApiStationServiceStatus implements ModelInterface, ArrayAccess, \JsonSeria
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('backendRunning', $data ?? [], null);
-        $this->setIfExists('frontendRunning', $data ?? [], null);
-        $this->setIfExists('stationHasStarted', $data ?? [], null);
-        $this->setIfExists('stationNeedsRestart', $data ?? [], null);
+        $this->setIfExists('backend_running', $data ?? [], null);
+        $this->setIfExists('frontend_running', $data ?? [], null);
+        $this->setIfExists('station_has_started', $data ?? [], null);
+        $this->setIfExists('station_needs_restart', $data ?? [], null);
     }
 
     /**
@@ -311,109 +311,109 @@ class ApiStationServiceStatus implements ModelInterface, ArrayAccess, \JsonSeria
 
 
     /**
-     * Gets backendRunning
+     * Gets backend_running
      *
      * @return bool|null
      */
     public function getBackendRunning()
     {
-        return $this->container['backendRunning'];
+        return $this->container['backend_running'];
     }
 
     /**
-     * Sets backendRunning
+     * Sets backend_running
      *
-     * @param bool|null $backendRunning backendRunning
+     * @param bool|null $backend_running backend_running
      *
      * @return self
      */
-    public function setBackendRunning($backendRunning)
+    public function setBackendRunning($backend_running)
     {
-        if (is_null($backendRunning)) {
-            throw new \InvalidArgumentException('non-nullable backendRunning cannot be null');
+        if (is_null($backend_running)) {
+            throw new \InvalidArgumentException('non-nullable backend_running cannot be null');
         }
-        $this->container['backendRunning'] = $backendRunning;
+        $this->container['backend_running'] = $backend_running;
 
         return $this;
     }
 
     /**
-     * Gets frontendRunning
+     * Gets frontend_running
      *
      * @return bool|null
      */
     public function getFrontendRunning()
     {
-        return $this->container['frontendRunning'];
+        return $this->container['frontend_running'];
     }
 
     /**
-     * Sets frontendRunning
+     * Sets frontend_running
      *
-     * @param bool|null $frontendRunning frontendRunning
+     * @param bool|null $frontend_running frontend_running
      *
      * @return self
      */
-    public function setFrontendRunning($frontendRunning)
+    public function setFrontendRunning($frontend_running)
     {
-        if (is_null($frontendRunning)) {
-            throw new \InvalidArgumentException('non-nullable frontendRunning cannot be null');
+        if (is_null($frontend_running)) {
+            throw new \InvalidArgumentException('non-nullable frontend_running cannot be null');
         }
-        $this->container['frontendRunning'] = $frontendRunning;
+        $this->container['frontend_running'] = $frontend_running;
 
         return $this;
     }
 
     /**
-     * Gets stationHasStarted
+     * Gets station_has_started
      *
      * @return bool|null
      */
     public function getStationHasStarted()
     {
-        return $this->container['stationHasStarted'];
+        return $this->container['station_has_started'];
     }
 
     /**
-     * Sets stationHasStarted
+     * Sets station_has_started
      *
-     * @param bool|null $stationHasStarted stationHasStarted
+     * @param bool|null $station_has_started station_has_started
      *
      * @return self
      */
-    public function setStationHasStarted($stationHasStarted)
+    public function setStationHasStarted($station_has_started)
     {
-        if (is_null($stationHasStarted)) {
-            throw new \InvalidArgumentException('non-nullable stationHasStarted cannot be null');
+        if (is_null($station_has_started)) {
+            throw new \InvalidArgumentException('non-nullable station_has_started cannot be null');
         }
-        $this->container['stationHasStarted'] = $stationHasStarted;
+        $this->container['station_has_started'] = $station_has_started;
 
         return $this;
     }
 
     /**
-     * Gets stationNeedsRestart
+     * Gets station_needs_restart
      *
      * @return bool|null
      */
     public function getStationNeedsRestart()
     {
-        return $this->container['stationNeedsRestart'];
+        return $this->container['station_needs_restart'];
     }
 
     /**
-     * Sets stationNeedsRestart
+     * Sets station_needs_restart
      *
-     * @param bool|null $stationNeedsRestart stationNeedsRestart
+     * @param bool|null $station_needs_restart station_needs_restart
      *
      * @return self
      */
-    public function setStationNeedsRestart($stationNeedsRestart)
+    public function setStationNeedsRestart($station_needs_restart)
     {
-        if (is_null($stationNeedsRestart)) {
-            throw new \InvalidArgumentException('non-nullable stationNeedsRestart cannot be null');
+        if (is_null($station_needs_restart)) {
+            throw new \InvalidArgumentException('non-nullable station_needs_restart cannot be null');
         }
-        $this->container['stationNeedsRestart'] = $stationNeedsRestart;
+        $this->container['station_needs_restart'] = $station_needs_restart;
 
         return $this;
     }

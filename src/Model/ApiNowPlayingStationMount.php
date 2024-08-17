@@ -64,7 +64,7 @@ class ApiNowPlayingStationMount implements ModelInterface, ArrayAccess, \JsonSer
         'format' => 'string',
         'listeners' => '\AzuraCast\Model\ApiNowPlayingListeners',
         'path' => 'string',
-        'isDefault' => 'bool'
+        'is_default' => 'bool'
     ];
 
     /**
@@ -82,7 +82,7 @@ class ApiNowPlayingStationMount implements ModelInterface, ArrayAccess, \JsonSer
         'format' => null,
         'listeners' => null,
         'path' => null,
-        'isDefault' => null
+        'is_default' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class ApiNowPlayingStationMount implements ModelInterface, ArrayAccess, \JsonSer
         'format' => true,
         'listeners' => false,
         'path' => false,
-        'isDefault' => false
+        'is_default' => false
     ];
 
     /**
@@ -194,7 +194,7 @@ class ApiNowPlayingStationMount implements ModelInterface, ArrayAccess, \JsonSer
         'format' => 'format',
         'listeners' => 'listeners',
         'path' => 'path',
-        'isDefault' => 'is_default'
+        'is_default' => 'is_default'
     ];
 
     /**
@@ -210,7 +210,7 @@ class ApiNowPlayingStationMount implements ModelInterface, ArrayAccess, \JsonSer
         'format' => 'setFormat',
         'listeners' => 'setListeners',
         'path' => 'setPath',
-        'isDefault' => 'setIsDefault'
+        'is_default' => 'setIsDefault'
     ];
 
     /**
@@ -226,7 +226,7 @@ class ApiNowPlayingStationMount implements ModelInterface, ArrayAccess, \JsonSer
         'format' => 'getFormat',
         'listeners' => 'getListeners',
         'path' => 'getPath',
-        'isDefault' => 'getIsDefault'
+        'is_default' => 'getIsDefault'
     ];
 
     /**
@@ -293,7 +293,7 @@ class ApiNowPlayingStationMount implements ModelInterface, ArrayAccess, \JsonSer
         $this->setIfExists('format', $data ?? [], null);
         $this->setIfExists('listeners', $data ?? [], null);
         $this->setIfExists('path', $data ?? [], null);
-        $this->setIfExists('isDefault', $data ?? [], null);
+        $this->setIfExists('is_default', $data ?? [], null);
     }
 
     /**
@@ -549,28 +549,28 @@ class ApiNowPlayingStationMount implements ModelInterface, ArrayAccess, \JsonSer
     }
 
     /**
-     * Gets isDefault
+     * Gets is_default
      *
      * @return bool|null
      */
     public function getIsDefault()
     {
-        return $this->container['isDefault'];
+        return $this->container['is_default'];
     }
 
     /**
-     * Sets isDefault
+     * Sets is_default
      *
-     * @param bool|null $isDefault If the mount is the default mount for the parent station
+     * @param bool|null $is_default If the mount is the default mount for the parent station
      *
      * @return self
      */
-    public function setIsDefault($isDefault)
+    public function setIsDefault($is_default)
     {
-        if (is_null($isDefault)) {
-            throw new \InvalidArgumentException('non-nullable isDefault cannot be null');
+        if (is_null($is_default)) {
+            throw new \InvalidArgumentException('non-nullable is_default cannot be null');
         }
-        $this->container['isDefault'] = $isDefault;
+        $this->container['is_default'] = $is_default;
 
         return $this;
     }

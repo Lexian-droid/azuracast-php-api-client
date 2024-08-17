@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**trackId** | **string** | Track ID unique identifier | [optional]
-**downloadUrl** | **string** | URL to download/play track. | [optional]
+**track_id** | **string** | Track ID unique identifier | [optional]
+**download_url** | **string** | URL to download/play track. | [optional]
 **media** | [**\AzuraCast\Model\ApiSong**](ApiSong.md) |  | [optional]
 **playlist** | **string** |  | [optional]
 

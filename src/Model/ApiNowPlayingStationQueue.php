@@ -57,11 +57,11 @@ class ApiNowPlayingStationQueue implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'cuedAt' => 'int',
-        'playedAt' => 'int',
+        'cued_at' => 'int',
+        'played_at' => 'int',
         'duration' => 'int',
         'playlist' => 'string',
-        'isRequest' => 'bool',
+        'is_request' => 'bool',
         'song' => '\AzuraCast\Model\ApiSong'
     ];
 
@@ -73,11 +73,11 @@ class ApiNowPlayingStationQueue implements ModelInterface, ArrayAccess, \JsonSer
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'cuedAt' => null,
-        'playedAt' => null,
+        'cued_at' => null,
+        'played_at' => null,
         'duration' => null,
         'playlist' => null,
-        'isRequest' => null,
+        'is_request' => null,
         'song' => null
     ];
 
@@ -87,11 +87,11 @@ class ApiNowPlayingStationQueue implements ModelInterface, ArrayAccess, \JsonSer
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'cuedAt' => false,
-        'playedAt' => false,
+        'cued_at' => false,
+        'played_at' => false,
         'duration' => false,
         'playlist' => true,
-        'isRequest' => false,
+        'is_request' => false,
         'song' => false
     ];
 
@@ -181,11 +181,11 @@ class ApiNowPlayingStationQueue implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $attributeMap = [
-        'cuedAt' => 'cued_at',
-        'playedAt' => 'played_at',
+        'cued_at' => 'cued_at',
+        'played_at' => 'played_at',
         'duration' => 'duration',
         'playlist' => 'playlist',
-        'isRequest' => 'is_request',
+        'is_request' => 'is_request',
         'song' => 'song'
     ];
 
@@ -195,11 +195,11 @@ class ApiNowPlayingStationQueue implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $setters = [
-        'cuedAt' => 'setCuedAt',
-        'playedAt' => 'setPlayedAt',
+        'cued_at' => 'setCuedAt',
+        'played_at' => 'setPlayedAt',
         'duration' => 'setDuration',
         'playlist' => 'setPlaylist',
-        'isRequest' => 'setIsRequest',
+        'is_request' => 'setIsRequest',
         'song' => 'setSong'
     ];
 
@@ -209,11 +209,11 @@ class ApiNowPlayingStationQueue implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $getters = [
-        'cuedAt' => 'getCuedAt',
-        'playedAt' => 'getPlayedAt',
+        'cued_at' => 'getCuedAt',
+        'played_at' => 'getPlayedAt',
         'duration' => 'getDuration',
         'playlist' => 'getPlaylist',
-        'isRequest' => 'getIsRequest',
+        'is_request' => 'getIsRequest',
         'song' => 'getSong'
     ];
 
@@ -274,11 +274,11 @@ class ApiNowPlayingStationQueue implements ModelInterface, ArrayAccess, \JsonSer
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('cuedAt', $data ?? [], null);
-        $this->setIfExists('playedAt', $data ?? [], null);
+        $this->setIfExists('cued_at', $data ?? [], null);
+        $this->setIfExists('played_at', $data ?? [], null);
         $this->setIfExists('duration', $data ?? [], null);
         $this->setIfExists('playlist', $data ?? [], null);
-        $this->setIfExists('isRequest', $data ?? [], null);
+        $this->setIfExists('is_request', $data ?? [], null);
         $this->setIfExists('song', $data ?? [], null);
     }
 
@@ -325,55 +325,55 @@ class ApiNowPlayingStationQueue implements ModelInterface, ArrayAccess, \JsonSer
 
 
     /**
-     * Gets cuedAt
+     * Gets cued_at
      *
      * @return int|null
      */
     public function getCuedAt()
     {
-        return $this->container['cuedAt'];
+        return $this->container['cued_at'];
     }
 
     /**
-     * Sets cuedAt
+     * Sets cued_at
      *
-     * @param int|null $cuedAt UNIX timestamp when the AutoDJ is expected to queue the song for playback.
+     * @param int|null $cued_at UNIX timestamp when the AutoDJ is expected to queue the song for playback.
      *
      * @return self
      */
-    public function setCuedAt($cuedAt)
+    public function setCuedAt($cued_at)
     {
-        if (is_null($cuedAt)) {
-            throw new \InvalidArgumentException('non-nullable cuedAt cannot be null');
+        if (is_null($cued_at)) {
+            throw new \InvalidArgumentException('non-nullable cued_at cannot be null');
         }
-        $this->container['cuedAt'] = $cuedAt;
+        $this->container['cued_at'] = $cued_at;
 
         return $this;
     }
 
     /**
-     * Gets playedAt
+     * Gets played_at
      *
      * @return int|null
      */
     public function getPlayedAt()
     {
-        return $this->container['playedAt'];
+        return $this->container['played_at'];
     }
 
     /**
-     * Sets playedAt
+     * Sets played_at
      *
-     * @param int|null $playedAt UNIX timestamp when playback is expected to start.
+     * @param int|null $played_at UNIX timestamp when playback is expected to start.
      *
      * @return self
      */
-    public function setPlayedAt($playedAt)
+    public function setPlayedAt($played_at)
     {
-        if (is_null($playedAt)) {
-            throw new \InvalidArgumentException('non-nullable playedAt cannot be null');
+        if (is_null($played_at)) {
+            throw new \InvalidArgumentException('non-nullable played_at cannot be null');
         }
-        $this->container['playedAt'] = $playedAt;
+        $this->container['played_at'] = $played_at;
 
         return $this;
     }
@@ -440,28 +440,28 @@ class ApiNowPlayingStationQueue implements ModelInterface, ArrayAccess, \JsonSer
     }
 
     /**
-     * Gets isRequest
+     * Gets is_request
      *
      * @return bool|null
      */
     public function getIsRequest()
     {
-        return $this->container['isRequest'];
+        return $this->container['is_request'];
     }
 
     /**
-     * Sets isRequest
+     * Sets is_request
      *
-     * @param bool|null $isRequest Indicates whether the song is a listener request.
+     * @param bool|null $is_request Indicates whether the song is a listener request.
      *
      * @return self
      */
-    public function setIsRequest($isRequest)
+    public function setIsRequest($is_request)
     {
-        if (is_null($isRequest)) {
-            throw new \InvalidArgumentException('non-nullable isRequest cannot be null');
+        if (is_null($is_request)) {
+            throw new \InvalidArgumentException('non-nullable is_request cannot be null');
         }
-        $this->container['isRequest'] = $isRequest;
+        $this->container['is_request'] = $is_request;
 
         return $this;
     }

@@ -57,12 +57,12 @@ class ApiNowPlayingCurrentSong implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'shId' => 'int',
-        'playedAt' => 'int',
+        'sh_id' => 'int',
+        'played_at' => 'int',
         'duration' => 'int',
         'playlist' => 'string',
         'streamer' => 'string',
-        'isRequest' => 'bool',
+        'is_request' => 'bool',
         'song' => '\AzuraCast\Model\ApiSong',
         'elapsed' => 'int',
         'remaining' => 'int'
@@ -76,12 +76,12 @@ class ApiNowPlayingCurrentSong implements ModelInterface, ArrayAccess, \JsonSeri
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'shId' => null,
-        'playedAt' => null,
+        'sh_id' => null,
+        'played_at' => null,
         'duration' => null,
         'playlist' => null,
         'streamer' => null,
-        'isRequest' => null,
+        'is_request' => null,
         'song' => null,
         'elapsed' => null,
         'remaining' => null
@@ -93,12 +93,12 @@ class ApiNowPlayingCurrentSong implements ModelInterface, ArrayAccess, \JsonSeri
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'shId' => false,
-        'playedAt' => false,
+        'sh_id' => false,
+        'played_at' => false,
         'duration' => false,
         'playlist' => true,
         'streamer' => true,
-        'isRequest' => false,
+        'is_request' => false,
         'song' => false,
         'elapsed' => false,
         'remaining' => false
@@ -190,12 +190,12 @@ class ApiNowPlayingCurrentSong implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $attributeMap = [
-        'shId' => 'sh_id',
-        'playedAt' => 'played_at',
+        'sh_id' => 'sh_id',
+        'played_at' => 'played_at',
         'duration' => 'duration',
         'playlist' => 'playlist',
         'streamer' => 'streamer',
-        'isRequest' => 'is_request',
+        'is_request' => 'is_request',
         'song' => 'song',
         'elapsed' => 'elapsed',
         'remaining' => 'remaining'
@@ -207,12 +207,12 @@ class ApiNowPlayingCurrentSong implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
-        'shId' => 'setShId',
-        'playedAt' => 'setPlayedAt',
+        'sh_id' => 'setShId',
+        'played_at' => 'setPlayedAt',
         'duration' => 'setDuration',
         'playlist' => 'setPlaylist',
         'streamer' => 'setStreamer',
-        'isRequest' => 'setIsRequest',
+        'is_request' => 'setIsRequest',
         'song' => 'setSong',
         'elapsed' => 'setElapsed',
         'remaining' => 'setRemaining'
@@ -224,12 +224,12 @@ class ApiNowPlayingCurrentSong implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
-        'shId' => 'getShId',
-        'playedAt' => 'getPlayedAt',
+        'sh_id' => 'getShId',
+        'played_at' => 'getPlayedAt',
         'duration' => 'getDuration',
         'playlist' => 'getPlaylist',
         'streamer' => 'getStreamer',
-        'isRequest' => 'getIsRequest',
+        'is_request' => 'getIsRequest',
         'song' => 'getSong',
         'elapsed' => 'getElapsed',
         'remaining' => 'getRemaining'
@@ -292,12 +292,12 @@ class ApiNowPlayingCurrentSong implements ModelInterface, ArrayAccess, \JsonSeri
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('shId', $data ?? [], null);
-        $this->setIfExists('playedAt', $data ?? [], null);
+        $this->setIfExists('sh_id', $data ?? [], null);
+        $this->setIfExists('played_at', $data ?? [], null);
         $this->setIfExists('duration', $data ?? [], null);
         $this->setIfExists('playlist', $data ?? [], null);
         $this->setIfExists('streamer', $data ?? [], null);
-        $this->setIfExists('isRequest', $data ?? [], null);
+        $this->setIfExists('is_request', $data ?? [], null);
         $this->setIfExists('song', $data ?? [], null);
         $this->setIfExists('elapsed', $data ?? [], null);
         $this->setIfExists('remaining', $data ?? [], null);
@@ -346,55 +346,55 @@ class ApiNowPlayingCurrentSong implements ModelInterface, ArrayAccess, \JsonSeri
 
 
     /**
-     * Gets shId
+     * Gets sh_id
      *
      * @return int|null
      */
     public function getShId()
     {
-        return $this->container['shId'];
+        return $this->container['sh_id'];
     }
 
     /**
-     * Sets shId
+     * Sets sh_id
      *
-     * @param int|null $shId Song history unique identifier
+     * @param int|null $sh_id Song history unique identifier
      *
      * @return self
      */
-    public function setShId($shId)
+    public function setShId($sh_id)
     {
-        if (is_null($shId)) {
-            throw new \InvalidArgumentException('non-nullable shId cannot be null');
+        if (is_null($sh_id)) {
+            throw new \InvalidArgumentException('non-nullable sh_id cannot be null');
         }
-        $this->container['shId'] = $shId;
+        $this->container['sh_id'] = $sh_id;
 
         return $this;
     }
 
     /**
-     * Gets playedAt
+     * Gets played_at
      *
      * @return int|null
      */
     public function getPlayedAt()
     {
-        return $this->container['playedAt'];
+        return $this->container['played_at'];
     }
 
     /**
-     * Sets playedAt
+     * Sets played_at
      *
-     * @param int|null $playedAt UNIX timestamp when playback started.
+     * @param int|null $played_at UNIX timestamp when playback started.
      *
      * @return self
      */
-    public function setPlayedAt($playedAt)
+    public function setPlayedAt($played_at)
     {
-        if (is_null($playedAt)) {
-            throw new \InvalidArgumentException('non-nullable playedAt cannot be null');
+        if (is_null($played_at)) {
+            throw new \InvalidArgumentException('non-nullable played_at cannot be null');
         }
-        $this->container['playedAt'] = $playedAt;
+        $this->container['played_at'] = $played_at;
 
         return $this;
     }
@@ -495,28 +495,28 @@ class ApiNowPlayingCurrentSong implements ModelInterface, ArrayAccess, \JsonSeri
     }
 
     /**
-     * Gets isRequest
+     * Gets is_request
      *
      * @return bool|null
      */
     public function getIsRequest()
     {
-        return $this->container['isRequest'];
+        return $this->container['is_request'];
     }
 
     /**
-     * Sets isRequest
+     * Sets is_request
      *
-     * @param bool|null $isRequest Indicates whether the song is a listener request.
+     * @param bool|null $is_request Indicates whether the song is a listener request.
      *
      * @return self
      */
-    public function setIsRequest($isRequest)
+    public function setIsRequest($is_request)
     {
-        if (is_null($isRequest)) {
-            throw new \InvalidArgumentException('non-nullable isRequest cannot be null');
+        if (is_null($is_request)) {
+            throw new \InvalidArgumentException('non-nullable is_request cannot be null');
         }
-        $this->container['isRequest'] = $isRequest;
+        $this->container['is_request'] = $is_request;
 
         return $this;
     }

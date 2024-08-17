@@ -137,34 +137,34 @@ class StationsWebHooksApi
     /**
      * Operation addWebhook
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
-     * @param  \AzuraCast\Model\StationWebhook $stationWebhook stationWebhook (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
+     * @param  \AzuraCast\Model\StationWebhook $station_webhook station_webhook (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addWebhook'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\StationWebhook|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function addWebhook($stationId, $stationWebhook = null, string $contentType = self::contentTypes['addWebhook'][0])
+    public function addWebhook($station_id, $station_webhook = null, string $contentType = self::contentTypes['addWebhook'][0])
     {
-        list($response) = $this->addWebhookWithHttpInfo($stationId, $stationWebhook, $contentType);
+        list($response) = $this->addWebhookWithHttpInfo($station_id, $station_webhook, $contentType);
         return $response;
     }
 
     /**
      * Operation addWebhookWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  \AzuraCast\Model\StationWebhook $stationWebhook (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  \AzuraCast\Model\StationWebhook $station_webhook (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addWebhook'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\StationWebhook|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function addWebhookWithHttpInfo($stationId, $stationWebhook = null, string $contentType = self::contentTypes['addWebhook'][0])
+    public function addWebhookWithHttpInfo($station_id, $station_webhook = null, string $contentType = self::contentTypes['addWebhook'][0])
     {
-        $request = $this->addWebhookRequest($stationId, $stationWebhook, $contentType);
+        $request = $this->addWebhookRequest($station_id, $station_webhook, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -382,16 +382,16 @@ class StationsWebHooksApi
     /**
      * Operation addWebhookAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  \AzuraCast\Model\StationWebhook $stationWebhook (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  \AzuraCast\Model\StationWebhook $station_webhook (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addWebhook'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addWebhookAsync($stationId, $stationWebhook = null, string $contentType = self::contentTypes['addWebhook'][0])
+    public function addWebhookAsync($station_id, $station_webhook = null, string $contentType = self::contentTypes['addWebhook'][0])
     {
-        return $this->addWebhookAsyncWithHttpInfo($stationId, $stationWebhook, $contentType)
+        return $this->addWebhookAsyncWithHttpInfo($station_id, $station_webhook, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -402,17 +402,17 @@ class StationsWebHooksApi
     /**
      * Operation addWebhookAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  \AzuraCast\Model\StationWebhook $stationWebhook (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  \AzuraCast\Model\StationWebhook $station_webhook (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addWebhook'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addWebhookAsyncWithHttpInfo($stationId, $stationWebhook = null, string $contentType = self::contentTypes['addWebhook'][0])
+    public function addWebhookAsyncWithHttpInfo($station_id, $station_webhook = null, string $contentType = self::contentTypes['addWebhook'][0])
     {
         $returnType = '\AzuraCast\Model\StationWebhook';
-        $request = $this->addWebhookRequest($stationId, $stationWebhook, $contentType);
+        $request = $this->addWebhookRequest($station_id, $station_webhook, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -453,20 +453,20 @@ class StationsWebHooksApi
     /**
      * Create request for operation 'addWebhook'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  \AzuraCast\Model\StationWebhook $stationWebhook (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  \AzuraCast\Model\StationWebhook $station_webhook (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addWebhook'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function addWebhookRequest($stationId, $stationWebhook = null, string $contentType = self::contentTypes['addWebhook'][0])
+    public function addWebhookRequest($station_id, $station_webhook = null, string $contentType = self::contentTypes['addWebhook'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling addWebhook'
+                'Missing the required parameter $station_id when calling addWebhook'
             );
         }
 
@@ -482,10 +482,10 @@ class StationsWebHooksApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -498,12 +498,12 @@ class StationsWebHooksApi
         );
 
         // for model (json/xml)
-        if (isset($stationWebhook)) {
+        if (isset($station_webhook)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($stationWebhook));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($station_webhook));
             } else {
-                $httpBody = $stationWebhook;
+                $httpBody = $station_webhook;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -559,7 +559,7 @@ class StationsWebHooksApi
     /**
      * Operation deleteWebhook
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  int $id Web Hook ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteWebhook'] to see the possible values for this operation
      *
@@ -567,16 +567,16 @@ class StationsWebHooksApi
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function deleteWebhook($stationId, $id, string $contentType = self::contentTypes['deleteWebhook'][0])
+    public function deleteWebhook($station_id, $id, string $contentType = self::contentTypes['deleteWebhook'][0])
     {
-        list($response) = $this->deleteWebhookWithHttpInfo($stationId, $id, $contentType);
+        list($response) = $this->deleteWebhookWithHttpInfo($station_id, $id, $contentType);
         return $response;
     }
 
     /**
      * Operation deleteWebhookWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Web Hook ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteWebhook'] to see the possible values for this operation
      *
@@ -584,9 +584,9 @@ class StationsWebHooksApi
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteWebhookWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['deleteWebhook'][0])
+    public function deleteWebhookWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['deleteWebhook'][0])
     {
-        $request = $this->deleteWebhookRequest($stationId, $id, $contentType);
+        $request = $this->deleteWebhookRequest($station_id, $id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -804,16 +804,16 @@ class StationsWebHooksApi
     /**
      * Operation deleteWebhookAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Web Hook ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteWebhook'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteWebhookAsync($stationId, $id, string $contentType = self::contentTypes['deleteWebhook'][0])
+    public function deleteWebhookAsync($station_id, $id, string $contentType = self::contentTypes['deleteWebhook'][0])
     {
-        return $this->deleteWebhookAsyncWithHttpInfo($stationId, $id, $contentType)
+        return $this->deleteWebhookAsyncWithHttpInfo($station_id, $id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -824,17 +824,17 @@ class StationsWebHooksApi
     /**
      * Operation deleteWebhookAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Web Hook ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteWebhook'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteWebhookAsyncWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['deleteWebhook'][0])
+    public function deleteWebhookAsyncWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['deleteWebhook'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStatus';
-        $request = $this->deleteWebhookRequest($stationId, $id, $contentType);
+        $request = $this->deleteWebhookRequest($station_id, $id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -875,20 +875,20 @@ class StationsWebHooksApi
     /**
      * Create request for operation 'deleteWebhook'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Web Hook ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteWebhook'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function deleteWebhookRequest($stationId, $id, string $contentType = self::contentTypes['deleteWebhook'][0])
+    public function deleteWebhookRequest($station_id, $id, string $contentType = self::contentTypes['deleteWebhook'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling deleteWebhook'
+                'Missing the required parameter $station_id when calling deleteWebhook'
             );
         }
 
@@ -910,10 +910,10 @@ class StationsWebHooksApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -988,36 +988,36 @@ class StationsWebHooksApi
     /**
      * Operation editWebhook
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  int $id Web Hook ID (required)
-     * @param  \AzuraCast\Model\StationWebhook $stationWebhook stationWebhook (optional)
+     * @param  \AzuraCast\Model\StationWebhook $station_webhook station_webhook (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editWebhook'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function editWebhook($stationId, $id, $stationWebhook = null, string $contentType = self::contentTypes['editWebhook'][0])
+    public function editWebhook($station_id, $id, $station_webhook = null, string $contentType = self::contentTypes['editWebhook'][0])
     {
-        list($response) = $this->editWebhookWithHttpInfo($stationId, $id, $stationWebhook, $contentType);
+        list($response) = $this->editWebhookWithHttpInfo($station_id, $id, $station_webhook, $contentType);
         return $response;
     }
 
     /**
      * Operation editWebhookWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Web Hook ID (required)
-     * @param  \AzuraCast\Model\StationWebhook $stationWebhook (optional)
+     * @param  \AzuraCast\Model\StationWebhook $station_webhook (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editWebhook'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function editWebhookWithHttpInfo($stationId, $id, $stationWebhook = null, string $contentType = self::contentTypes['editWebhook'][0])
+    public function editWebhookWithHttpInfo($station_id, $id, $station_webhook = null, string $contentType = self::contentTypes['editWebhook'][0])
     {
-        $request = $this->editWebhookRequest($stationId, $id, $stationWebhook, $contentType);
+        $request = $this->editWebhookRequest($station_id, $id, $station_webhook, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1235,17 +1235,17 @@ class StationsWebHooksApi
     /**
      * Operation editWebhookAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Web Hook ID (required)
-     * @param  \AzuraCast\Model\StationWebhook $stationWebhook (optional)
+     * @param  \AzuraCast\Model\StationWebhook $station_webhook (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editWebhook'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function editWebhookAsync($stationId, $id, $stationWebhook = null, string $contentType = self::contentTypes['editWebhook'][0])
+    public function editWebhookAsync($station_id, $id, $station_webhook = null, string $contentType = self::contentTypes['editWebhook'][0])
     {
-        return $this->editWebhookAsyncWithHttpInfo($stationId, $id, $stationWebhook, $contentType)
+        return $this->editWebhookAsyncWithHttpInfo($station_id, $id, $station_webhook, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1256,18 +1256,18 @@ class StationsWebHooksApi
     /**
      * Operation editWebhookAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Web Hook ID (required)
-     * @param  \AzuraCast\Model\StationWebhook $stationWebhook (optional)
+     * @param  \AzuraCast\Model\StationWebhook $station_webhook (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editWebhook'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function editWebhookAsyncWithHttpInfo($stationId, $id, $stationWebhook = null, string $contentType = self::contentTypes['editWebhook'][0])
+    public function editWebhookAsyncWithHttpInfo($station_id, $id, $station_webhook = null, string $contentType = self::contentTypes['editWebhook'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStatus';
-        $request = $this->editWebhookRequest($stationId, $id, $stationWebhook, $contentType);
+        $request = $this->editWebhookRequest($station_id, $id, $station_webhook, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1308,21 +1308,21 @@ class StationsWebHooksApi
     /**
      * Create request for operation 'editWebhook'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Web Hook ID (required)
-     * @param  \AzuraCast\Model\StationWebhook $stationWebhook (optional)
+     * @param  \AzuraCast\Model\StationWebhook $station_webhook (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editWebhook'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function editWebhookRequest($stationId, $id, $stationWebhook = null, string $contentType = self::contentTypes['editWebhook'][0])
+    public function editWebhookRequest($station_id, $id, $station_webhook = null, string $contentType = self::contentTypes['editWebhook'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling editWebhook'
+                'Missing the required parameter $station_id when calling editWebhook'
             );
         }
 
@@ -1345,10 +1345,10 @@ class StationsWebHooksApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -1369,12 +1369,12 @@ class StationsWebHooksApi
         );
 
         // for model (json/xml)
-        if (isset($stationWebhook)) {
+        if (isset($station_webhook)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($stationWebhook));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($station_webhook));
             } else {
-                $httpBody = $stationWebhook;
+                $httpBody = $station_webhook;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1430,7 +1430,7 @@ class StationsWebHooksApi
     /**
      * Operation getWebhook
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  int $id Web Hook ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWebhook'] to see the possible values for this operation
      *
@@ -1438,16 +1438,16 @@ class StationsWebHooksApi
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\StationWebhook|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function getWebhook($stationId, $id, string $contentType = self::contentTypes['getWebhook'][0])
+    public function getWebhook($station_id, $id, string $contentType = self::contentTypes['getWebhook'][0])
     {
-        list($response) = $this->getWebhookWithHttpInfo($stationId, $id, $contentType);
+        list($response) = $this->getWebhookWithHttpInfo($station_id, $id, $contentType);
         return $response;
     }
 
     /**
      * Operation getWebhookWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Web Hook ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWebhook'] to see the possible values for this operation
      *
@@ -1455,9 +1455,9 @@ class StationsWebHooksApi
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\StationWebhook|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getWebhookWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['getWebhook'][0])
+    public function getWebhookWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['getWebhook'][0])
     {
-        $request = $this->getWebhookRequest($stationId, $id, $contentType);
+        $request = $this->getWebhookRequest($station_id, $id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1675,16 +1675,16 @@ class StationsWebHooksApi
     /**
      * Operation getWebhookAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Web Hook ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWebhook'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getWebhookAsync($stationId, $id, string $contentType = self::contentTypes['getWebhook'][0])
+    public function getWebhookAsync($station_id, $id, string $contentType = self::contentTypes['getWebhook'][0])
     {
-        return $this->getWebhookAsyncWithHttpInfo($stationId, $id, $contentType)
+        return $this->getWebhookAsyncWithHttpInfo($station_id, $id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1695,17 +1695,17 @@ class StationsWebHooksApi
     /**
      * Operation getWebhookAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Web Hook ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWebhook'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getWebhookAsyncWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['getWebhook'][0])
+    public function getWebhookAsyncWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['getWebhook'][0])
     {
         $returnType = '\AzuraCast\Model\StationWebhook';
-        $request = $this->getWebhookRequest($stationId, $id, $contentType);
+        $request = $this->getWebhookRequest($station_id, $id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1746,20 +1746,20 @@ class StationsWebHooksApi
     /**
      * Create request for operation 'getWebhook'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Web Hook ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWebhook'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getWebhookRequest($stationId, $id, string $contentType = self::contentTypes['getWebhook'][0])
+    public function getWebhookRequest($station_id, $id, string $contentType = self::contentTypes['getWebhook'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling getWebhook'
+                'Missing the required parameter $station_id when calling getWebhook'
             );
         }
 
@@ -1781,10 +1781,10 @@ class StationsWebHooksApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -1859,32 +1859,32 @@ class StationsWebHooksApi
     /**
      * Operation getWebhooks
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWebhooks'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\StationWebhook[]|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function getWebhooks($stationId, string $contentType = self::contentTypes['getWebhooks'][0])
+    public function getWebhooks($station_id, string $contentType = self::contentTypes['getWebhooks'][0])
     {
-        list($response) = $this->getWebhooksWithHttpInfo($stationId, $contentType);
+        list($response) = $this->getWebhooksWithHttpInfo($station_id, $contentType);
         return $response;
     }
 
     /**
      * Operation getWebhooksWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWebhooks'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\StationWebhook[]|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getWebhooksWithHttpInfo($stationId, string $contentType = self::contentTypes['getWebhooks'][0])
+    public function getWebhooksWithHttpInfo($station_id, string $contentType = self::contentTypes['getWebhooks'][0])
     {
-        $request = $this->getWebhooksRequest($stationId, $contentType);
+        $request = $this->getWebhooksRequest($station_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2102,15 +2102,15 @@ class StationsWebHooksApi
     /**
      * Operation getWebhooksAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWebhooks'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getWebhooksAsync($stationId, string $contentType = self::contentTypes['getWebhooks'][0])
+    public function getWebhooksAsync($station_id, string $contentType = self::contentTypes['getWebhooks'][0])
     {
-        return $this->getWebhooksAsyncWithHttpInfo($stationId, $contentType)
+        return $this->getWebhooksAsyncWithHttpInfo($station_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2121,16 +2121,16 @@ class StationsWebHooksApi
     /**
      * Operation getWebhooksAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWebhooks'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getWebhooksAsyncWithHttpInfo($stationId, string $contentType = self::contentTypes['getWebhooks'][0])
+    public function getWebhooksAsyncWithHttpInfo($station_id, string $contentType = self::contentTypes['getWebhooks'][0])
     {
         $returnType = '\AzuraCast\Model\StationWebhook[]';
-        $request = $this->getWebhooksRequest($stationId, $contentType);
+        $request = $this->getWebhooksRequest($station_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2171,19 +2171,19 @@ class StationsWebHooksApi
     /**
      * Create request for operation 'getWebhooks'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWebhooks'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getWebhooksRequest($stationId, string $contentType = self::contentTypes['getWebhooks'][0])
+    public function getWebhooksRequest($station_id, string $contentType = self::contentTypes['getWebhooks'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling getWebhooks'
+                'Missing the required parameter $station_id when calling getWebhooks'
             );
         }
 
@@ -2198,10 +2198,10 @@ class StationsWebHooksApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }

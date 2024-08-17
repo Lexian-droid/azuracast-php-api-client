@@ -137,34 +137,34 @@ class StationsStreamersDJsApi
     /**
      * Operation addStreamer
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
-     * @param  \AzuraCast\Model\StationStreamer $stationStreamer stationStreamer (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
+     * @param  \AzuraCast\Model\StationStreamer $station_streamer station_streamer (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addStreamer'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\StationStreamer|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function addStreamer($stationId, $stationStreamer = null, string $contentType = self::contentTypes['addStreamer'][0])
+    public function addStreamer($station_id, $station_streamer = null, string $contentType = self::contentTypes['addStreamer'][0])
     {
-        list($response) = $this->addStreamerWithHttpInfo($stationId, $stationStreamer, $contentType);
+        list($response) = $this->addStreamerWithHttpInfo($station_id, $station_streamer, $contentType);
         return $response;
     }
 
     /**
      * Operation addStreamerWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  \AzuraCast\Model\StationStreamer $stationStreamer (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  \AzuraCast\Model\StationStreamer $station_streamer (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addStreamer'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\StationStreamer|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function addStreamerWithHttpInfo($stationId, $stationStreamer = null, string $contentType = self::contentTypes['addStreamer'][0])
+    public function addStreamerWithHttpInfo($station_id, $station_streamer = null, string $contentType = self::contentTypes['addStreamer'][0])
     {
-        $request = $this->addStreamerRequest($stationId, $stationStreamer, $contentType);
+        $request = $this->addStreamerRequest($station_id, $station_streamer, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -382,16 +382,16 @@ class StationsStreamersDJsApi
     /**
      * Operation addStreamerAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  \AzuraCast\Model\StationStreamer $stationStreamer (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  \AzuraCast\Model\StationStreamer $station_streamer (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addStreamer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addStreamerAsync($stationId, $stationStreamer = null, string $contentType = self::contentTypes['addStreamer'][0])
+    public function addStreamerAsync($station_id, $station_streamer = null, string $contentType = self::contentTypes['addStreamer'][0])
     {
-        return $this->addStreamerAsyncWithHttpInfo($stationId, $stationStreamer, $contentType)
+        return $this->addStreamerAsyncWithHttpInfo($station_id, $station_streamer, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -402,17 +402,17 @@ class StationsStreamersDJsApi
     /**
      * Operation addStreamerAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  \AzuraCast\Model\StationStreamer $stationStreamer (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  \AzuraCast\Model\StationStreamer $station_streamer (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addStreamer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addStreamerAsyncWithHttpInfo($stationId, $stationStreamer = null, string $contentType = self::contentTypes['addStreamer'][0])
+    public function addStreamerAsyncWithHttpInfo($station_id, $station_streamer = null, string $contentType = self::contentTypes['addStreamer'][0])
     {
         $returnType = '\AzuraCast\Model\StationStreamer';
-        $request = $this->addStreamerRequest($stationId, $stationStreamer, $contentType);
+        $request = $this->addStreamerRequest($station_id, $station_streamer, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -453,20 +453,20 @@ class StationsStreamersDJsApi
     /**
      * Create request for operation 'addStreamer'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  \AzuraCast\Model\StationStreamer $stationStreamer (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  \AzuraCast\Model\StationStreamer $station_streamer (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addStreamer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function addStreamerRequest($stationId, $stationStreamer = null, string $contentType = self::contentTypes['addStreamer'][0])
+    public function addStreamerRequest($station_id, $station_streamer = null, string $contentType = self::contentTypes['addStreamer'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling addStreamer'
+                'Missing the required parameter $station_id when calling addStreamer'
             );
         }
 
@@ -482,10 +482,10 @@ class StationsStreamersDJsApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -498,12 +498,12 @@ class StationsStreamersDJsApi
         );
 
         // for model (json/xml)
-        if (isset($stationStreamer)) {
+        if (isset($station_streamer)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($stationStreamer));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($station_streamer));
             } else {
-                $httpBody = $stationStreamer;
+                $httpBody = $station_streamer;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -559,7 +559,7 @@ class StationsStreamersDJsApi
     /**
      * Operation deleteStreamer
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  int $id StationStreamer ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteStreamer'] to see the possible values for this operation
      *
@@ -567,16 +567,16 @@ class StationsStreamersDJsApi
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function deleteStreamer($stationId, $id, string $contentType = self::contentTypes['deleteStreamer'][0])
+    public function deleteStreamer($station_id, $id, string $contentType = self::contentTypes['deleteStreamer'][0])
     {
-        list($response) = $this->deleteStreamerWithHttpInfo($stationId, $id, $contentType);
+        list($response) = $this->deleteStreamerWithHttpInfo($station_id, $id, $contentType);
         return $response;
     }
 
     /**
      * Operation deleteStreamerWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id StationStreamer ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteStreamer'] to see the possible values for this operation
      *
@@ -584,9 +584,9 @@ class StationsStreamersDJsApi
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteStreamerWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['deleteStreamer'][0])
+    public function deleteStreamerWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['deleteStreamer'][0])
     {
-        $request = $this->deleteStreamerRequest($stationId, $id, $contentType);
+        $request = $this->deleteStreamerRequest($station_id, $id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -804,16 +804,16 @@ class StationsStreamersDJsApi
     /**
      * Operation deleteStreamerAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id StationStreamer ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteStreamer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteStreamerAsync($stationId, $id, string $contentType = self::contentTypes['deleteStreamer'][0])
+    public function deleteStreamerAsync($station_id, $id, string $contentType = self::contentTypes['deleteStreamer'][0])
     {
-        return $this->deleteStreamerAsyncWithHttpInfo($stationId, $id, $contentType)
+        return $this->deleteStreamerAsyncWithHttpInfo($station_id, $id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -824,17 +824,17 @@ class StationsStreamersDJsApi
     /**
      * Operation deleteStreamerAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id StationStreamer ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteStreamer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteStreamerAsyncWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['deleteStreamer'][0])
+    public function deleteStreamerAsyncWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['deleteStreamer'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStatus';
-        $request = $this->deleteStreamerRequest($stationId, $id, $contentType);
+        $request = $this->deleteStreamerRequest($station_id, $id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -875,20 +875,20 @@ class StationsStreamersDJsApi
     /**
      * Create request for operation 'deleteStreamer'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id StationStreamer ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteStreamer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function deleteStreamerRequest($stationId, $id, string $contentType = self::contentTypes['deleteStreamer'][0])
+    public function deleteStreamerRequest($station_id, $id, string $contentType = self::contentTypes['deleteStreamer'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling deleteStreamer'
+                'Missing the required parameter $station_id when calling deleteStreamer'
             );
         }
 
@@ -910,10 +910,10 @@ class StationsStreamersDJsApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -988,36 +988,36 @@ class StationsStreamersDJsApi
     /**
      * Operation editStreamer
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  int $id Streamer ID (required)
-     * @param  \AzuraCast\Model\StationStreamer $stationStreamer stationStreamer (optional)
+     * @param  \AzuraCast\Model\StationStreamer $station_streamer station_streamer (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editStreamer'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function editStreamer($stationId, $id, $stationStreamer = null, string $contentType = self::contentTypes['editStreamer'][0])
+    public function editStreamer($station_id, $id, $station_streamer = null, string $contentType = self::contentTypes['editStreamer'][0])
     {
-        list($response) = $this->editStreamerWithHttpInfo($stationId, $id, $stationStreamer, $contentType);
+        list($response) = $this->editStreamerWithHttpInfo($station_id, $id, $station_streamer, $contentType);
         return $response;
     }
 
     /**
      * Operation editStreamerWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Streamer ID (required)
-     * @param  \AzuraCast\Model\StationStreamer $stationStreamer (optional)
+     * @param  \AzuraCast\Model\StationStreamer $station_streamer (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editStreamer'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function editStreamerWithHttpInfo($stationId, $id, $stationStreamer = null, string $contentType = self::contentTypes['editStreamer'][0])
+    public function editStreamerWithHttpInfo($station_id, $id, $station_streamer = null, string $contentType = self::contentTypes['editStreamer'][0])
     {
-        $request = $this->editStreamerRequest($stationId, $id, $stationStreamer, $contentType);
+        $request = $this->editStreamerRequest($station_id, $id, $station_streamer, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1235,17 +1235,17 @@ class StationsStreamersDJsApi
     /**
      * Operation editStreamerAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Streamer ID (required)
-     * @param  \AzuraCast\Model\StationStreamer $stationStreamer (optional)
+     * @param  \AzuraCast\Model\StationStreamer $station_streamer (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editStreamer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function editStreamerAsync($stationId, $id, $stationStreamer = null, string $contentType = self::contentTypes['editStreamer'][0])
+    public function editStreamerAsync($station_id, $id, $station_streamer = null, string $contentType = self::contentTypes['editStreamer'][0])
     {
-        return $this->editStreamerAsyncWithHttpInfo($stationId, $id, $stationStreamer, $contentType)
+        return $this->editStreamerAsyncWithHttpInfo($station_id, $id, $station_streamer, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1256,18 +1256,18 @@ class StationsStreamersDJsApi
     /**
      * Operation editStreamerAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Streamer ID (required)
-     * @param  \AzuraCast\Model\StationStreamer $stationStreamer (optional)
+     * @param  \AzuraCast\Model\StationStreamer $station_streamer (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editStreamer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function editStreamerAsyncWithHttpInfo($stationId, $id, $stationStreamer = null, string $contentType = self::contentTypes['editStreamer'][0])
+    public function editStreamerAsyncWithHttpInfo($station_id, $id, $station_streamer = null, string $contentType = self::contentTypes['editStreamer'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStatus';
-        $request = $this->editStreamerRequest($stationId, $id, $stationStreamer, $contentType);
+        $request = $this->editStreamerRequest($station_id, $id, $station_streamer, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1308,21 +1308,21 @@ class StationsStreamersDJsApi
     /**
      * Create request for operation 'editStreamer'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Streamer ID (required)
-     * @param  \AzuraCast\Model\StationStreamer $stationStreamer (optional)
+     * @param  \AzuraCast\Model\StationStreamer $station_streamer (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editStreamer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function editStreamerRequest($stationId, $id, $stationStreamer = null, string $contentType = self::contentTypes['editStreamer'][0])
+    public function editStreamerRequest($station_id, $id, $station_streamer = null, string $contentType = self::contentTypes['editStreamer'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling editStreamer'
+                'Missing the required parameter $station_id when calling editStreamer'
             );
         }
 
@@ -1345,10 +1345,10 @@ class StationsStreamersDJsApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -1369,12 +1369,12 @@ class StationsStreamersDJsApi
         );
 
         // for model (json/xml)
-        if (isset($stationStreamer)) {
+        if (isset($station_streamer)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($stationStreamer));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($station_streamer));
             } else {
-                $httpBody = $stationStreamer;
+                $httpBody = $station_streamer;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1430,7 +1430,7 @@ class StationsStreamersDJsApi
     /**
      * Operation getStreamer
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  int $id Streamer ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStreamer'] to see the possible values for this operation
      *
@@ -1438,16 +1438,16 @@ class StationsStreamersDJsApi
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\StationStreamer|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function getStreamer($stationId, $id, string $contentType = self::contentTypes['getStreamer'][0])
+    public function getStreamer($station_id, $id, string $contentType = self::contentTypes['getStreamer'][0])
     {
-        list($response) = $this->getStreamerWithHttpInfo($stationId, $id, $contentType);
+        list($response) = $this->getStreamerWithHttpInfo($station_id, $id, $contentType);
         return $response;
     }
 
     /**
      * Operation getStreamerWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Streamer ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStreamer'] to see the possible values for this operation
      *
@@ -1455,9 +1455,9 @@ class StationsStreamersDJsApi
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\StationStreamer|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getStreamerWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['getStreamer'][0])
+    public function getStreamerWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['getStreamer'][0])
     {
-        $request = $this->getStreamerRequest($stationId, $id, $contentType);
+        $request = $this->getStreamerRequest($station_id, $id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1675,16 +1675,16 @@ class StationsStreamersDJsApi
     /**
      * Operation getStreamerAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Streamer ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStreamer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStreamerAsync($stationId, $id, string $contentType = self::contentTypes['getStreamer'][0])
+    public function getStreamerAsync($station_id, $id, string $contentType = self::contentTypes['getStreamer'][0])
     {
-        return $this->getStreamerAsyncWithHttpInfo($stationId, $id, $contentType)
+        return $this->getStreamerAsyncWithHttpInfo($station_id, $id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1695,17 +1695,17 @@ class StationsStreamersDJsApi
     /**
      * Operation getStreamerAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Streamer ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStreamer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStreamerAsyncWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['getStreamer'][0])
+    public function getStreamerAsyncWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['getStreamer'][0])
     {
         $returnType = '\AzuraCast\Model\StationStreamer';
-        $request = $this->getStreamerRequest($stationId, $id, $contentType);
+        $request = $this->getStreamerRequest($station_id, $id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1746,20 +1746,20 @@ class StationsStreamersDJsApi
     /**
      * Create request for operation 'getStreamer'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Streamer ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStreamer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getStreamerRequest($stationId, $id, string $contentType = self::contentTypes['getStreamer'][0])
+    public function getStreamerRequest($station_id, $id, string $contentType = self::contentTypes['getStreamer'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling getStreamer'
+                'Missing the required parameter $station_id when calling getStreamer'
             );
         }
 
@@ -1781,10 +1781,10 @@ class StationsStreamersDJsApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -1859,32 +1859,32 @@ class StationsStreamersDJsApi
     /**
      * Operation getStreamers
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStreamers'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\StationStreamer[]|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function getStreamers($stationId, string $contentType = self::contentTypes['getStreamers'][0])
+    public function getStreamers($station_id, string $contentType = self::contentTypes['getStreamers'][0])
     {
-        list($response) = $this->getStreamersWithHttpInfo($stationId, $contentType);
+        list($response) = $this->getStreamersWithHttpInfo($station_id, $contentType);
         return $response;
     }
 
     /**
      * Operation getStreamersWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStreamers'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\StationStreamer[]|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getStreamersWithHttpInfo($stationId, string $contentType = self::contentTypes['getStreamers'][0])
+    public function getStreamersWithHttpInfo($station_id, string $contentType = self::contentTypes['getStreamers'][0])
     {
-        $request = $this->getStreamersRequest($stationId, $contentType);
+        $request = $this->getStreamersRequest($station_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2102,15 +2102,15 @@ class StationsStreamersDJsApi
     /**
      * Operation getStreamersAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStreamers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStreamersAsync($stationId, string $contentType = self::contentTypes['getStreamers'][0])
+    public function getStreamersAsync($station_id, string $contentType = self::contentTypes['getStreamers'][0])
     {
-        return $this->getStreamersAsyncWithHttpInfo($stationId, $contentType)
+        return $this->getStreamersAsyncWithHttpInfo($station_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2121,16 +2121,16 @@ class StationsStreamersDJsApi
     /**
      * Operation getStreamersAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStreamers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStreamersAsyncWithHttpInfo($stationId, string $contentType = self::contentTypes['getStreamers'][0])
+    public function getStreamersAsyncWithHttpInfo($station_id, string $contentType = self::contentTypes['getStreamers'][0])
     {
         $returnType = '\AzuraCast\Model\StationStreamer[]';
-        $request = $this->getStreamersRequest($stationId, $contentType);
+        $request = $this->getStreamersRequest($station_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2171,19 +2171,19 @@ class StationsStreamersDJsApi
     /**
      * Create request for operation 'getStreamers'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStreamers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getStreamersRequest($stationId, string $contentType = self::contentTypes['getStreamers'][0])
+    public function getStreamersRequest($station_id, string $contentType = self::contentTypes['getStreamers'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling getStreamers'
+                'Missing the required parameter $station_id when calling getStreamers'
             );
         }
 
@@ -2198,10 +2198,10 @@ class StationsStreamersDJsApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }

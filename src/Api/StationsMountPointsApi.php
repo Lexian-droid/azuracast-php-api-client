@@ -146,34 +146,34 @@ class StationsMountPointsApi
     /**
      * Operation addMount
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
-     * @param  \AzuraCast\Model\StationMount $stationMount stationMount (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
+     * @param  \AzuraCast\Model\StationMount $station_mount station_mount (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addMount'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\StationMount|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function addMount($stationId, $stationMount = null, string $contentType = self::contentTypes['addMount'][0])
+    public function addMount($station_id, $station_mount = null, string $contentType = self::contentTypes['addMount'][0])
     {
-        list($response) = $this->addMountWithHttpInfo($stationId, $stationMount, $contentType);
+        list($response) = $this->addMountWithHttpInfo($station_id, $station_mount, $contentType);
         return $response;
     }
 
     /**
      * Operation addMountWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  \AzuraCast\Model\StationMount $stationMount (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  \AzuraCast\Model\StationMount $station_mount (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addMount'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\StationMount|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function addMountWithHttpInfo($stationId, $stationMount = null, string $contentType = self::contentTypes['addMount'][0])
+    public function addMountWithHttpInfo($station_id, $station_mount = null, string $contentType = self::contentTypes['addMount'][0])
     {
-        $request = $this->addMountRequest($stationId, $stationMount, $contentType);
+        $request = $this->addMountRequest($station_id, $station_mount, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -356,16 +356,16 @@ class StationsMountPointsApi
     /**
      * Operation addMountAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  \AzuraCast\Model\StationMount $stationMount (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  \AzuraCast\Model\StationMount $station_mount (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addMount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addMountAsync($stationId, $stationMount = null, string $contentType = self::contentTypes['addMount'][0])
+    public function addMountAsync($station_id, $station_mount = null, string $contentType = self::contentTypes['addMount'][0])
     {
-        return $this->addMountAsyncWithHttpInfo($stationId, $stationMount, $contentType)
+        return $this->addMountAsyncWithHttpInfo($station_id, $station_mount, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -376,17 +376,17 @@ class StationsMountPointsApi
     /**
      * Operation addMountAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  \AzuraCast\Model\StationMount $stationMount (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  \AzuraCast\Model\StationMount $station_mount (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addMount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addMountAsyncWithHttpInfo($stationId, $stationMount = null, string $contentType = self::contentTypes['addMount'][0])
+    public function addMountAsyncWithHttpInfo($station_id, $station_mount = null, string $contentType = self::contentTypes['addMount'][0])
     {
         $returnType = '\AzuraCast\Model\StationMount';
-        $request = $this->addMountRequest($stationId, $stationMount, $contentType);
+        $request = $this->addMountRequest($station_id, $station_mount, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -427,20 +427,20 @@ class StationsMountPointsApi
     /**
      * Create request for operation 'addMount'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
-     * @param  \AzuraCast\Model\StationMount $stationMount (optional)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
+     * @param  \AzuraCast\Model\StationMount $station_mount (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addMount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function addMountRequest($stationId, $stationMount = null, string $contentType = self::contentTypes['addMount'][0])
+    public function addMountRequest($station_id, $station_mount = null, string $contentType = self::contentTypes['addMount'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling addMount'
+                'Missing the required parameter $station_id when calling addMount'
             );
         }
 
@@ -456,10 +456,10 @@ class StationsMountPointsApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -472,12 +472,12 @@ class StationsMountPointsApi
         );
 
         // for model (json/xml)
-        if (isset($stationMount)) {
+        if (isset($station_mount)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($stationMount));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($station_mount));
             } else {
-                $httpBody = $stationMount;
+                $httpBody = $station_mount;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -533,7 +533,7 @@ class StationsMountPointsApi
     /**
      * Operation deleteMount
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  int $id StationMount ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteMount'] to see the possible values for this operation
      *
@@ -541,16 +541,16 @@ class StationsMountPointsApi
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function deleteMount($stationId, $id, string $contentType = self::contentTypes['deleteMount'][0])
+    public function deleteMount($station_id, $id, string $contentType = self::contentTypes['deleteMount'][0])
     {
-        list($response) = $this->deleteMountWithHttpInfo($stationId, $id, $contentType);
+        list($response) = $this->deleteMountWithHttpInfo($station_id, $id, $contentType);
         return $response;
     }
 
     /**
      * Operation deleteMountWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id StationMount ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteMount'] to see the possible values for this operation
      *
@@ -558,9 +558,9 @@ class StationsMountPointsApi
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteMountWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['deleteMount'][0])
+    public function deleteMountWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['deleteMount'][0])
     {
-        $request = $this->deleteMountRequest($stationId, $id, $contentType);
+        $request = $this->deleteMountRequest($station_id, $id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -778,16 +778,16 @@ class StationsMountPointsApi
     /**
      * Operation deleteMountAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id StationMount ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteMount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteMountAsync($stationId, $id, string $contentType = self::contentTypes['deleteMount'][0])
+    public function deleteMountAsync($station_id, $id, string $contentType = self::contentTypes['deleteMount'][0])
     {
-        return $this->deleteMountAsyncWithHttpInfo($stationId, $id, $contentType)
+        return $this->deleteMountAsyncWithHttpInfo($station_id, $id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -798,17 +798,17 @@ class StationsMountPointsApi
     /**
      * Operation deleteMountAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id StationMount ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteMount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteMountAsyncWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['deleteMount'][0])
+    public function deleteMountAsyncWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['deleteMount'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStatus';
-        $request = $this->deleteMountRequest($stationId, $id, $contentType);
+        $request = $this->deleteMountRequest($station_id, $id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -849,20 +849,20 @@ class StationsMountPointsApi
     /**
      * Create request for operation 'deleteMount'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id StationMount ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteMount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function deleteMountRequest($stationId, $id, string $contentType = self::contentTypes['deleteMount'][0])
+    public function deleteMountRequest($station_id, $id, string $contentType = self::contentTypes['deleteMount'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling deleteMount'
+                'Missing the required parameter $station_id when calling deleteMount'
             );
         }
 
@@ -884,10 +884,10 @@ class StationsMountPointsApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -962,7 +962,7 @@ class StationsMountPointsApi
     /**
      * Operation deleteMountIntro
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  int $id Mount Point ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteMountIntro'] to see the possible values for this operation
      *
@@ -970,16 +970,16 @@ class StationsMountPointsApi
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function deleteMountIntro($stationId, $id, string $contentType = self::contentTypes['deleteMountIntro'][0])
+    public function deleteMountIntro($station_id, $id, string $contentType = self::contentTypes['deleteMountIntro'][0])
     {
-        list($response) = $this->deleteMountIntroWithHttpInfo($stationId, $id, $contentType);
+        list($response) = $this->deleteMountIntroWithHttpInfo($station_id, $id, $contentType);
         return $response;
     }
 
     /**
      * Operation deleteMountIntroWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Mount Point ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteMountIntro'] to see the possible values for this operation
      *
@@ -987,9 +987,9 @@ class StationsMountPointsApi
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteMountIntroWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['deleteMountIntro'][0])
+    public function deleteMountIntroWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['deleteMountIntro'][0])
     {
-        $request = $this->deleteMountIntroRequest($stationId, $id, $contentType);
+        $request = $this->deleteMountIntroRequest($station_id, $id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1207,16 +1207,16 @@ class StationsMountPointsApi
     /**
      * Operation deleteMountIntroAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Mount Point ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteMountIntro'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteMountIntroAsync($stationId, $id, string $contentType = self::contentTypes['deleteMountIntro'][0])
+    public function deleteMountIntroAsync($station_id, $id, string $contentType = self::contentTypes['deleteMountIntro'][0])
     {
-        return $this->deleteMountIntroAsyncWithHttpInfo($stationId, $id, $contentType)
+        return $this->deleteMountIntroAsyncWithHttpInfo($station_id, $id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1227,17 +1227,17 @@ class StationsMountPointsApi
     /**
      * Operation deleteMountIntroAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Mount Point ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteMountIntro'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteMountIntroAsyncWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['deleteMountIntro'][0])
+    public function deleteMountIntroAsyncWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['deleteMountIntro'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStatus';
-        $request = $this->deleteMountIntroRequest($stationId, $id, $contentType);
+        $request = $this->deleteMountIntroRequest($station_id, $id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1278,20 +1278,20 @@ class StationsMountPointsApi
     /**
      * Create request for operation 'deleteMountIntro'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Mount Point ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteMountIntro'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function deleteMountIntroRequest($stationId, $id, string $contentType = self::contentTypes['deleteMountIntro'][0])
+    public function deleteMountIntroRequest($station_id, $id, string $contentType = self::contentTypes['deleteMountIntro'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling deleteMountIntro'
+                'Missing the required parameter $station_id when calling deleteMountIntro'
             );
         }
 
@@ -1313,10 +1313,10 @@ class StationsMountPointsApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -1391,36 +1391,36 @@ class StationsMountPointsApi
     /**
      * Operation editMount
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  int $id Streamer ID (required)
-     * @param  \AzuraCast\Model\StationMount $stationMount stationMount (optional)
+     * @param  \AzuraCast\Model\StationMount $station_mount station_mount (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editMount'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function editMount($stationId, $id, $stationMount = null, string $contentType = self::contentTypes['editMount'][0])
+    public function editMount($station_id, $id, $station_mount = null, string $contentType = self::contentTypes['editMount'][0])
     {
-        list($response) = $this->editMountWithHttpInfo($stationId, $id, $stationMount, $contentType);
+        list($response) = $this->editMountWithHttpInfo($station_id, $id, $station_mount, $contentType);
         return $response;
     }
 
     /**
      * Operation editMountWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Streamer ID (required)
-     * @param  \AzuraCast\Model\StationMount $stationMount (optional)
+     * @param  \AzuraCast\Model\StationMount $station_mount (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editMount'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function editMountWithHttpInfo($stationId, $id, $stationMount = null, string $contentType = self::contentTypes['editMount'][0])
+    public function editMountWithHttpInfo($station_id, $id, $station_mount = null, string $contentType = self::contentTypes['editMount'][0])
     {
-        $request = $this->editMountRequest($stationId, $id, $stationMount, $contentType);
+        $request = $this->editMountRequest($station_id, $id, $station_mount, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1638,17 +1638,17 @@ class StationsMountPointsApi
     /**
      * Operation editMountAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Streamer ID (required)
-     * @param  \AzuraCast\Model\StationMount $stationMount (optional)
+     * @param  \AzuraCast\Model\StationMount $station_mount (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editMount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function editMountAsync($stationId, $id, $stationMount = null, string $contentType = self::contentTypes['editMount'][0])
+    public function editMountAsync($station_id, $id, $station_mount = null, string $contentType = self::contentTypes['editMount'][0])
     {
-        return $this->editMountAsyncWithHttpInfo($stationId, $id, $stationMount, $contentType)
+        return $this->editMountAsyncWithHttpInfo($station_id, $id, $station_mount, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1659,18 +1659,18 @@ class StationsMountPointsApi
     /**
      * Operation editMountAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Streamer ID (required)
-     * @param  \AzuraCast\Model\StationMount $stationMount (optional)
+     * @param  \AzuraCast\Model\StationMount $station_mount (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editMount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function editMountAsyncWithHttpInfo($stationId, $id, $stationMount = null, string $contentType = self::contentTypes['editMount'][0])
+    public function editMountAsyncWithHttpInfo($station_id, $id, $station_mount = null, string $contentType = self::contentTypes['editMount'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStatus';
-        $request = $this->editMountRequest($stationId, $id, $stationMount, $contentType);
+        $request = $this->editMountRequest($station_id, $id, $station_mount, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1711,21 +1711,21 @@ class StationsMountPointsApi
     /**
      * Create request for operation 'editMount'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Streamer ID (required)
-     * @param  \AzuraCast\Model\StationMount $stationMount (optional)
+     * @param  \AzuraCast\Model\StationMount $station_mount (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['editMount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function editMountRequest($stationId, $id, $stationMount = null, string $contentType = self::contentTypes['editMount'][0])
+    public function editMountRequest($station_id, $id, $station_mount = null, string $contentType = self::contentTypes['editMount'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling editMount'
+                'Missing the required parameter $station_id when calling editMount'
             );
         }
 
@@ -1748,10 +1748,10 @@ class StationsMountPointsApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -1772,12 +1772,12 @@ class StationsMountPointsApi
         );
 
         // for model (json/xml)
-        if (isset($stationMount)) {
+        if (isset($station_mount)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($stationMount));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($station_mount));
             } else {
-                $httpBody = $stationMount;
+                $httpBody = $station_mount;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1833,7 +1833,7 @@ class StationsMountPointsApi
     /**
      * Operation getMount
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  int $id Streamer ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMount'] to see the possible values for this operation
      *
@@ -1841,16 +1841,16 @@ class StationsMountPointsApi
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\StationMount|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function getMount($stationId, $id, string $contentType = self::contentTypes['getMount'][0])
+    public function getMount($station_id, $id, string $contentType = self::contentTypes['getMount'][0])
     {
-        list($response) = $this->getMountWithHttpInfo($stationId, $id, $contentType);
+        list($response) = $this->getMountWithHttpInfo($station_id, $id, $contentType);
         return $response;
     }
 
     /**
      * Operation getMountWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Streamer ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMount'] to see the possible values for this operation
      *
@@ -1858,9 +1858,9 @@ class StationsMountPointsApi
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\StationMount|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getMountWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['getMount'][0])
+    public function getMountWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['getMount'][0])
     {
-        $request = $this->getMountRequest($stationId, $id, $contentType);
+        $request = $this->getMountRequest($station_id, $id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2078,16 +2078,16 @@ class StationsMountPointsApi
     /**
      * Operation getMountAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Streamer ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getMountAsync($stationId, $id, string $contentType = self::contentTypes['getMount'][0])
+    public function getMountAsync($station_id, $id, string $contentType = self::contentTypes['getMount'][0])
     {
-        return $this->getMountAsyncWithHttpInfo($stationId, $id, $contentType)
+        return $this->getMountAsyncWithHttpInfo($station_id, $id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2098,17 +2098,17 @@ class StationsMountPointsApi
     /**
      * Operation getMountAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Streamer ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getMountAsyncWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['getMount'][0])
+    public function getMountAsyncWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['getMount'][0])
     {
         $returnType = '\AzuraCast\Model\StationMount';
-        $request = $this->getMountRequest($stationId, $id, $contentType);
+        $request = $this->getMountRequest($station_id, $id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2149,20 +2149,20 @@ class StationsMountPointsApi
     /**
      * Create request for operation 'getMount'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Streamer ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getMountRequest($stationId, $id, string $contentType = self::contentTypes['getMount'][0])
+    public function getMountRequest($station_id, $id, string $contentType = self::contentTypes['getMount'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling getMount'
+                'Missing the required parameter $station_id when calling getMount'
             );
         }
 
@@ -2184,10 +2184,10 @@ class StationsMountPointsApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -2262,7 +2262,7 @@ class StationsMountPointsApi
     /**
      * Operation getMountIntro
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  int $id Mount Point ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMountIntro'] to see the possible values for this operation
      *
@@ -2270,15 +2270,15 @@ class StationsMountPointsApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function getMountIntro($stationId, $id, string $contentType = self::contentTypes['getMountIntro'][0])
+    public function getMountIntro($station_id, $id, string $contentType = self::contentTypes['getMountIntro'][0])
     {
-        $this->getMountIntroWithHttpInfo($stationId, $id, $contentType);
+        $this->getMountIntroWithHttpInfo($station_id, $id, $contentType);
     }
 
     /**
      * Operation getMountIntroWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Mount Point ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMountIntro'] to see the possible values for this operation
      *
@@ -2286,9 +2286,9 @@ class StationsMountPointsApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getMountIntroWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['getMountIntro'][0])
+    public function getMountIntroWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['getMountIntro'][0])
     {
-        $request = $this->getMountIntroRequest($stationId, $id, $contentType);
+        $request = $this->getMountIntroRequest($station_id, $id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2361,16 +2361,16 @@ class StationsMountPointsApi
     /**
      * Operation getMountIntroAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Mount Point ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMountIntro'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getMountIntroAsync($stationId, $id, string $contentType = self::contentTypes['getMountIntro'][0])
+    public function getMountIntroAsync($station_id, $id, string $contentType = self::contentTypes['getMountIntro'][0])
     {
-        return $this->getMountIntroAsyncWithHttpInfo($stationId, $id, $contentType)
+        return $this->getMountIntroAsyncWithHttpInfo($station_id, $id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2381,17 +2381,17 @@ class StationsMountPointsApi
     /**
      * Operation getMountIntroAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Mount Point ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMountIntro'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getMountIntroAsyncWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['getMountIntro'][0])
+    public function getMountIntroAsyncWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['getMountIntro'][0])
     {
         $returnType = '';
-        $request = $this->getMountIntroRequest($stationId, $id, $contentType);
+        $request = $this->getMountIntroRequest($station_id, $id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2419,20 +2419,20 @@ class StationsMountPointsApi
     /**
      * Create request for operation 'getMountIntro'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Mount Point ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMountIntro'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getMountIntroRequest($stationId, $id, string $contentType = self::contentTypes['getMountIntro'][0])
+    public function getMountIntroRequest($station_id, $id, string $contentType = self::contentTypes['getMountIntro'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling getMountIntro'
+                'Missing the required parameter $station_id when calling getMountIntro'
             );
         }
 
@@ -2454,10 +2454,10 @@ class StationsMountPointsApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -2532,32 +2532,32 @@ class StationsMountPointsApi
     /**
      * Operation getStationMounts
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStationMounts'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\StationMount[]|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function getStationMounts($stationId, string $contentType = self::contentTypes['getStationMounts'][0])
+    public function getStationMounts($station_id, string $contentType = self::contentTypes['getStationMounts'][0])
     {
-        list($response) = $this->getStationMountsWithHttpInfo($stationId, $contentType);
+        list($response) = $this->getStationMountsWithHttpInfo($station_id, $contentType);
         return $response;
     }
 
     /**
      * Operation getStationMountsWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStationMounts'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\StationMount[]|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getStationMountsWithHttpInfo($stationId, string $contentType = self::contentTypes['getStationMounts'][0])
+    public function getStationMountsWithHttpInfo($station_id, string $contentType = self::contentTypes['getStationMounts'][0])
     {
-        $request = $this->getStationMountsRequest($stationId, $contentType);
+        $request = $this->getStationMountsRequest($station_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2740,15 +2740,15 @@ class StationsMountPointsApi
     /**
      * Operation getStationMountsAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStationMounts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStationMountsAsync($stationId, string $contentType = self::contentTypes['getStationMounts'][0])
+    public function getStationMountsAsync($station_id, string $contentType = self::contentTypes['getStationMounts'][0])
     {
-        return $this->getStationMountsAsyncWithHttpInfo($stationId, $contentType)
+        return $this->getStationMountsAsyncWithHttpInfo($station_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2759,16 +2759,16 @@ class StationsMountPointsApi
     /**
      * Operation getStationMountsAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStationMounts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStationMountsAsyncWithHttpInfo($stationId, string $contentType = self::contentTypes['getStationMounts'][0])
+    public function getStationMountsAsyncWithHttpInfo($station_id, string $contentType = self::contentTypes['getStationMounts'][0])
     {
         $returnType = '\AzuraCast\Model\StationMount[]';
-        $request = $this->getStationMountsRequest($stationId, $contentType);
+        $request = $this->getStationMountsRequest($station_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2809,19 +2809,19 @@ class StationsMountPointsApi
     /**
      * Create request for operation 'getStationMounts'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStationMounts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getStationMountsRequest($stationId, string $contentType = self::contentTypes['getStationMounts'][0])
+    public function getStationMountsRequest($station_id, string $contentType = self::contentTypes['getStationMounts'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling getStationMounts'
+                'Missing the required parameter $station_id when calling getStationMounts'
             );
         }
 
@@ -2836,10 +2836,10 @@ class StationsMountPointsApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -2906,7 +2906,7 @@ class StationsMountPointsApi
     /**
      * Operation postMountIntro
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  int $id Mount Point ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMountIntro'] to see the possible values for this operation
      *
@@ -2914,16 +2914,16 @@ class StationsMountPointsApi
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function postMountIntro($stationId, $id, string $contentType = self::contentTypes['postMountIntro'][0])
+    public function postMountIntro($station_id, $id, string $contentType = self::contentTypes['postMountIntro'][0])
     {
-        list($response) = $this->postMountIntroWithHttpInfo($stationId, $id, $contentType);
+        list($response) = $this->postMountIntroWithHttpInfo($station_id, $id, $contentType);
         return $response;
     }
 
     /**
      * Operation postMountIntroWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Mount Point ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMountIntro'] to see the possible values for this operation
      *
@@ -2931,9 +2931,9 @@ class StationsMountPointsApi
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postMountIntroWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['postMountIntro'][0])
+    public function postMountIntroWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['postMountIntro'][0])
     {
-        $request = $this->postMountIntroRequest($stationId, $id, $contentType);
+        $request = $this->postMountIntroRequest($station_id, $id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3151,16 +3151,16 @@ class StationsMountPointsApi
     /**
      * Operation postMountIntroAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Mount Point ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMountIntro'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postMountIntroAsync($stationId, $id, string $contentType = self::contentTypes['postMountIntro'][0])
+    public function postMountIntroAsync($station_id, $id, string $contentType = self::contentTypes['postMountIntro'][0])
     {
-        return $this->postMountIntroAsyncWithHttpInfo($stationId, $id, $contentType)
+        return $this->postMountIntroAsyncWithHttpInfo($station_id, $id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3171,17 +3171,17 @@ class StationsMountPointsApi
     /**
      * Operation postMountIntroAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Mount Point ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMountIntro'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postMountIntroAsyncWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['postMountIntro'][0])
+    public function postMountIntroAsyncWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['postMountIntro'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStatus';
-        $request = $this->postMountIntroRequest($stationId, $id, $contentType);
+        $request = $this->postMountIntroRequest($station_id, $id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3222,20 +3222,20 @@ class StationsMountPointsApi
     /**
      * Create request for operation 'postMountIntro'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Mount Point ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMountIntro'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function postMountIntroRequest($stationId, $id, string $contentType = self::contentTypes['postMountIntro'][0])
+    public function postMountIntroRequest($station_id, $id, string $contentType = self::contentTypes['postMountIntro'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling postMountIntro'
+                'Missing the required parameter $station_id when calling postMountIntro'
             );
         }
 
@@ -3257,10 +3257,10 @@ class StationsMountPointsApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }

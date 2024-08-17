@@ -131,7 +131,7 @@ class StationsQueueApi
     /**
      * Operation deleteQueueItem
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  int $id Queue Item ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteQueueItem'] to see the possible values for this operation
      *
@@ -139,16 +139,16 @@ class StationsQueueApi
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function deleteQueueItem($stationId, $id, string $contentType = self::contentTypes['deleteQueueItem'][0])
+    public function deleteQueueItem($station_id, $id, string $contentType = self::contentTypes['deleteQueueItem'][0])
     {
-        list($response) = $this->deleteQueueItemWithHttpInfo($stationId, $id, $contentType);
+        list($response) = $this->deleteQueueItemWithHttpInfo($station_id, $id, $contentType);
         return $response;
     }
 
     /**
      * Operation deleteQueueItemWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Queue Item ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteQueueItem'] to see the possible values for this operation
      *
@@ -156,9 +156,9 @@ class StationsQueueApi
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStatus|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteQueueItemWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['deleteQueueItem'][0])
+    public function deleteQueueItemWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['deleteQueueItem'][0])
     {
-        $request = $this->deleteQueueItemRequest($stationId, $id, $contentType);
+        $request = $this->deleteQueueItemRequest($station_id, $id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -376,16 +376,16 @@ class StationsQueueApi
     /**
      * Operation deleteQueueItemAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Queue Item ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteQueueItem'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteQueueItemAsync($stationId, $id, string $contentType = self::contentTypes['deleteQueueItem'][0])
+    public function deleteQueueItemAsync($station_id, $id, string $contentType = self::contentTypes['deleteQueueItem'][0])
     {
-        return $this->deleteQueueItemAsyncWithHttpInfo($stationId, $id, $contentType)
+        return $this->deleteQueueItemAsyncWithHttpInfo($station_id, $id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -396,17 +396,17 @@ class StationsQueueApi
     /**
      * Operation deleteQueueItemAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Queue Item ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteQueueItem'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteQueueItemAsyncWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['deleteQueueItem'][0])
+    public function deleteQueueItemAsyncWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['deleteQueueItem'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStatus';
-        $request = $this->deleteQueueItemRequest($stationId, $id, $contentType);
+        $request = $this->deleteQueueItemRequest($station_id, $id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -447,20 +447,20 @@ class StationsQueueApi
     /**
      * Create request for operation 'deleteQueueItem'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Queue Item ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteQueueItem'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function deleteQueueItemRequest($stationId, $id, string $contentType = self::contentTypes['deleteQueueItem'][0])
+    public function deleteQueueItemRequest($station_id, $id, string $contentType = self::contentTypes['deleteQueueItem'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling deleteQueueItem'
+                'Missing the required parameter $station_id when calling deleteQueueItem'
             );
         }
 
@@ -482,10 +482,10 @@ class StationsQueueApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -560,32 +560,32 @@ class StationsQueueApi
     /**
      * Operation getQueue
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getQueue'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStationQueueDetailed[]|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function getQueue($stationId, string $contentType = self::contentTypes['getQueue'][0])
+    public function getQueue($station_id, string $contentType = self::contentTypes['getQueue'][0])
     {
-        list($response) = $this->getQueueWithHttpInfo($stationId, $contentType);
+        list($response) = $this->getQueueWithHttpInfo($station_id, $contentType);
         return $response;
     }
 
     /**
      * Operation getQueueWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getQueue'] to see the possible values for this operation
      *
      * @throws \AzuraCast\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStationQueueDetailed[]|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getQueueWithHttpInfo($stationId, string $contentType = self::contentTypes['getQueue'][0])
+    public function getQueueWithHttpInfo($station_id, string $contentType = self::contentTypes['getQueue'][0])
     {
-        $request = $this->getQueueRequest($stationId, $contentType);
+        $request = $this->getQueueRequest($station_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -803,15 +803,15 @@ class StationsQueueApi
     /**
      * Operation getQueueAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getQueue'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getQueueAsync($stationId, string $contentType = self::contentTypes['getQueue'][0])
+    public function getQueueAsync($station_id, string $contentType = self::contentTypes['getQueue'][0])
     {
-        return $this->getQueueAsyncWithHttpInfo($stationId, $contentType)
+        return $this->getQueueAsyncWithHttpInfo($station_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -822,16 +822,16 @@ class StationsQueueApi
     /**
      * Operation getQueueAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getQueue'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getQueueAsyncWithHttpInfo($stationId, string $contentType = self::contentTypes['getQueue'][0])
+    public function getQueueAsyncWithHttpInfo($station_id, string $contentType = self::contentTypes['getQueue'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStationQueueDetailed[]';
-        $request = $this->getQueueRequest($stationId, $contentType);
+        $request = $this->getQueueRequest($station_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -872,19 +872,19 @@ class StationsQueueApi
     /**
      * Create request for operation 'getQueue'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getQueue'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getQueueRequest($stationId, string $contentType = self::contentTypes['getQueue'][0])
+    public function getQueueRequest($station_id, string $contentType = self::contentTypes['getQueue'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling getQueue'
+                'Missing the required parameter $station_id when calling getQueue'
             );
         }
 
@@ -899,10 +899,10 @@ class StationsQueueApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }
@@ -969,7 +969,7 @@ class StationsQueueApi
     /**
      * Operation getQueueItem
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id station_id (required)
      * @param  int $id Queue Item ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getQueueItem'] to see the possible values for this operation
      *
@@ -977,16 +977,16 @@ class StationsQueueApi
      * @throws \InvalidArgumentException
      * @return \AzuraCast\Model\ApiStationQueueDetailed|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError
      */
-    public function getQueueItem($stationId, $id, string $contentType = self::contentTypes['getQueueItem'][0])
+    public function getQueueItem($station_id, $id, string $contentType = self::contentTypes['getQueueItem'][0])
     {
-        list($response) = $this->getQueueItemWithHttpInfo($stationId, $id, $contentType);
+        list($response) = $this->getQueueItemWithHttpInfo($station_id, $id, $contentType);
         return $response;
     }
 
     /**
      * Operation getQueueItemWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Queue Item ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getQueueItem'] to see the possible values for this operation
      *
@@ -994,9 +994,9 @@ class StationsQueueApi
      * @throws \InvalidArgumentException
      * @return array of \AzuraCast\Model\ApiStationQueueDetailed|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError|\AzuraCast\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getQueueItemWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['getQueueItem'][0])
+    public function getQueueItemWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['getQueueItem'][0])
     {
-        $request = $this->getQueueItemRequest($stationId, $id, $contentType);
+        $request = $this->getQueueItemRequest($station_id, $id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1214,16 +1214,16 @@ class StationsQueueApi
     /**
      * Operation getQueueItemAsync
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Queue Item ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getQueueItem'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getQueueItemAsync($stationId, $id, string $contentType = self::contentTypes['getQueueItem'][0])
+    public function getQueueItemAsync($station_id, $id, string $contentType = self::contentTypes['getQueueItem'][0])
     {
-        return $this->getQueueItemAsyncWithHttpInfo($stationId, $id, $contentType)
+        return $this->getQueueItemAsyncWithHttpInfo($station_id, $id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1234,17 +1234,17 @@ class StationsQueueApi
     /**
      * Operation getQueueItemAsyncWithHttpInfo
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Queue Item ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getQueueItem'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getQueueItemAsyncWithHttpInfo($stationId, $id, string $contentType = self::contentTypes['getQueueItem'][0])
+    public function getQueueItemAsyncWithHttpInfo($station_id, $id, string $contentType = self::contentTypes['getQueueItem'][0])
     {
         $returnType = '\AzuraCast\Model\ApiStationQueueDetailed';
-        $request = $this->getQueueItemRequest($stationId, $id, $contentType);
+        $request = $this->getQueueItemRequest($station_id, $id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1285,20 +1285,20 @@ class StationsQueueApi
     /**
      * Create request for operation 'getQueueItem'
      *
-     * @param  GetStationNowPlayingStationIdParameter $stationId (required)
+     * @param  GetStationNowPlayingStationIdParameter $station_id (required)
      * @param  int $id Queue Item ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getQueueItem'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getQueueItemRequest($stationId, $id, string $contentType = self::contentTypes['getQueueItem'][0])
+    public function getQueueItemRequest($station_id, $id, string $contentType = self::contentTypes['getQueueItem'][0])
     {
 
-        // verify the required parameter 'stationId' is set
-        if ($stationId === null || (is_array($stationId) && count($stationId) === 0)) {
+        // verify the required parameter 'station_id' is set
+        if ($station_id === null || (is_array($station_id) && count($station_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stationId when calling getQueueItem'
+                'Missing the required parameter $station_id when calling getQueueItem'
             );
         }
 
@@ -1320,10 +1320,10 @@ class StationsQueueApi
 
 
         // path params
-        if ($stationId !== null) {
+        if ($station_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'station_id' . '}',
-                ObjectSerializer::toPathValue($stationId),
+                ObjectSerializer::toPathValue($station_id),
                 $resourcePath
             );
         }

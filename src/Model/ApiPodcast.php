@@ -59,24 +59,24 @@ class ApiPodcast implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'links' => 'array<string,string>',
         'id' => 'string',
-        'storageLocationId' => 'int',
+        'storage_location_id' => 'int',
         'source' => 'string',
-        'playlistId' => 'int',
-        'playlistAutoPublish' => 'bool',
+        'playlist_id' => 'int',
+        'playlist_auto_publish' => 'bool',
         'title' => 'string',
         'link' => 'string',
         'description' => 'string',
-        'descriptionShort' => 'string',
-        'isEnabled' => 'bool',
-        'brandingConfig' => 'mixed[]',
+        'description_short' => 'string',
+        'is_enabled' => 'bool',
+        'branding_config' => 'mixed[]',
         'language' => 'string',
-        'languageName' => 'string',
+        'language_name' => 'string',
         'author' => 'string',
         'email' => 'string',
-        'hasCustomArt' => 'bool',
+        'has_custom_art' => 'bool',
         'art' => 'string',
-        'artUpdatedAt' => 'int',
-        'isPublished' => 'bool',
+        'art_updated_at' => 'int',
+        'is_published' => 'bool',
         'episodes' => 'int',
         'categories' => '\AzuraCast\Model\ApiPodcastCategory[]'
     ];
@@ -91,24 +91,24 @@ class ApiPodcast implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'links' => null,
         'id' => null,
-        'storageLocationId' => null,
+        'storage_location_id' => null,
         'source' => null,
-        'playlistId' => null,
-        'playlistAutoPublish' => null,
+        'playlist_id' => null,
+        'playlist_auto_publish' => null,
         'title' => null,
         'link' => null,
         'description' => null,
-        'descriptionShort' => null,
-        'isEnabled' => null,
-        'brandingConfig' => null,
+        'description_short' => null,
+        'is_enabled' => null,
+        'branding_config' => null,
         'language' => null,
-        'languageName' => null,
+        'language_name' => null,
         'author' => null,
         'email' => null,
-        'hasCustomArt' => null,
+        'has_custom_art' => null,
         'art' => null,
-        'artUpdatedAt' => null,
-        'isPublished' => null,
+        'art_updated_at' => null,
+        'is_published' => null,
         'episodes' => null,
         'categories' => null
     ];
@@ -121,24 +121,24 @@ class ApiPodcast implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'links' => false,
         'id' => false,
-        'storageLocationId' => false,
+        'storage_location_id' => false,
         'source' => false,
-        'playlistId' => true,
-        'playlistAutoPublish' => false,
+        'playlist_id' => true,
+        'playlist_auto_publish' => false,
         'title' => false,
         'link' => true,
         'description' => false,
-        'descriptionShort' => false,
-        'isEnabled' => false,
-        'brandingConfig' => false,
+        'description_short' => false,
+        'is_enabled' => false,
+        'branding_config' => false,
         'language' => false,
-        'languageName' => false,
+        'language_name' => false,
         'author' => false,
         'email' => false,
-        'hasCustomArt' => false,
+        'has_custom_art' => false,
         'art' => false,
-        'artUpdatedAt' => false,
-        'isPublished' => false,
+        'art_updated_at' => false,
+        'is_published' => false,
         'episodes' => false,
         'categories' => false
     ];
@@ -231,24 +231,24 @@ class ApiPodcast implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'links' => 'links',
         'id' => 'id',
-        'storageLocationId' => 'storage_location_id',
+        'storage_location_id' => 'storage_location_id',
         'source' => 'source',
-        'playlistId' => 'playlist_id',
-        'playlistAutoPublish' => 'playlist_auto_publish',
+        'playlist_id' => 'playlist_id',
+        'playlist_auto_publish' => 'playlist_auto_publish',
         'title' => 'title',
         'link' => 'link',
         'description' => 'description',
-        'descriptionShort' => 'description_short',
-        'isEnabled' => 'is_enabled',
-        'brandingConfig' => 'branding_config',
+        'description_short' => 'description_short',
+        'is_enabled' => 'is_enabled',
+        'branding_config' => 'branding_config',
         'language' => 'language',
-        'languageName' => 'language_name',
+        'language_name' => 'language_name',
         'author' => 'author',
         'email' => 'email',
-        'hasCustomArt' => 'has_custom_art',
+        'has_custom_art' => 'has_custom_art',
         'art' => 'art',
-        'artUpdatedAt' => 'art_updated_at',
-        'isPublished' => 'is_published',
+        'art_updated_at' => 'art_updated_at',
+        'is_published' => 'is_published',
         'episodes' => 'episodes',
         'categories' => 'categories'
     ];
@@ -261,24 +261,24 @@ class ApiPodcast implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'links' => 'setLinks',
         'id' => 'setId',
-        'storageLocationId' => 'setStorageLocationId',
+        'storage_location_id' => 'setStorageLocationId',
         'source' => 'setSource',
-        'playlistId' => 'setPlaylistId',
-        'playlistAutoPublish' => 'setPlaylistAutoPublish',
+        'playlist_id' => 'setPlaylistId',
+        'playlist_auto_publish' => 'setPlaylistAutoPublish',
         'title' => 'setTitle',
         'link' => 'setLink',
         'description' => 'setDescription',
-        'descriptionShort' => 'setDescriptionShort',
-        'isEnabled' => 'setIsEnabled',
-        'brandingConfig' => 'setBrandingConfig',
+        'description_short' => 'setDescriptionShort',
+        'is_enabled' => 'setIsEnabled',
+        'branding_config' => 'setBrandingConfig',
         'language' => 'setLanguage',
-        'languageName' => 'setLanguageName',
+        'language_name' => 'setLanguageName',
         'author' => 'setAuthor',
         'email' => 'setEmail',
-        'hasCustomArt' => 'setHasCustomArt',
+        'has_custom_art' => 'setHasCustomArt',
         'art' => 'setArt',
-        'artUpdatedAt' => 'setArtUpdatedAt',
-        'isPublished' => 'setIsPublished',
+        'art_updated_at' => 'setArtUpdatedAt',
+        'is_published' => 'setIsPublished',
         'episodes' => 'setEpisodes',
         'categories' => 'setCategories'
     ];
@@ -291,24 +291,24 @@ class ApiPodcast implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'links' => 'getLinks',
         'id' => 'getId',
-        'storageLocationId' => 'getStorageLocationId',
+        'storage_location_id' => 'getStorageLocationId',
         'source' => 'getSource',
-        'playlistId' => 'getPlaylistId',
-        'playlistAutoPublish' => 'getPlaylistAutoPublish',
+        'playlist_id' => 'getPlaylistId',
+        'playlist_auto_publish' => 'getPlaylistAutoPublish',
         'title' => 'getTitle',
         'link' => 'getLink',
         'description' => 'getDescription',
-        'descriptionShort' => 'getDescriptionShort',
-        'isEnabled' => 'getIsEnabled',
-        'brandingConfig' => 'getBrandingConfig',
+        'description_short' => 'getDescriptionShort',
+        'is_enabled' => 'getIsEnabled',
+        'branding_config' => 'getBrandingConfig',
         'language' => 'getLanguage',
-        'languageName' => 'getLanguageName',
+        'language_name' => 'getLanguageName',
         'author' => 'getAuthor',
         'email' => 'getEmail',
-        'hasCustomArt' => 'getHasCustomArt',
+        'has_custom_art' => 'getHasCustomArt',
         'art' => 'getArt',
-        'artUpdatedAt' => 'getArtUpdatedAt',
-        'isPublished' => 'getIsPublished',
+        'art_updated_at' => 'getArtUpdatedAt',
+        'is_published' => 'getIsPublished',
         'episodes' => 'getEpisodes',
         'categories' => 'getCategories'
     ];
@@ -372,24 +372,24 @@ class ApiPodcast implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('links', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('storageLocationId', $data ?? [], null);
+        $this->setIfExists('storage_location_id', $data ?? [], null);
         $this->setIfExists('source', $data ?? [], null);
-        $this->setIfExists('playlistId', $data ?? [], null);
-        $this->setIfExists('playlistAutoPublish', $data ?? [], null);
+        $this->setIfExists('playlist_id', $data ?? [], null);
+        $this->setIfExists('playlist_auto_publish', $data ?? [], null);
         $this->setIfExists('title', $data ?? [], null);
         $this->setIfExists('link', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
-        $this->setIfExists('descriptionShort', $data ?? [], null);
-        $this->setIfExists('isEnabled', $data ?? [], null);
-        $this->setIfExists('brandingConfig', $data ?? [], null);
+        $this->setIfExists('description_short', $data ?? [], null);
+        $this->setIfExists('is_enabled', $data ?? [], null);
+        $this->setIfExists('branding_config', $data ?? [], null);
         $this->setIfExists('language', $data ?? [], null);
-        $this->setIfExists('languageName', $data ?? [], null);
+        $this->setIfExists('language_name', $data ?? [], null);
         $this->setIfExists('author', $data ?? [], null);
         $this->setIfExists('email', $data ?? [], null);
-        $this->setIfExists('hasCustomArt', $data ?? [], null);
+        $this->setIfExists('has_custom_art', $data ?? [], null);
         $this->setIfExists('art', $data ?? [], null);
-        $this->setIfExists('artUpdatedAt', $data ?? [], null);
-        $this->setIfExists('isPublished', $data ?? [], null);
+        $this->setIfExists('art_updated_at', $data ?? [], null);
+        $this->setIfExists('is_published', $data ?? [], null);
         $this->setIfExists('episodes', $data ?? [], null);
         $this->setIfExists('categories', $data ?? [], null);
     }
@@ -491,28 +491,28 @@ class ApiPodcast implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets storageLocationId
+     * Gets storage_location_id
      *
      * @return int|null
      */
     public function getStorageLocationId()
     {
-        return $this->container['storageLocationId'];
+        return $this->container['storage_location_id'];
     }
 
     /**
-     * Sets storageLocationId
+     * Sets storage_location_id
      *
-     * @param int|null $storageLocationId storageLocationId
+     * @param int|null $storage_location_id storage_location_id
      *
      * @return self
      */
-    public function setStorageLocationId($storageLocationId)
+    public function setStorageLocationId($storage_location_id)
     {
-        if (is_null($storageLocationId)) {
-            throw new \InvalidArgumentException('non-nullable storageLocationId cannot be null');
+        if (is_null($storage_location_id)) {
+            throw new \InvalidArgumentException('non-nullable storage_location_id cannot be null');
         }
-        $this->container['storageLocationId'] = $storageLocationId;
+        $this->container['storage_location_id'] = $storage_location_id;
 
         return $this;
     }
@@ -545,62 +545,62 @@ class ApiPodcast implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets playlistId
+     * Gets playlist_id
      *
      * @return int|null
      */
     public function getPlaylistId()
     {
-        return $this->container['playlistId'];
+        return $this->container['playlist_id'];
     }
 
     /**
-     * Sets playlistId
+     * Sets playlist_id
      *
-     * @param int|null $playlistId playlistId
+     * @param int|null $playlist_id playlist_id
      *
      * @return self
      */
-    public function setPlaylistId($playlistId)
+    public function setPlaylistId($playlist_id)
     {
-        if (is_null($playlistId)) {
-            array_push($this->openAPINullablesSetToNull, 'playlistId');
+        if (is_null($playlist_id)) {
+            array_push($this->openAPINullablesSetToNull, 'playlist_id');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('playlistId', $nullablesSetToNull);
+            $index = array_search('playlist_id', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['playlistId'] = $playlistId;
+        $this->container['playlist_id'] = $playlist_id;
 
         return $this;
     }
 
     /**
-     * Gets playlistAutoPublish
+     * Gets playlist_auto_publish
      *
      * @return bool|null
      */
     public function getPlaylistAutoPublish()
     {
-        return $this->container['playlistAutoPublish'];
+        return $this->container['playlist_auto_publish'];
     }
 
     /**
-     * Sets playlistAutoPublish
+     * Sets playlist_auto_publish
      *
-     * @param bool|null $playlistAutoPublish playlistAutoPublish
+     * @param bool|null $playlist_auto_publish playlist_auto_publish
      *
      * @return self
      */
-    public function setPlaylistAutoPublish($playlistAutoPublish)
+    public function setPlaylistAutoPublish($playlist_auto_publish)
     {
-        if (is_null($playlistAutoPublish)) {
-            throw new \InvalidArgumentException('non-nullable playlistAutoPublish cannot be null');
+        if (is_null($playlist_auto_publish)) {
+            throw new \InvalidArgumentException('non-nullable playlist_auto_publish cannot be null');
         }
-        $this->container['playlistAutoPublish'] = $playlistAutoPublish;
+        $this->container['playlist_auto_publish'] = $playlist_auto_publish;
 
         return $this;
     }
@@ -694,82 +694,82 @@ class ApiPodcast implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets descriptionShort
+     * Gets description_short
      *
      * @return string|null
      */
     public function getDescriptionShort()
     {
-        return $this->container['descriptionShort'];
+        return $this->container['description_short'];
     }
 
     /**
-     * Sets descriptionShort
+     * Sets description_short
      *
-     * @param string|null $descriptionShort descriptionShort
+     * @param string|null $description_short description_short
      *
      * @return self
      */
-    public function setDescriptionShort($descriptionShort)
+    public function setDescriptionShort($description_short)
     {
-        if (is_null($descriptionShort)) {
-            throw new \InvalidArgumentException('non-nullable descriptionShort cannot be null');
+        if (is_null($description_short)) {
+            throw new \InvalidArgumentException('non-nullable description_short cannot be null');
         }
-        $this->container['descriptionShort'] = $descriptionShort;
+        $this->container['description_short'] = $description_short;
 
         return $this;
     }
 
     /**
-     * Gets isEnabled
+     * Gets is_enabled
      *
      * @return bool|null
      */
     public function getIsEnabled()
     {
-        return $this->container['isEnabled'];
+        return $this->container['is_enabled'];
     }
 
     /**
-     * Sets isEnabled
+     * Sets is_enabled
      *
-     * @param bool|null $isEnabled isEnabled
+     * @param bool|null $is_enabled is_enabled
      *
      * @return self
      */
-    public function setIsEnabled($isEnabled)
+    public function setIsEnabled($is_enabled)
     {
-        if (is_null($isEnabled)) {
-            throw new \InvalidArgumentException('non-nullable isEnabled cannot be null');
+        if (is_null($is_enabled)) {
+            throw new \InvalidArgumentException('non-nullable is_enabled cannot be null');
         }
-        $this->container['isEnabled'] = $isEnabled;
+        $this->container['is_enabled'] = $is_enabled;
 
         return $this;
     }
 
     /**
-     * Gets brandingConfig
+     * Gets branding_config
      *
      * @return mixed[]|null
      */
     public function getBrandingConfig()
     {
-        return $this->container['brandingConfig'];
+        return $this->container['branding_config'];
     }
 
     /**
-     * Sets brandingConfig
+     * Sets branding_config
      *
-     * @param mixed[]|null $brandingConfig An array containing podcast-specific branding configuration
+     * @param mixed[]|null $branding_config An array containing podcast-specific branding configuration
      *
      * @return self
      */
-    public function setBrandingConfig($brandingConfig)
+    public function setBrandingConfig($branding_config)
     {
-        if (is_null($brandingConfig)) {
-            throw new \InvalidArgumentException('non-nullable brandingConfig cannot be null');
+        if (is_null($branding_config)) {
+            throw new \InvalidArgumentException('non-nullable branding_config cannot be null');
         }
-        $this->container['brandingConfig'] = $brandingConfig;
+        $this->container['branding_config'] = $branding_config;
 
         return $this;
     }
@@ -802,28 +802,28 @@ class ApiPodcast implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets languageName
+     * Gets language_name
      *
      * @return string|null
      */
     public function getLanguageName()
     {
-        return $this->container['languageName'];
+        return $this->container['language_name'];
     }
 
     /**
-     * Sets languageName
+     * Sets language_name
      *
-     * @param string|null $languageName languageName
+     * @param string|null $language_name language_name
      *
      * @return self
      */
-    public function setLanguageName($languageName)
+    public function setLanguageName($language_name)
     {
-        if (is_null($languageName)) {
-            throw new \InvalidArgumentException('non-nullable languageName cannot be null');
+        if (is_null($language_name)) {
+            throw new \InvalidArgumentException('non-nullable language_name cannot be null');
         }
-        $this->container['languageName'] = $languageName;
+        $this->container['language_name'] = $language_name;
 
         return $this;
     }
@@ -883,28 +883,28 @@ class ApiPodcast implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets hasCustomArt
+     * Gets has_custom_art
      *
      * @return bool|null
      */
     public function getHasCustomArt()
     {
-        return $this->container['hasCustomArt'];
+        return $this->container['has_custom_art'];
     }
 
     /**
-     * Sets hasCustomArt
+     * Sets has_custom_art
      *
-     * @param bool|null $hasCustomArt hasCustomArt
+     * @param bool|null $has_custom_art has_custom_art
      *
      * @return self
      */
-    public function setHasCustomArt($hasCustomArt)
+    public function setHasCustomArt($has_custom_art)
     {
-        if (is_null($hasCustomArt)) {
-            throw new \InvalidArgumentException('non-nullable hasCustomArt cannot be null');
+        if (is_null($has_custom_art)) {
+            throw new \InvalidArgumentException('non-nullable has_custom_art cannot be null');
         }
-        $this->container['hasCustomArt'] = $hasCustomArt;
+        $this->container['has_custom_art'] = $has_custom_art;
 
         return $this;
     }
@@ -937,55 +937,55 @@ class ApiPodcast implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets artUpdatedAt
+     * Gets art_updated_at
      *
      * @return int|null
      */
     public function getArtUpdatedAt()
     {
-        return $this->container['artUpdatedAt'];
+        return $this->container['art_updated_at'];
     }
 
     /**
-     * Sets artUpdatedAt
+     * Sets art_updated_at
      *
-     * @param int|null $artUpdatedAt artUpdatedAt
+     * @param int|null $art_updated_at art_updated_at
      *
      * @return self
      */
-    public function setArtUpdatedAt($artUpdatedAt)
+    public function setArtUpdatedAt($art_updated_at)
     {
-        if (is_null($artUpdatedAt)) {
-            throw new \InvalidArgumentException('non-nullable artUpdatedAt cannot be null');
+        if (is_null($art_updated_at)) {
+            throw new \InvalidArgumentException('non-nullable art_updated_at cannot be null');
         }
-        $this->container['artUpdatedAt'] = $artUpdatedAt;
+        $this->container['art_updated_at'] = $art_updated_at;
 
         return $this;
     }
 
     /**
-     * Gets isPublished
+     * Gets is_published
      *
      * @return bool|null
      */
     public function getIsPublished()
     {
-        return $this->container['isPublished'];
+        return $this->container['is_published'];
     }
 
     /**
-     * Sets isPublished
+     * Sets is_published
      *
-     * @param bool|null $isPublished isPublished
+     * @param bool|null $is_published is_published
      *
      * @return self
      */
-    public function setIsPublished($isPublished)
+    public function setIsPublished($is_published)
     {
-        if (is_null($isPublished)) {
-            throw new \InvalidArgumentException('non-nullable isPublished cannot be null');
+        if (is_null($is_published)) {
+            throw new \InvalidArgumentException('non-nullable is_published cannot be null');
         }
-        $this->container['isPublished'] = $isPublished;
+        $this->container['is_published'] = $is_published;
 
         return $this;
     }

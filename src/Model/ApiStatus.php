@@ -59,7 +59,7 @@ class ApiStatus implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'success' => 'bool',
         'message' => 'string',
-        'formattedMessage' => 'string'
+        'formatted_message' => 'string'
     ];
 
     /**
@@ -72,7 +72,7 @@ class ApiStatus implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'success' => null,
         'message' => null,
-        'formattedMessage' => null
+        'formatted_message' => null
     ];
 
     /**
@@ -83,7 +83,7 @@ class ApiStatus implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'success' => false,
         'message' => false,
-        'formattedMessage' => false
+        'formatted_message' => false
     ];
 
     /**
@@ -174,7 +174,7 @@ class ApiStatus implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'success' => 'success',
         'message' => 'message',
-        'formattedMessage' => 'formatted_message'
+        'formatted_message' => 'formatted_message'
     ];
 
     /**
@@ -185,7 +185,7 @@ class ApiStatus implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'success' => 'setSuccess',
         'message' => 'setMessage',
-        'formattedMessage' => 'setFormattedMessage'
+        'formatted_message' => 'setFormattedMessage'
     ];
 
     /**
@@ -196,7 +196,7 @@ class ApiStatus implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'success' => 'getSuccess',
         'message' => 'getMessage',
-        'formattedMessage' => 'getFormattedMessage'
+        'formatted_message' => 'getFormattedMessage'
     ];
 
     /**
@@ -258,7 +258,7 @@ class ApiStatus implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('success', $data ?? [], null);
         $this->setIfExists('message', $data ?? [], null);
-        $this->setIfExists('formattedMessage', $data ?? [], null);
+        $this->setIfExists('formatted_message', $data ?? [], null);
     }
 
     /**
@@ -358,28 +358,28 @@ class ApiStatus implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets formattedMessage
+     * Gets formatted_message
      *
      * @return string|null
      */
     public function getFormattedMessage()
     {
-        return $this->container['formattedMessage'];
+        return $this->container['formatted_message'];
     }
 
     /**
-     * Sets formattedMessage
+     * Sets formatted_message
      *
-     * @param string|null $formattedMessage formattedMessage
+     * @param string|null $formatted_message formatted_message
      *
      * @return self
      */
-    public function setFormattedMessage($formattedMessage)
+    public function setFormattedMessage($formatted_message)
     {
-        if (is_null($formattedMessage)) {
-            throw new \InvalidArgumentException('non-nullable formattedMessage cannot be null');
+        if (is_null($formatted_message)) {
+            throw new \InvalidArgumentException('non-nullable formatted_message cannot be null');
         }
-        $this->container['formattedMessage'] = $formattedMessage;
+        $this->container['formatted_message'] = $formatted_message;
 
         return $this;
     }

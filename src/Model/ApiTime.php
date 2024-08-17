@@ -58,10 +58,10 @@ class ApiTime implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'timestamp' => 'int',
-        'utcDatetime' => 'string',
-        'utcDate' => 'string',
-        'utcTime' => 'string',
-        'utcJson' => 'string'
+        'utc_datetime' => 'string',
+        'utc_date' => 'string',
+        'utc_time' => 'string',
+        'utc_json' => 'string'
     ];
 
     /**
@@ -73,10 +73,10 @@ class ApiTime implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'timestamp' => null,
-        'utcDatetime' => null,
-        'utcDate' => null,
-        'utcTime' => null,
-        'utcJson' => null
+        'utc_datetime' => null,
+        'utc_date' => null,
+        'utc_time' => null,
+        'utc_json' => null
     ];
 
     /**
@@ -86,10 +86,10 @@ class ApiTime implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'timestamp' => false,
-        'utcDatetime' => false,
-        'utcDate' => false,
-        'utcTime' => false,
-        'utcJson' => false
+        'utc_datetime' => false,
+        'utc_date' => false,
+        'utc_time' => false,
+        'utc_json' => false
     ];
 
     /**
@@ -179,10 +179,10 @@ class ApiTime implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'timestamp' => 'timestamp',
-        'utcDatetime' => 'utc_datetime',
-        'utcDate' => 'utc_date',
-        'utcTime' => 'utc_time',
-        'utcJson' => 'utc_json'
+        'utc_datetime' => 'utc_datetime',
+        'utc_date' => 'utc_date',
+        'utc_time' => 'utc_time',
+        'utc_json' => 'utc_json'
     ];
 
     /**
@@ -192,10 +192,10 @@ class ApiTime implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'timestamp' => 'setTimestamp',
-        'utcDatetime' => 'setUtcDatetime',
-        'utcDate' => 'setUtcDate',
-        'utcTime' => 'setUtcTime',
-        'utcJson' => 'setUtcJson'
+        'utc_datetime' => 'setUtcDatetime',
+        'utc_date' => 'setUtcDate',
+        'utc_time' => 'setUtcTime',
+        'utc_json' => 'setUtcJson'
     ];
 
     /**
@@ -205,10 +205,10 @@ class ApiTime implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'timestamp' => 'getTimestamp',
-        'utcDatetime' => 'getUtcDatetime',
-        'utcDate' => 'getUtcDate',
-        'utcTime' => 'getUtcTime',
-        'utcJson' => 'getUtcJson'
+        'utc_datetime' => 'getUtcDatetime',
+        'utc_date' => 'getUtcDate',
+        'utc_time' => 'getUtcTime',
+        'utc_json' => 'getUtcJson'
     ];
 
     /**
@@ -269,10 +269,10 @@ class ApiTime implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('timestamp', $data ?? [], null);
-        $this->setIfExists('utcDatetime', $data ?? [], null);
-        $this->setIfExists('utcDate', $data ?? [], null);
-        $this->setIfExists('utcTime', $data ?? [], null);
-        $this->setIfExists('utcJson', $data ?? [], null);
+        $this->setIfExists('utc_datetime', $data ?? [], null);
+        $this->setIfExists('utc_date', $data ?? [], null);
+        $this->setIfExists('utc_time', $data ?? [], null);
+        $this->setIfExists('utc_json', $data ?? [], null);
     }
 
     /**
@@ -345,109 +345,109 @@ class ApiTime implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets utcDatetime
+     * Gets utc_datetime
      *
      * @return string|null
      */
     public function getUtcDatetime()
     {
-        return $this->container['utcDatetime'];
+        return $this->container['utc_datetime'];
     }
 
     /**
-     * Sets utcDatetime
+     * Sets utc_datetime
      *
-     * @param string|null $utcDatetime utcDatetime
+     * @param string|null $utc_datetime utc_datetime
      *
      * @return self
      */
-    public function setUtcDatetime($utcDatetime)
+    public function setUtcDatetime($utc_datetime)
     {
-        if (is_null($utcDatetime)) {
-            throw new \InvalidArgumentException('non-nullable utcDatetime cannot be null');
+        if (is_null($utc_datetime)) {
+            throw new \InvalidArgumentException('non-nullable utc_datetime cannot be null');
         }
-        $this->container['utcDatetime'] = $utcDatetime;
+        $this->container['utc_datetime'] = $utc_datetime;
 
         return $this;
     }
 
     /**
-     * Gets utcDate
+     * Gets utc_date
      *
      * @return string|null
      */
     public function getUtcDate()
     {
-        return $this->container['utcDate'];
+        return $this->container['utc_date'];
     }
 
     /**
-     * Sets utcDate
+     * Sets utc_date
      *
-     * @param string|null $utcDate utcDate
+     * @param string|null $utc_date utc_date
      *
      * @return self
      */
-    public function setUtcDate($utcDate)
+    public function setUtcDate($utc_date)
     {
-        if (is_null($utcDate)) {
-            throw new \InvalidArgumentException('non-nullable utcDate cannot be null');
+        if (is_null($utc_date)) {
+            throw new \InvalidArgumentException('non-nullable utc_date cannot be null');
         }
-        $this->container['utcDate'] = $utcDate;
+        $this->container['utc_date'] = $utc_date;
 
         return $this;
     }
 
     /**
-     * Gets utcTime
+     * Gets utc_time
      *
      * @return string|null
      */
     public function getUtcTime()
     {
-        return $this->container['utcTime'];
+        return $this->container['utc_time'];
     }
 
     /**
-     * Sets utcTime
+     * Sets utc_time
      *
-     * @param string|null $utcTime utcTime
+     * @param string|null $utc_time utc_time
      *
      * @return self
      */
-    public function setUtcTime($utcTime)
+    public function setUtcTime($utc_time)
     {
-        if (is_null($utcTime)) {
-            throw new \InvalidArgumentException('non-nullable utcTime cannot be null');
+        if (is_null($utc_time)) {
+            throw new \InvalidArgumentException('non-nullable utc_time cannot be null');
         }
-        $this->container['utcTime'] = $utcTime;
+        $this->container['utc_time'] = $utc_time;
 
         return $this;
     }
 
     /**
-     * Gets utcJson
+     * Gets utc_json
      *
      * @return string|null
      */
     public function getUtcJson()
     {
-        return $this->container['utcJson'];
+        return $this->container['utc_json'];
     }
 
     /**
-     * Sets utcJson
+     * Sets utc_json
      *
-     * @param string|null $utcJson utcJson
+     * @param string|null $utc_json utc_json
      *
      * @return self
      */
-    public function setUtcJson($utcJson)
+    public function setUtcJson($utc_json)
     {
-        if (is_null($utcJson)) {
-            throw new \InvalidArgumentException('non-nullable utcJson cannot be null');
+        if (is_null($utc_json)) {
+            throw new \InvalidArgumentException('non-nullable utc_json cannot be null');
         }
-        $this->container['utcJson'] = $utcJson;
+        $this->container['utc_json'] = $utc_json;
 
         return $this;
     }

@@ -12,7 +12,7 @@ All URIs are relative to https://demo.azuracast.com/api, except if the operation
 ## `deleteQueueItem()`
 
 ```php
-deleteQueueItem($stationId, $id): \AzuraCast\Model\ApiStatus
+deleteQueueItem($station_id, $id): \AzuraCast\Model\ApiStatus
 ```
 
 
@@ -38,11 +38,11 @@ $apiInstance = new AzuraCast\Api\StationsQueueApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 56; // int | Queue Item ID
 
 try {
-    $result = $apiInstance->deleteQueueItem($stationId, $id);
+    $result = $apiInstance->deleteQueueItem($station_id, $id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsQueueApi->deleteQueueItem: ', $e->getMessage(), PHP_EOL;
@@ -53,7 +53,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **int**| Queue Item ID | |
 
 ### Return type
@@ -76,7 +76,7 @@ try {
 ## `getQueue()`
 
 ```php
-getQueue($stationId): \AzuraCast\Model\ApiStationQueueDetailed[]
+getQueue($station_id): \AzuraCast\Model\ApiStationQueueDetailed[]
 ```
 
 
@@ -102,10 +102,10 @@ $apiInstance = new AzuraCast\Api\StationsQueueApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 
 try {
-    $result = $apiInstance->getQueue($stationId);
+    $result = $apiInstance->getQueue($station_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsQueueApi->getQueue: ', $e->getMessage(), PHP_EOL;
@@ -116,7 +116,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 
 ### Return type
 
@@ -138,7 +138,7 @@ try {
 ## `getQueueItem()`
 
 ```php
-getQueueItem($stationId, $id): \AzuraCast\Model\ApiStationQueueDetailed
+getQueueItem($station_id, $id): \AzuraCast\Model\ApiStationQueueDetailed
 ```
 
 
@@ -164,11 +164,11 @@ $apiInstance = new AzuraCast\Api\StationsQueueApi(
     new GuzzleHttp\Client(),
     $config
 );
-$stationId = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
+$station_id = new \AzuraCast\Model\GetStationNowPlayingStationIdParameter(); // GetStationNowPlayingStationIdParameter
 $id = 56; // int | Queue Item ID
 
 try {
-    $result = $apiInstance->getQueueItem($stationId, $id);
+    $result = $apiInstance->getQueueItem($station_id, $id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StationsQueueApi->getQueueItem: ', $e->getMessage(), PHP_EOL;
@@ -179,7 +179,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **stationId** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
+| **station_id** | [**GetStationNowPlayingStationIdParameter**](../Model/.md)|  | |
 | **id** | **int**| Queue Item ID | |
 
 ### Return type
